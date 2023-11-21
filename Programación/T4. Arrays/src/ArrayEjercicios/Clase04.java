@@ -17,50 +17,29 @@ public class Clase04 {
         //      en la primera posición pasa a la última y así sucesivamente
 
         Scanner scanner = new Scanner(in);
-        System.out.println("Inserte la longitud deseada del array");
-        int longitudArray= scanner.nextInt();
-        int[] numeros = new int[longitudArray];
-        int[] numerosInversa = new int[longitudArray];
-        int[] numerosCopia = new int[longitudArray];
 
-        for (int i = 0; i < longitudArray; i++) {
-            System.out.println("Inserte un valor del array");
-            numeros[i]= scanner.nextInt();
-            numerosCopia[i]= numeros[i];
+        int longitud = 5;
+
+        int[] array = new int[]{2,3,4,5,6};
+
+        //Mover a la derecha
+        int aux = array[array.length-1];
+        for (int i = 0; i < longitud-1; i++) {
+            array[longitud-i-1]=array[longitud-i-2];
+        } array[0] = aux;
+
+        //Mover a la izquierda
+        int aux2 = array[0];
+        for (int i = 0; i < longitud-1; i++) {
+            array[i]=array[i+1];
+        } array[longitud-1] = aux2;
+
+        for (int numero : array) {
+            System.out.print(numero+", ");
         }
 
 
-        for (int i = 0; i < longitudArray; i++) { //esto está mal porque hace 2 veces el fori, lo tengo que cambiar todavía
-            System.out.println(ArrayMoverDerecha(longitudArray, numeros, numerosCopia)[i]);
-        }
-        for (int i = 0; i < longitudArray; i++) {
-            System.out.println(ArrayMoverIzquierda(longitudArray, numerosInversa, numerosCopia)[i]);
-
-        }
 
 
-
-    }
-
-    public static int[] ArrayMoverDerecha(int longitudArray, int[] numeros, int[]numerosCopia){
-        for (int i = 0; i < longitudArray; i++) {
-            if(i<longitudArray-1){
-                numeros[i+1]=numerosCopia[i];
-            } else if (i==longitudArray-1) {
-                numeros[0]=numerosCopia[i];
-            }
-        }
-        return numeros;
-    }
-
-    public static int[] ArrayMoverIzquierda(int longitudArray, int[] numerosInversa, int[]numerosCopia){
-        for (int i = longitudArray-1; i >= 0; i--) {
-            if(i>0){
-                numerosInversa[i-1]=numerosCopia[i];
-            } else if (i==0) {
-                numerosInversa[longitudArray-1]=numerosCopia[0];
-            }
-        }
-        return numerosInversa;
     }
 }
