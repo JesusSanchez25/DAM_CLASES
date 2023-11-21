@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7cbd3106-6ebb-4731-a5a8-c5dee9aa40ce" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Ejercicios programacion (1-50)/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicios programacion (1-50)/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicios programacion (1-50)/src/Pruebaforeach.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jesus_Sanchez dam1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jesus_Sanchez dam1/Ejercicio1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jesus_Sanchez dam1/Ejercicio2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jesus_Sanchez dam1/Ejercicio3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jesus_Sanchez dam1/Ejercicio4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jesus_Sanchez dam1/Ejercicio5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jesus_Sanchez dam1/T3/Ejercicio1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jesus_Sanchez dam1/T3/Ejercicio2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jesus_Sanchez dam1/T3/Ejercicio3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Jesus_Sanchez dam1/T3/Ejercicio4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/T2/Ejercicio1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/T2/Ejercicio2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/T2/Ejercicio3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/T2/Ejercicio4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/T2/Ejercicio5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/T3/Ejercicio1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/T3/Ejercicio2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/T3/Ejercicio3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/T3/Ejercicio4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jesús_Sánchez_T3 dam1/T3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jesús_Sánchez_T3 dam1/T3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jesús_Sánchez_T3 dam1/T3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jesús_Sánchez_T3 dam1/T3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jesús_Sánchez_T3 dam1/T3/T3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jesús_Sánchez_T3 dam1/T3/out/production/T3/T3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jesús_Sánchez_T3 dam1/T3/out/production/T3/T3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jesús_Sánchez_T3 dam1/T3/out/production/T3/T3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jesús_Sánchez_T3 dam1/T3/out/production/T3/T3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jesús_Sánchez_T3 dam1/T3/out/production/T3/T3/Ejercicio1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jesús_Sánchez_T3 dam1/T3/out/production/T3/T3/Ejercicio2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jesús_Sánchez_T3 dam1/T3/out/production/T3/T3/Ejercicio3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jesús_Sánchez_T3 dam1/T3/out/production/T3/T3/Ejercicio4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Jesús_Sánchez_T3 dam1/T3/out/production/T3/T3/T3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2.Operadres/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2.Operadres/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2.Operadres/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2.Operadres/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2.Operadres/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2.Operadres/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2.Operadres/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2.Operadres/T2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2.Operadres/src/CalculadoraIMC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2.Operadres/src/Entrada.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2.Operadres/src/EntradaMatemáticas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2.Operadres/src/EntradaVariables.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2.Operadres/src/Operadores.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2/out/production/Jesus_Sanchez dam1/Ejercicio1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2/out/production/Jesus_Sanchez dam1/Ejercicio2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2/out/production/Jesus_Sanchez dam1/Ejercicio3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2/out/production/Jesus_Sanchez dam1/Ejercicio4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2/out/production/Jesus_Sanchez dam1/Ejercicio5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2/out/production/T2/ArraysPasarluego.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2/out/production/T2/CalculadoraIMC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2/out/production/T2/Entrada.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2/out/production/T2/EntradaMatemáticas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2/out/production/T2/EntradaVariables.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T2/out/production/T2/Operadores.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4. Arrays/src/ArrayEjercicios/EjercicioChampionsV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../T4. Arrays/src/ArrayEjercicios/EjercicioChampionsV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejercicio01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejercicio02.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejercicio03.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejercicio04.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejercicio06.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejercicio07.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejercicio08.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosSwitch_01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosSwitch_02.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosSwitch_03.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosSwitch_04.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosSwitch_05.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosSwitch_06.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosSwitch_07.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosSwitch_08.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosSwitch_09.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosSwitch_10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosTFor_01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosTFor_02.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosTFor_03.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosTFor_04.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosTFor_05.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosTFor_06.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosTFor_09.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosTFor_10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosTFor_11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosTFor_12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosTFor_13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosTFor_14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosTFor_15.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosTFor_16.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosTfor_07.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/EjerciciosTfor_08.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejerciciosif_01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejerciciosif_02.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejerciciosif_03.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejerciciosif_04.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejerciciosif_05.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejerciciosif_06.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejerciciosif_07.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejerciciosif_08.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejerciciosif_09.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejerciciosif_10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejerciciosif_11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejerciciosif_12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejerciciosif_13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Ejerciciosif_14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Primosprimosprimosprimos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/Ejercicios/Prueba.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/EjerciciosWhile/Ejercicio05.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/EjerciciosWhile/Ejercicio09.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/EjerciciosWhile/Ejercicio09_Mejorado.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/META-INF/T3 Estructuras.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/PruebasyCosas/ArbolitoNavidad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/PruebasyCosas/ElProblemaSupremo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/PruebasyCosas/PrototipoDeEstrella.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/_1bloqueif/Estructuraif.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/_1bloqueif/EstructuraifElseif.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/_2Bloqueswitch/EstructuraSwitch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/_3BloqueFor/estructurafor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/_3BloqueFor/estructuraforeach.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/_4While/estructura_dowhile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T4/out/production/T3 Estructuras/_4While/estructurawhile.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2XciOECyxYSh3iJvBmWukayenvl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/magol/1.DAM/GitHub/Programación/Ejercicios programacion (1-50)"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7cbd3106-6ebb-4731-a5a8-c5dee9aa40ce" name="Changes" comment="" />
+      <created>1698934736216</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698934736216</updated>
+    </task>
+    <servers />
+  </component>
+</project>
