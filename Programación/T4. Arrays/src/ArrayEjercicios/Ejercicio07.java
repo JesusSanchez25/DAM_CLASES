@@ -24,7 +24,7 @@ public class Ejercicio07 {
         for (int i = 0; i < palabras.length; i++) {
             System.out.println("Inserte tu palabra");
             palabras[i]= scanner.next();
-            if (contadorLetras==0){
+            if (i==0){
                 palabraMasPequeña=palabras[i];
             }
             contadorLetras += palabras[i].length();
