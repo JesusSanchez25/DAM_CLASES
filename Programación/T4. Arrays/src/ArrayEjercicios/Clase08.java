@@ -1,5 +1,6 @@
 package ArrayEjercicios;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import static java.lang.System.in;
@@ -12,45 +13,24 @@ public class Clase08 {
         //- pedir el nombre de cada uno de los participantes
         //- sacar por pantalla el orden de las parejas resultantes
 
+        String[] equipos = new String[]{"Alcalá","Pedro","Asturias","RauwAlejandro"};
+        ArrayList equiposElegidos = new ArrayList<>();
 
-        Scanner scanner = new Scanner(in);
-        System.out.println("Dime la cantidad de participantes (tiene que ser un número par)");
-        int numeropar = scanner.nextInt();
-        while ((numeropar%2)==1){
-            System.out.println("Número incorrecto, escribe un número par");
-            numeropar = scanner.nextInt();
-        }
+        String equipo1;
 
-        String[] nombres = new String[numeropar];
-        String[] nombresSacados = new String[numeropar];
-
-        for (int i = 0; i < numeropar; i++) {
-            System.out.println("Escribe el nombre de un participante");
-            nombres[i] = scanner.next();
-        }
-
-        for (int i = 0; i < numeropar; i++) {
-
-            do{nombresSacados[i] = nombres[(int)(Math.random()*(numeropar))];}
-            while (repetido(nombresSacados,i));
-
-        }
-
-        for (int i = 0; i < numeropar-1; i+=2) {
-            System.out.println(nombresSacados[i]+" dará su regalo a: "+ nombresSacados[i+1]);
+        for (int i = 0; i < 4; i++) {
+            do {
+                int numeroRandom = (int)(Math.random()*4);
+                equipo1 = equipos[numeroRandom];
+            }while (equiposElegidos.contains(equipo1));
+            equiposElegidos.add(equipo1);
+            System.out.println(equipo1);
         }
 
 
 
-    }
-    public static boolean repetido (String[] personas, int x){
-        boolean repetidos = false;
-        for (int i = 0; i < personas.length; i++) {
-            if(personas[x].equals(personas[i]) && x!=i){
-                repetidos= true;
-                return repetidos;
-            }
-        }
-        return repetidos;
+
+
+
     }
 }
