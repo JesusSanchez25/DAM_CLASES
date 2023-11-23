@@ -157,6 +157,7 @@ public class EjercicioBingo_Trabajo {
                 String numeroBingo = carton.get(j+(3*i)).toString();
                 cartonArray[j][i] = (numeroBingo);
             }
+
         }
 
         System.out.println(" ╔══════════════════════════════════════╗ ");
