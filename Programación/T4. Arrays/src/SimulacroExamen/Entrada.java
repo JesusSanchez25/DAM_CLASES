@@ -65,9 +65,9 @@ public class Entrada {
 
                     //Precio base
                     double precio = 8;
-                    ArrayList<String> ingredientes = new ArrayList<>();
+                    ArrayList<String> ingredientesUsados = new ArrayList<>();
                     Object[][] listaIngredientes = new Object[][]{
-                            {"Tomate",1.0},{"aceitunas",1.5},{"queso",1.0},{"albahaca",0.5},{"jamon",1.0}
+                            {"Tomate",1.0},{"aceitunas",1.0},{"queso",1.0},{"albahaca",0.5},{"jamon",1.5}
                     };
 
                     idPedido++;
@@ -97,16 +97,16 @@ public class Entrada {
                             System.out.println("4.Albahaca");
                             System.out.println("5.Jamón");
                             NumeroIngrediente = scanner.nextInt();
-                            if (listaIngredientes[NumeroIngrediente-1][0]==null){
+                            if (NumeroIngrediente > 5 || NumeroIngrediente < 1) {
                                 System.out.println("Inserte un número válido");
                             }
-                        } while (NumeroIngrediente < listaIngredientes[0].length);
+                        }while (NumeroIngrediente > 5 || NumeroIngrediente < 1);
 
-                        ingredientes.add(listaIngredientes[NumeroIngrediente-1][0].toString());
-                            precio+=(double)listaIngredientes[NumeroIngrediente-1][1];
+                        ingredientesUsados.add(listaIngredientes[NumeroIngrediente-1][0].toString());
+                            precio+= (double)listaIngredientes[NumeroIngrediente-1][1];}
 
-                    }
-                    pedido[3] = ingredientes;
+
+                    pedido[3] = ingredientesUsados;
                     pedido[4]=precio;
                     pedido[5] = false;
                     metodos.añadirPedido(pedido);
