@@ -5,7 +5,7 @@ public static extern void mouse_event(long dwFlags, long dx, long dy, long cButt
  
 $MouseEvent = Add-Type -memberDefinition $MouseEventSig -name "MouseEventWinApi" -passThru
 
-[System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point(10,1000)
+[System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point(10,1200)
 $MouseEvent::mouse_event(0x00000002, 0, 0, 0, 0)
 $MouseEvent::mouse_event(0x00000004, 0, 0, 0, 0)
 
