@@ -43,7 +43,6 @@ public class Prueba {
         //de 15 números en el cartón y 15 espacios
         for (int i = 0; i < 3; i++) {
             int aleatorio= (int)(Math.random()*27);
-            //TODO HACER ESTO BIEN BRRR
             do {
                 carton.set(aleatorio, "  ");
             }while (((Object)(carton.indexOf(aleatorio))).equals("  "));
@@ -76,5 +75,4 @@ public class Prueba {
         }
 
         System.out.println("  ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ ");
-        //TODO ACTUALIZARLO PARA EL NUEVO METODO DE GENERADO
     }}

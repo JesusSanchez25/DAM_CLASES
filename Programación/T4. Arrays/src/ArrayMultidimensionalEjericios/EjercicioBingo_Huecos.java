@@ -116,7 +116,6 @@ public class EjercicioBingo_Huecos {
             int aleatorioColumna= (int)(Math.random()*9);
             int aleatorioFila = 0;
             boolean hecho = false;
-            //TODO HACER ESTO BIEN BRRR
             do {
                 aleatorioFila = (int)(Math.random()*3);
                 if (!carton.get((aleatorioColumna*3)+(aleatorioFila)).equals("  ")){
@@ -155,7 +154,6 @@ public class EjercicioBingo_Huecos {
         }
 
         System.out.println(" ╚══════════════════════════════════════╝");
-        //TODO ACTUALIZARLO PARA EL NUEVO METODO DE GENERADO
     }
 
     public static boolean linea (ArrayList carton){

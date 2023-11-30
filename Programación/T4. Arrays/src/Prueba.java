@@ -85,7 +85,6 @@ public class Prueba {
     }
 
     public static void MostrarCarton (){
-        //todo que pida directamente el array multidimensionales
 
         System.out.println(" ╔══════════════════════════════════════╗ ");
         for (Object[] fila : carton) {
