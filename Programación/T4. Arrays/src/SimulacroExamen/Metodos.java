@@ -50,8 +50,6 @@ public class Metodos {
         }
 
 
-
-
     }
     public void MostrarPedidosPendientes(){
         for (Object[] item : pedidosPendientes) {
