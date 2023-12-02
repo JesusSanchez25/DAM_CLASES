@@ -129,7 +129,6 @@ public class EjercicioBingo_Completo {
         }
 
         System.out.println("   ____________________________________");
-        //TODO ACTUALIZARLO PARA EL NUEVO METODO DE GENERADO
     }
 
     public static boolean linea (ArrayList carton){

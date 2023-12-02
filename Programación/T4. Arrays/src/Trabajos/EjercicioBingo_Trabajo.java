@@ -58,7 +58,6 @@ public class EjercicioBingo_Trabajo {
             //Dice el número que ha salido y lo elimina de la cartilla
             System.out.println("\n\nEl número que ha tocado es el: "+ numeroBingo);
             contadorIntentos++;
-            //TODO CAMBIAR ESTO PARA QUE DETECTE DEL ARRAYMULTIDIMENSIONAL DE TU CARTÓN
             tacharNumero(numeroBingo);
 
 
@@ -66,7 +65,6 @@ public class EjercicioBingo_Trabajo {
              MostrarCarton();
 
             //Detecta si ha habido una línea en ese turno
-            //todo cambiar que cartón sea un array Multidimensional
             if (linea() && !lineaRealizada){
                 lineaRealizada=true;
                 System.out.println("TE HA SALIDO UNA LÍNEA!!");
