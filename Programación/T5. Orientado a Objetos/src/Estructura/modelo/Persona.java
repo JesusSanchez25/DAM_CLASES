@@ -1,15 +1,15 @@
-package modelo;
+package Estructura.modelo;
 
 public class Persona {
 
     //Es la ESTRUCTURA BASE de lo que va a ser una persona
-    // atributos - propiedades (suelen ser privados)
+    // atributos - propiedades (suelen ser privados y se obtienen con los getter y setter)
     private String nombre, apellido, email;
     private int telefono;
     private char genero;
 
 
-    // métodos - CONSTRUCTOR -> por defecto tengo l vacío (hasta que creo un Constructor)
+    // métodos - CONSTRUCTOR -> por defecto tengo el vacío (hasta que creo un Constructor)
     public Persona(String nombre, String apellido, int telefono){
         // Este constructor te pide solo 3 valores
         this.nombre = nombre;
@@ -30,7 +30,6 @@ public class Persona {
     public Persona(){
 
     }
-
     // metodos - "normales"
 
     public void mostrarDatos (){
@@ -38,6 +37,7 @@ public class Persona {
         System.out.println("El apellido es: " + apellido);
         System.out.println("El email es: " + email);
         System.out.println("El teléfono es: " + telefono);
+
     }
 
 
@@ -88,6 +88,8 @@ public class Persona {
         this.genero = genero;
     }
 
+    //Cambias lo que hace el método toString
+    @Override
     public String toString(){
         return nombre;
     }
