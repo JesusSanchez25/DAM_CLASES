@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3cf22d0c-08d0-49fe-9c05-1deff0de02bc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Entrada.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/coche.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Estructura/modelo/Entrada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../T4. Arrays/src/Jesus_Sanchez_DAM1_24_11/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../T4. Arrays/src/Jesus_Sanchez_DAM1_24_11/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Entrada.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../modelo/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Estructura/modelo/Persona.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2Z4Xp9LyF9rWFeISXIXxxQbeN6j" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Usuario DAM1/Documents/DAM/Programación/T5. Orientado a Objetos/src/Ejercicios"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3cf22d0c-08d0-49fe-9c05-1deff0de02bc" name="Changes" comment="" />
+      <created>1701682506330</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701682506330</updated>
+    </task>
+    <servers />
+  </component>
+</project>
