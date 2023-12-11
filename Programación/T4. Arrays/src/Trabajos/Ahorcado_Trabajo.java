@@ -97,7 +97,7 @@ public class Ahorcado_Trabajo {
     public static void LimpiarPantalla(){
         for (int i = 0; i < 10; i++) {
             System.out.println("");
-            style color lightblue
+
     }
 }
 
