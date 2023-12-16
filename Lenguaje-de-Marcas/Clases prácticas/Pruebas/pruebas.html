@@ -1,0 +1,88 @@
+<header id="header" style="
+        box-shadow: #000000 -5px -5px 15px;
+        display: block;
+        position: fixed;
+        padding:1%;
+        padding-bottom: 2px;
+        width:98%;
+        left: 0;
+        z-index: 998;
+        top: 0;
+        ">
+
+        <hr style="background-color:#a81e26; z-index:997;
+        height: 10.8%; z-index:996;  display: block;
+        position: fixed;
+        padding:-8%;
+        margin-top: -1.1%;
+        margin-left: -1.1%;
+
+        z-index: -999;
+        width:105%;">
+
+        <img src="C:\Users\magol\Downloads\banner3.png" style=" display: block;
+        position: fixed;
+        padding:-5%;
+        margin-top: -6px;
+        width:105%;
+        left: 0;
+        top: 0;
+        z-index:-997;
+        height: 11.2%;  
+        opacity: 0.2;
+        ">        
+
+<table style="z-index: 999;">
+    <a id="unlock" href="javascript:;" style="
+        margin-left:735px; display: none;"
+        onclick="this.style.display='none'; getElementById('lock').style.display='inline-block';
+                    getElementById('HamburguerMenu').style.display='none';getElementById('header').style.position='absolute'">
+        <img src="C:\Users\magol\Web-Navidad\assets\unlock.png" height="28px"></a>
+
+    <a id="lock" href="javascript:;" style="
+        margin-left:735px; display: none" onclick="this.style.display='none'; getElementById('unlock').style.display='inline-block';
+                    getElementById('header').style.position='fixed'">
+        <img src="C:\Users\magol\Web-Navidad\assets/lock.png" height="28px"></a>
+
+
+    <a href="#" style="float: left;">
+        <img src="C:\Users\magol\Web-Navidad\assets/icons/legoLogo.png" alt="Zoo Logo" width="55px" height="55px"
+            style="margin-top: -5px; box-shadow: #00000050 0px 0px 1px;">
+    </a>
+
+    <!--Enlazar a 'Pagina en construccion'-->
+    <a href=""><img src="C:\Users\magol\Web-Navidad\assets/icons/shoppingBagIcon.png" alt="Carrito" width="60px"
+            style="margin-top: -10px; float: right;">
+    </a>
+
+    <table cellspacing="0" cellpadding="0" onmouseleave="document.getElementById('search_bar').style.display='none';"
+        onmouseout="this.style.boxShadow='#00000020 2px 2px 4px'"
+        onmouseover="this.style.boxShadow='#00000030 3px 3px 5px'" style="float: right;
+        background-color:#ffffff; 
+        padding-left: 1px;
+        padding-bottom: 1px;
+        padding-left: 2px;
+        padding-right: 2px;
+        border-radius: 11px;
+        z-index: 10001;
+        box-shadow: #00000020 2px 2px 4px;">
+        <tr>
+            <td>
+                <!--Make it so a click on the icon also shows a translucent layer over everything else to detect clicks outside -->
+                <!--Fix the search bar to autofocus -->
+                <a href="javascript:;"><img src="C:\Users\magol\Web-Navidad\assets/icons/search.png" alt="Busqueda" width="40px"
+                        style="margin-right: 1px"
+                        onclick="document.getElementById('search_bar').style.display='block';">
+
+                </a>
+            </td>
+            <td>
+                <input id="search_bar" type="search" placeholder="Buscar..."
+                    style="display: none; border:none; outline:none; margin-left:2%; font-size:14px; margin-right:5px; font-family: Lexend;">
+            </td>
+
+        </tr>
+    </table>
+  </table>
+
+</header>
