@@ -1,4 +1,4 @@
-#Crear un formulario, añadir una etiqueta, dos botones y una caja de texto
+﻿#Crear un formulario, añadir una etiqueta, dos botones y una caja de texto
 #Funcionalidad para el formulario:
 #Pulsar la tecla Enter almacena en una variable el contenido de la caja de texto y se muestra
 #Pulsar la tecla Escape sale del formulario
@@ -9,6 +9,11 @@ $Form.Text="Formulario"
 $Form.Size=New-Object System.Drawing.Size(500,500)
 $Form.StartPosition="CenterScreen"
 
+#imagen
+$pictureBox = New-Object System.Windows.Forms.PictureBox
+$pictureBox.Location = New-Object System.Drawing.Point(100, 450)
+$imagen = [System.Drawing.Image]::FromFile("C:\Users\magol\1. DAM\Entornos de Desarrollo\Automatización\robotito.jpg")
+$pictureBox.Image = $imagen
 
 
  
@@ -41,7 +46,20 @@ $Button.Location = New-Object Drawing.Point(100,270)
 $Button.Size = New-Object Drawing.Size(75,33)
 $Button.Text = "Log in"
 
-$Button.Add_Click({ Rellenar-CajaTexto -TextBox $TextBox })
+
+
+$Button.Add_Click({
+    # Acción cuando se hace clic en el botón
+    $text = $textBox.Text
+    $text2 = $textBox2.Text
+
+    $text | Out-File -FilePath "C:\Users\magol\1. DAM\Entornos de Desarrollo\Automatización\Contraseñas.txt" -Append
+    $text2 | Out-File -FilePath "C:\Users\magol\1. DAM\Entornos de Desarrollo\Automatización\Contraseñas.txt" -Append
+
+    $textBox.Clear()
+    $textBox2.Clear()
+
+})
 
  
 #Botón2
@@ -60,7 +78,7 @@ $Form.Add_KeyDown({if ($_.KeyCode -eq "Escape"){$Form.Close()}})
 #Funcionalidad para el botón:
 #Pulsar Enter almacena en una variable el contenido de la caja de texto y se muestra
 #Pulsar Escape sale del formulario
-$Button1.Add_Click({$Var=$TextBox.Text;Write-Host $Var})
+
 $Button2.Add_Click({$Form.Close()})
  
 #Añadir etiqueta
@@ -74,60 +92,11 @@ $Form.Controls.Add($Button2)
 #Añadir caja de texto
 $Form.Controls.Add($TextBox)
 $Form.Controls.Add($TextBox2)
+$Form.Controls.Add($pictureBox)
+
+
 
 
 
  
 $Form.ShowDialog()
-
-
-
-
-
-
-
-<------------------------------------------------------------ Segunda parte ------------------------------------------------------------->
-
-
-$MouseEventSig=@'
-[DllImport("user32.dll",CharSet=CharSet.Auto, CallingConvention=CallingConvention.StdCall)]
-public static extern void mouse_event(long dwFlags, long dx, long dy, long cButtons, long dwExtraInfo);
-'@
- 
-$MouseEvent = Add-Type -memberDefinition $MouseEventSig -name "MouseEventWinApi" -passThru
-
-Start-Sleep -Seconds 0.5
-[System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point(1116,280)
-$MouseEvent::mouse_event(0x00000002, 0, 0, 0, 0)
-$MouseEvent::mouse_event(0x00000004, 0, 0, 0, 0)
-
-[System.Windows.Forms.SendKeys]::SendWait('hola')
-Start-Sleep -Milliseconds 150
-
-Start-Sleep -Seconds 0.5
-[System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point(119,214)
-$MouseEvent::mouse_event(0x00000002, 0, 0, 0, 0)
-$MouseEvent::mouse_event(0x00000004, 0, 0, 0, 0)
-
-[System.Windows.Forms.SendKeys]::SendWait('hola')
-Start-Sleep -Milliseconds 150
-
-Start-Sleep -Seconds 0.5
-[System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point(126,279)
-$MouseEvent::mouse_event(0x00000002, 0, 0, 0, 0)
-$MouseEvent::mouse_event(0x00000004, 0, 0, 0, 0)
-
-[System.Windows.Forms.SendKeys]::SendWait('hola')
-Start-Sleep -Milliseconds 150
-
-Start-Sleep -Seconds 0.5
-[System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point(133,314)
-$MouseEvent::mouse_event(0x00000002, 0, 0, 0, 0)
-$MouseEvent::mouse_event(0x00000004, 0, 0, 0, 0)
-
-
-
-<------------------------------------------------------------ Tercera parte ------------------------------------------------------------->
-
-while(1){Start-Sleep -m 500;Write-Host ([System.Windows.Forms.Cursor]::Position | Select-Object X,Y)}
-
