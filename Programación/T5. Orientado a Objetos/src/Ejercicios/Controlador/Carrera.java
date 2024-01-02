@@ -32,11 +32,11 @@ public class Carrera {
     // Nº participantes: XXX
 
     public void mostrarDatos() {
-        System.out.println("La carrera se corre en " + circuito.getNombre());
-        System.out.println("Los datos de la carrera son");
+        System.out.println("Los datos de la carrera son:");
         System.out.println("KM: " + circuito.getKmTotales());
         System.out.println("Vueltas: " + circuito.getVueltas());
         System.out.println("Nº de participantes: " + participantes.size());
+        System.out.println("Nº de vueltas: " + circuito.getVueltas());
     }
 
     // inscribir un participante
@@ -49,11 +49,12 @@ public class Carrera {
 
     public void decidirGanador() {
 
+        ordenarParrilla();
+
         ganador = participantes.get(0);
         if (ganador.getKm() >= circuito.getKmTotales()) {
             ganador = participantes.get(0);
-            System.out.printf("El ganador de la carrera es %s con %dkm\n",
-                    ganador.getNombre(), ganador.getKm());
+
         } else {
             //System.out.println("No hay ganador");
             ganador = null;
@@ -61,21 +62,63 @@ public class Carrera {
 
     }
 
-    public void resetearKM(){
+    public void resetear(){
         for (Coche coche : participantes ) {
             coche.setKm(0);
+            coche.setVelocidad(0);
         }
     }
 
+    private void acelerarCoches(){
+
+        for (Coche item : participantes) {
+            int kmRecorridos = (int) (Math.random() * 90) + 35;
+
+            // Los coches frenan en caso de encontrarse con una curva
+            if (hayCurva(kmRecorridos, item)){
+                item.frenar((int) (Math.random() * (item.velocidadMax()-100)+50));
+            };
+
+            item.acelerar(kmRecorridos);
+
+
+        }
+
+
+    }
+
+    private boolean hayCurva (int distanciaRecorrida, Coche coche){
+
+            // Calcula si en la distancia que acaba de recorrer el coche se ha topado con alguna de las
+            // curvas del circuito
+            for (int i = 0; i < circuito.getCurvas(); i++) {
+                if (coche.getKm()<circuito.getLocalizacionCurvas().get(i)
+                        && (coche.getKm()+distanciaRecorrida) >(circuito.getLocalizacionCurvas().get(i))){
+                    return true;
+                };
+            }
+            return false;
+
+    }
+
+
+
     public void iniciarCarrera() {
-        //resetearKM();
-        for (int i = 0; i < circuito.getVueltas(); i++) {
+
+        // Presentación de la carrera
+        System.out.println("Procedemos a correr la carrera en "
+                + circuito.getNombre());
+        mostrarDatos();
+
+         for (int i = 0; i < circuito.getVueltas(); i++) {
             //System.out.println("Vuleta " + (i + 1));
             // cada coche acelera
             // participantes (todos los coches)
-            for (Coche item : participantes) {
-                item.acelerar((int) (Math.random() * 51) + 25);
-            }
+
+
+            acelerarCoches();
+
+
             //mostrarParrilla();
         }
         //System.out.println("Vueltas oficiales terminadas");
@@ -85,17 +128,20 @@ public class Carrera {
         // si hay ganador -> muestro datos
         while (ganador == null) {
             //System.out.println("Vuelta extra!!!");
-            for (Coche item : participantes) {
-                item.acelerar((int) (Math.random() * 51) + 25);
-            }
-            ordenarParrilla();
+            acelerarCoches();
             decidirGanador();
         }
 
-        repartirPuntos();
-        // mostrarParrilla();
-        // System.out.println("El ganado de la carrera es "+ganador.getNombre());
+        // Muestra el GANADOR y los datos finales de la carrera
+        System.out.printf("\nEl ganador de la carrera es '%s' con %dkm.\n", ganador.getNombre(), ganador.getKm());
+        System.out.println("Estos han sido los resultados finales de la carrera:");
+        mostrarParrilla();
 
+        // Reparte los puntos para la clasificación del campeonato
+        repartirPuntos();
+
+        // Resetea todos los coches
+        resetear();
     }
 
     public void repartirPuntos(){
@@ -107,15 +153,14 @@ public class Carrera {
 
     public void inscribirParticipante(Coche coche) {
         if (participantes.size() == 20) {
-            System.out.println("Error en la inscripcion: no hay plazas");
+            System.out.println("Hay un error en la inscripcion: plazas insuficientes");
         } else {
             // esta la matricula del coche que quiero agregar en la lista?
             // true o false
             if (estaCoche(coche.getMatricula()) != null) {
-                System.out.println("Error en la inscripcion. Datos duplicados");
+                System.out.println("Hay un error en la inscripcion. Datos duplicados");
             } else {
                 participantes.add(coche);
-                System.out.println("Agregado correctamente");
             }
         }
     }
@@ -169,12 +214,10 @@ public class Carrera {
     }
     public void mostrarParrilla() {
 
-
-        // ordena la lista ->
-
+        ordenarParrilla();
 
         for (int i = 0; i < participantes.size(); i++) {
-            System.out.printf("%d - %s %d km\n", i + 1, participantes.get(i).getNombre()
+            System.out.printf("%d - %s con %d km\n", i + 1, participantes.get(i).getNombre()
                     , participantes.get(i).getKm());
         }
 

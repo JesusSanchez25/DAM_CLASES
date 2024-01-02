@@ -1,5 +1,7 @@
 package Ejercicios.model;
 
+import java.util.ArrayList;
+
 public class Coche {
     // la dirección tiene Parado, Recto, Izquierda y Derecha
     private int cv,velocidad, km, cc, puntos;
@@ -57,7 +59,7 @@ public class Coche {
     }
 
     public void acelerar (int velocidad){
-        this.velocidad += Math.random()*(velocidad+1);
+        this.velocidad += velocidad;
 
         if (this.velocidad>velocidadMax()){
             this.velocidad = velocidadMax();
@@ -74,13 +76,15 @@ public class Coche {
         }
 
 
-        int kmAvanza = (int)(Math.random()*(this.velocidad+1));
+        int kmAvanza = velocidad;
         this.km += kmAvanza;
+
+        // Pone el coche recto
         girar();
 
     }
 
-    private int velocidadMax (){
+    public int velocidadMax (){
         switch (categoria){
 
             case 'A' -> {return 300;}
@@ -95,7 +99,7 @@ public class Coche {
 
 
     public void frenar (int velocidadFreno){
-        this.velocidad -= (int)(Math.random()*(velocidadFreno+1));
+        this.velocidad -= velocidadFreno;
 
         if(this.velocidad<=0){
             this.velocidad=0;
@@ -187,4 +191,6 @@ public class Coche {
     public char getCategoria() {
         return categoria;
     }
+
+
 }

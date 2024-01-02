@@ -36,7 +36,6 @@ public class Campeonato {
                 System.out.println("Error en la inscripcion. Datos duplicados");
             } else {
                 listaParticipantes.add(coche);
-                System.out.println("Agregado correctamente");
             }
         }
     }
@@ -54,27 +53,23 @@ public class Campeonato {
         return coincideCoche;
     }
 
+
     // descalificarParticiapante
     // elimina un particiopante a la lista
     public void descalificarParticipante(String matricula) {
-        // esta el coche en la lista?
-        // coche
 
+        // esta el coche en la lista?
         Coche cocheEncontrado = estaCoche(matricula);
 
         if (cocheEncontrado != null) {
             listaParticipantes.remove(cocheEncontrado);
-            System.out.println("El coche se ha borrado ok");
+            System.out.println("El coche se ha borrado");
         } else {
-            System.out.println("No esta");
+            System.out.println("No está el coche en la lista");
         }
 
-        /*if (participantes.remove(estaCoche(matricula))){
-            System.out.println("Borrado correctamente");
-        }else {
-            System.out.println("No esta");
-        }*/
     }
+
 
     // agregarCarrera
     // agregar una carrera a la lista
@@ -92,57 +87,21 @@ public class Campeonato {
     // nombre_circuito vueltas km
     public void mostrarDatos() {
 
-        System.out.printf("El campeonato con nombre %s " +
-                "tiene los siguientes datos:\n", nombre);
+        System.out.printf("El campeonato con nombre '%s', tiene los siguientes datos:\n", nombre);
         System.out.println("Los participantes son:");
         for (Coche item : listaParticipantes) {
-            System.out.printf("\t%s %s\n", item.getNombre()
+            System.out.printf("\tNombre: %s\t/\tMatrícula: %s\n", item.getNombre()
                     , item.getMatricula());
         }
-        System.out.println("Las carreras son:");
+        System.out.println("\nLas carreras son:");
         for (Carrera item : listaCarreras) {
-            System.out.printf("\tNombre: %s Vueltas: %d KM: %d\n"
+            System.out.printf("\tNombre: %s\t/\tVueltas: %d\t/\t Km: %d\n"
                     , item.getCircuito().getNombre(),
                     item.getCircuito().getVueltas(),
                     item.getCircuito().getKmTotales()
             );
         }
-    }
-
-
-    // iniciarCampeonato
-    public void iniciarCampeonato() {
-
-        for (Carrera item : listaCarreras) {
-
-            System.out.println("Procedemos a correr la carrara en "
-                    + item.getCircuito().getNombre());
-            // inscribir participates en carrera
-            //for (Coche element : listaParticipantes) {
-            //    item.inscribirParticipante(element);
-            //}
-            item.setParticipantes(listaParticipantes);
-            // correr la carrera
-            item.iniciarCarrera();
-            // tras cada carrera quiero
-            // ver la clasificacion con puntos del campeonato
-            System.out.println("La situacion del campeonato tras correr la carrera es");
-            mostrarParrilla();
-
-        }
-    }
-    // recorrer todas las carreres e iniciarlas
-    // mostrarClasficiacion
-    // muestra los participantes con sus puntos
-
-    public void mostrarParrilla() {
-        ordenarParrilla();
-        for (int i = 0; i < listaParticipantes.size(); i++) {
-            System.out.printf("%d - %s %d km\n", i + 1,
-                    listaParticipantes.get(i).getNombre()
-                    , listaParticipantes.get(i).getPuntos());
-        }
-
+        System.out.println("\n");
     }
 
     public void ordenarParrilla() {
@@ -158,6 +117,55 @@ public class Campeonato {
             }
         });
     }
+
+    public void mostrarParrilla() {
+        ordenarParrilla();
+        for (int i = 0; i < listaParticipantes.size(); i++) {
+            System.out.printf("%dº - %s con %d puntos\n", i + 1,
+                    listaParticipantes.get(i).getNombre()
+                    , listaParticipantes.get(i).getPuntos());
+        }
+
+    }
+
+
+    // iniciarCampeonato
+    public void iniciarCampeonato() {
+
+        mostrarDatos();
+
+        for (Carrera item : listaCarreras) {
+
+            // inscribir participates en carrera
+            // (Por cada participante en la lista, lo inscribe en esa carrera)
+            for (Coche element : listaParticipantes) {
+                item.inscribirParticipante(element);
+            }
+
+            // Pasa la lista de participantes a la carrera también
+            item.setParticipantes(listaParticipantes);
+
+
+            // correr la carrera
+            item.iniciarCarrera();
+
+
+            // tras cada carrera quiero
+            // ver la clasificacion con puntos del campeonato
+            System.out.println("\nLa situacion del campeonato tras correr la carrera es:");
+            ordenarParrilla();
+            mostrarParrilla();
+            System.out.println("\n");
+
+        }
+    }
+
+    // recorrer todas las carreres e iniciarlas
+    // mostrarClasficiacion
+    // muestra los participantes con sus puntos
+
+
+
 
 
     public String getNombre() {
