@@ -1,4 +1,4 @@
-ackage Ejercicios;
+package Ejercicios;
 
 import Ejercicios.Controlador.Carrera;
 import Ejercicios.model.Circuito;
@@ -19,8 +19,8 @@ public class Entrada {
         carrera1.mostrarDatos();
         carrera1.inscribirParticipante(participante1);
         carrera1.inscribirParticipante(participante1);
-        carrera1.descalificarParticipantes(participante1.getMatricula());
-        carrera1.mostrarParticipantes();
+        carrera1.descalificarParticipante(participante1.getMatricula());
+        carrera1.mostrarParrilla();
 
 /*
         // para cambiar los km totales en el model de circuito1

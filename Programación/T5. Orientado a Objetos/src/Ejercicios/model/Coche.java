@@ -2,7 +2,7 @@ package Ejercicios.model;
 
 public class Coche {
     // la dirección tiene Parado, Recto, Izquierda y Derecha
-    private int cv,velocidad, km, cc;
+    private int cv,velocidad, km, cc, puntos;
     private String direccion, matricula, nombre;
     private char categoria;
     // A -> cv> 200
@@ -116,45 +116,17 @@ public class Coche {
     }
 
 
+    public int getPuntos() {
+        return puntos;
+    }
 
+    public void setPuntos(int puntos) {
+        this.puntos = puntos;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public void setCategoria(char categoria) {
+        this.categoria = categoria;
+    }
 
     public int getCv() {
         return cv;
