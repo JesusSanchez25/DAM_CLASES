@@ -1,4 +1,4 @@
-package Ejercicios;
+ackage Ejercicios;
 
 import Ejercicios.Controlador.Carrera;
 import Ejercicios.model.Circuito;
