@@ -1,11 +1,9 @@
-package Ejercicios;
+package ejercicios.campeonatoMejorado;
 
-import Ejercicios.Controlador.Campeonato;
-import Ejercicios.Controlador.Carrera;
-import Ejercicios.model.Circuito;
-import Ejercicios.model.Coche;
-
-import java.util.ArrayList;
+import ejercicios.campeonatoMejorado.Controlador.Campeonato;
+import ejercicios.campeonatoMejorado.Controlador.Carrera;
+import ejercicios.campeonatoMejorado.model.Circuito;
+import ejercicios.campeonatoMejorado.model.Coche;
 
 public class Entrada {
 
@@ -18,9 +16,9 @@ public class Entrada {
         Coche participante6 = new Coche("Participante6","6789",75,3000);
 
 
-        Circuito ciruito1 = new Circuito("Imola",600,9, 5);
-        Circuito ciruito2 = new Circuito("Jarama",500,8, 6);
-        Circuito ciruito3 = new Circuito("Suzuka",300,5, 3);
+        Circuito ciruito1 = new Circuito("Imola",1800,7, 5);
+        Circuito ciruito2 = new Circuito("Jarama",1500,5, 4);
+        Circuito ciruito3 = new Circuito("Suzuka",900,4, 3);
         Carrera carrera1 = new Carrera(ciruito1);
         Carrera carrera2 = new Carrera(ciruito2);
         Carrera carrera3 = new Carrera(ciruito3);

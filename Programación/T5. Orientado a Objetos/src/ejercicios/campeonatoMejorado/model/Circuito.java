@@ -1,4 +1,4 @@
-package Ejercicios.model;
+package ejercicios.campeonatoMejorado.model;
 
 
 import java.util.ArrayList;
@@ -26,7 +26,10 @@ public class Circuito {
         // record = 0;
 
         // Se asigna automáticamente la localización de las curvas en el circuito según el número de curvas que haya
-        int distanciaEntreCurvas = this.kmTotales/this.curvas;
+        int distanciaEntreCurvas;
+
+        try {distanciaEntreCurvas = this.kmTotales/this.curvas;} catch (Exception e){distanciaEntreCurvas = 0;}
+
 
         // Divide el circuito en el número de curvas y asigna curvas de forma equitativa en tod el circuito
         // El +1 pq hay 1 curva que está al final y no se usa

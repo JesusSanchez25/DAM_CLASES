@@ -1,6 +1,6 @@
-package Ejercicios.Controlador;
+package ejercicios.Campeonato.Controlador;
 
-import Ejercicios.model.Coche;
+import ejercicios.Campeonato.model.Coche;
 
 import java.util.ArrayList;
 import java.util.Collections;

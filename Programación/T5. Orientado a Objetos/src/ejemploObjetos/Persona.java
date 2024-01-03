@@ -1,4 +1,4 @@
-package Estructura.modelo;
+package ejemploObjetos;
 
 public class Persona {
 

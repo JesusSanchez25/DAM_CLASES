@@ -1,6 +1,4 @@
-package Ejercicios.model;
-
-import java.util.ArrayList;
+package ejercicios.Campeonato.model;
 
 public class Coche {
     // la dirección tiene Parado, Recto, Izquierda y Derecha
@@ -76,7 +74,7 @@ public class Coche {
         }
 
 
-        int kmAvanza = velocidad;
+        int kmAvanza = this.velocidad;
         this.km += kmAvanza;
 
         // Pone el coche recto
