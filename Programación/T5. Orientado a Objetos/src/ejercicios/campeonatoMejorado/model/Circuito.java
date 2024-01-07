@@ -17,7 +17,7 @@ public class Circuito {
 
     public Circuito(){}
 
-    public Circuito(String nombre, int kmTotales, int vueltas, int curvas){
+    public Circuito(String nombre, int kmTotales, int curvas){
         this.nombre = nombre;
         this.kmTotales = kmTotales;
         this.vueltas = vueltas;

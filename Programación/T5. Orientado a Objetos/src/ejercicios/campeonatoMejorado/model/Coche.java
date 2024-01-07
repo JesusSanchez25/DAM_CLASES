@@ -3,7 +3,7 @@ package ejercicios.campeonatoMejorado.model;
 public class Coche {
     // la dirección tiene Parado, Recto, Izquierda y Derecha
     private int cv,velocidad, km, cc, puntos;
-    private String direccion, matricula, nombre;
+    private String direccion, matricula, nombre, simbolo;
     private char categoria;
     // A -> cv> 200
     // B -> cv= entre 150-200
@@ -14,13 +14,14 @@ public class Coche {
     // CONSTRUCTOR
     public Coche(){}
 
-    public Coche(String nombre, String matricula, int cv, int cc){
+    public Coche(String nombre, String matricula, int cv, int cc, String simbolo){
 
         this.nombre = nombre;
         this.matricula = matricula;
         this.cv = cv;
         this.cc = cc;
         this.direccion = "parado";
+        this.simbolo = simbolo;
         categoria = categorizarCoche(cv);
 
         // No es necesario poner km = 0 porque es un tipo primitivo y es 0
@@ -190,5 +191,11 @@ public class Coche {
         return categoria;
     }
 
+    public String getSimbolo() {
+        return simbolo;
+    }
 
+    public void setSimbolo(String simbolo) {
+        this.simbolo = simbolo;
+    }
 }

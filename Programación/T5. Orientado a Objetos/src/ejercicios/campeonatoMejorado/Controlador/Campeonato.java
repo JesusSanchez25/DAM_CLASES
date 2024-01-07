@@ -1,5 +1,6 @@
 package ejercicios.campeonatoMejorado.Controlador;
 
+import ejercicios.campeonatoMejorado.Entrada;
 import ejercicios.campeonatoMejorado.model.Coche;
 
 import java.util.ArrayList;
@@ -118,8 +119,7 @@ public class Campeonato {
         });
     }
 
-    public void mostrarParrilla() {
-        ordenarParrilla();
+    public void mostrarPuntos() {
         for (int i = 0; i < listaParticipantes.size(); i++) {
             System.out.printf("%dº - %s con %d puntos\n", i + 1,
                     listaParticipantes.get(i).getNombre()
@@ -131,8 +131,6 @@ public class Campeonato {
 
     // iniciarCampeonato
     public void iniciarCampeonato() {
-
-        mostrarDatos();
 
         for (Carrera item : listaCarreras) {
 
@@ -154,10 +152,14 @@ public class Campeonato {
             // ver la clasificacion con puntos del campeonato
             System.out.println("\nLa situacion del campeonato tras correr la carrera es:");
             ordenarParrilla();
-            mostrarParrilla();
+            mostrarPuntos();
             System.out.println("\n");
+            pararTiempo(5);
+
 
         }
+
+
     }
 
     // recorrer todas las carreres e iniciarlas
@@ -167,7 +169,14 @@ public class Campeonato {
 
 
 
-
+    public void pararTiempo(int segundos){
+        try {
+            //Ponemos a "Dormir" el programa durante los ms que queremos
+            Thread.sleep(segundos*1000);
+        } catch (Exception e) {
+            System.out.println("e");
+        }
+    }
     public String getNombre() {
         return nombre;
     }
@@ -200,3 +209,4 @@ public class Campeonato {
         this.campeon = campeon;
     }
 }
+

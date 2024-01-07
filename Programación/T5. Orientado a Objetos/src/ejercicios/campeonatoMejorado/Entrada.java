@@ -8,17 +8,17 @@ import ejercicios.campeonatoMejorado.model.Coche;
 public class Entrada {
 
     public static void main(String[] args) {
-        Coche participante1 = new Coche("Participante1","1234",70,3000);
-        Coche participante2 = new Coche("Participante2","2345",90,3000);
-        Coche participante3 = new Coche("Participante3","3456",100,3000);
-        Coche participante4 = new Coche("Participante4","4567",110,3000);
-        Coche participante5 = new Coche("Participante5","5678",80,3000);
-        Coche participante6 = new Coche("Participante6","6789",75,3000);
+        Coche participante1 = new Coche("Caballo","1234",70,3000,"\uD83C\uDFC7");
+        Coche participante2 = new Coche("Ferrari","2345",90,3000,"\uD83C\uDFCE\uFE0F");
+        Coche participante3 = new Coche("Moto","3456",100,3000,"\uD83C\uDFCD\uFE0F");
+        Coche participante4 = new Coche("Persona en bicicleta","4567",110,3000,"\uD83D\uDEB4");
+        Coche participante5 = new Coche("Autobús","5678",80,3000,"\uD83D\uDE8C");
+        Coche participante6 = new Coche("Cerdo","6789",75,3000,"\uD83D\uDC16");
 
 
-        Circuito ciruito1 = new Circuito("Imola",1800,7, 5);
-        Circuito ciruito2 = new Circuito("Jarama",1500,5, 4);
-        Circuito ciruito3 = new Circuito("Suzuka",900,4, 3);
+        Circuito ciruito1 = new Circuito("Imola",1800, 5);
+        Circuito ciruito2 = new Circuito("Jarama",1500, 4);
+        Circuito ciruito3 = new Circuito("Suzuka",900, 3);
         Carrera carrera1 = new Carrera(ciruito1);
         Carrera carrera2 = new Carrera(ciruito2);
         Carrera carrera3 = new Carrera(ciruito3);
@@ -40,7 +40,6 @@ public class Entrada {
         campeonato.agregarCarrera(carrera3);
         campeonato.agregarCarrera(carrera4);
         campeonato.agregarCarrera(carrera5);
-
 
         campeonato.iniciarCampeonato();
 

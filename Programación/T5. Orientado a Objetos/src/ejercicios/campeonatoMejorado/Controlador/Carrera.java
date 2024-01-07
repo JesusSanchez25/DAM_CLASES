@@ -32,9 +32,8 @@ public class Carrera {
     public void mostrarDatos() {
         System.out.println("Los datos de la carrera son:");
         System.out.println("KM: " + circuito.getKmTotales());
-        System.out.println("Vueltas: " + circuito.getVueltas());
+        System.out.println("Curvas: " + circuito.getCurvas());
         System.out.println("Nº de participantes: " + participantes.size());
-        System.out.println("Nº de vueltas: " + circuito.getVueltas());
     }
 
     // inscribir un participante
@@ -47,17 +46,21 @@ public class Carrera {
 
     public void decidirGanador() {
 
-        ordenarParrilla();
+        for (Coche item : participantes) {
+            if (item.getKm() > circuito.getKmTotales() && ganador==null){
+                ganador = item;
 
-        ganador = participantes.get(0);
-        if (ganador.getKm() >= circuito.getKmTotales()) {
-            System.out.println("Ya tenemos nuestro ganador");
-            ganador = participantes.get(0);
-
-        } else {
-            System.out.println("No hay ganador todavía.");
-            ganador = null;
+            } else if (ganador!=null) {
+                if (ganador.getKm()<item.getKm()){
+                    ganador=item;
+                }
+            }
         }
+
+
+
+
+
 
     }
 
@@ -72,13 +75,14 @@ public class Carrera {
 
         for (Coche item : participantes) {
 
-            int kmRecorridos = (int) (Math.random() * 110) + 30;
+            int velocidadAcelerada = (int) (Math.random() * 100) + 10;
 
-            item.acelerar(kmRecorridos);
+            item.acelerar(velocidadAcelerada);
 
             // Los coches frenan en caso de encontrarse con una curva
-            if (pasaCurva(kmRecorridos, item)){
-                item.frenar((int) ((item.velocidadMax())- Math.random()*70));
+            if (pasaCurva(item.getVelocidad(), item)){
+                item.setVelocidad(20);
+                System.out.println("acaba de pasar una curva");
             };
 
 
@@ -97,7 +101,7 @@ public class Carrera {
             // curvas del circuito
             for (int i = 0; i < circuito.getCurvas(); i++) {
                 if (coche.getKm()>circuito.getLocalizacionCurvas().get(i)
-                        && (coche.getKm()-distanciaRecorrida) <(circuito.getLocalizacionCurvas().get(i))){
+                        && (coche.getKm()-distanciaRecorrida) < (circuito.getLocalizacionCurvas().get(i))){
                     return true;
                 };
             }
@@ -105,52 +109,71 @@ public class Carrera {
 
     }
 
+    public static void limpiarPantalla (){
+
+        for (int i = 0; i < 15; i++) {
+            System.out.println("");
+        }
+
+    }
+
 
 
     public void iniciarCarrera() {
 
+
+
         // Presentación de la carrera
-        System.out.println("Procedemos a correr la carrera en "
-                + circuito.getNombre());
+        System.out.println("\nProcedemos a correr la carrera en -"
+                + circuito.getNombre()+"-:");
         mostrarDatos();
+        pararTiempo(5);
+        limpiarPantalla();
 
-         for (int i = 0; i < circuito.getVueltas(); i++) {
-             System.out.printf("\n*%dº vuelta:*\n", i+1);
-
-                acelerarCoches();
-
-             System.out.println("Posiciones actuales:");
-                mostrarParrilla();
-
-        }
-        System.out.println("/Vueltas oficiales terminadas./");
-        decidirGanador();
-
-        // si no hay ganador -> vuelta extra
-        // si hay ganador -> muestro datos
         while (ganador == null) {
-            System.out.println("Vuelta extra!!!");
             acelerarCoches();
 
-            System.out.println("Posiciones actuales:");
-            mostrarParrilla();
-
             decidirGanador();
+
+            mostrarCarrera();
+
+
+
+            try {
+                //Ponemos a "Dormir" el programa durante los ms que queremos
+                Thread.sleep(1*1500);
+            } catch (Exception e) {
+                System.out.println("e");
+            }
+
+            if(ganador == null){limpiarPantalla();
+            } else {pararTiempo(2);}
         }
+
+
 
         // Muestra el GANADOR y los datos finales de la carrera
         System.out.printf("\nEl ganador de la carrera es '%s' con %dkm.\n", ganador.getNombre(), ganador.getKm());
         System.out.println("Estos han sido los resultados finales de la carrera:");
         mostrarParrilla();
 
+            pararTiempo(5);
+
+
         // Reparte los puntos para la clasificación del campeonato
+        limpiarPantalla();
         repartirPuntos();
 
         // Resetea todos los coches
         resetear();
+
+
+
+
     }
 
     public void repartirPuntos(){
+        ordenarParrilla();
         // primero 10 puntos más
         participantes.get(0).setPuntos(participantes.get(0).getPuntos()+10);
         participantes.get(1).setPuntos(participantes.get(1).getPuntos()+5);
@@ -168,6 +191,15 @@ public class Carrera {
             } else {
                 participantes.add(coche);
             }
+        }
+    }
+
+    public void pararTiempo(int segundos){
+        try {
+            //Ponemos a "Dormir" el programa durante los ms que queremos
+            Thread.sleep(segundos*1000);
+        } catch (Exception e) {
+            System.out.println("e");
         }
     }
 
@@ -234,6 +266,23 @@ public class Carrera {
             posicion++;
         } */
     }
+
+    public void mostrarCarrera() {
+
+        System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+        for (Coche item : participantes) {
+            for (int i = 0; i < (double)item.getKm() / circuito.getKmTotales() * 155; i++) {
+                System.out.print("=");
+                if (i==155){break;}
+            }
+            System.out.print(item.getSimbolo());
+            if (item==ganador){
+                System.out.print("\t GANADOR");
+            }
+            System.out.println("");
+            System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
+        }    }
 
 
     public Circuito getCircuito() {

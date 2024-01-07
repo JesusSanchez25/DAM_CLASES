@@ -129,15 +129,7 @@ public class Carrera {
 
         // si no hay ganador -> vuelta extra
         // si hay ganador -> muestro datos
-        while (ganador == null) {
-            System.out.println("Vuelta extra!!!");
-            acelerarCoches();
 
-            System.out.println("Posiciones actuales:");
-            mostrarParrilla();
-
-            decidirGanador();
-        }
 
         // Muestra el GANADOR y los datos finales de la carrera
         System.out.printf("\nEl ganador de la carrera es '%s' con %dkm.\n", ganador.getNombre(), ganador.getKm());
