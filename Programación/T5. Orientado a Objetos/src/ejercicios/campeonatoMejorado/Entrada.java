@@ -13,7 +13,7 @@ public class Entrada {
         Coche participante3 = new Coche("Moto","3456",100,3000,"\uD83C\uDFCD\uFE0F");
         Coche participante4 = new Coche("Persona en bicicleta","4567",110,3000,"\uD83D\uDEB4");
         Coche participante5 = new Coche("Autobús","5678",80,3000,"\uD83D\uDE8C");
-        Coche participante6 = new Coche("Cerdo","6789",75,3000,"\uD83D\uDC16");
+        Coche participante6 = new Coche("Cerdo","6789",75,3000,"\uD83D\uDC16 ");
 
 
         Circuito ciruito1 = new Circuito("Imola",1800, 5);

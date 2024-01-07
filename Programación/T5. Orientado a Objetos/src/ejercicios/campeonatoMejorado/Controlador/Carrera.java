@@ -100,8 +100,8 @@ public class Carrera {
             // Calcula si en la distancia que acaba de recorrer el coche se ha topado con alguna de las
             // curvas del circuito
             for (int i = 0; i < circuito.getCurvas(); i++) {
-                if (coche.getKm()>circuito.getLocalizacionCurvas().get(i)
-                        && (coche.getKm()-distanciaRecorrida) < (circuito.getLocalizacionCurvas().get(i))){
+                if (coche.getKm()>=circuito.getLocalizacionCurvas().get(i)
+                        && (coche.getKm()-distanciaRecorrida) <= (circuito.getLocalizacionCurvas().get(i))){
                     return true;
                 };
             }
