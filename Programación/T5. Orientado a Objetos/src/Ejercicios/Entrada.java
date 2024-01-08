@@ -1,5 +1,6 @@
 package Ejercicios;
 
+import Ejercicios.Controlador.Campeonato;
 import Ejercicios.Controlador.Carrera;
 import Ejercicios.model.Circuito;
 import Ejercicios.model.Coche;
@@ -11,17 +12,35 @@ public class Entrada {
 
         Coche participante1 = new Coche("Participante1", "1234A", 240, 150);
         Coche participante2 = new Coche("Participante2", "1234B", 240, 170);
-        Circuito circuito1 = new Circuito("Imola", 300, 5);
+        Circuito circuito1 = new Circuito("Imola", 500, 8);
+        Circuito circuito2 = new Circuito("Jarama", 400, 7);
+        Circuito circuito3 = new Circuito("Suzuka", 300, 5);
+
+
+
         Carrera carrera1 = new Carrera(circuito1);
+        Carrera carrera2 = new Carrera(circuito2);
+        Carrera carrera3 = new Carrera(circuito3);
+        Carrera carrera4 = new Carrera(circuito2);
+        Carrera carrera5 = new Carrera(circuito1);
+
+        Campeonato campeonato1 = new Campeonato("Torneo CES");
+        campeonato1.inscribirParticipante(participante1);
+        campeonato1.inscribirParticipante(participante2);
+
+
+
+
+
+
 
         // participantes = (participantes1, participantes2)
         // km = 300 (los del circuito)
-        carrera1.mostrarDatos();
-        carrera1.inscribirParticipante(participante1);
-        carrera1.inscribirParticipante(participante1);
-        carrera1.descalificarParticipantes(participante1.getMatricula());
-        carrera1.mostrarParticipantes();
-
+        /*    carrera1.mostrarDatos();
+            carrera1.inscribirParticipante(participante1);
+            carrera1.inscribirParticipante(participante1);
+            carrera1.descalificarParticipantes(participante1.getMatricula());
+            carrera1.mostrarParticipantes();
 /*
         // para cambiar los km totales en el model de circuito1
         circuito1.setKmTotales(500);
