@@ -1,6 +1,4 @@
-package Estructura.modelo;
-
-import Estructura.modelo.Persona;
+package ejemploObjetos;
 
 import java.util.ArrayList;
 
