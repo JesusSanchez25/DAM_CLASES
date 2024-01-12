@@ -1,22 +1,29 @@
 package ejerciciosClase.ejercicioClase3_Agenda.controler;
 
 public class Persona {
-    private String nobre,dni;
+    private String nombre,dni;
     private int telefono;
 
     public Persona(){}
-    public Persona(String nobre, String dni, int telefono) {
-        this.nobre = nobre;
+    public Persona(String nombre, String dni, int telefono) {
+        this.nombre = nombre;
         this.dni = dni;
         this.telefono = telefono;
     }
 
+    public void mostrarDatos(){
+        System.out.printf("Nombre: %s\n", nombre);
+        System.out.printf("Telefono: %s\n", telefono);
+
+
+    }
+
     public String getNobre() {
-        return nobre;
+        return nombre;
     }
 
     public void setNobre(String nobre) {
-        this.nobre = nobre;
+        this.nombre = nobre;
     }
 
     public String getDni() {
