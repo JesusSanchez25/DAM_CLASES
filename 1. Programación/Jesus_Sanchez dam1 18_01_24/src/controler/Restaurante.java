@@ -1,11 +1,23 @@
 package controler;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import model.Cliente;
 import model.Pedido;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Restaurante {
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+
+public class Restaurante implements Serializable {
+
+
     private int caja;
     private String nif,nombre;
     private ArrayList<Pedido> pedidos;
@@ -77,27 +89,5 @@ public class Restaurante {
        }
     }
 
-    public int getCaja() {
-        return caja;
-    }
 
-    public void setCaja(int caja) {
-        this.caja = caja;
-    }
-
-    public String getNif() {
-        return nif;
-    }
-
-    public void setNif(String nif) {
-        this.nif = nif;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 }

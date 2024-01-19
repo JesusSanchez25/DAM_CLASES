@@ -47,7 +47,6 @@ public class Entrada {
 
 
 
-
         pedido1.agregarProducto(cocacola);
         pedido1.agregarProducto(H_alcorcon);
         pedido1.agregarProducto(helado);
