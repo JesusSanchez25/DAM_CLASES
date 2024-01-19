@@ -39,7 +39,7 @@ public class Partido {
             // El partido ha terminado
             partidoEnJuego = false;
         } else {
-            System.out.println("El partido ya está en juego.");
+            System.out.println("El partido ya está en juego."); 
         }
     }
 
