@@ -14,28 +14,117 @@
   <header>
     <h1>LA PAGINA DEFINITIVA</h1>
   </header>
+
+  
   <div class="hola">
   </div>
 
   <div class="pagPrincipal">
     <div class="selectores">
       <ol class="">
-        <li onmouseover="document.getElementById('columnas2').style.animation='desaparecer 3s forwards'; document.getElementById('columnas3').style.animation='aparecer 3s forwards'; document.getElementById('enunciado2').style.animation='desvanecerse 1s forwards'; document.getElementById('enunciado3').style.animation='reaparecer 5s forwards';" class="button">1º Ejercicio</li>
-        <li class="button">2º Ejercicio</li>
-        <li class="button">3º Ejercicio</li>
-        <li class="button">4º Ejercicio</li>
-        <li id="button2" class="button2">5º Ejercicio</li>
+        <li onmousedown=
+        "document.getElementById('columnas1').style.animation='aparecer 3s forwards';    
+
+        document.getElementById('columnas2').style.animation='desaparecer 3s forwards';
+        document.getElementById('columnas3').style.animation='desaparecer 3s forwards'; 
+        document.getElementById('columnas4').style.animation='desaparecer 3s forwards';
+        document.getElementById('columnas5').style.animation='desaparecer 3s forwards'; 
+        document.getElementById('enunciado1').style.animation='reaparecer 5s forwards';
+        document.getElementById('enunciado2').style.animation='desvanecerse 1s forwards';
+        document.getElementById('enunciado3').style.animation='desvanecerse 1s forwards';
+        document.getElementById('enunciado4').style.animation='desvanecerse 1s forwards';
+        document.getElementById('enunciado5').style.animation='desvanecerse 1s forwards';" 
+        class="button">1º Ejercicio</li>
+        
+        <li onmousedown=
+        "document.getElementById('columnas2').style.animation='aparecer 3s forwards';    
+
+        document.getElementById('columnas1').style.animation='desaparecer 3s forwards';
+        document.getElementById('columnas3').style.animation='desaparecer 3s forwards'; 
+        document.getElementById('columnas4').style.animation='desaparecer 3s forwards';
+        document.getElementById('columnas5').style.animation='desaparecer 3s forwards'; 
+        document.getElementById('enunciado2').style.animation='reaparecer 5s forwards';
+        document.getElementById('enunciado1').style.animation='desvanecerse 1s forwards';
+        document.getElementById('enunciado3').style.animation='desvanecerse 1s forwards';
+        document.getElementById('enunciado4').style.animation='desvanecerse 1s forwards';
+        document.getElementById('enunciado5').style.animation='desvanecerse 1s forwards';" 
+        class="button">2º Ejercicio</li>
+        <li onmousedown=
+        "document.getElementById('columnas3').style.animation='aparecer 3s forwards';    
+
+        document.getElementById('columnas2').style.animation='desaparecer 3s forwards';
+        document.getElementById('columnas1').style.animation='desaparecer 3s forwards'; 
+        document.getElementById('columnas4').style.animation='desaparecer 3s forwards';
+        document.getElementById('columnas5').style.animation='desaparecer 3s forwards'; 
+        document.getElementById('enunciado3').style.animation='reaparecer 5s forwards';
+        document.getElementById('enunciado2').style.animation='desvanecerse 1s forwards';
+        document.getElementById('enunciado1').style.animation='desvanecerse 1s forwards';
+        document.getElementById('enunciado4').style.animation='desvanecerse 1s forwards';
+        document.getElementById('enunciado5').style.animation='desvanecerse 1s forwards';" 
+        class="button">3º Ejercicio</li>
+        <li onmousedown=
+        "document.getElementById('columnas4').style.animation='aparecer 3s forwards';    
+
+        document.getElementById('columnas2').style.animation='desaparecer 3s forwards';
+        document.getElementById('columnas3').style.animation='desaparecer 3s forwards'; 
+        document.getElementById('columnas1').style.animation='desaparecer 3s forwards';
+        document.getElementById('columnas5').style.animation='desaparecer 3s forwards'; 
+        document.getElementById('enunciado4').style.animation='reaparecer 5s forwards';
+        document.getElementById('enunciado2').style.animation='desvanecerse 1s forwards';
+        document.getElementById('enunciado3').style.animation='desvanecerse 1s forwards';
+        document.getElementById('enunciado1').style.animation='desvanecerse 1s forwards';
+        document.getElementById('enunciado5').style.animation='desvanecerse 1s forwards';" 
+        class="button">4º Ejercicio</li>
+        <li onmousedown=
+        "document.getElementById('columnas5').style.animation='aparecer 3s forwards';    
+
+        document.getElementById('columnas1').style.animation='desaparecer 3s forwards';
+        document.getElementById('columnas3').style.animation='desaparecer 3s forwards'; 
+        document.getElementById('columnas4').style.animation='desaparecer 3s forwards';
+        document.getElementById('columnas2').style.animation='desaparecer 3s forwards'; 
+        document.getElementById('enunciado5').style.animation='reaparecer 5s forwards';
+        document.getElementById('enunciado1').style.animation='desvanecerse 1s forwards';
+        document.getElementById('enunciado3').style.animation='desvanecerse 1s forwards';
+        document.getElementById('enunciado4').style.animation='desvanecerse 1s forwards';
+        document.getElementById('enunciado2').style.animation='desvanecerse 1s forwards';" 
+        class="button">5º Ejercicio</li>
       </ol>
   
     </div>
 
-    <div id="contenido2" class="contenido">
+    <div id="contenido" class="contenido">
+      <!-- Todos los enunciados -->
+      <div id="enunciado1" class="enunciado">
+        <img src="assets/Enunciado ejercicio 1.png" alt="código">
+      </div>
+
       <div id="enunciado2" class="enunciado">
         <img src="assets/Enunciado ejercicio 2.png" alt="código">
       </div>
 
       <div id="enunciado3" class="enunciado">
-        <img src="assets/Enunciado ejercicio 2.png" alt="código">
+        <img src="assets/Enunciado ejercicio 3.png" alt="código">
+      </div>
+
+      <div id="enunciado4" class="enunciado">
+        <img src="assets/Enunciado ejercicio 4.png" alt="código">
+      </div>
+
+      <div id="enunciado5" class="enunciado">
+        <img src="assets/Enunciado ejercicio 5.png" alt="código">
+      </div>
+
+
+      <!-- Todas las columnas -->
+      <div id="columnas1" class="columnas">
+        <div class="ejemplo">
+          
+        </div>
+
+        <div class="codigoEjemplo">
+          <img src="assets/Codigo ejercicio 1.png" alt="">
+        </div>
+
       </div>
 
       <div id="columnas2" class="columnas">
@@ -57,17 +146,48 @@
 
       <div id="columnas3" class="columnas">
         <div class="ejemplo">
-          <ol class="">
-            <li>1º Elemento</li>
-            <li>2º Elemento</li>
-            <li>3º Elemento</li>
-            <li>4º Elemento</li>
-            <li>5º Elemento</li>
-          </ol>
+          <img src="assets/willy.jpg" alt="">
+          <p>-Foto de nuestro salvador</p>
         </div>
 
         <div class="codigoEjemplo">
-          <img src="assets/Codigo ejercicio 2.png" alt="">
+          <img src="assets/Codigo ejercicio 3.png" alt="">
+        </div>
+
+      </div>
+
+      <div id="columnas4" class="columnas">
+        <div class="ejemplo">
+          <form>
+            <h2>Formulario de Contacto</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+        
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" required>
+        
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" required></textarea>
+        
+            <input type="submit" value="Enviar">
+          </form>
+        </div>
+
+        <div class="codigoEjemplo">
+          <img src="assets/Codigo ejercicio 4.png" alt="">
+        </div>
+
+      </div>
+
+      <div id="columnas5" class="columnas">
+        <div class="ejemplo">
+          <div class="ej5">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint fuga.</h2>
+          </div>
+        </div>
+
+        <div class="codigoEjemplo">
+          <img src="assets/Codigo ejercicio 5.png" alt="">
         </div>
 
       </div>
@@ -83,7 +203,7 @@
   
   
 
-
+<footer>FIN DE PAGINA</footer>
 </body>
 
 
