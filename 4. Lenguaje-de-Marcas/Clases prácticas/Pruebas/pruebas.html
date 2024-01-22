@@ -38,7 +38,7 @@
 
     .moverLista {
       transform: translateY(35px);
-      scale: 0.8;
+      scale: 0.9;
       opacity: 1;
     }
 
@@ -77,14 +77,14 @@
     var estilo = window.getComputedStyle(cuadrado);
     
     if (estilo.borderColor === 'rgb(0, 0, 0)') {
-      cuadrado.style.borderColor = 'yellow';
-    } else if (estilo.borderColor === 'rgb(255, 255, 0)') {
+      cuadrado.style.borderColor = 'rgb(0, 0, 255)';
+    } else if (estilo.borderColor === 'rgb(0, 0, 255)') {
       cuadrado.style.borderColor = 'green';
     } else if (estilo.borderColor === 'rgb(0, 128, 0)') {
       cuadrado.style.borderColor = 'rgb(255, 165, 0)';
     } else if (estilo.borderColor === 'rgb(255, 165, 0)') {
-      cuadrado.style.borderColor = 'rgb(0, 0, 255)';
-    } else if (estilo.borderColor === 'rgb(0, 0, 255)') {
+      cuadrado.style.borderColor = 'rgb(255, 255, 0)';
+    } else if (estilo.borderColor === 'rgb(255, 255, 0)') {
       cuadrado.style.borderColor = 'rgb(142, 68, 173)';
     } else if (estilo.borderColor === 'rgb(142, 68, 173)') {
       cuadrado.style.borderColor = 'black';
@@ -107,14 +107,14 @@ document.getElementById('TOP').classList.toggle('moverLista');
     var estilo = window.getComputedStyle(cuadrado);
     
     if (estilo.borderTopColor === 'rgb(0, 0, 0)') {
-      cuadrado.style.borderTopColor = 'yellow';
-    } else if (estilo.borderTopColor === 'rgb(255, 255, 0)') {
+      cuadrado.style.borderTopColor = 'rgb(0, 0, 255)';
+    } else if (estilo.borderTopColor === 'rgb(0, 0, 255)') {
       cuadrado.style.borderTopColor = 'green';
     } else if (estilo.borderTopColor === 'rgb(0, 128, 0)') {
       cuadrado.style.borderTopColor = 'rgb(255, 165, 0)';
     } else if (estilo.borderTopColor === 'rgb(255, 165, 0)') {
-      cuadrado.style.borderTopColor = 'rgb(0, 0, 255)';
-    } else if (estilo.borderTopColor === 'rgb(0, 0, 255)') {
+      cuadrado.style.borderTopColor = 'rgb(255, 255, 0)';
+    } else if (estilo.borderTopColor === 'rgb(255, 255, 0)') {
       cuadrado.style.borderTopColor = 'rgb(142, 68, 173)';
     } else if (estilo.borderTopColor === 'rgb(142, 68, 173)') {
       cuadrado.style.borderTopColor = 'black';
