@@ -1,88 +1,200 @@
-<header id="header" style="
-        box-shadow: #000000 -5px -5px 15px;
-        display: block;
-        position: fixed;
-        padding:1%;
-        padding-bottom: 2px;
-        width:98%;
-        left: 0;
-        z-index: 998;
-        top: 0;
-        ">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuadrado con Cambio de Borde</title>
+  <style>
+    .cuadrado {
+      width: 200px;
+      height: 200px;
+      margin: 20px;
+      border: 10px solid black;
+      transition: border-color 0.3s ease-in-out;
+    }
 
-        <hr style="background-color:#a81e26; z-index:997;
-        height: 10.8%; z-index:996;  display: block;
-        position: fixed;
-        padding:-8%;
-        margin-top: -1.1%;
-        margin-left: -1.1%;
+    button{
+      user-select: none;
+      background-color: greenyellow;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      padding: 5px;
 
-        z-index: -999;
-        width:105%;">
+    }
 
-        <img src="C:\Users\magol\Downloads\banner3.png" style=" display: block;
-        position: fixed;
-        padding:-5%;
-        margin-top: -6px;
-        width:105%;
-        left: 0;
-        top: 0;
-        z-index:-997;
-        height: 11.2%;  
-        opacity: 0.2;
-        ">        
+    .TOP{
+      transition: transform 2s, scale 2s, opacity 2s;
+      display: flex;
+      list-style: none;
+      position: absolute;
+      gap: 10px;
+      margin-top: -20px;
+      margin-left: 40px;
+      opacity: 0;
+      scale: 0.2;
+    }
 
-<table style="z-index: 999;">
-    <a id="unlock" href="javascript:;" style="
-        margin-left:735px; display: none;"
-        onclick="this.style.display='none'; getElementById('lock').style.display='inline-block';
-                    getElementById('HamburguerMenu').style.display='none';getElementById('header').style.position='absolute'">
-        <img src="C:\Users\magol\Web-Navidad\assets\unlock.png" height="28px"></a>
-
-    <a id="lock" href="javascript:;" style="
-        margin-left:735px; display: none" onclick="this.style.display='none'; getElementById('unlock').style.display='inline-block';
-                    getElementById('header').style.position='fixed'">
-        <img src="C:\Users\magol\Web-Navidad\assets/lock.png" height="28px"></a>
+    .moverLista {
+      transform: translateY(35px);
+      scale: 0.8;
+      opacity: 1;
+    }
 
 
-    <a href="#" style="float: left;">
-        <img src="C:\Users\magol\Web-Navidad\assets/icons/legoLogo.png" alt="Zoo Logo" width="55px" height="55px"
-            style="margin-top: -5px; box-shadow: #00000050 0px 0px 1px;">
-    </a>
+  </style>
+</head>
+<body>
+  <div id="miCuadrado" class="cuadrado"></div>
+  
 
-    <!--Enlazar a 'Pagina en construccion'-->
-    <a href=""><img src="C:\Users\magol\Web-Navidad\assets/icons/shoppingBagIcon.png" alt="Carrito" width="60px"
-            style="margin-top: -10px; float: right;">
-    </a>
+  <!-- Cambiar estilo-->
+  <!-- Este botón cada vez que es pulsado detecta el estilo de borde (inferior por motivos logisticos) que tiene el cubo
+  y sigue una cadena predefinida de estilos hasta volver al inicial-->
+  <button onclick="
+    var cuadrado = document.getElementById('miCuadrado');
+    var estilo = window.getComputedStyle(cuadrado);
+    
+    if (estilo.borderBottomStyle === 'solid') {
+      cuadrado.style.borderStyle = 'dotted';}
+    else if (estilo.borderBottomStyle === 'dotted'){
+      cuadrado.style.borderStyle = 'dashed';}
+    else if (estilo.borderBottomStyle === 'dashed'){
+      cuadrado.style.borderStyle = 'double';}
+    else if (estilo.borderBottomStyle === 'double'){
+      cuadrado.style.borderStyle = 'ridge';}
+    else if (estilo.borderBottomStyle === 'ridge'){
+      cuadrado.style.borderStyle = 'hidden';}
+    else if (estilo.borderBottomStyle === 'hidden'){
+      cuadrado.style.borderStyle = 'solid';}
+    ">Cambiar estilo</button>
 
-    <table cellspacing="0" cellpadding="0" onmouseleave="document.getElementById('search_bar').style.display='none';"
-        onmouseout="this.style.boxShadow='#00000020 2px 2px 4px'"
-        onmouseover="this.style.boxShadow='#00000030 3px 3px 5px'" style="float: right;
-        background-color:#ffffff; 
-        padding-left: 1px;
-        padding-bottom: 1px;
-        padding-left: 2px;
-        padding-right: 2px;
-        border-radius: 11px;
-        z-index: 10001;
-        box-shadow: #00000020 2px 2px 4px;">
-        <tr>
-            <td>
-                <!--Make it so a click on the icon also shows a translucent layer over everything else to detect clicks outside -->
-                <!--Fix the search bar to autofocus -->
-                <a href="javascript:;"><img src="C:\Users\magol\Web-Navidad\assets/icons/search.png" alt="Busqueda" width="40px"
-                        style="margin-right: 1px"
-                        onclick="document.getElementById('search_bar').style.display='block';">
+    <!-- Cambiar color del borde-->
+    <!-- Este botón cada vez que es pulsado detecta el color del borde (inferior en este caso por motivos logisticos) que tiene el cubo y sigue una cadena predefinida de colores hasta volver al inicial-->
+   <button onclick="
+    var cuadrado = document.getElementById('miCuadrado');
+    var estilo = window.getComputedStyle(cuadrado);
+    
+    if (estilo.borderColor === 'rgb(0, 0, 0)') {
+      cuadrado.style.borderColor = 'yellow';
+    } else if (estilo.borderColor === 'rgb(255, 255, 0)') {
+      cuadrado.style.borderColor = 'green';
+    } else if (estilo.borderColor === 'rgb(0, 128, 0)') {
+      cuadrado.style.borderColor = 'rgb(255, 165, 0)';
+    } else if (estilo.borderColor === 'rgb(255, 165, 0)') {
+      cuadrado.style.borderColor = 'rgb(0, 0, 255)';
+    } else if (estilo.borderColor === 'rgb(0, 0, 255)') {
+      cuadrado.style.borderColor = 'rgb(142, 68, 173)';
+    } else if (estilo.borderColor === 'rgb(142, 68, 173)') {
+      cuadrado.style.borderColor = 'black';
+    }
+">Cambiar colores</button>
 
-                </a>
-            </td>
-            <td>
-                <input id="search_bar" type="search" placeholder="Buscar..."
-                    style="display: none; border:none; outline:none; margin-left:2%; font-size:14px; margin-right:5px; font-family: Lexend;">
-            </td>
+<button onclick="
+document.getElementById('TOP').classList.toggle('moverLista');
+">TOP BORDER</button>
 
-        </tr>
-    </table>
-  </table>
+<ul id="TOP" class="TOP">  
 
-</header>
+    
+    <!-- Cambiar color del borde de arriba-->
+    <!-- Este botón cada vez que es pulsado detecta el color de borde (de arriba) que tiene el cubo
+    y lo cambia según una cadena predefinida de colores hasta volver al inicial-->
+    <li>
+    <button onclick="
+    var cuadrado = document.getElementById('miCuadrado');
+    var estilo = window.getComputedStyle(cuadrado);
+    
+    if (estilo.borderTopColor === 'rgb(0, 0, 0)') {
+      cuadrado.style.borderTopColor = 'yellow';
+    } else if (estilo.borderTopColor === 'rgb(255, 255, 0)') {
+      cuadrado.style.borderTopColor = 'green';
+    } else if (estilo.borderTopColor === 'rgb(0, 128, 0)') {
+      cuadrado.style.borderTopColor = 'rgb(255, 165, 0)';
+    } else if (estilo.borderTopColor === 'rgb(255, 165, 0)') {
+      cuadrado.style.borderTopColor = 'rgb(0, 0, 255)';
+    } else if (estilo.borderTopColor === 'rgb(0, 0, 255)') {
+      cuadrado.style.borderTopColor = 'rgb(142, 68, 173)';
+    } else if (estilo.borderTopColor === 'rgb(142, 68, 173)') {
+      cuadrado.style.borderTopColor = 'black';
+    }
+    ">Cambiar colores</button></li>
+
+    <!-- Cambiar estilo del borde de arriba-->
+    <!-- Este botón cada vez que es pulsado detecta el estilo del borde (de arriba) que tiene el cubo
+    y lo cambia según una cadena predefinida de estilos hasta volver al inicial-->
+    <li>
+    <button onclick="
+    var cuadrado = document.getElementById('miCuadrado');
+    var estilo = window.getComputedStyle(cuadrado);
+    
+    if (estilo.borderTopStyle === 'solid') {
+      cuadrado.style.borderTopStyle = 'dotted';}
+    else if (estilo.borderTopStyle === 'dotted'){
+      cuadrado.style.borderTopStyle = 'dashed';}
+    else if (estilo.borderTopStyle === 'dashed'){
+      cuadrado.style.borderTopStyle = 'double';}
+    else if (estilo.borderTopStyle === 'double'){
+      cuadrado.style.borderTopStyle = 'ridge';}
+    else if (estilo.borderTopStyle === 'ridge'){
+      cuadrado.style.borderTopStyle = 'hidden';}
+    else if (estilo.borderTopStyle === 'hidden'){
+      cuadrado.style.borderTopStyle = 'solid';}
+    ">Cambiar estilo</button></li>
+
+
+    <!-- Cambiar el ancho del borde de arriba-->
+    <!-- Este botón cada vez que es pulsado detecta el ancho del borde (de arriba) que tiene el cubo
+    y lo le aumenta 5 pixeles-->
+    <li>
+    <button onclick="
+        var cuadrado = document.getElementById('miCuadrado');
+        var estilo = window.getComputedStyle(cuadrado);
+        var ancho = parseInt(estilo.borderTopWidth); 
+        cuadrado.style.borderTopWidth = (ancho + 5) + 'px';
+    ">Más ancho</button></li>
+
+    <!-- Cambiar el ancho del borde de arriba-->
+    <!-- Este botón cada vez que es pulsado detecta el ancho del borde (de arriba) que tiene el cubo
+    y lo le resta 5 pixeles-->
+    <li>
+    <button onclick="
+        var cuadrado = document.getElementById('miCuadrado');
+        var estilo = window.getComputedStyle(cuadrado);
+        var ancho = parseInt(estilo.borderTopWidth); 
+        cuadrado.style.borderTopWidth = (ancho - 5) + 'px';
+    ">Menos ancho</button></li>
+</ul>
+
+    <!-- Cambiar el ancho del cubo-->
+    <!-- Este botón cada vez que es pulsado detecta el estilo del borde (de abajo por motivos logísticos) que tiene el cubo
+    y le suma 5 píxeles-->
+    <button onclick="
+        var cuadrado = document.getElementById('miCuadrado');
+        var estilo = window.getComputedStyle(cuadrado);
+        var ancho = parseInt(estilo.borderWidth); 
+        cuadrado.style.borderWidth = (ancho + 5) + 'px';
+    ">Más ancho</button>
+
+
+    <!-- Cambiar el ancho del cubo-->
+    <!-- Este botón cada vez que es pulsado detecta el estilo del borde (de abajo por motivos logísticos) que tiene el cubo
+    y le suma 5 píxeles-->
+    <button onclick="
+        var cuadrado = document.getElementById('miCuadrado');
+        var estilo = window.getComputedStyle(cuadrado);
+        var ancho = parseInt(estilo.borderWidth); 
+        cuadrado.style.borderWidth = (ancho - 5) + 'px';
+    ">Menos ancho</button>
+
+
+
+ 
+
+
+
+
+  
+</body>
+</html>
