@@ -81,7 +81,7 @@ header h1{
 .pagPrincipal{
 margin: 0;
 width: 100%;
-height: 643px;
+height: 803px;
 }
 
 .selectores{
@@ -172,6 +172,7 @@ li {
   padding-top: 14%;
   height: 1000px;
   transform: translateX(1200px);
+  margin-left: 2%;
   float: right;
   position: absolute;
   opacity: 0;
@@ -181,6 +182,7 @@ li {
   float: inline-start;
   padding-inline-start: 25px;
   width: 46%;
+  height: 35%;
  float: left;
 }
 
@@ -205,6 +207,7 @@ border-right: solid 1px salmon;
 .ejemplo ol {
   padding: 0px 10px;
   width: 300px;
+  margin-left: 220px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -287,8 +290,8 @@ li:hover {
 .ej5{
   background-color: #fff;
   padding: 20px;
+  margin-left: 94px;
   padding-top: 0;
-  margin-left:60px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 250px;
