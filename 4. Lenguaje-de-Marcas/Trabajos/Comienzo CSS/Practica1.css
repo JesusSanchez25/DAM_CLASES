@@ -61,15 +61,6 @@ header{
  
 }
 
-footer{
-  width: 100%;
-  background-color: black;
-  min-height: 600px;
-  margin-bottom: 2000px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
 
 header h1{
   color: white;
@@ -77,6 +68,15 @@ header h1{
   margin: 0;
   font-weight: bold;
   font-family: Oswald;
+}
+
+footer{
+  width: 100%;
+  background-color: black;
+  min-height: 200px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .pagPrincipal{
