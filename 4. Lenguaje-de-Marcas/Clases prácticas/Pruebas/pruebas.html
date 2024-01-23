@@ -46,14 +46,14 @@
   </style>
 </head>
 <body>
-  <div id="miCuadrado" class="cuadrado"></div>
+  <div id="cuadrado" class="cuadrado"></div>
   
 
   <!-- Cambiar estilo-->
   <!-- Este botón cada vez que es pulsado detecta el estilo de borde (inferior por motivos logisticos) que tiene el cubo
   y sigue una cadena predefinida de estilos hasta volver al inicial-->
   <button onclick="
-    var cuadrado = document.getElementById('miCuadrado');
+    var cuadrado = document.getElementById('cuadrado');
     var estilo = window.getComputedStyle(cuadrado);
     
     if (estilo.borderBottomStyle === 'solid') {
@@ -73,7 +73,7 @@
     <!-- Cambiar color del borde-->
     <!-- Este botón cada vez que es pulsado detecta el color del borde (inferior en este caso por motivos logisticos) que tiene el cubo y sigue una cadena predefinida de colores hasta volver al inicial-->
    <button onclick="
-    var cuadrado = document.getElementById('miCuadrado');
+    var cuadrado = document.getElementById('cuadrado');
     var estilo = window.getComputedStyle(cuadrado);
     
     if (estilo.borderColor === 'rgb(0, 0, 0)') {
@@ -103,7 +103,7 @@ document.getElementById('TOP').classList.toggle('moverLista');
     y lo cambia según una cadena predefinida de colores hasta volver al inicial-->
     <li>
     <button onclick="
-    var cuadrado = document.getElementById('miCuadrado');
+    var cuadrado = document.getElementById('cuadrado');
     var estilo = window.getComputedStyle(cuadrado);
     
     if (estilo.borderTopColor === 'rgb(0, 0, 0)') {
@@ -126,7 +126,7 @@ document.getElementById('TOP').classList.toggle('moverLista');
     y lo cambia según una cadena predefinida de estilos hasta volver al inicial-->
     <li>
     <button onclick="
-    var cuadrado = document.getElementById('miCuadrado');
+    var cuadrado = document.getElementById('cuadrado');
     var estilo = window.getComputedStyle(cuadrado);
     
     if (estilo.borderTopStyle === 'solid') {
@@ -149,7 +149,7 @@ document.getElementById('TOP').classList.toggle('moverLista');
     y lo le aumenta 5 pixeles-->
     <li>
     <button onclick="
-        var cuadrado = document.getElementById('miCuadrado');
+        var cuadrado = document.getElementById('cuadrado');
         var estilo = window.getComputedStyle(cuadrado);
         var ancho = parseInt(estilo.borderTopWidth); 
         cuadrado.style.borderTopWidth = (ancho + 5) + 'px';
@@ -160,7 +160,7 @@ document.getElementById('TOP').classList.toggle('moverLista');
     y lo le resta 5 pixeles-->
     <li>
     <button onclick="
-        var cuadrado = document.getElementById('miCuadrado');
+        var cuadrado = document.getElementById('cuadrado');
         var estilo = window.getComputedStyle(cuadrado);
         var ancho = parseInt(estilo.borderTopWidth); 
         cuadrado.style.borderTopWidth = (ancho - 5) + 'px';
@@ -171,7 +171,7 @@ document.getElementById('TOP').classList.toggle('moverLista');
     <!-- Este botón cada vez que es pulsado detecta el estilo del borde (de abajo por motivos logísticos) que tiene el cubo
     y le suma 5 píxeles-->
     <button onclick="
-        var cuadrado = document.getElementById('miCuadrado');
+        var cuadrado = document.getElementById('cuadrado');
         var estilo = window.getComputedStyle(cuadrado);
         var ancho = parseInt(estilo.borderWidth); 
         cuadrado.style.borderWidth = (ancho + 5) + 'px';
@@ -182,7 +182,7 @@ document.getElementById('TOP').classList.toggle('moverLista');
     <!-- Este botón cada vez que es pulsado detecta el estilo del borde (de abajo por motivos logísticos) que tiene el cubo
     y le suma 5 píxeles-->
     <button onclick="
-        var cuadrado = document.getElementById('miCuadrado');
+        var cuadrado = document.getElementById('cuadrado');
         var estilo = window.getComputedStyle(cuadrado);
         var ancho = parseInt(estilo.borderWidth); 
         cuadrado.style.borderWidth = (ancho - 5) + 'px';

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> Estilo Bordes</title>
+        <link rel="stylesheet" href="Trabajo grupo.css">
+    </head>
+    <body>
+      <header class="header">
+        <h1>Diferentes Border</h1>
+    
+        <p>Explorando las posibilidades de estilos de borde en CSS</p>
+       </header> 
+        <section class="contenedor">
+            <div class="divEjemploCuadrado">
+              <div id="cuadrado" class="cuadrado"></div>
+              <div id="textoExplicacion" class="textoExplicacion"> <-- Este texto dará una breve descripción del borde elegido para permitir un mejor entendimiento y ayudar a la explicación -->
+              </div>
+              <div id="valores" class="valores"> 
+                <-- Aquí estará el valor del borde elegido -->
+              </div>
+            </div>
+            <div class="divBotones">
+              <div class="botones">
+                <!-- Cambiar estilo-->
+                <!-- Este botón cada vez que es pulsado detecta el estilo de borde (inferior por motivos logisticos) que tiene el cubo
+                y sigue una cadena predefinida de estilos hasta volver al inicial-->
+                <button class="button" onclick="
+  var cuadrado = document.getElementById('cuadrado');
+  var estilo = window.getComputedStyle(cuadrado);
+  
+  if (estilo.borderBottomStyle === 'solid') {
+    cuadrado.style.borderStyle = 'dotted';
+  } else if (estilo.borderBottomStyle === 'dotted') {
+    cuadrado.style.borderStyle = 'dashed';
+  } else if (estilo.borderBottomStyle === 'dashed') {
+    cuadrado.style.borderStyle = 'double';
+  } else if (estilo.borderBottomStyle === 'double') {
+    cuadrado.style.borderStyle = 'ridge';
+  } else if (estilo.borderBottomStyle === 'ridge') {
+    cuadrado.style.borderStyle = 'hidden';
+  } else if (estilo.borderBottomStyle === 'hidden') {
+    cuadrado.style.borderStyle = 'solid';
+  }
+
+  document.getElementById('textoExplicacion').innerHTML = '<u>Border style:</u> Define el estilo del borde de un elemento. Puedes establecer diferentes estilos como sólido, punteado, discontinuo, etc.';
+
+  document.getElementById('valores').innerHTML = '<-- Border style: ' + estilo.borderBottomStyle +'-->';
+">Border style</button>
+
+                <!-- Cambiar color del borde-->
+                <!-- Este botón cada vez que es pulsado detecta el color del borde (inferior en este caso por motivos logisticos) que tiene el cubo y sigue una cadena predefinida de colores hasta volver al inicial-->
+              <button class="button" onclick="
+              var cuadrado = document.getElementById('cuadrado');
+              var estilo = window.getComputedStyle(cuadrado);
+              
+              if (estilo.borderColor === 'rgb(0, 0, 0)') {
+                cuadrado.style.borderColor = 'rgb(0, 0, 255)';
+              } else if (estilo.borderColor === 'rgb(0, 0, 255)') {
+                cuadrado.style.borderColor = 'rgb(0, 128, 0)';
+              } else if (estilo.borderColor === 'rgb(0, 128, 0)') {
+                cuadrado.style.borderColor = 'rgb(255, 165, 0)';
+              } else if (estilo.borderColor === 'rgb(255, 165, 0)') {
+                cuadrado.style.borderColor = 'rgb(255, 255, 0)';
+              } else if (estilo.borderColor === 'rgb(255, 255, 0)') {
+                cuadrado.style.borderColor = 'rgb(142, 68, 173)';
+              } else if (estilo.borderColor === 'rgb(142, 68, 173)') {
+                cuadrado.style.borderColor = 'black';
+              }
+              
+              document.getElementById('textoExplicacion').innerHTML = '<u>Border Color:</u> Es simplemente un ajuste que define el color del borde de un elemento. Puedes elegir el color tanto por su nombre, código hexadecimal, código rgb, etc...';
+
+document.getElementById('valores').innerHTML = '<-- Border style: ' + cuadrado.style.borderBottomColor +'-->';
+">Border color</button>
+            <!-- Cambiar el ancho del cubo-->
+            <!-- Este botón cada vez que es pulsado detecta el estilo del borde (de abajo por motivos logísticos) que tiene el cubo
+            y le suma 5 píxeles-->
+            <button class="button" onclick="
+            var cuadrado = document.getElementById('cuadrado');
+            var estilo = window.getComputedStyle(cuadrado);
+            var ancho = parseInt(estilo.borderWidth); 
+            cuadrado.style.borderWidth = (ancho + 5) + 'px';
+            document.getElementById('textoExplicacion').innerHTML = '<u>Border Width:</u> Establece el ancho de los cuatro bordes de un elemento de forma simultánea. Puedes proporcionar uno, dos, tres o cuatro valores.';
+
+            document.getElementById('valores').innerHTML = '<-- Border width: ' + cuadrado.style.borderBottomWidth +'-->';
+            ">Más width</button>
+
+              
+            <!-- Cambiar el ancho del cubo-->
+            <!-- Este botón cada vez que es pulsado detecta el estilo del borde (de abajo por motivos logísticos) que tiene el cubo
+            y le suma 5 píxeles-->
+            <button class="button" onclick="
+            var cuadrado = document.getElementById('cuadrado');
+            var estilo = window.getComputedStyle(cuadrado);
+            var ancho = parseInt(estilo.borderWidth); 
+            cuadrado.style.borderWidth = (ancho - 5) + 'px';
+        ">Menos width</button>
+                <button onclick="
+                document.getElementById('TOP').classList.toggle('moverLista');" class="button">Top border
+                </button> 
+
+    <!-- BORDE SUPERIOR-->
+                <h1><ul 
+                  id="TOP" class="TOP">
+                  <!-- Cambiar color del borde de arriba-->
+                  <!-- Este botón cada vez que es pulsado detecta el color de borde (de arriba) que tiene el cubo
+                  y lo cambia según una cadena predefinida de colores hasta volver al inicial-->
+                  <li class="button-pequeño" onclick="
+                    var cuadrado = document.getElementById('cuadrado');
+                    var estilo = window.getComputedStyle(cuadrado);
+                    
+                    if (estilo.borderTopColor === 'rgb(0, 0, 0)') {
+                      cuadrado.style.borderTopColor = 'rgb(0, 0, 255)';
+                    } else if (estilo.borderTopColor === 'rgb(0, 0, 255)') {
+                      cuadrado.style.borderTopColor = 'green';
+                    } else if (estilo.borderTopColor === 'rgb(0, 128, 0)') {
+                      cuadrado.style.borderTopColor = 'rgb(255, 165, 0)';
+                    } else if (estilo.borderTopColor === 'rgb(255, 165, 0)') {
+                      cuadrado.style.borderTopColor = 'rgb(255, 255, 0)';
+                    } else if (estilo.borderTopColor === 'rgb(255, 255, 0)') {
+                      cuadrado.style.borderTopColor = 'rgb(142, 68, 173)';
+                    } else if (estilo.borderTopColor === 'rgb(142, 68, 173)') {
+                      cuadrado.style.borderTopColor = 'black';
+                    }
+                    ">Style</li>
+                  <!-- Cambiar estilo del borde de arriba-->
+                  <!-- Este botón cada vez que es pulsado detecta el estilo del borde (de arriba) que tiene el cubo
+                  y lo cambia según una cadena predefinida de estilos hasta volver al inicial-->
+                  <li class="button-pequeño" onclick="
+                    var cuadrado = document.getElementById('cuadrado');
+                    var estilo = window.getComputedStyle(cuadrado);
+                    
+                    if (estilo.borderTopStyle === 'solid') {
+                      cuadrado.style.borderTopStyle = 'dotted';}
+                    else if (estilo.borderTopStyle === 'dotted'){
+                      cuadrado.style.borderTopStyle = 'dashed';}
+                    else if (estilo.borderTopStyle === 'dashed'){
+                      cuadrado.style.borderTopStyle = 'double';}
+                    else if (estilo.borderTopStyle === 'double'){
+                      cuadrado.style.borderTopStyle = 'ridge';}
+                    else if (estilo.borderTopStyle === 'ridge'){
+                      cuadrado.style.borderTopStyle = 'hidden';}
+                    else if (estilo.borderTopStyle === 'hidden'){
+                      cuadrado.style.borderTopStyle = 'solid';}
+                    ">Color</li>
+                  <!-- Cambiar el ancho del borde de arriba-->
+                  <!-- Este botón cada vez que es pulsado detecta el ancho del borde (de arriba) que tiene el cubo
+                  y lo le aumenta 5 pixeles-->
+                  <li class="button-pequeño" onclick="
+                        var cuadrado = document.getElementById('cuadrado');
+                        var estilo = window.getComputedStyle(cuadrado);
+                        var ancho = parseInt(estilo.borderTopWidth); 
+                        cuadrado.style.borderTopWidth = (ancho + 5) + 'px';
+                    ">Más width</li>
+                  <!-- Cambiar el ancho del borde de arriba-->
+                  <!-- Este botón cada vez que es pulsado detecta el ancho del borde (de arriba) que tiene el cubo
+                  y lo le resta 5 pixeles-->
+                  <li class="button-pequeño" onclick="
+                        var cuadrado = document.getElementById('cuadrado');
+                        var estilo = window.getComputedStyle(cuadrado);
+                        var ancho = parseInt(estilo.borderTopWidth); 
+                        cuadrado.style.borderTopWidth = (ancho - 5) + 'px';
+                    ">Menos width</li>
+                              </ul></h1>
+                
+    
+              </div>
+            </div>
+        </section>
+
+       
+
+      <footer>
+        <div class="textoFooter1">
+        Raul Asensio, Mario Galán, Jesus Sanchez, Alejandro Tordable <br> DAM1 24/01/20024
+        </div>
+    </footer>
+    </body>
+</html>
