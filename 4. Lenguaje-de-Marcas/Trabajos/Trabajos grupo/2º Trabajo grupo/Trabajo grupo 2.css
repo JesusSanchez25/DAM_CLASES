@@ -7,6 +7,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
 }
 
 .header {
@@ -38,6 +39,12 @@ body {
 .header:hover {
   background-color: #0FADD0;
 }
+
+.button{
+  cursor: pointer;
+  
+}
+
 
 
 @keyframes shadowAnimation {
@@ -82,17 +89,24 @@ body {
   margin-bottom: 10%;
 }
 
-.cuadrado{
-  height: 50%;
-  width: 50%;
-  border: solid 10px;
-  transition: border-color 0.3s ease-in-out;
+.contenido{
+  width: 300px;
+    height: 250px;
+    background-image: url('https://img.freepik.com/fotos-premium/hermosos-paisajes-naturales-fantasia-natural-ai-imagenes-increibles-clasicos-paisajes-naturales_744422-6057.jpg');
+    clip: rect(0px, 300px, 250px, 0px);
+    top: 65%;
+    left: 35%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    clip-path: none;
 
 }
 
+
+
 .textoExplicacion{
   width: 70%;
-  margin: 6% 0px 0px 0px;
+  margin: 57% 0px 0px 0px;
   padding: 0;
   text-align: justify;
   font-weight: bold;
@@ -146,10 +160,56 @@ body {
       border: none;
       border-radius: 10px;
       padding: 5px;
+      align-items: start;
       margin: 5% 0;
+      padding: 0;
       box-shadow: 3px 3px 8px gray;
       transition: background-color 0.3s ease-in-out;
       cursor: pointer;
+}
+
+
+.textoLados {
+  font-size: 20px;
+  color: white;
+  font-family: Lexend;
+  text-decoration-line: underline;
+  text-decoration-style: solid; 
+  float: left;
+  margin: 25px 0px 0 -20px;
+}
+
+
+.mas{
+  padding: 0;
+  margin: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  border-radius: 0px 10px 10px 0px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.menos{
+  padding: 0;
+  margin: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  border-radius: 10px 0 0 10px;
+  transition: background-color 0.3s ease-in-out;
+
+}
+
+.menos:hover,
+.mas:hover{
+  background: #3AA0B6;
 }
 
 .button-pequeño{
@@ -172,16 +232,25 @@ body {
   cursor: pointer;
 }
 
-.button:hover,
-.button-pequeño:hover {
+.button-pequeño:hover{
   background-color: #3AA0B6;
 }
-
-.button:active,
-.button-pequeño:active {
+.button-pequeño:active{
   transform: translateY(2px);
 }
 
+.display{
+  transition: transform 2s, scale 2s, opacity 2s;
+  list-style: none;
+  position: absolute;
+  gap: 10px;
+  opacity: 0;
+  padding: 0;
+  margin-top: -80px;
+  margin-left: 10px;
+  display: flex;
+  scale: 0.2;
+}
 
 .moverLista {
   transform: translateY(49px);
@@ -372,7 +441,7 @@ footer:hover{
   float: center;
   margin: 80px 0px;
   height: 500px;
-  width: 900px;
+  width: 1050px;
   background: linear-gradient(-45deg, #56cce6 0%, #0E57FF 100% );
   border-radius: 10px;
   display: flex;

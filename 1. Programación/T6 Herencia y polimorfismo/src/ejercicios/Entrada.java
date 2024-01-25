@@ -1,8 +1,6 @@
 package ejercicios;
 
-import ejercicios.ejercicio1.model.Figura;
-import ejercicios.ejercicio1.model.Triangulo;
-import org.w3c.dom.ls.LSOutput;
+import ejercicios.ejercicio0.model.Triangulo;
 
 public class Entrada {
 

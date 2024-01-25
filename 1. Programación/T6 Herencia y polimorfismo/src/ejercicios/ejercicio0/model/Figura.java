@@ -1,4 +1,4 @@
-package ejercicios.ejercicio1.model;
+package ejercicios.ejercicio0.model;
 
 public abstract class Figura {
 

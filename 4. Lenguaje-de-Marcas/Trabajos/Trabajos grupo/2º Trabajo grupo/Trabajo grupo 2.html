@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title> Estilo Bordes</title>
-        <link rel="stylesheet" href="Trabajo grupo 2.css">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-      <header class="header">
-        <h1>Tipos de Border</h1>
-    
-        <p>- Explorando las posibilidades de estilos de borde en CSS -</p>
-       </header> 
-       <h1 class="titulo"><u>Cuadrado de ejemplo</u></h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Estilo Bordes</title>
+  <link rel="stylesheet" href="Trabajo grupo 2.css">
 
-        
-       <section class="contenedor">
-        <div class="divEjemploCuadrado">
-          <div id="contenido" class="contenido">
-            <!-- Hablar de Clippy   -->
-            
-          </div>
-          <div id="textoExplicacion" class="textoExplicacion"> <-- Este texto dará una breve descripción del borde elegido para permitir un mejor entendimiento y ayudar a la explicación -->
-          </div>
-          <div id="valores" class="valores"> 
-            <-- Aquí estará el valor del borde elegido -->
-          </div>
-        </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+</head>
 
-        <div class="divBotones">
-          <div class="botones">
-            <button class="button" 
-        onclick="
+<body>
+  <header class="header">
+    <h1>2º Trabajo en grupo</h1>
+
+    <p>- Explorando las posibilidades de CSS con estilo -</p>
+  </header>
+  <h1 class="titulo"><u>Cuadrado de ejemplo</u></h1>
+
+
+  <section class="contenedor">
+    <div class="divEjemploCuadrado">
+      <div id="contenido" class="contenido">
+        <!-- Hablar de Clippy   -->
+
+      </div>
+      <div id="textoExplicacion" class="textoExplicacion">
+        <-- Este texto dará una breve descripción del borde elegido para permitir un mejor entendimiento y ayudar a la
+          explicación -->
+      </div>
+      <div id="valores" class="valores">
+        <-- Aquí estará el valor del borde elegido -->
+      </div>
+    </div>
+
+    <div class="divBotones">
+      <div class="botones">
+        <button class="button" onclick="
           var cuadrado = document.getElementById('contenido');
       var estilo = window.getComputedStyle(cuadrado);
 
@@ -49,8 +54,7 @@
 
         ">Arriba</button>
 
-<button class="button" 
-onclick="
+        <button class="button" onclick="
   var cuadrado = document.getElementById('contenido');
 var estilo = window.getComputedStyle(cuadrado);
 
@@ -63,8 +67,7 @@ document.getElementById('textoExplicacion').innerHTML = '<u>Clip:</u> Es una pro
 document.getElementById('valores').innerHTML = '<-- Clip: ' + estilo.clip +'-->';
 
 ">Derecha</button>
-            <button class="button" 
-            onclick="
+        <button class="button" onclick="
               var cuadrado = document.getElementById('contenido');
           var estilo = window.getComputedStyle(cuadrado);
     
@@ -77,8 +80,7 @@ document.getElementById('valores').innerHTML = '<-- Clip: ' + estilo.clip +'-->'
       document.getElementById('valores').innerHTML = '<-- Clip: ' + estilo.clip +'-->';
     
             ">Abajo</button>
-            <button class="button" 
-            onclick="
+        <button class="button" onclick="
               var cuadrado = document.getElementById('contenido');
           var estilo = window.getComputedStyle(cuadrado);
     
@@ -91,7 +93,7 @@ document.getElementById('valores').innerHTML = '<-- Clip: ' + estilo.clip +'-->'
       document.getElementById('valores').innerHTML = '<-- Clip: ' + estilo.clip +'-->';
     
             ">Izquierda</button>
-            <button class="button" onclick="
+        <button class="button" onclick="
             var cuadrado = document.getElementById('contenido');
             var estilo = window.getComputedStyle(cuadrado);
         
@@ -109,20 +111,22 @@ document.getElementById('valores').innerHTML = '<-- Clip: ' + estilo.clip +'-->'
         
             document.getElementById('valores').innerHTML = '<-- Clip-path: ' + estilo.clipPath + '-->';
         ">clip-path</button>
-        
-        
-          </div>
-        
-        </div>
+        <h1></h1>
 
-       </section>
 
-        
+      </div>
 
-        <footer>
-          <div class="textoFooter2">
-          Raul Asensio, Mario Galán, Jesus Sanchez, Alejandro Tordable <br> DAM1 24/01/2024
-          </div>
-      </footer>
-    </body>
+    </div>
+
+  </section>
+
+
+
+  <footer>
+    <div class="textoFooter2">
+      Raul Asensio, Mario Galán, Jesus Sanchez, Alejandro Tordable <br> DAM1 24/01/2024
+    </div>
+  </footer>
+</body>
+
 </html>

@@ -1,4 +1,4 @@
-package ejercicios.ejercicio1.model;
+package ejercicios.ejercicio0.model;
 
 public class Cuadrado extends Poligono{
 
