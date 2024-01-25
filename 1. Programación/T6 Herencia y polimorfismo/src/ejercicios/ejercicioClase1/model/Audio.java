@@ -14,9 +14,19 @@ public class Audio extends Multimedia {
         this.soporte = soporte;
     }
 
-    public Audio(int identificador, int tamano, String titulo, String director, String formato, int duracion, String soporte) {
-        super(identificador, tamano, titulo, director, formato);
+    public Audio(int tamano, String titulo, String autor, String formato, int duracion, String soporte) {
+        super(tamano, titulo, autor, formato);
         this.duracion = duracion;
         this.soporte = soporte;
+        System.out.println("Tipo: Libro");
+    }
+
+    @Override
+    public void mostrarDatos() {
+        System.out.println("Tipo: Audi");
+        super.mostrarDatos();
+        System.out.println("Duracion: " + duracion);
+        System.out.println("Soporte: " + soporte);
+
     }
 }

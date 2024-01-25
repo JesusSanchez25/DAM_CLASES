@@ -2,15 +2,23 @@ package ejercicios.ejercicioClase1.model;
 
 public abstract class Multimedia {
     private int identificador, tamano;
-    private String titulo, director, formato;
+    private String titulo, autor, formato;
 
 
     public Multimedia(){}
-    public Multimedia(int tamano, String titulo, String director, String formato) {
+    public Multimedia(int tamano, String titulo, String autor, String formato) {
         this.tamano = tamano;
         this.titulo = titulo;
-        this.director = director;
+        this.autor = autor;
         this.formato = formato;
+    }
+
+    public void mostrarDatos(){
+        System.out.println("Tamaño: " + getTamano());
+        System.out.println("Título: " + getTitulo());
+        System.out.println("Autor: " + getautor());
+        System.out.println("Formato: " + getFormato());
+
     }
 
     public int getIdentificador() {
@@ -37,12 +45,12 @@ public abstract class Multimedia {
         this.titulo = titulo;
     }
 
-    public String getDirector() {
-        return director;
+    public String getautor() {
+        return autor;
     }
 
-    public void setDirector(String director) {
-        this.director = director;
+    public void setautor(String autor) {
+        this.autor = autor;
     }
 
     public String getFormato() {
