@@ -90,7 +90,8 @@ public class Entrada {
                     break;
 
                 case 4:
-                    
+                    System.out.println("En base a qué autor quieres buscar");
+                    coleccion1.buscarPorAutor(scanner.next());
                 break;
                 case 7:
                     System.out.println("Saliendo...");

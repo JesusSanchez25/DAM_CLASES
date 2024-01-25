@@ -43,6 +43,40 @@ public class Coleccion {
 
     }
 
+    public void buscarPorAutor(String autor){
+
+        for (Multimedia item : multimediaArrayList) {
+            if (item.getautor().equalsIgnoreCase(autor)){
+                item.mostrarDatos();
+            }
+        }
+
+    }
+
+    public void buscarPorActor(String actor){
+
+        for (Multimedia item : multimediaArrayList) {
+            if (item instanceof Video){
+               for (Persona object : ((Video) item).getActores()) {
+                   if (object.getNombre().equals(actor)){
+                       item.mostrarDatos();
+                   }
+               }
+            }
+        }
+
+    }
+
+    public void buscarPorDirector(String director){
+        for (Multimedia item : multimediaArrayList) {
+            if (item instanceof Video && ((Video) item).getdirector().getNombre().equalsIgnoreCase(director)){
+                item.mostrarDatos();
+            }
+        }
+    }
+
+    }
 
 
-}
+
+
