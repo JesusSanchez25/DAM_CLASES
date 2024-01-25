@@ -20,7 +20,7 @@
 
     <p>- Explorando las posibilidades de CSS con estilo -</p>
   </header>
-  <h1 class="titulo"><u>Cuadrado de ejemplo</u></h1>
+  <h1 class="titulo">Cuadrado de ejemplo</h1>
 
 
   <section class="contenedor">
@@ -91,33 +91,241 @@ document.getElementById('valores').innerHTML = '<-- Clip: ' + estilo.clip +'-->'
           document.getElementById('textoExplicacion').innerHTML = '<u>Clip:</u> Es una propiedad muy anticuada y en desuso que nos permite recortar una imagen o div en un cuadrado más pequeño';
     
       document.getElementById('valores').innerHTML = '<-- Clip: ' + estilo.clip +'-->';
-    
-            ">Izquierda</button>
+
+        ">Izquierda</button>
+
         <button class="button" onclick="
+        document.getElementById('display').classList.toggle('moverLista');
+        
+        
+        "> Clip-path
+
+        </button>
+
+        <h1>
+          <ul id="display" class="display">
+            <li class="button-pequeño" onclick="
+              var cuadrado = document.getElementById('contenido');
+              var estilo = window.getComputedStyle(cuadrado);
+              var nuevoClipPath = 'circle(45% at 50% 50%)';
+  
+              if (estilo.clipPath !== nuevoClipPath) {
+                  document.getElementById('contenido').style.clipPath = nuevoClipPath;
+  
+                  document.getElementById('textoExplicacion').innerHTML = '<u>Clip-path:</u> Es una propiedad mucho más actualizada y útil, que te permite recortar una imagen o div según varias formas predefinidas e incluso personalizadas';
+  
+                  document.getElementById('valores').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';
+              } else {
+                document.getElementById('contenido').style.clipPath = 'none';
+  
+                document.getElementById('valores').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';
+              }">🔴</li>
+            <li class=" button-pequeño" onclick="
             var cuadrado = document.getElementById('contenido');
             var estilo = window.getComputedStyle(cuadrado);
-        
-            if (estilo.clipPath === 'none') {
-                cuadrado.style.clipPath = 'circle(40% at 50% 50%)';
-            } else if (estilo.clipPath === 'circle(40% at 50% 50%)') {
-                cuadrado.style.clipPath = 'polygon(50% 0%, 0% 100%, 100% 100%)';
-            } else if (estilo.clipPath === 'polygon(50% 0%, 0% 100%, 100% 100%)'){
-              cuadrado.style.clipPath = 'ellipse(55% 50% at 50% 50%)';
-            } else if(estilo.clipPath === 'ellipse(55% 50% at 50% 50%)'){
-              cuadrado.style.clipPath = 'none'
+            var nuevoClipPath = 'polygon(50% 0%, 0% 100%, 100% 100%)';
+
+            if (estilo.clipPath !== nuevoClipPath) {
+                document.getElementById('contenido').style.clipPath = nuevoClipPath;
+
+                document.getElementById('textoExplicacion').innerHTML = '<u>Clip-path:</u> Es una propiedad mucho más actualizada y útil, que te permite recortar una imagen o div según varias formas predefinidas e incluso personalizadas';
+
+                document.getElementById('valores').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';
+            } else {
+              document.getElementById('contenido').style.clipPath = 'none';
+
+              document.getElementById('valores').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';
             }
-        
-            document.getElementById('textoExplicacion').innerHTML = '<u>Clip-path:</u> Este ni siquiera entraba en el trabajo pero es infinitamente más util, permite personalizar formas a tu gusto y te da mayor libertad';
-        
-            document.getElementById('valores').innerHTML = '<-- Clip-path: ' + estilo.clipPath + '-->';
-        ">clip-path</button>
-        <h1></h1>
+
+        ">🔺</li>
+            <li class="button-pequeño" onclick="
+            var cuadrado = document.getElementById('contenido');
+            var estilo = window.getComputedStyle(cuadrado);
+            var nuevoClipPath = 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)';
+
+            if (estilo.clipPath !== nuevoClipPath) {
+                document.getElementById('contenido').style.clipPath = nuevoClipPath;
+
+                document.getElementById('textoExplicacion').innerHTML = '<u>Clip-path:</u> Es una propiedad mucho más actualizada y útil, que te permite recortar una imagen o div según varias formas predefinidas e incluso personalizadas';
+
+                document.getElementById('valores').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';
+            } else {
+              document.getElementById('contenido').style.clipPath = 'none';
+
+              document.getElementById('valores').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';
+            }
+
+        ">🔶</li>
+            <li class="button-pequeño" onclick="
+                    var cuadrado = document.getElementById('contenido');
+                    var estilo = window.getComputedStyle(cuadrado);
+                    var nuevoClipPath = 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)';
+
+                    if (estilo.clipPath !== nuevoClipPath) {
+                        document.getElementById('contenido').style.clipPath = nuevoClipPath;
+
+                        document.getElementById('textoExplicacion').innerHTML = '<u>Clip-path:</u> Es una propiedad mucho más actualizada y útil, que te permite recortar una imagen o div según varias formas predefinidas e incluso personalizadas';
+
+                        document.getElementById('valores').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';
+                    } else {
+                      document.getElementById('contenido').style.clipPath = 'none';
+
+                      document.getElementById('valores').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';
+                    }
+
+                ">⭐</li>
+          </ul>
+
+        </h1>
+
 
 
       </div>
 
     </div>
 
+  </section>
+
+  <h1 class="titulo">Caption side</h1>
+
+
+  <section class="contenedor">
+    <div class="divEjemploCuadrado">
+      <table id="cuadrado" class="cuadrado">
+        <tr>
+          <td><img class="imagen" src="assets/caption-side(bottom).png" alt="Hola"></td>
+        </tr>
+
+        <caption>Leyenda de la tabla</caption>
+      </table>
+
+      <div id="textoExplicacion2" class="textoExplicacion2">
+        <-- Este texto dará una breve descripción del borde elegido para permitir un mejor entendimiento y ayudar a la
+          explicación -->
+      </div>
+      <div id="valores" class="valores">
+        <-- Aquí estará el valor del borde elegido -->
+      </div>
+    </div>
+    <div class="divBotones">
+      <div class="botones">
+        <!-- Cambiar estilo-->
+        <!-- Este botón cada vez que es pulsado detecta el estilo de borde (inferior por motivos logisticos) que tiene el cubo
+                  y sigue una cadena predefinida de estilos hasta volver al inicial-->
+        <button class="button" onclick="
+    var cuadrado = document.getElementById('cuadrado');
+    var estilo = window.getComputedStyle(cuadrado);
+    
+    
+    
+    document.getElementById('cuadrado').caption.style.opacity = '1';
+            document.getElementById('cuadrado').style.captionSide = 'top';
+            document.getElementById('textoExplicacion').innerHTML = 'Caption-Side Top : Con esta propiedad, la leyenda (caption) de la tabla se ubicará en la parte superior de la tabla.';
+    
+    ">Caption-Side Top</button>
+
+        <!-- Cambiar color del borde-->
+        <!-- Este botón cada vez que es pulsado detecta el color del borde (inferior en este caso por motivos logisticos) que tiene el cubo y sigue una cadena predefinida de colores hasta volver al inicial-->
+        <button class="button" onclick="
+                var cuadrado = document.getElementById('cuadrado');
+                var estilo = window.getComputedStyle(cuadrado);
+              
+              document.getElementById('cuadrado').caption.style.opacity = '1';
+            document.getElementById('cuadrado').style.captionSide = 'bottom';
+            document.getElementById('textoExplicacion').innerHTML = 'Caption-Side Bottom : En este caso, la leyenda de la tabla se colocará en la parte inferior de la tabla. El texto descriptivo se mostrará debajo de la tabla.';
+    ">Caption-Side bottom</button>
+
+        <button class="button" onclick="
+              var cuadrado = document.getElementById('cuadrado');
+              var estilo = window.getComputedStyle(cuadrado);
+              var ancho = parseInt(estilo.borderWidth); 
+            
+            document.getElementById('cuadrado').caption.style.opacity = '0';
+            document.getElementById('textoExplicacion').innerHTML = 'Sin Caption-Side :  Si estableces hidden, la leyenda se ocultará. Esto significa que el texto descriptivo definido en <caption> no será visible. La tabla seguirá siendo funcional, pero no habrá una leyenda visible asociada.';
+              ">Sin Caption-Side</button>
+
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <h1 class="titulo">Ejemplos de Clear</h1>
+
+  <section class="contenedor">
+    <div class="parteIzquierda">
+      <div class="float-left1">Elemento Flotante a la Izquierda</div>
+      <div class="float-right1">Elemento Flotante a la Derecha</div>
+      <center>
+        <div class="clear-both">Elemento no flotante con Clear Both</div>
+      </center>
+      <div class="explicacion1">
+        <u>Clear:</u><br><br>La propiedad clear especifica si un elemento puede estar al lado de elementos flotantes o
+        si debe ser movido (cleared/limpiado) debajo de ellos.<br><br>
+        Clear Both: El elemento es movido hacia abajo si hay elementos flotantes a algun lado de la pantalla.
+      </div>
+
+    </div>
+
+    <div class="parteDerecha">
+      <div class="float-left2">Elemento Flotante a la Izquierda</div>
+      <div class="float-right2">Elemento Flotante a la Derecha</div>
+      <center>
+        <div class="clear-none">Elemento No Flotante con Clear None</div>
+      </center>
+      <div class="explicacion2">
+        None/Left/Right/Both<br><br>
+        Clear Left: El elemento es movido hacia abajo si hay elementos flotantes a la izquierda.<br><br>
+        Clear Right: El elemento es movido hacia abajo si hay elementos flotantes a la derecha.<br><br>
+        Clear None: Keyword que indica que el elemento puede estar al lado de elementos flotantes.
+
+      </div>
+    </div>
+  </section>
+
+  <h1 class="titulo">Ejemplo de box shadow y box-sizing</h1>
+  <section class="contenedor">
+    <div class="divEjemploCuadrado">
+      <div id="cuadrado" class="cuadrado"></div>
+      <div id="textoExplicacion2" class="textoExplicacion2">
+        <-- Este texto dará una breve descripción de la propiedad elegida para permitir un mejor entendimiento y ayudar
+          a la explicación -->
+      </div>
+
+    </div>
+    <div class="divBotones">
+      <div class="botones">
+
+
+
+        <!-- Cambiar el ancho del cubo-->
+        <!-- Este botón cada vez que es pulsado detecta el estilo del borde (de abajo por motivos logísticos) que
+              tiene el cubo
+          y le suma 5 píxeles-->
+        <button class="button" onclick="
+                  var cuadrado = document.getElementById('cuadrado');
+                  cuadrado.style.boxSizing = 'border-box';
+                  document.getElementById('textoExplicacion2').innerHTML = '<u>BOX-SIZING:</u> box-sizing es una propiedad en CSS que determina cómo se calcula el tamaño total de un elemento, incluyendo su contenido, relleno y borde.';
+
+              ">BOX-SIZING</button>
+
+        <!-- Cambiar el ancho del cubo-->
+        <!-- Este botón cada vez que es pulsado detecta el estilo del borde (de abajo por motivos logísticos) que
+              tiene el cubo
+          y le suma 5 píxeles-->
+        <button class="button" onclick="
+                  var cuadrado = document.getElementById('cuadrado');
+                  
+                  cuadrado.style.boxShadow = '0px 0px 10px orange';
+
+                  document.getElementById('textoExplicacion2').innerHTML = '<u>BOX-SHADOW:</u>En CSS se utiliza para agregar sombras a los elementos. Puedes aplicar sombras a cajas (elementos rectangulares) y texto.'
+
+                  
+              ">BOX-SHADOW</button>
+      </div>
+    </div>
   </section>
 
 

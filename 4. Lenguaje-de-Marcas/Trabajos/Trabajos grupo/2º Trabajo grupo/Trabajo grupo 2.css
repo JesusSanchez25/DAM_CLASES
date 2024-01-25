@@ -60,6 +60,7 @@ body {
   margin: 3% 0 0 0;
   padding: 0;
   width: 100%;
+  text-decoration: underline;
   text-align: center;
   color: #5f9aa7;
   font-size: 50px;
@@ -86,8 +87,10 @@ body {
   justify-content: center;
   float: left;
   flex-direction: column;
-  margin-bottom: 10%;
 }
+
+
+
 
 .contenido{
   width: 300px;
@@ -96,6 +99,7 @@ body {
     clip: rect(0px, 300px, 250px, 0px);
     top: 65%;
     left: 35%;
+    border-radius: 5px;
     position: absolute;
     transform: translate(-50%, -50%);
     clip-path: none;
@@ -106,7 +110,17 @@ body {
 
 .textoExplicacion{
   width: 70%;
-  margin: 57% 0px 0px 0px;
+  margin: 50% 0px 0px 0px;
+  padding: 0;
+  text-align: justify;
+  font-weight: bold;
+  color: lightseagreen;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.textoExplicacion2{
+  width: 70%;
+  margin: 5% 0px 0px 0px;
   padding: 0;
   text-align: justify;
   font-weight: bold;
@@ -218,7 +232,7 @@ body {
   background-color: #56CCE6;
   color: white;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 25px;
   border: none;
   border-radius: 10px;
   padding: 0px 10px;
@@ -247,7 +261,7 @@ body {
   opacity: 0;
   padding: 0;
   margin-top: -80px;
-  margin-left: 10px;
+  margin-left: 55px;
   display: flex;
   scale: 0.2;
 }
@@ -267,7 +281,7 @@ body {
   background-position: right; /* Mueve el fondo hacia la derecha al pasar el ratÃ³n */
 }
 
-.contenedor2 {
+.contenedor {
   text-align: center;
   height: 70%;
   width: 70%;
@@ -347,7 +361,7 @@ body {
 
 
 
-.contenedor2:hover .icon-arrow{
+.contenedor:hover .icon-arrow{
   transition: 0.5s;
   margin-right: 0px;
 }
@@ -500,3 +514,226 @@ footer:hover{
   scale: 0;
   transform: rotate(-45deg);
 }
+
+.cuadrado {
+  padding: 0;
+  margin: 0;
+    font-size: 35px;
+    color: #777;
+    caption-side: hiden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    animation: shadowAnimation 2s infinite alternate;
+    height: 50%;
+  width: 50%;
+  border: solid 5px;
+  transition: border-color 0.3s ease-in-out;
+
+   
+  }
+
+  .imagen{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 250px;
+  }
+
+  /*-----------------------------------------------*/
+
+  .contenedor3 {
+    height: 70%;
+    width: 70%;
+    border-radius: 20px;
+    background-color: #C0E9F2;
+    opacity: 1;
+    box-shadow: 0px 0px 12px gray;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 0;
+  }
+  
+  
+  
+  
+  .parteIzquierda {
+    width: 45%;
+    height: 80%;
+    border-radius: 20px;
+    margin-right: 2%;
+    background-color: aliceblue;
+    box-shadow: -1px 0 4px gray;
+    opacity: 1;
+    transition:  scale 1s;
+  }
+  
+  
+  .parteDerecha{
+    width: 45%;
+    height: 80%;
+    border-radius: 20px;
+    margin-left: 2%;
+    background-color: aliceblue;
+    box-shadow: -1px 0 4px gray;
+    opacity: 1;
+    transition:  scale 1s;
+  }
+  
+  
+  .parteIzquierda:hover, .parteDerecha:hover{
+    scale: 1.13;
+  }
+  
+  
+  .float-left1 {
+    float: left;
+    width: 25%;
+    height: 25%;
+    border-radius: 100px;
+    background-color: lightblue;
+    opacity: 1;
+    margin-top: 8%;
+    margin-bottom: 0;
+    margin-left: 4%;
+    margin-right: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 25%;
+    box-shadow: 0 0 10px rgba(0, 80, 120, 0.4);
+    transition: transform 0.3s;
+   
+  }
+  
+  
+  .float-right1 {
+    float: right;
+    width: 25%;
+    height: 25%;
+    border-radius: 100px;
+    background-color: lightcoral;
+    opacity: 1;
+    margin-top: 8%;
+    margin-bottom: 0;
+    margin-left: 4%;
+    margin-right: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 25%;
+    box-shadow: 0 0 15px rgba(200, 100, 100, 0.6);
+    transition: transform 0.3s;
+  }
+  
+  
+  .clear-both {
+    clear: both;
+    width: 30%;
+    background-color: lightgreen;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.6);
+    transition: transform 0.3s;
+   
+  }
+  
+  
+  .explicacion1{
+    max-width:100%;
+    margin: 6% 0px 0px 0px;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+    color: lightseagreen;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 10%;
+    margin-right:10%;
+    margin-top: 3%;
+  
+  
+  
+  
+  }
+  
+  
+  
+  
+  /*----------------------------------------*/
+  
+  
+  
+  
+  .float-left2 {
+    float: left;
+    width: 25%;
+    height: 25%;
+    background-color: lightblue;
+    opacity: 1;
+    border-radius: 100px;
+    margin-top: 8%;
+    margin-bottom: 4%;
+    margin-left: 4%;
+    margin-right: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 25%;
+    box-shadow: 0 0 10px rgba(0, 80, 120, 0.4);
+    transition: transform 0.3s;
+  }
+  
+  
+  
+  
+  .float-right2 {
+    float: right;
+    width: 25%;
+    height: 25%;
+    background-color: lightcoral;
+    opacity: 1;
+    border-radius: 100px;
+    margin-top: 8%;
+    margin-bottom: 4%;
+    margin-left: 4%;
+    margin-right: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 25%;
+    box-shadow: 0 0 10px rgba(200, 100, 100, 0.6);
+    transition: transform 0.3s;
+  }
+  
+  
+  
+  
+  .clear-none {
+    clear: none;
+    width: 30%;
+    background-color: lightgreen;
+    border-radius: 20px;
+    margin: 8%;
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.6);
+    transition: transform 0.3s;
+  }
+  
+  
+  
+  
+  .explicacion2{
+    max-width:100%;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+    color: lightseagreen;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 7%;
+    margin-right:7%;
+    margin-top: 8%;
+  }
+  
+
