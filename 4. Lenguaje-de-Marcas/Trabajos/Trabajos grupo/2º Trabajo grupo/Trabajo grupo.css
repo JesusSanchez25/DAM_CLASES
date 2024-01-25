@@ -7,7 +7,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
 }
 
 .header {
@@ -40,14 +39,6 @@ body {
   background-color: #0FADD0;
 }
 
-.button{
-  cursor: pointer;
-  
-}
-
-.button:active{
-  transform: translateY(2px);
-}
 
 @keyframes shadowAnimation {
   0% {
@@ -95,9 +86,7 @@ body {
   height: 50%;
   width: 50%;
   border: solid 10px;
-
   transition: border-color 0.3s ease-in-out;
-
 
 }
 
@@ -183,28 +172,16 @@ body {
   cursor: pointer;
 }
 
-button:hover{
+.button:hover,
+.button-pequeño:hover {
   background-color: #3AA0B6;
 }
-.button-pequeño:hover{
-  background-color: #3AA0B6;
-}
-.button-pequeño:active{
+
+.button:active,
+.button-pequeño:active {
   transform: translateY(2px);
 }
 
-.TOP{
-  transition: transform 2s, scale 2s, opacity 2s;
-  list-style: none;
-  position: absolute;
-  gap: 10px;
-  opacity: 0;
-  padding: 0;
-  margin-top: -80px;
-  margin-left: 10px;
-  display: flex;
-  scale: 0.2;
-}
 
 .moverLista {
   transform: translateY(49px);
@@ -395,7 +372,7 @@ footer:hover{
   float: center;
   margin: 80px 0px;
   height: 500px;
-  width: 1050px;
+  width: 900px;
   background: linear-gradient(-45deg, #56cce6 0%, #0E57FF 100% );
   border-radius: 10px;
   display: flex;
