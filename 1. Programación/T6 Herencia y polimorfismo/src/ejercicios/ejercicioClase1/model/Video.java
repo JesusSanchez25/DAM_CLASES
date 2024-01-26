@@ -5,7 +5,7 @@ import ejercicios.ejercicioClase1.model.Multimedia;
 import java.time.Period;
 import java.util.ArrayList;
 
-public class Video extends Multimedia {
+public final class Video extends Multimedia {
 
     private ArrayList<Persona> actores;
     private Persona director;

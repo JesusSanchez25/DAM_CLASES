@@ -1,10 +1,14 @@
-package ejercicios.ejercicioClase1.model;
+package ejercicios.ejercicioClase1.controlador;
+
+import ejercicios.ejercicioClase1.model.Multimedia;
+import ejercicios.ejercicioClase1.model.Persona;
+import ejercicios.ejercicioClase1.model.Video;
 
 import java.util.ArrayList;
 
 public class Coleccion {
     int contador;
-    private ArrayList<Multimedia> multimediaArrayList;
+    private final ArrayList<Multimedia> multimediaArrayList;
 
     public Coleccion() {
         multimediaArrayList = new ArrayList<>();

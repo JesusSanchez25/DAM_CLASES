@@ -1,6 +1,6 @@
 package ejercicios.ejercicioClase1.model;
 
-public class Libro extends Multimedia{
+public final class Libro extends Multimedia{
 
     private String ISBN;
     private int numeroPag;

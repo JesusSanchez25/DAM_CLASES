@@ -1,12 +1,11 @@
 package ejercicios.ejercicioClase1;
 
+import ejercicios.ejercicioClase1.constantes.Constantes;
 import ejercicios.ejercicioClase1.model.Audio;
-import ejercicios.ejercicioClase1.model.Coleccion;
+import ejercicios.ejercicioClase1.controlador.Coleccion;
 import ejercicios.ejercicioClase1.model.Libro;
 import ejercicios.ejercicioClase1.model.Video;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
 
 import static java.lang.System.in;
@@ -43,8 +42,8 @@ public class Entrada {
                     respuesta2 = scanner.nextInt();
 
                     switch (respuesta2){
-                        case 1: System.out.println("Inserte el tamaño, titulo, autor, formato, ISBN y número de páginas separado por espacios");
-                        coleccion1.agregarMultimedia(new Libro(scanner.nextInt(), scanner.next(), scanner.next(), scanner.next(), scanner.next(), scanner.nextInt()));
+                        case 1: System.out.println("Inserte el tamaño, titulo, autor, ISBN y número de páginas separado por espacios");
+                        coleccion1.agregarMultimedia(new Libro(scanner.nextInt(), scanner.next(), scanner.next(), Constantes.SOPORTE_PAPEL, scanner.next(), scanner.nextInt()));
                         break;
 
                         case 2:

@@ -2,7 +2,7 @@ package ejercicios.ejercicioClase1.model;
 
 import ejercicios.ejercicioClase1.model.Multimedia;
 
-public class Audio extends Multimedia {
+public final class Audio extends Multimedia {
 
     private int duracion;
     private String soporte;
