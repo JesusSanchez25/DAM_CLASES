@@ -1,3 +1,5 @@
+
+/* <!-- Código básico estandar --> */
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +9,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
 }
 
 .header {
@@ -40,13 +41,7 @@ body {
   background-color: #0FADD0;
 }
 
-.button{
-  cursor: pointer;
-  
-}
-
-
-
+/* <!-- La animación de la sombra del header --> */
 @keyframes shadowAnimation {
   0% {
     box-shadow: 0px 4px 10px rgba(41, 128, 185, 0.8);
@@ -79,7 +74,8 @@ body {
   margin: 3% 0;
 }
 
-.divEjemploCuadrado{
+
+.divEjemploContenido{
   height: 100%;
   width: 60%;
   display: flex;
@@ -87,40 +83,21 @@ body {
   justify-content: center;
   float: left;
   flex-direction: column;
+  margin-bottom: 10%;
 }
-
-
-
 
 .contenido{
-  width: 300px;
-    height: 250px;
-    background-image: url('https://img.freepik.com/fotos-premium/hermosos-paisajes-naturales-fantasia-natural-ai-imagenes-increibles-clasicos-paisajes-naturales_744422-6057.jpg');
-    clip: rect(0px, 300px, 250px, 0px);
-    top: 65%;
-    left: 35%;
-    border-radius: 5px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    clip-path: none;
+  height: 50%;
+  width: 50%;
+  border: solid 10px;
+  transition: border-color 0.3s ease-in-out;
 
 }
-
 
 
 .textoExplicacion{
   width: 70%;
-  margin: 50% 0px 0px 0px;
-  padding: 0;
-  text-align: justify;
-  font-weight: bold;
-  color: lightseagreen;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.textoExplicacion2{
-  width: 70%;
-  margin: 5% 0px 0px 0px;
+  margin: 6% 0px 0px 0px;
   padding: 0;
   text-align: justify;
   font-weight: bold;
@@ -174,65 +151,21 @@ body {
       border: none;
       border-radius: 10px;
       padding: 5px;
-      align-items: start;
       margin: 5% 0;
-      padding: 0;
       box-shadow: 3px 3px 8px gray;
       transition: background-color 0.3s ease-in-out;
       cursor: pointer;
 }
 
 
-.textoLados {
-  font-size: 20px;
-  color: white;
-  font-family: Lexend;
-  text-decoration-line: underline;
-  text-decoration-style: solid; 
-  float: left;
-  margin: 25px 0px 0 -20px;
-}
 
-
-.mas{
-  padding: 0;
-  margin: 0;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  float: left;
-  border-radius: 0px 10px 10px 0px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.menos{
-  padding: 0;
-  margin: 0;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  float: left;
-  border-radius: 10px 0 0 10px;
-  transition: background-color 0.3s ease-in-out;
-
-}
-
-.menos:hover,
-.mas:hover{
-  background: #3AA0B6;
-}
 
 .button-pequeño{
   height: 40px;
-  user-select: none;
-  background-color: #56CCE6;
   color: white;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 14px;
+  background-color: #56CCE6;
   border: none;
   border-radius: 10px;
   padding: 0px 10px;
@@ -243,15 +176,20 @@ body {
   align-items: center;
   box-shadow: 3px 3px 8px gray;
   transition: background-color 0.3s ease-in-out;
+  user-select: none;
   cursor: pointer;
 }
 
+button:hover,
 .button-pequeño:hover{
   background-color: #3AA0B6;
 }
+
+.button:active,
 .button-pequeño:active{
   transform: translateY(2px);
 }
+
 
 .display{
   transition: transform 2s, scale 2s, opacity 2s;
@@ -261,27 +199,38 @@ body {
   opacity: 0;
   padding: 0;
   margin-top: -80px;
-  margin-left: 55px;
+  margin-left: 10px;
   display: flex;
   scale: 0.2;
 }
 
-.moverLista {
+.moverDisplay {
   transform: translateY(49px);
   scale: 0.9;
   opacity: 1;
 }
 
+footer{
+  width: 100%;
+  height: 10%;
+  bottom: 0;
 
-/*-------------------------------------------------------------->*/
+  opacity: 0.5;
 
-
-
-.animated-header:hover {
-  background-position: right; /* Mueve el fondo hacia la derecha al pasar el ratÃ³n */
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:larger;
+  transition: opacity 0.4s ease-in-out;
 }
 
-.contenedor {
+footer:hover{
+  opacity: 1;
+}
+
+
+/* <!-- Parte de Torda --> */
+
+#contenedor2 {
   text-align: center;
   height: 70%;
   width: 70%;
@@ -295,12 +244,12 @@ body {
   align-items: center; /*centrar verticalmente*/
 }
 
-.tres-en-raya-container {
+#tres-en-raya-container {
   display: flex;
   align-items: center;
 }
 
-.tres-en-raya {
+#tres-en-raya {
   margin: 40px; /* Espacio entre los tableros */
   display: flex;
   flex-direction: column;
@@ -325,7 +274,7 @@ body {
   border-spacing: 20px; /* Espacio entre las celdas */
 }
 
-.btn-conteiner {
+#btn-conteiner {
   display: flex;
   justify-content: center;
   --color-text: #9ee5fa;
@@ -334,7 +283,7 @@ body {
   --color-shadow: #00000080;
 }
 
-.btn-content {
+#btn-content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -349,8 +298,8 @@ body {
   box-shadow: 0 0 0.2em 0 var(--color-background);
 }
 
-.btn-content:hover,
-.btn-content:focus {
+#btn-content:hover,
+#btn-content:focus {
   transition: 0.5s;
   -webkit-animation: btn-content 1s;
   animation: btn-content 1s;
@@ -359,19 +308,17 @@ body {
   box-shadow: 0 0 0.4em 0 var(--color-background);
 }
 
-
-
-.contenedor:hover .icon-arrow{
+#contenedor2:hover .icon-arrow{
   transition: 0.5s;
   margin-right: 0px;
 }
 
-.btn-content:hover .icon-arrow {
+#btn-content:hover .icon-arrow {
   transition: 0.5s;
   margin-right: 0px;
 }
 
-.icon-arrow {
+#icon-arrow {
   width: 80px;
   
   position: relative;
@@ -389,16 +336,16 @@ body {
   transform: translateX(-30%);
 }
 
-.btn-content:hover #arrow-icon-three {
+#btn-content:hover #arrow-icon-three {
   animation: color_anim 1s infinite 0.2s;
 }
 
-.btn-content:hover #arrow-icon-one {
+#btn-content:hover #arrow-icon-one {
   transform: translateX(0%);
   animation: color_anim 1s infinite 0.6s;
 }
 
-.btn-content:hover #arrow-icon-two {
+#btn-content:hover #arrow-icon-two {
   transform: translateX(0%);
   animation: color_anim 1s infinite 0.4s;
 }
@@ -433,29 +380,13 @@ body {
   }
 }
 
-footer{
-  width: 100%;
-  height: 10%;
-  bottom: 0;
 
-  opacity: 0.5;
-
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size:larger;
-  transition: opacity 0.4s ease-in-out;
-}
-
-footer:hover{
-  opacity: 1;
-}
-
-.card {
+#card {
   position: relative;
   float: center;
   margin: 80px 0px;
   height: 500px;
-  width: 1050px;
+  width: 900px;
   background: linear-gradient(-45deg, #56cce6 0%, #0E57FF 100% );
   border-radius: 10px;
   display: flex;
@@ -465,18 +396,18 @@ footer:hover{
   transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.card svg {
+#card svg {
   width: 48px;
   fill: #333;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.card:hover {
+#card:hover {
   transform: rotate(-5deg) scale(1.1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.cardcontent {
+#cardcontent {
   font-size: 30px;
   position: absolute;
   top: 50%;
@@ -491,31 +422,52 @@ footer:hover{
   transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.card:hover .cardcontent {
+#card:hover #cardcontent {
   transform: translate(-50%, -50%) rotate(0deg);
   opacity: 1;
 }
 
-.cardtitle {
+#cardtitle {
   margin: 0;
   font-size: 100px;
   color: #333;
   font-weight: 700;
 }
 
-.carddescription {
+#cardDescription {
   margin: 10px 0 0;
-  font-size: 200px;
+  font-size: 50px;
   color: #777;
   line-height: 1.4;
 }
 
-.card:hover svg {
+#card:hover svg {
   scale: 0;
   transform: rotate(-45deg);
 }
 
-.cuadrado {
+#contenedorCapSide{
+  text-align: center;
+  height: 70%;
+  width: 70%;
+  border-radius: 20px;
+  background-color: #C0E9F2;
+  opacity: 1;
+  box-shadow: 0px 0px 12px gray;
+  margin: 3% 0;
+}
+
+#divEjemploCapSide{
+  height: 100%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  flex-direction: column;
+}
+
+#contenidoCapSide{
   padding: 0;
   margin: 0;
     font-size: 35px;
@@ -527,213 +479,301 @@ footer:hover{
   width: 50%;
   border: solid 5px;
   transition: border-color 0.3s ease-in-out;
+}
 
-   
-  }
 
-  .imagen{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 250px;
-  }
 
-  /*-----------------------------------------------*/
 
-  .contenedor3 {
-    height: 70%;
-    width: 70%;
-    border-radius: 20px;
-    background-color: #C0E9F2;
-    opacity: 1;
-    box-shadow: 0px 0px 12px gray;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: 3% 0;
-  }
-  
-  
-  
-  
-  .parteIzquierda {
-    width: 45%;
-    height: 80%;
-    border-radius: 20px;
-    margin-right: 2%;
-    background-color: aliceblue;
-    box-shadow: -1px 0 4px gray;
-    opacity: 1;
-    transition:  scale 1s;
-  }
-  
-  
-  .parteDerecha{
-    width: 45%;
-    height: 80%;
-    border-radius: 20px;
-    margin-left: 2%;
-    background-color: aliceblue;
-    box-shadow: -1px 0 4px gray;
-    opacity: 1;
-    transition:  scale 1s;
-  }
-  
-  
-  .parteIzquierda:hover, .parteDerecha:hover{
-    scale: 1.13;
-  }
-  
-  
-  .float-left1 {
-    float: left;
-    width: 25%;
-    height: 25%;
-    border-radius: 100px;
-    background-color: lightblue;
-    opacity: 1;
-    margin-top: 8%;
-    margin-bottom: 0;
-    margin-left: 4%;
-    margin-right: 4%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 25%;
-    box-shadow: 0 0 10px rgba(0, 80, 120, 0.4);
-    transition: transform 0.3s;
-   
-  }
-  
-  
-  .float-right1 {
-    float: right;
-    width: 25%;
-    height: 25%;
-    border-radius: 100px;
-    background-color: lightcoral;
-    opacity: 1;
-    margin-top: 8%;
-    margin-bottom: 0;
-    margin-left: 4%;
-    margin-right: 4%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 25%;
-    box-shadow: 0 0 15px rgba(200, 100, 100, 0.6);
-    transition: transform 0.3s;
-  }
-  
-  
-  .clear-both {
-    clear: both;
-    width: 30%;
-    background-color: lightgreen;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 128, 0, 0.6);
-    transition: transform 0.3s;
-   
-  }
-  
-  
-  .explicacion1{
-    max-width:100%;
-    margin: 6% 0px 0px 0px;
-    padding: 0;
-    text-align: center;
-    font-weight: bold;
-    color: lightseagreen;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-left: 10%;
-    margin-right:10%;
-    margin-top: 3%;
-  
-  
-  
-  
-  }
-  
-  
-  
-  
-  /*----------------------------------------*/
-  
-  
-  
-  
-  .float-left2 {
-    float: left;
-    width: 25%;
-    height: 25%;
-    background-color: lightblue;
-    opacity: 1;
-    border-radius: 100px;
-    margin-top: 8%;
-    margin-bottom: 4%;
-    margin-left: 4%;
-    margin-right: 4%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 25%;
-    box-shadow: 0 0 10px rgba(0, 80, 120, 0.4);
-    transition: transform 0.3s;
-  }
-  
-  
-  
-  
-  .float-right2 {
-    float: right;
-    width: 25%;
-    height: 25%;
-    background-color: lightcoral;
-    opacity: 1;
-    border-radius: 100px;
-    margin-top: 8%;
-    margin-bottom: 4%;
-    margin-left: 4%;
-    margin-right: 4%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 25%;
-    box-shadow: 0 0 10px rgba(200, 100, 100, 0.6);
-    transition: transform 0.3s;
-  }
-  
-  
-  
-  
-  .clear-none {
-    clear: none;
-    width: 30%;
-    background-color: lightgreen;
-    border-radius: 20px;
-    margin: 8%;
-    box-shadow: 0 0 10px rgba(0, 128, 0, 0.6);
-    transition: transform 0.3s;
-  }
-  
-  
-  
-  
-  .explicacion2{
-    max-width:100%;
-    padding: 0;
-    text-align: center;
-    font-weight: bold;
-    color: lightseagreen;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-left: 7%;
-    margin-right:7%;
-    margin-top: 8%;
-  }
-  
 
+
+/* <!-- Código Jesús -->*/
+#contenedorClip{
+  text-align: center;
+  height: 70%;
+  width: 70%;
+  border-radius: 20px;
+  background-color: #C0E9F2;
+  opacity: 1;
+  box-shadow: 0px 0px 12px gray;
+  margin: 3% 0;
+}
+
+#divEjemploClip{
+  height: 100%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  flex-direction: column;
+}
+
+#contenidoClip{
+  width: 300px;
+  height: 250px;
+  margin-bottom: 10%;
+  background-image: url('https://img.freepik.com/fotos-premium/hermosos-paisajes-naturales-fantasia-natural-ai-imagenes-increibles-clasicos-paisajes-naturales_744422-6057.jpg');
+  background-size: cover;
+  clip: rect(0px, 300px, 250px, 0px);
+  position: absolute;
+  border-radius: 5px;
+  clip-path: none;
+  
+}
+
+#textoExplicacionClip{
+  width: 70%;
+  margin: 50% 0px 0px 0px;
+  padding: 0;
+  text-align: justify;
+  font-weight: bold;
+  color: lightseagreen;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.displayClip{
+  transition: transform 2s, scale 2s, opacity 2s;
+  list-style: none;
+  position: absolute;
+  gap: 10px;
+  opacity: 0;
+  padding: 0;
+  margin-top: -80px;
+  margin-left: 60px;
+  display: flex;
+  scale: 0.2;
+}
+
+.moverDisplayClip{
+  transform: translateY(49px);
+  scale: 1.1;
+  opacity: 1;
+}
+
+
+/* <!-- Código de Mario -->  */
+
+#contenedorFloat {
+  height: 70%;
+  width: 70%;
+  border-radius: 20px;
+  opacity: 1;
+  box-shadow: 0px 0px 12px gray;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 3% 0;
+}
+
+.parteIzquierda {
+  width: 45%;
+  height: 80%;
+  border-radius: 20px;
+  margin-right: 2%;
+  float: left;
+  background-color: aliceblue;
+  box-shadow: -1px 0 4px gray;
+  opacity: 1;
+  transition:  scale 1s;
+}
+
+.parteDerecha{
+  width: 45%;
+  height: 80%;
+  border-radius: 20px;
+  margin-left: 2%;
+  float: right;
+  background-color: aliceblue;
+  box-shadow: -1px 0 4px gray;
+  opacity: 1;
+  transition:  scale 1s;
+}
+
+.parteIzquierda:hover, .parteDerecha:hover{
+  scale: 1.13;
+}
+
+.float-left1 {
+  float: left;
+  width: 25%;
+  height: 25%;
+  border-radius: 100px;
+  background-color: lightblue;
+  opacity: 1;
+  margin-top: 8%;
+  margin-bottom: 0;
+  margin-left: 4%;
+  margin-right: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 25%;
+  box-shadow: 0 0 10px rgba(0, 80, 120, 0.4);
+  transition: transform 0.3s;
+ 
+}
+
+.float-right1 {
+  float: right;
+  width: 25%;
+  height: 25%;
+  border-radius: 100px;
+  background-color: lightcoral;
+  opacity: 1;
+  margin-top: 8%;
+  margin-bottom: 0;
+  margin-left: 4%;
+  margin-right: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 25%;
+  box-shadow: 0 0 15px rgba(200, 100, 100, 0.6);
+  transition: transform 0.3s;
+}
+
+
+.clear-both {
+  clear: both;
+  width: 30%;
+  background-color: lightgreen;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.6);
+  transition: transform 0.3s;
+ 
+}
+
+
+.explicacion1{
+  max-width:100%;
+  margin: 6% 0px 0px 0px;
+  padding: 0;
+  text-align: center;
+  font-weight: bold;
+  color: lightseagreen;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-left: 10%;
+  margin-right:10%;
+  margin-top: 3%;
+
+
+
+
+}
+
+.float-left2 {
+  float: left;
+  width: 25%;
+  height: 25%;
+  background-color: lightblue;
+  opacity: 1;
+  border-radius: 100px;
+  margin-top: 8%;
+  margin-bottom: 4%;
+  margin-left: 4%;
+  margin-right: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 25%;
+  box-shadow: 0 0 10px rgba(0, 80, 120, 0.4);
+  transition: transform 0.3s;
+}
+
+.float-right2 {
+  float: right;
+  width: 25%;
+  height: 25%;
+  background-color: lightcoral;
+  opacity: 1;
+  border-radius: 100px;
+  margin-top: 8%;
+  margin-bottom: 4%;
+  margin-left: 4%;
+  margin-right: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 25%;
+  box-shadow: 0 0 10px rgba(200, 100, 100, 0.6);
+  transition: transform 0.3s;
+}
+
+.clear-none {
+  clear: none;
+  width: 30%;
+  background-color: lightgreen;
+  border-radius: 20px;
+  margin: 8%;
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.6);
+  transition: transform 0.3s;
+}
+
+
+.explicacion2{
+  max-width:100%;
+  padding: 0;
+  text-align: center;
+  font-weight: bold;
+  color: lightseagreen;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-left: 7%;
+  margin-right:7%;
+  margin-top: 8%;
+}
+
+/* <!-- Código de Raul -->  */
+
+#contenedorBoxSS{
+  text-align: center;
+  height: 70%;
+  width: 70%;
+  border-radius: 20px;
+  background-color: #C0E9F2;
+  opacity: 1;
+  box-shadow: 0px 0px 12px gray;
+  margin: 3% 0;
+}
+
+#divEjemploBoxSS{
+  height: 100%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  flex-direction: column;
+}
+
+#contenidoBoxSS{
+  padding: 0;
+  margin: 0;
+  font-size: 35px;
+  color: #777;
+  caption-side: hiden;
+  box-shadow: none;
+  transition: box-shadow 1.5s ease-in-out;
+  height: 50%;
+  width: 50%;
+  border: solid 5px;
+}
+
+#textoExplicacionBoxSS{
+  width: 70%;
+  margin: 5% 0px 0px 0px;
+  padding: 0;
+  text-align: justify;
+  font-weight: bold;
+  color: lightseagreen;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#button-BoxSS{
+  margin-top: 10%;
+}

@@ -14,6 +14,13 @@ public abstract class Trabajador {
         this.dni = dni;
     }
 
+    public void mostrarDatos(){
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Apellido: " + apellido);
+        System.out.println("Dni: " + dni);
+    }
+
+
     public String getNombre() {
         return nombre;
     }
