@@ -16,11 +16,11 @@
 
 <body>
   <header class="header">
-    <h1>Tipos de Border</h1>
+    <h1>Explicación propiedades CSS</h1>
 
-    <p>- Explorando las posibilidades de estilos de borde en CSS -</p>
+    <p>- Explicando propiedades de CSS con estilo -</p>
   </header>
-  <h1 class="titulo"><u>contenido de ejemplo</u></h1>
+  <h1 class="titulo"><u>1. Tipos de border</u></h1>
 
   <section class="contenedor">
     <!-- Dividimos el contenedor en div de contenido y botones-->
@@ -210,7 +210,7 @@
   </section>
 
 
-  <h1 class="titulo"><u>Border spacing</u></h1>
+  <h1 class="titulo"><u>1.1 Border spacing</u></h1>
   <section class="contenedor"  id="contenedor2">
     <div id="tres-en-raya-container">
       <div id="tres-en-raya">
@@ -278,7 +278,7 @@
     </div>
   </section>
 
-  <h1 class="titulo">Clip</h1>
+  <h1 class="titulo">2. Clip</h1>
 
   
   <section class="contenedor" id="contenedorClip">
@@ -329,7 +329,7 @@
           if(estilo.clip !== 'rect(0px, 250px, 250px, 0px)'){contenido.style.clip = 'rect(0px, 250px, 250px, 0px)';} 
           else {contenido.style.clip = 'rect(0px, 300px, 250px, 0px)';}
 
-          document.getElementById('textoExplicacionClip').innerHTML = '<u>Clip:</u> Es una propiedad muy anticuada y en desuso que nos permite recortar una imagen o div en un cuadrado más pequeño';  cc
+          document.getElementById('textoExplicacionClip').innerHTML = '<u>Clip:</u> Es una propiedad muy anticuada y en desuso que nos permite recortar una imagen o div en un cuadrado más pequeño';
           document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clip +'-->';">Derecha</button>
 
 
@@ -439,7 +439,7 @@
     </div>
   </section>
 
-
+  <h1 class="titulo">2.1 Caption </h1>
 <!-- CAPTION SIDE -->
   <section class="contenedor" id="contendedorCapSide">
     <div id="divEjemploCapSide" >
@@ -467,7 +467,7 @@
 
   <!-- BOTONES -->
     <div class="divBotones">
-      <div class="botones">
+      <div class="botones" id="botonesCapSide">
       <!-- TOP -->  
         <button class="button" onclick="
           var contenidoCapSide = document.getElementById('contenidoCapSide');
@@ -505,6 +505,8 @@
     </div>
   </section>
 
+  <h1 class="titulo">2.2 Clear</h1>
+
   <!-- FLOAT -->
   <section class="contenedor" id="contenedorFloat">
     <!-- PARTE IZQUIERDA -->
@@ -539,9 +541,8 @@
     </div>
   </section>
 
-
   <!-- BOX SHADOW / BOX SIZING-->
-  <h1 class="titulo">Ejemplo de box shadow y box-sizing</h1>
+  <h1 class="titulo">2.3 Ejemplo de box shadow y box-sizing</h1>
   <section class="contenedor" id="contenedorBoxSS">
     <div id="divEjemploBoxSS">
       <!-- CONTENIDO -->
@@ -596,6 +597,83 @@
       </div>
     </div>
   </section>
+
+
+  <!-- COLUMNS -->
+  <h1 class="titulo">3. Columns</h1>
+  <section class="contenedor" id="contenedorColumns">
+    <div id="divEjemploColumns" >
+      <div class="flexbox" id="flexBoxColumns">
+        <div class="content-box" id="contentBoxColumns">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dignissimos perferendis iste, soluta iure aperiam eveniet provident sint quia quo repudiandae nemo tempora delectus aliquam aliquid, quis odio doloremque necessitatibus similique distinctio minus dolorem veritatis laborum. Possimus, mollitia! Iure doloribus fugiat suscipit obcaecati minima blanditiis quo quos facere delectus, officia sint, nisi sapiente tempore? Doloribus inventore sequi pariatur unde enim, nulla molestias! Porro quaerat laudantium nesciunt illo omnis nemo.
+        </div>
+        <div></div>
+
+
+       
+       
+      </div>
+     
+
+
+      <!-- DESCRIPCION -->
+      <div id="textoExplicacionColumns" class="textoExplicacion">
+        <-- Este texto dará una breve descripción de la opción elegida para permitir un mejor entendimiento y ayudar a la
+          explicación -->
+      </div>
+
+
+      <!-- VALORES -->
+      <div id="valoresColumns" class="valores">
+        <-- Aquí estará el valor elegido -->
+      </div>
+    </div>
+   
+    <div class="divBotones" id="divBotonesColumns">
+      <div class="botones" id="botonesColumns">
+      <!-- AÑADIR COLUMNAS -->  
+        <button class="button" onclick="
+          var contenido = document.getElementById('contentBoxColumns');
+          var estilo = window.getComputedStyle(contenido);
+          var columnas = parseInt(estilo.columnCount)
+ 
+          document.getElementById('contentBoxColumns').style.columnCount = columnas + 1;
+          if(contenido.style.columnCount === '4'){
+            contenido.style.columnCount = '1';
+          }
+          ">Añadir Columnas</button>
+
+
+      <!-- AÑADIR GAP -->
+        <button class="button" onclick="
+          var contenido = document.getElementById('contentBoxColumns');
+          var estilo = window.getComputedStyle(contenido);
+          var hueco = parseInt(estilo.columnGap);
+ 
+          document.getElementById('contentBoxColumns').style.columnGap = (hueco + 5) + 'px';
+          if(hueco >= '105'){
+            contenido.style.columnGap = '50px'
+          }
+          ">Añadir Gap</button>
+
+
+      <!-- COLUM FILL -->  
+        <button class="button" onclick="
+          var contenido = document.getElementById('contentBoxColumns');
+          var estilo = window.getComputedStyle(contenido);
+
+          if(estilo.columnFill === 'auto'){
+            contenido.style.columnFill = 'Balance'
+          } else {
+            contenido.style.columnFill = 'auto'
+          }
+          ">Column Fill: Auto/Balance</button>
+
+      </div>
+    </div>
+  </section>
+
+
 
   <!-- CRÉDITOS -->
   <div id="textoFooter1">

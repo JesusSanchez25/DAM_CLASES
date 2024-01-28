@@ -112,7 +112,7 @@ body {
   font-weight: bold;
   color: lightseagreen;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+  
 }
 
 
@@ -554,6 +554,7 @@ footer:hover{
 
 /* <!-- Código de Mario -->  */
 
+
 #contenedorFloat {
   height: 70%;
   width: 70%;
@@ -567,6 +568,7 @@ footer:hover{
   margin: 3% 0;
 }
 
+
 .parteIzquierda {
   width: 45%;
   height: 80%;
@@ -578,6 +580,7 @@ footer:hover{
   opacity: 1;
   transition:  scale 1s;
 }
+
 
 .parteDerecha{
   width: 45%;
@@ -591,9 +594,11 @@ footer:hover{
   transition:  scale 1s;
 }
 
+
 .parteIzquierda:hover, .parteDerecha:hover{
   scale: 1.13;
 }
+
 
 .float-left1 {
   float: left;
@@ -616,6 +621,7 @@ footer:hover{
  
 }
 
+
 .float-right1 {
   float: right;
   width: 25%;
@@ -637,6 +643,8 @@ footer:hover{
 }
 
 
+
+
 .clear-both {
   clear: both;
   width: 30%;
@@ -646,6 +654,8 @@ footer:hover{
   transition: transform 0.3s;
  
 }
+
+
 
 
 .explicacion1{
@@ -663,7 +673,12 @@ footer:hover{
 
 
 
+
+
+
+
 }
+
 
 .float-left2 {
   float: left;
@@ -685,6 +700,7 @@ footer:hover{
   transition: transform 0.3s;
 }
 
+
 .float-right2 {
   float: right;
   width: 25%;
@@ -705,6 +721,7 @@ footer:hover{
   transition: transform 0.3s;
 }
 
+
 .clear-none {
   clear: none;
   width: 30%;
@@ -714,6 +731,8 @@ footer:hover{
   box-shadow: 0 0 10px rgba(0, 128, 0, 0.6);
   transition: transform 0.3s;
 }
+
+
 
 
 .explicacion2{
@@ -727,6 +746,58 @@ footer:hover{
   margin-right:7%;
   margin-top: 8%;
 }
+
+
+#divEjemploColumns{
+  height: 100%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  flex-direction: column;
+}
+
+
+#botonesColumns{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+ 
+}
+
+
+.flexbox {
+  border: 1px solid green;
+  background-color: lime;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  height: 70%;
+  margin-top: 10%;
+  display: flex;
+  flex-flow: row wrap;
+  height: 50%;
+}
+
+
+#contentBoxColumns {
+  height: 100%;
+  column-rule: solid 5px white ;
+  column-count: 1;
+  column-gap: 50px;
+  column-fill: balance;
+  flex: 200px;
+  transition: column-gap 0.3s;
+  
+}
+
+#textoExplicacionColumns{
+  margin-top: 10px;
+}
+
 
 /* <!-- Código de Raul -->  */
 
@@ -776,4 +847,12 @@ footer:hover{
 
 #button-BoxSS{
   margin-top: 10%;
+}
+
+/* <!-- Código de Torda -->  */
+#botonesCapSide{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-top: 40%;
 }
