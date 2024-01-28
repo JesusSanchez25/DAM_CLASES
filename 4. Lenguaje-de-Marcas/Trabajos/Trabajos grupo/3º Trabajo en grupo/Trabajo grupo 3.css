@@ -55,6 +55,7 @@ body {
   margin: 3% 0 0 0;
   padding: 0;
   width: 100%;
+  text-decoration: underline;
   text-align: center;
   color: #5f9aa7;
   font-size: 50px;
@@ -71,7 +72,6 @@ body {
   opacity: 1;
   box-shadow: 0px 0px 12px gray;
   margin: 3% 0;
-
 }
 
 
@@ -446,6 +446,45 @@ footer:hover{
   transform: rotate(-45deg);
 }
 
+#contenedorCapSide{
+  text-align: center;
+  height: 70%;
+  width: 70%;
+  border-radius: 20px;
+  background-color: #C0E9F2;
+  opacity: 1;
+  box-shadow: 0px 0px 12px gray;
+  margin: 3% 0;
+}
+
+#divEjemploCapSide{
+  height: 100%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  flex-direction: column;
+}
+
+#contenidoCapSide{
+  padding: 0;
+  margin: 0;
+    font-size: 35px;
+    color: #777;
+    caption-side: hiden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    animation: shadowAnimation 2s infinite alternate;
+    height: 50%;
+  width: 50%;
+  border: solid 5px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+
+
+
+
 
 /* <!-- Código Jesús -->*/
 #contenedorClip{
@@ -459,7 +498,282 @@ footer:hover{
   margin: 3% 0;
 }
 
+#divEjemploClip{
+  height: 100%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  flex-direction: column;
+}
+
+#contenidoClip{
+  width: 300px;
+  height: 250px;
+  margin-bottom: 10%;
+  background-image: url('https://img.freepik.com/fotos-premium/hermosos-paisajes-naturales-fantasia-natural-ai-imagenes-increibles-clasicos-paisajes-naturales_744422-6057.jpg');
+  background-size: cover;
+  clip: rect(0px, 300px, 250px, 0px);
+  position: absolute;
+  border-radius: 5px;
+  clip-path: none;
+  
+}
+
+#textoExplicacionClip{
+  width: 70%;
+  margin: 50% 0px 0px 0px;
+  padding: 0;
+  text-align: justify;
+  font-weight: bold;
+  color: lightseagreen;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.displayClip{
+  transition: transform 2s, scale 2s, opacity 2s;
+  list-style: none;
+  position: absolute;
+  gap: 10px;
+  opacity: 0;
+  padding: 0;
+  margin-top: -80px;
+  margin-left: 60px;
+  display: flex;
+  scale: 0.2;
+}
+
+.moverDisplayClip{
+  transform: translateY(49px);
+  scale: 1.1;
+  opacity: 1;
+}
+
+
+/* <!-- Código de Mario -->  */
+
+#contenedorFloat {
+  height: 70%;
+  width: 70%;
+  border-radius: 20px;
+  opacity: 1;
+  box-shadow: 0px 0px 12px gray;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 3% 0;
+}
+
+.parteIzquierda {
+  width: 45%;
+  height: 80%;
+  border-radius: 20px;
+  margin-right: 2%;
+  float: left;
+  background-color: aliceblue;
+  box-shadow: -1px 0 4px gray;
+  opacity: 1;
+  transition:  scale 1s;
+}
+
+.parteDerecha{
+  width: 45%;
+  height: 80%;
+  border-radius: 20px;
+  margin-left: 2%;
+  float: right;
+  background-color: aliceblue;
+  box-shadow: -1px 0 4px gray;
+  opacity: 1;
+  transition:  scale 1s;
+}
+
+.parteIzquierda:hover, .parteDerecha:hover{
+  scale: 1.13;
+}
+
+.float-left1 {
+  float: left;
+  width: 25%;
+  height: 25%;
+  border-radius: 100px;
+  background-color: lightblue;
+  opacity: 1;
+  margin-top: 8%;
+  margin-bottom: 0;
+  margin-left: 4%;
+  margin-right: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 25%;
+  box-shadow: 0 0 10px rgba(0, 80, 120, 0.4);
+  transition: transform 0.3s;
+ 
+}
+
+.float-right1 {
+  float: right;
+  width: 25%;
+  height: 25%;
+  border-radius: 100px;
+  background-color: lightcoral;
+  opacity: 1;
+  margin-top: 8%;
+  margin-bottom: 0;
+  margin-left: 4%;
+  margin-right: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 25%;
+  box-shadow: 0 0 15px rgba(200, 100, 100, 0.6);
+  transition: transform 0.3s;
+}
+
+
+.clear-both {
+  clear: both;
+  width: 30%;
+  background-color: lightgreen;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.6);
+  transition: transform 0.3s;
+ 
+}
+
+
+.explicacion1{
+  max-width:100%;
+  margin: 6% 0px 0px 0px;
+  padding: 0;
+  text-align: center;
+  font-weight: bold;
+  color: lightseagreen;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-left: 10%;
+  margin-right:10%;
+  margin-top: 3%;
 
 
 
 
+}
+
+.float-left2 {
+  float: left;
+  width: 25%;
+  height: 25%;
+  background-color: lightblue;
+  opacity: 1;
+  border-radius: 100px;
+  margin-top: 8%;
+  margin-bottom: 4%;
+  margin-left: 4%;
+  margin-right: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 25%;
+  box-shadow: 0 0 10px rgba(0, 80, 120, 0.4);
+  transition: transform 0.3s;
+}
+
+.float-right2 {
+  float: right;
+  width: 25%;
+  height: 25%;
+  background-color: lightcoral;
+  opacity: 1;
+  border-radius: 100px;
+  margin-top: 8%;
+  margin-bottom: 4%;
+  margin-left: 4%;
+  margin-right: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 25%;
+  box-shadow: 0 0 10px rgba(200, 100, 100, 0.6);
+  transition: transform 0.3s;
+}
+
+.clear-none {
+  clear: none;
+  width: 30%;
+  background-color: lightgreen;
+  border-radius: 20px;
+  margin: 8%;
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.6);
+  transition: transform 0.3s;
+}
+
+
+.explicacion2{
+  max-width:100%;
+  padding: 0;
+  text-align: center;
+  font-weight: bold;
+  color: lightseagreen;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-left: 7%;
+  margin-right:7%;
+  margin-top: 8%;
+}
+
+/* <!-- Código de Raul -->  */
+
+#contenedorBoxSS{
+  text-align: center;
+  height: 70%;
+  width: 70%;
+  border-radius: 20px;
+  background-color: #C0E9F2;
+  opacity: 1;
+  box-shadow: 0px 0px 12px gray;
+  margin: 3% 0;
+}
+
+#divEjemploBoxSS{
+  height: 100%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  flex-direction: column;
+}
+
+#contenidoBoxSS{
+  padding: 0;
+  margin: 0;
+  font-size: 35px;
+  color: #777;
+  caption-side: hiden;
+  box-shadow: none;
+  transition: box-shadow 1.5s ease-in-out;
+  height: 50%;
+  width: 50%;
+  border: solid 5px;
+}
+
+#textoExplicacionBoxSS{
+  width: 70%;
+  margin: 5% 0px 0px 0px;
+  padding: 0;
+  text-align: justify;
+  font-weight: bold;
+  color: lightseagreen;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#button-BoxSS{
+  margin-top: 10%;
+}
