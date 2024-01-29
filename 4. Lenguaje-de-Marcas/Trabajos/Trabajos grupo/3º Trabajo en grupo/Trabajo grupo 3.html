@@ -20,9 +20,47 @@
 
     <p>- Explicando propiedades de CSS con estilo -</p>
   </header>
-  <h1 class="titulo"><u>1. Tipos de border</u></h1>
 
-  <section class="contenedor">
+  <!-- Menu display-->
+  <div class="menuAlejandro">
+    <button class="valueMenu">
+
+      <img class="imagen"
+        src="https://static.vecteezy.com/system/resources/previews/009/346/267/original/3d-render-icon-yellow-folder-illustration-free-png.png"
+        alt=""><a href="#tituloBorder" id="letralink">
+        Estilos 1
+
+    </button></a>
+
+    <button class="valueMenu">
+      <img class="imagen"
+        src="https://static.vecteezy.com/system/resources/previews/009/346/267/original/3d-render-icon-yellow-folder-illustration-free-png.png"
+        alt="">
+      <a href="#tituloClip" id="letralink">Estilos 2</a>
+    </button>
+    <button class="valueMenu">
+      <img class="imagen"
+        src="https://static.vecteezy.com/system/resources/previews/009/346/267/original/3d-render-icon-yellow-folder-illustration-free-png.png"
+        alt="">
+      <a href="#tituloColumns" id="letralink">Estilos 3</a>
+    </button>
+    <button class="valueMenu">
+      <img class="imagen"
+        src="https://static.vecteezy.com/system/resources/previews/009/346/267/original/3d-render-icon-yellow-folder-illustration-free-png.png"
+        alt="">
+      <a href="#" id="letralink">Estilos 4</a>
+    </button>
+    <button class="valueMenu">
+      <img class="imagen" src="https://cdn3.iconfinder.com/data/icons/iconic-1/32/x_alt-512.png" alt="">
+      Cerrar Menú
+    </button>
+  </div>
+
+
+
+  <h1 class="titulo" id="tituloBorder"><u>1. Tipos de border</u></h1>
+  <!-- BORDER -->
+  <section class="contenedor" id="sectionBorder">
     <!-- Dividimos el contenedor en div de contenido y botones-->
     <div class="divEjemploContenido">
       <div id="contenido" class="contenido">
@@ -39,8 +77,9 @@
 
     <div class="divBotones">
       <div class="botones">
-      <!-- CAMBIAR ESTILO-->
-        <button class="button" onclick="
+        <!-- CAMBIAR ESTILO-->
+        <button class="button"
+          onclick="
           // Establece las variables para mayor legibilidad
           var contenido = document.getElementById('contenido');
           var estilo = window.getComputedStyle(contenido);
@@ -66,8 +105,9 @@
           document.getElementById('valores').innerHTML = '<-- Border style: ' + estilo.borderBottomStyle +'-->';">Border style</button>
 
 
-      <!-- CAMBIAR COLOR-->
-        <button class="button" onclick="
+        <!-- CAMBIAR COLOR-->
+        <button class="button"
+          onclick="
               var contenido = document.getElementById('contenido');
               var estilo = window.getComputedStyle(contenido);
               
@@ -85,7 +125,8 @@
                 contenido.style.borderColor = 'black';
               }
               
-              document.getElementById('textoExplicacion').innerHTML = '<u>Border Color:</u> Es simplemente un ajuste que define el color del borde de un elemento. Puedes elegir el color tanto por su nombre, código hexadecimal, código rgb, etc...';document.getElementById('valores').innerHTML = '<-- Border color: ' + contenido.style.borderBottomColor +'-->';">Border color</button>
+              document.getElementById('textoExplicacion').innerHTML = '<u>Border Color:</u> Es simplemente un ajuste que define el color del borde de un elemento. Puedes elegir el color tanto por su nombre, código hexadecimal, código rgb, etc...';document.getElementById('valores').innerHTML = '<-- Border color: ' + contenido.style.borderBottomColor +'-->';">Border
+          color</button>
 
 
         <!-- MÁS ANCHO-->
@@ -105,7 +146,8 @@
 
 
         <!-- MENOS ANCHO-->
-        <button class="button" onclick="
+        <button class="button"
+          onclick="
             var contenido = document.getElementById('contenido');
             var estilo = window.getComputedStyle(contenido);
             var ancho = parseInt(estilo.borderWidth); 
@@ -114,10 +156,10 @@
 
             document.getElementById('textoExplicacion').innerHTML = '<u>Border Width:</u> Establece el ancho de los cuatro bordes de un elemento de forma simultánea. Puedes proporcionar uno, dos, tres o cuatro valores.';
             document.getElementById('valores').innerHTML = '<-- Border width: ' + contenido.style.borderBottomWidth +'-->'">
-            Menos width</button>
+          Menos width</button>
 
 
-        <!-- MOSTRAR DISPLAY-->    
+        <!-- MOSTRAR DISPLAY-->
         <button onclick="
                 document.getElementById('display').classList.toggle('moverDisplay');" class="button">Top border
         </button>
@@ -125,8 +167,8 @@
         <!-- DISPLAY -->
         <h1>
           <ul id="display" class="display">
-          <!-- CAMBIAR ESTILO (top) -->
-          <li class="button-pequeño" onclick="
+            <!-- CAMBIAR ESTILO (top) -->
+            <li class="button-pequeño" onclick="
             // variables
             var contenido = document.getElementById('contenido');
             var estilo = window.getComputedStyle(contenido);
@@ -148,10 +190,11 @@
             // Descripción y valor actual    
             document.getElementById('textoExplicacion').innerHTML = '<u>Border style:</u> Define el estilo del borde de un elemento. Puedes establecer diferentes estilos como sólido, punteado, discontinuo, etc.';
             document.getElementById('valores').innerHTML = '<-- Border style: ' + estilo.borderBottomStyle +'-->';">
-            Style</li>
+              Style</li>
 
-          <!-- CAMBIAR COLOR (top)-->
-            <li class="button-pequeño" onclick="
+            <!-- CAMBIAR COLOR (top)-->
+            <li class="button-pequeño"
+              onclick="
               var contenido = document.getElementById('contenido');
               var estilo = window.getComputedStyle(contenido);
               
@@ -192,7 +235,8 @@
 
 
             <!-- MENOS ANCHO(top)-->
-            <li class="button-pequeño" onclick="
+            <li class="button-pequeño"
+              onclick="
             var contenido = document.getElementById('contenido');
             var estilo = window.getComputedStyle(contenido);
             var ancho = parseInt(estilo.borderTopWidth); 
@@ -211,10 +255,10 @@
 
 
   <h1 class="titulo"><u>1.1 Border spacing</u></h1>
-  <section class="contenedor"  id="contenedor2">
+  <section class="contenedor" id="sectionBorderSpacing">
     <div id="tres-en-raya-container">
       <div id="tres-en-raya">
-      <!-- TABLA SIN BORDER SPACING -->
+        <!-- TABLA SIN BORDER SPACING -->
         <table id="tresEnRayaSinSpacing">
           <tr>
             <td></td>
@@ -255,9 +299,9 @@
         </a>
       </div>
     </div>
-    
+
     <div class="tres-en-raya">
-    <!-- TABLA CON BORDER SPACING -->
+      <!-- TABLA CON BORDER SPACING -->
       <table id="tresEnRayaConSpacing">
         <tr>
           <td></td>
@@ -278,34 +322,34 @@
     </div>
   </section>
 
-  <h1 class="titulo">2. Clip</h1>
+  <h1 class="titulo" id="tituloClip">2. Clip</h1>
 
-  
+
   <section class="contenedor" id="contenedorClip">
-  <!-- CONTENIDO -->
+    <!-- CONTENIDO -->
     <div class="divEjemploContenido" id="divEjemploClip">
       <div id="contenidoClip">
-      
+
       </div>
 
-    <!-- EXPLICACIÓN -->
+      <!-- EXPLICACIÓN -->
       <div id="textoExplicacionClip" class="textoExplicacion">
         <-- Este texto dará una breve descripción del borde elegido para permitir un mejor entendimiento y ayudar a la
           explicación -->
       </div>
 
-    <!-- VALOR ACTUAL -->
+      <!-- VALOR ACTUAL -->
       <div id="valoresClip" class="valores">
         <-- Aquí estará el valor del borde elegido -->
       </div>
     </div>
 
 
-  <!-- BOTONES -->
+    <!-- BOTONES -->
     <div class="divBotones">
       <div class="botones">
 
-      <!-- RECORTAR ARRIBA-->
+        <!-- RECORTAR ARRIBA-->
         <button class="button" onclick="
           // Establece las variables para mayor legibilidad
           var contenido = document.getElementById('contenidoClip');
@@ -321,7 +365,7 @@
           document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clip +'-->';">Arriba</button>
 
 
-      <!-- RECORTAR DERECHA -->
+        <!-- RECORTAR DERECHA -->
         <button class="button" onclick="
           var contenido = document.getElementById('contenidoClip');
           var estilo = window.getComputedStyle(contenido);
@@ -367,7 +411,7 @@
         <!-- EL DISPLAY (VARIOS BOTONES)-->
         <h1>
           <ul id="displayClip" class="displayClip">
-          <!-- CIRCULO -->  
+            <!-- CIRCULO -->
             <li class="button-pequeño" onclick="
               // Establece las variables para mayor legibilidad
               var contenido = document.getElementById('contenidoClip');
@@ -386,7 +430,7 @@
                 document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';}">🔴</li>
 
 
-          <!-- TRIANGULO -->      
+            <!-- TRIANGULO -->
             <li class=" button-pequeño" onclick="
               var contenido = document.getElementById('contenidoClip');
               var estilo = window.getComputedStyle(contenido);
@@ -399,10 +443,11 @@
                   document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';
               } else {
                 document.getElementById('contenidoClip').style.clipPath = 'none';
-                document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';}"><span style="font-size: 25px;">🔺</span></li>
+                document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';}"><span
+                style="font-size: 25px;">🔺</span></li>
 
 
-          <!-- ROMBO -->     
+            <!-- ROMBO -->
             <li class="button-pequeño" onclick="
               var contenido = document.getElementById('contenidoClip');
               var estilo = window.getComputedStyle(contenido);
@@ -418,7 +463,7 @@
                 document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';}">🔶</li>
 
 
-          <!-- ESTRELLA -->    
+            <!-- ESTRELLA -->
             <li class="button-pequeño" onclick="
               var contenido = document.getElementById('contenidoClip');
               var estilo = window.getComputedStyle(contenido);
@@ -439,10 +484,10 @@
     </div>
   </section>
 
-  <h1 class="titulo">2.1 Caption </h1>
-<!-- CAPTION SIDE -->
+  <h1 class="titulo" id="sectionCapSide">2.1 Caption </h1>
+  <!-- CAPTION SIDE -->
   <section class="contenedor" id="contendedorCapSide">
-    <div id="divEjemploCapSide" >
+    <div id="divEjemploCapSide">
       <!-- TABLA-->
       <table id="contenidoCapSide">
         <tr>
@@ -465,10 +510,10 @@
     </div>
 
 
-  <!-- BOTONES -->
+    <!-- BOTONES -->
     <div class="divBotones">
       <div class="botones" id="botonesCapSide">
-      <!-- TOP -->  
+        <!-- TOP -->
         <button class="button" onclick="
           var contenidoCapSide = document.getElementById('contenidoCapSide');
           var estilo = window.getComputedStyle(contenidoCapSide);
@@ -479,7 +524,7 @@
           document.getElementById('valoresCapSide').innerHTML = estilo.captionSide;">Caption-Side Top</button>
 
 
-      <!-- BOTTOM --> 
+        <!-- BOTTOM -->
         <button class="button" onclick="
           var contenidoCapSide = document.getElementById('contenidoCapSide');
           var estilo = window.getComputedStyle(contenidoCapSide);
@@ -490,7 +535,7 @@
           document.getElementById('valoresCapSide').innerHTML = estilo.captionSide; ">Caption-Side bottom</button>
 
 
-      <!-- HIDDEN -->  
+        <!-- HIDDEN -->
         <button class="button" onclick="
               var contenidoCapSide = document.getElementById('contenidoCapSide');
               var estilo = window.getComputedStyle(contenidoCapSide);
@@ -505,7 +550,7 @@
     </div>
   </section>
 
-  <h1 class="titulo">2.2 Clear</h1>
+  <h1 class="titulo" id="sectionClear">2.2 Clear</h1>
 
   <!-- FLOAT -->
   <section class="contenedor" id="contenedorFloat">
@@ -529,7 +574,9 @@
     <div class="parteDerecha">
       <div class="float-left2">Elemento Flotante a la Izquierda</div>
       <div class="float-right2">Elemento Flotante a la Derecha</div>
-      <center><div class="clear-none">Elemento No Flotante con Clear None</div></center>
+      <center>
+        <div class="clear-none">Elemento No Flotante con Clear None</div>
+      </center>
 
       <div class="explicacion2">
         None/Left/Right/Both<br><br>
@@ -542,7 +589,7 @@
   </section>
 
   <!-- BOX SHADOW / BOX SIZING-->
-  <h1 class="titulo">2.3 Ejemplo de box shadow y box-sizing</h1>
+  <h1 class="titulo" id="sectionBoxSS">2.3 Ejemplo de box shadow y box-sizing</h1>
   <section class="contenedor" id="contenedorBoxSS">
     <div id="divEjemploBoxSS">
       <!-- CONTENIDO -->
@@ -560,7 +607,7 @@
 
     <!-- BOTONES -->
     <div class="divBotones">
-      <div class="botones">
+      <div class="botones" id="botonesBoxSS">
         <!-- BOX SIZING -->
         <button class="button" id="button-BoxSS" onclick="
           var contenidoBoxSS = document.getElementById('contenidoBoxSS');
@@ -568,11 +615,11 @@
           contenidoBoxSS.style.boxSizing = 'border-box';
           
           document.getElementById('textoExplicacionBoxSS').innerHTML = '<u>BOX-SIZING:</u> box-sizing es una propiedad en CSS que determina cómo se calcula el tamaño total de un elemento, incluyendo su contenido, relleno y borde.';
-          document.getElementById('valoresBoxSS').innerHTML = estilo.boxSizing; ">BOX-SIZING    
+          document.getElementById('valoresBoxSS').innerHTML = estilo.boxSizing; ">BOX-SIZING
 
         </button>
 
-      
+
         <!-- BOX SHADOW -->
         <button class="button" id="button-BoxSS" onclick="
           var contenidoBoxSS = document.getElementById('contenidoBoxSS');
@@ -592,7 +639,7 @@
           
           document.getElementById('textoExplicacionBoxSS').innerHTML = '<u>BOX-SHADOW:</u>En CSS se utiliza para agregar sombras a los elementos. Puedes aplicar sombras a cajas (elementos rectangulares) y texto.';
           document.getElementById('valoresBoxSS').innerHTML = contenidoBoxSS.style.boxShadow; ">BOX-SHADOW
-          
+
         </button>
       </div>
     </div>
@@ -600,26 +647,30 @@
 
 
   <!-- COLUMNS -->
-  <h1 class="titulo">3. Columns</h1>
-  <section class="contenedor" id="contenedorColumns">
-    <div id="divEjemploColumns" >
+  <h1 class="titulo" id="tituloColumns">3. Columns</h1>
+  <section class="contenedor" id="sectionColumns">
+    <div id="divEjemploColumns">
       <div class="flexbox" id="flexBoxColumns">
         <div class="content-box" id="contentBoxColumns">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dignissimos perferendis iste, soluta iure aperiam eveniet provident sint quia quo repudiandae nemo tempora delectus aliquam aliquid, quis odio doloremque necessitatibus similique distinctio minus dolorem veritatis laborum. Possimus, mollitia! Iure doloribus fugiat suscipit obcaecati minima blanditiis quo quos facere delectus, officia sint, nisi sapiente tempore? Doloribus inventore sequi pariatur unde enim, nulla molestias! Porro quaerat laudantium nesciunt illo omnis nemo.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi expedita beatae inventore adipisci eaque,
+          assumenda possimus aperiam itaque quisquam amet maiores quo voluptatem nam laboriosam nulla repudiandae
+          molestias temporibus voluptatum fugiat ipsam! Animi nesciunt provident optio sunt tempore quis ea molestias
+          voluptatibus recusandae, necessitatibus sint ducimus non enim sequi assumenda, eum reprehenderit et culpa ut
+          eligendi. Dolore ipsa nisi quia?
         </div>
         <div></div>
 
 
-       
-       
+
+
       </div>
-     
+
 
 
       <!-- DESCRIPCION -->
       <div id="textoExplicacionColumns" class="textoExplicacion">
-        <-- Este texto dará una breve descripción de la opción elegida para permitir un mejor entendimiento y ayudar a la
-          explicación -->
+        <-- Este texto dará una breve descripción de la opción elegida para permitir un mejor entendimiento y ayudar a
+          la explicación -->
       </div>
 
 
@@ -628,10 +679,10 @@
         <-- Aquí estará el valor elegido -->
       </div>
     </div>
-   
+
     <div class="divBotones" id="divBotonesColumns">
       <div class="botones" id="botonesColumns">
-      <!-- AÑADIR COLUMNAS -->  
+        <!-- AÑADIR COLUMNAS -->
         <button class="button" onclick="
           var contenido = document.getElementById('contentBoxColumns');
           var estilo = window.getComputedStyle(contenido);
@@ -641,10 +692,12 @@
           if(contenido.style.columnCount === '4'){
             contenido.style.columnCount = '1';
           }
+          document.getElementById('textoExplicacionColumns').innerHTML = '<u>Columns:</u>Se utiliza para especificar el diseño de columnas en contenedores. Puedes establecer el número de columnas a dividir, lo que permitirá otras propiedades.';
+          document.getElementById('valoresColumns').innerHTML = 'Columnas: ' + contenido.style.columnCount; 
           ">Añadir Columnas</button>
 
 
-      <!-- AÑADIR GAP -->
+        <!-- AÑADIR GAP -->
         <button class="button" onclick="
           var contenido = document.getElementById('contentBoxColumns');
           var estilo = window.getComputedStyle(contenido);
@@ -654,10 +707,12 @@
           if(hueco >= '105'){
             contenido.style.columnGap = '50px'
           }
+          document.getElementById('textoExplicacionColumns').innerHTML = '<u>Gap:</u> La propiedad gap se usa junto con la propiedad columns para establecer el espacio entre las columnas. Permite definir la separación horizontal entre las columnas.';
+          document.getElementById('valoresColumns').innerHTML = 'Gap: ' + contenido.style.columnGap;
           ">Añadir Gap</button>
 
 
-      <!-- COLUM FILL -->  
+        <!-- COLUM FILL -->
         <button class="button" onclick="
           var contenido = document.getElementById('contentBoxColumns');
           var estilo = window.getComputedStyle(contenido);
