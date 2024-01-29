@@ -443,8 +443,7 @@
                   document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';
               } else {
                 document.getElementById('contenidoClip').style.clipPath = 'none';
-                document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';}"><span
-                style="font-size: 25px;">🔺</span></li>
+                document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';}">🔺</li>
 
 
             <!-- ROMBO -->
@@ -562,7 +561,8 @@
         <div class="clear-both">Elemento no flotante con Clear Both</div>
       </center>
       <div class="explicacion1">
-        <u>Clear:</u><br><br>La propiedad clear especifica si un elemento puede estar al lado de elementos flotantes o
+        <p id="hola"> <u>Clear:</u></p>La propiedad clear especifica si un elemento puede estar al lado de elementos
+        flotantes o
         si debe ser movido (cleared/limpiado) debajo de ellos.<br><br>
         Clear Both: El elemento es movido hacia abajo si hay elementos flotantes a algun lado de la pantalla.
       </div>
@@ -579,7 +579,7 @@
       </center>
 
       <div class="explicacion2">
-        None/Left/Right/Both<br><br>
+        <p id="adios">None/Left/Right/Both</p>
         Clear Left: El elemento es movido hacia abajo si hay elementos flotantes a la izquierda.<br><br>
         Clear Right: El elemento es movido hacia abajo si hay elementos flotantes a la derecha.<br><br>
         Clear None: Keyword que indica que el elemento puede estar al lado de elementos flotantes.
@@ -612,7 +612,12 @@
         <button class="button" id="button-BoxSS" onclick="
           var contenidoBoxSS = document.getElementById('contenidoBoxSS');
           
-          contenidoBoxSS.style.boxSizing = 'border-box';
+          if(contenidoBoxSS.style.boxSizing === 'none'){
+            contenidoBoxSS.style.boxSizing = 'border-box';
+          } else{
+            contenidoBoxSS.style.boxSizing = 'none';
+          }
+          
           
           document.getElementById('textoExplicacionBoxSS').innerHTML = '<u>BOX-SIZING:</u> box-sizing es una propiedad en CSS que determina cómo se calcula el tamaño total de un elemento, incluyendo su contenido, relleno y borde.';
           document.getElementById('valoresBoxSS').innerHTML = estilo.boxSizing; ">BOX-SIZING
