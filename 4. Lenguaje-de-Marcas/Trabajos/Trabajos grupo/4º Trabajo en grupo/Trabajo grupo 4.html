@@ -734,19 +734,23 @@
   </section>
 
 
-  <h1 class="titulo" id="tituloColumns2">Columns 2</h1>
+  <h1 class="titulo" id="tituloColumns2">4. Más Columns</h1>
   <!-- Columns 2-->
   <section class="contenedor" id="contenedorColumns2">
     <div class="divEjemploContenido" id="divEjemploColumns2">
       <div id="contenidoColumns2">
         <p id="tablaColumns2">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod facilis animi impedit amet quidem eum similique inventore beatae illo soluta, dolore numquam magni vero suscipit esse neque eius veniam. Sequi tempora veritatis numquam aliquam cum laboriosam iure a, deserunt ut, earum eaque mollitia commodi, praesentium quae ducimus dignissimos adipisci placeat quod? Asperiores harum fuga saepe quia laudantium debitis. Repudiandae assumenda aspernatur modi. Temporibus cupiditate praesentium velit facilis atque. Quasi, sequi?
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod facilis animi impedit amet quidem eum similique
+          inventore beatae illo soluta, dolore numquam magni vero suscipit esse neque eius veniam. Sequi tempora
+          veritatis numquam aliquam cum laboriosam iure a, deserunt ut, earum eaque mollitia commodi, praesentium quae
+          ducimus dignissimos adipisci placeat quod? Asperiores harum fuga saepe quia laudantium debitis. Repudiandae
+          assumenda aspernatur modi. Temporibus cupiditate praesentium velit facilis atque. Quasi, sequi?
         </p>
       </div>
 
-      <div class="textoExplicacion" id="textoExplicacionColumns2"> 
+      <div class="textoExplicacion" id="textoExplicacionColumns2">
         <-- Este texto dará una breve descripción de la opción elegida para permitir un mejor entendimiento y ayudar a
-        la explicación -->
+          la explicación -->
       </div>
 
       <div class="valores " id="valoresColumns2">
@@ -761,8 +765,8 @@
 
 
         <!-- CAMBIAR ESTILO-->
-          <button id="buttonColumns2" class="button"
-            onclick="
+        <button id="buttonColumns2" class="button"
+          onclick="
             // Establece las variables para mayor legibilidad
             var contenido = document.getElementById('contenidoColumns2');
             var estilo = window.getComputedStyle(contenido);
@@ -789,7 +793,8 @@
 
 
         <!-- CAMBIAR COLOR COLUMN2-->
-        <button class="button" id="buttonColumns2" onclick="
+        <button class="button" id="buttonColumns2"
+          onclick="
         var contenido = document.getElementById('contenidoColumns2');
         var estilo = window.getComputedStyle(contenido);
         
@@ -807,11 +812,13 @@
           contenido.style.columnRuleColor = 'black';
         }
         
-        document.getElementById('textoExplicacionColumns2').innerHTML = '<u>Column-rule-color:</u> Establece el color de la regla que separa las columnas. Puedes elegir el color tanto por su nombre, código hexadecimal, código rgb, etc...';document.getElementById('valoresColumns2').innerHTML = '<-- Border color: ' + contenido.style.columnRuleColor +'-->';"> column-rule-color </button>
+        document.getElementById('textoExplicacionColumns2').innerHTML = '<u>Column-rule-color:</u> Establece el color de la regla que separa las columnas. Puedes elegir el color tanto por su nombre, código hexadecimal, código rgb, etc...';document.getElementById('valoresColumns2').innerHTML = '<-- Border color: ' + contenido.style.columnRuleColor +'-->';">
+          column-rule-color </button>
 
 
         <!-- MAS WIDTH COLUMN2 -->
-        <button class="button" id="buttonColumns2" onmousedown="
+        <button class="button" id="buttonColumns2"
+          onmousedown="
         // variables 
             var contenido = document.getElementById('contenidoColumns2');
             var estilo = window.getComputedStyle(contenido);
@@ -827,11 +834,13 @@
 
             // Cambia la descripcion y el valor
             document.getElementById('textoExplicacionColumns2').innerHTML = '<u>Column - rule - width:</u> Define el ancho de la linea que se muestra entre las columnas en un elemento con múltiples columnas. ';
-            document.getElementById('valoresColumns2').innerHTML = '<-- Colum-rule-width: ' + contenido.style.columnRuleWidth +'-->';">Más column-rule-width </button>
+            document.getElementById('valoresColumns2').innerHTML = '<-- Colum-rule-width: ' + contenido.style.columnRuleWidth +'-->';">Más column-rule-width
+        </button>
 
-         
+
         <!-- MENOS WIDTH COLUMN2 -->
-        <button class="button" id="buttonColumns2" onmousedown="
+        <button class="button" id="buttonColumns2"
+          onmousedown="
         // variables 
             var contenido = document.getElementById('contenidoColumns2');
             var estilo = window.getComputedStyle(contenido);
@@ -842,7 +851,8 @@
 
             // Cambia la descripcion y el valor
             document.getElementById('textoExplicacionColumns2').innerHTML = '<u>Column - rule - width:</u> Define el ancho de la linea que se muestra entre las columnas en un elemento con múltiples columnas. ';
-            document.getElementById('valoresColumns2').innerHTML = '<-- Colum-rule-width: ' + contenido.style.columnRuleWidth +'-->';">Menos column-rule-width </button>
+            document.getElementById('valoresColumns2').innerHTML = '<-- Colum-rule-width: ' + contenido.style.columnRuleWidth +'-->';">Menos column-rule-width
+        </button>
       </div>
     </div>
   </section>
