@@ -861,6 +861,50 @@ footer:hover{
   height: 12%;
 }
 
+#buttonColumns3{
+  font-size: 15px;
+  transition: font-size 0.3s;
+}
+
+#buttonColumns3:focus{
+  background-color: #D496A7;
+  font-size: 17px;
+}
+
+#contenidoColumns3{
+  margin: 0;
+  border: 1px solid white;
+  background-color: aliceblue;
+  margin: 3% 10%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px gray;
+  height: 60%;
+  font-family: Lexend;
+  column-rule: 5px solid black;
+  text-align: center;
+  columns: 3;
+  column-width: 100px;
+}
+
+#qwerty{
+  column-span: all;
+}
+
+#qwertyu{
+  column-span: all;
+}
+
+#tablaColumns3{
+  margin: 0;
+}
+
+#textoExplicacionColumns3{
+  margin-top: 5px;
+  height: 12%;
+}
+
+
 
 /* <!-- Código de Raul -->  */
 

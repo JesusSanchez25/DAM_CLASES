@@ -857,6 +857,107 @@
     </div>
   </section>
 
+  <h1 class="titulo" id="tituloColumns3">4.1 Más Columns</h1>
+  <!-- Columns 3-->
+  <section class="contenedor" id="contenedorColumns3">
+    <div class="divEjemploContenido" id="divEjemploColumns3">
+      <div id="contenidoColumns3">
+
+        <h3 id="qwertyu">Header haceindo span las columnas de debajo</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi minima explicabo non quisquam sequi? Sit,
+          recusandae fuga sequi beatae aspernatur repellendus.
+        </p>
+        <p id="qwerty">
+          Eum odit voluptas soluta fugit dolores qui perspiciatis placeat quia, delectus quo non earum quasi pariatur
+          quod dignissimos, veritatis doloribus officia quis.
+        </p>
+        <p>
+          Explicabo rem deserunt sint sunt eum amet consectetur, earum nihil distinctio debitis quis nobis labore
+          perspiciatis vero optio quia.
+        </p>
+
+
+
+      </div>
+
+      <div class="textoExplicacion" id="textoExplicacionColumns3">
+        <-- Este texto dará una breve descripción de la opción elegida para permitir un mejor entendimiento y ayudar a
+          la explicación -->
+      </div>
+
+      <div class="valores " id="valoresColumns3">
+        <-- Aquí estará el valor elegido -->
+      </div>
+    </div>
+    <div class="divBotones" id="divBotonesColumns3">
+      <!-- BOTONES-->
+      <div class="botones" id="botonesColumns3">
+        <!-- MINI TÍTULO -->
+        <h1 class="miniTitulo">COLUMN SPAN/WIDTH:</h1>
+
+
+        <!-- SPAN: NONE/ALL-->
+        <button id="buttonColumns3" class="button" onclick="
+
+          var contenido = document.getElementById('qwerty');
+          var contenido2 = document.getElementById('qwertyu');
+          var estilo = window.getComputedStyle(contenido);
+
+          if(estilo.columnSpan === 'all'){
+            contenido.style.columnSpan = 'none'
+            contenido2.style.columnSpan = 'none'
+          } else {
+            contenido.style.columnSpan = 'all'
+            contenido2.style.columnSpan = 'all'
+          }
+        "> Column-Span: None/All </button>
+
+
+        <!-- MÁS WIDTH-->
+        <button class="button" id="buttonColumns3" onclick="
+          var contenido = document.getElementById('contenidoColumns3');
+            var estilo = window.getComputedStyle(contenido);
+            var anchura = parseInt(estilo.columnWidth); 
+
+            // Coge el ancho actual del borde y le suma 5px
+            contenido.style.columnWidth = (anchura + 20) + 'px';
+            
+            // Para que no se pase de tamaño
+            if(ancho >= '200'){
+            contenido.style.columnWidth = '100px'
+          }
+
+            // Cambia la descripcion y el valor
+            document.getElementById('textoExplicacionColumns2').innerHTML = '<u>Column - rule - width:</u> Define el ancho de la linea que se muestra entre las columnas en un elemento con múltiples columnas. ';
+            document.getElementById('valoresColumns2').innerHTML = '<-- Colum-rule-width: ' + contenido.style.columnRuleWidth +'-->';
+        "> Más column-width </button>
+
+
+        <!-- MENOS WIDTH -->
+        <button class="button" id="buttonColumns3" onmousedown="
+        var contenido = document.getElementById('contenidoColumns3');
+            var estilo = window.getComputedStyle(contenido);
+            var anchura = parseInt(estilo.columnWidth); 
+
+            // Coge el ancho actual del borde y le suma 5px
+            contenido.style.columnWidth = (anchura - 20) + 'px';
+            
+            // Para que no se pase de tamaño
+            if(ancho <= '100'){
+            contenido.style.columnWidth = '100px'
+          }
+
+            // Cambia la descripcion y el valor
+            document.getElementById('textoExplicacionColumns2').innerHTML = '<u>Column - rule - width:</u> Define el ancho de la linea que se muestra entre las columnas en un elemento con múltiples columnas. ';
+            document.getElementById('valoresColumns2').innerHTML = '<-- Colum-rule-width: ' + contenido.style.columnRuleWidth +'-->';
+        ">Menos column-width </button>
+
+      </div>
+    </div>
+  </section>
+
+
 
 
   <!-- CRÉDITOS -->
