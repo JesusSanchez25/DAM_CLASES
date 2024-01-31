@@ -857,13 +857,14 @@
     </div>
   </section>
 
+
   <h1 class="titulo" id="tituloColumns3">4.1 Más Columns</h1>
   <!-- Columns 3-->
   <section class="contenedor" id="contenedorColumns3">
     <div class="divEjemploContenido" id="divEjemploColumns3">
       <div id="contenidoColumns3">
 
-        <h3 id="qwertyu">Header haceindo span las columnas de debajo</h3>
+        <h3 id="qwertyu">Header haciendo span las columnas de debajo</h3>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi minima explicabo non quisquam sequi? Sit,
           recusandae fuga sequi beatae aspernatur repellendus.
@@ -874,7 +875,7 @@
         </p>
         <p>
           Explicabo rem deserunt sint sunt eum amet consectetur, earum nihil distinctio debitis quis nobis labore
-          perspiciatis vero optio quia.
+          perspiciatis vero opti.
         </p>
 
 
@@ -903,7 +904,7 @@
           var contenido = document.getElementById('qwerty');
           var contenido2 = document.getElementById('qwertyu');
           var estilo = window.getComputedStyle(contenido);
-
+          /*Cambia la propiedad column span de none a all y viceversa*/
           if(estilo.columnSpan === 'all'){
             contenido.style.columnSpan = 'none'
             contenido2.style.columnSpan = 'none'
@@ -911,6 +912,10 @@
             contenido.style.columnSpan = 'all'
             contenido2.style.columnSpan = 'all'
           }
+
+          /*texto explicativo*/
+          document.getElementById('textoExplicacionColumns3').innerHTML = '<u>Column Span:</u> Determina si un elemento en una columna pone un espacio debajo suya(All) o no lo pone(none)';
+          document.getElementById('valoresColumns3').innerHTML = '<-- Colum Span: ' + contenido.style.columnSpan +'-->';
         "> Column-Span: None/All </button>
 
 
@@ -920,17 +925,18 @@
             var estilo = window.getComputedStyle(contenido);
             var anchura = parseInt(estilo.columnWidth); 
 
-            // Coge el ancho actual del borde y le suma 5px
-            contenido.style.columnWidth = (anchura + 20) + 'px';
-            
-            // Para que no se pase de tamaño
-            if(ancho >= '200'){
+            /*cambia la anchura de las columnas*/
+            if(anchura == '100'){
+            contenido.style.columnWidth = '200px'
+          }else if (anchura =='200'){
+            contenido.style.columnWidth = '300px'
+          }else if(ancgura =='300'){
             contenido.style.columnWidth = '100px'
           }
 
-            // Cambia la descripcion y el valor
-            document.getElementById('textoExplicacionColumns2').innerHTML = '<u>Column - rule - width:</u> Define el ancho de la linea que se muestra entre las columnas en un elemento con múltiples columnas. ';
-            document.getElementById('valoresColumns2').innerHTML = '<-- Colum-rule-width: ' + contenido.style.columnRuleWidth +'-->';
+            // Cambia la descripcion y el valor 
+            document.getElementById('textoExplicacionColumns3').innerHTML = '<u>Column width:</u> Define el ancho de las columnas de un elemento, si el ancho de la columna es mayor que el ancho total, se establece el ancho total.';
+            document.getElementById('valoresColumns3').innerHTML = '<-- Colum-width: ' + contenido.style.columnWidth +'-->';
         "> Más column-width </button>
 
 
@@ -939,18 +945,18 @@
         var contenido = document.getElementById('contenidoColumns3');
             var estilo = window.getComputedStyle(contenido);
             var anchura = parseInt(estilo.columnWidth); 
-
-            // Coge el ancho actual del borde y le suma 5px
-            contenido.style.columnWidth = (anchura - 20) + 'px';
-            
-            // Para que no se pase de tamaño
-            if(ancho <= '100'){
+            /*cambia la anchura de las columnas*/
+            if(anchura == '300'){
+            contenido.style.columnWidth = '200px'
+          }else if (anchura =='200'){
             contenido.style.columnWidth = '100px'
+          }else if(ancgura =='300'){
+            contenido.style.columnWidth = '300px'
           }
 
             // Cambia la descripcion y el valor
-            document.getElementById('textoExplicacionColumns2').innerHTML = '<u>Column - rule - width:</u> Define el ancho de la linea que se muestra entre las columnas en un elemento con múltiples columnas. ';
-            document.getElementById('valoresColumns2').innerHTML = '<-- Colum-rule-width: ' + contenido.style.columnRuleWidth +'-->';
+            document.getElementById('textoExplicacionColumns3').innerHTML = '<u>Column width:</u> Define el ancho de las columnas de un elemento, si el ancho de la columna es mayor que el ancho total, se establece el ancho total. ';
+            document.getElementById('valoresColumns3').innerHTML = '<-- Colum-width: ' + contenido.style.columnWidth +'-->';
         ">Menos column-width </button>
 
       </div>
