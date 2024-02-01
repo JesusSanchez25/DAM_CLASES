@@ -1,6 +1,6 @@
-package model;
+package ejercicioPractica.model;
 
-public enum Estaciones {
+public enum Estaciones_ENUM {
 
     // PLANTILLAS
     invierno ("invierno", 1, false),
@@ -12,7 +12,7 @@ public enum Estaciones {
     private int temperaturaMedia;
     private boolean indiceUV;
 
-    Estaciones(String nombre, int temperaturaMedia, boolean indiceUV) {
+    Estaciones_ENUM(String nombre, int temperaturaMedia, boolean indiceUV) {
 
         this.nombre = nombre;
         this.temperaturaMedia = temperaturaMedia;

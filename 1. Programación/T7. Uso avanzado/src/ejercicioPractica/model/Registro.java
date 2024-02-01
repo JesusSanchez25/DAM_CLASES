@@ -1,15 +1,15 @@
-package model;
+package ejercicioPractica.model;
 
 public class Registro {
 
     private int temperatura;
     private int hora, minuto, dia, mes, anio;
-    private Estaciones estacion;
+    private Estaciones_ENUM estacion;
 
     public Registro() {
     }
 
-    public Registro(int temperatura, int hora, int minuto, int dia, int mes, int anio, Estaciones estacion) {
+    public Registro(int temperatura, int hora, int minuto, int dia, int mes, int anio, Estaciones_ENUM estacion) {
         this.temperatura = temperatura;
         this.hora = hora;
         this.minuto = minuto;
@@ -75,11 +75,11 @@ public class Registro {
         this.anio = anio;
     }
 
-    public Estaciones getEstacion() {
+    public Estaciones_ENUM getEstacion() {
         return estacion;
     }
 
-    public void setEstacion(Estaciones estacion) {
+    public void setEstacion(Estaciones_ENUM estacion) {
         this.estacion = estacion;
     }
 }
