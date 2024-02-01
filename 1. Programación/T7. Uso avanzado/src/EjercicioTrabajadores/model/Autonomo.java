@@ -11,11 +11,20 @@ public class Autonomo extends Trabajador{
     }
 
     public Autonomo(String nombre, String apellido, String dni, int sueldo) {
-        super(nombre, apellido, dni, sueldo);
+
+        super(nombre, apellido, dni);
+        setSueldo(calcularSueldo(sueldo));
     }
 
     @Override
-    public void calcularSueldo() {
+    public int calcularSueldo(int sueldo) {
+        return ((int)(sueldo()*0.8);;
+    }
 
+
+
+    @Override
+    public void mostrarDatos() {
+        super.mostrarDatos();
     }
 }

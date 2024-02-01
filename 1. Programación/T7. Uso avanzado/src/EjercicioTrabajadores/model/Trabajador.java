@@ -13,8 +13,10 @@ public abstract class Trabajador extends Personal{
 
     public Trabajador(String nombre, String apellido, String dni, int sueldo) {
         super(nombre, apellido, dni);
-        this.sueldo = sueldo;
+        // El sueldo se calcula en cada clase
     }
+
+    public abstract int calcularSueldo();
 
     @Override
     public void mostrarDatos() {
@@ -23,7 +25,14 @@ public abstract class Trabajador extends Personal{
     }
 
 
-    public int void calcularSueldo(int sueldo);
+    public abstract int calcularSueldo(int sueldo);
 
 
+    public int getSueldo() {
+        return sueldo;
+    }
+
+    public void setSueldo(int sueldo) {
+        this.sueldo = sueldo;
+    }
 }

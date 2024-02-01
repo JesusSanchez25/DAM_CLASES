@@ -10,6 +10,9 @@ public class Asalariado extends Trabajador{
     }
 
     public Asalariado(String nombre, String apellido, String dni, int sueldo) {
+
         super(nombre, apellido, dni, sueldo);
+        setSueldo(calcularSueldo(sueldo));
+
     }
 }

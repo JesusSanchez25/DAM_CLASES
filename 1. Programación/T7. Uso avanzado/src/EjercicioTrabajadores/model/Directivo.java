@@ -1,5 +1,6 @@
 package EjercicioTrabajadores.model;
 
+import EjercicioTrabajadores.constantes.Constantes;
 import EjercicioTrabajadores.interfaz.Votantes;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,6 +9,7 @@ import lombok.Setter;
 @Setter
 public class Directivo extends Personal implements Votantes {
 
+    public boolean porcentajeResponsabilidad;
     public Directivo() {
     }
 
@@ -16,7 +18,13 @@ public class Directivo extends Personal implements Votantes {
     }
 
     @Override
-    public void votar() {
+    public int votar() {
+        return Constantes.voto*2;
+    }
 
+    @Override
+    public void mostrarDatos() {
+        super.mostrarDatos();
+        System.out.println("Responsabilidad " + porcentajeResponsabilidad + "%");
     }
 }

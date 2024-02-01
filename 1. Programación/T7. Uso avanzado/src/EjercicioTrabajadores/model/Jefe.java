@@ -13,14 +13,16 @@ public class Jefe extends Trabajador implements Votantes {
     public Jefe() {
     }
 
-    public Jefe(String nombre, String apellido, String dni, int sueldo) {
+    public Jefe(String nombre, String apellido, String dni, int sueldo, int beneficio, int acciones) {
         super(nombre, apellido, dni, sueldo);
+        this.beneficio = beneficio;
+        this.acciones = acciones;
         setSueldo(calcularSueldo(sueldo));
     }
 
     @Override
     public int votar() {
-        return Constantes.voto/2 + beneficio;
+        return Constantes.voto/2;
     }
 
     @Override
@@ -31,7 +33,7 @@ public class Jefe extends Trabajador implements Votantes {
 
     @Override
     public int calcularSueldo(int sueldo) {
-        return (int)(sueldo-(sueldo*0.2));
+        return beneficio + (int)(sueldo-(sueldo*0.2));
     }
 
 
