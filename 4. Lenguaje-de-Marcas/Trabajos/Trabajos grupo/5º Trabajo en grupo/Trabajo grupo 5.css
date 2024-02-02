@@ -602,6 +602,10 @@ footer:hover{
   height: 12%;
 }
 
+#contenidoDia5-EmptyCells{
+  background-color: rebeccapurple;
+}
+
 
 
 /* <!-- Código de Mario -->  */
