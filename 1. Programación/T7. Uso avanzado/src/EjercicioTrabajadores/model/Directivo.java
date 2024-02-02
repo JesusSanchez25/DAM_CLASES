@@ -7,14 +7,15 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Directivo extends Personal implements Votantes {
+public final class Directivo extends Personal implements Votantes {
 
-    public boolean porcentajeResponsabilidad;
+    public int responsabilidad;
     public Directivo() {
     }
 
-    public Directivo(String nombre, String apellido, String dni) {
+    public Directivo(String nombre, String apellido, String dni, int responsabilidad) {
         super(nombre, apellido, dni);
+        this.responsabilidad = responsabilidad;
     }
 
     @Override
@@ -25,6 +26,15 @@ public class Directivo extends Personal implements Votantes {
     @Override
     public void mostrarDatos() {
         super.mostrarDatos();
-        System.out.println("Responsabilidad " + porcentajeResponsabilidad + "%");
+        System.out.println("Resondabilidad: " + responsabilidad);
+    }
+
+
+    public int getResponsabilidad() {
+        return responsabilidad;
+    }
+
+    public void setResponsabilidad(int responsabilidad) {
+        this.responsabilidad = responsabilidad;
     }
 }

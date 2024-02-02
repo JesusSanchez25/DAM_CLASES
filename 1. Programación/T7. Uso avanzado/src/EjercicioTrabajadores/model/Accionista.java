@@ -7,17 +7,30 @@ import lombok.Setter;
 @Getter
 @Setter
 
-public class Accionista extends Personal implements Votantes {
+public final class Accionista extends Personal implements Votantes {
+
+    private int acciones;
 
     public Accionista() {
     }
 
-    public Accionista(String nombre, String apellido, String dni) {
+    public Accionista(String nombre, String apellido, String dni, int acciones) {
         super(nombre, apellido, dni);
+        this.acciones = acciones;
     }
 
     @Override
-    public void votar() {
+    public void mostrarDatos() {
+        super.mostrarDatos();
+        System.out.println("Acciones: " + acciones);
+    }
 
+
+    public int getAcciones() {
+        return acciones;
+    }
+
+    public void setAcciones(int acciones) {
+        this.acciones = acciones;
     }
 }

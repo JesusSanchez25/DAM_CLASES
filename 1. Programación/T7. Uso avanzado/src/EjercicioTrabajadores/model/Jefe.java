@@ -17,7 +17,10 @@ public class Jefe extends Trabajador implements Votantes {
         super(nombre, apellido, dni, sueldo);
         this.beneficio = beneficio;
         this.acciones = acciones;
-        setSueldo(calcularSueldo(sueldo));
+
+        // Se calcula de nuevo el sueldo para haber assignado los Beneficios
+        // si no cogería los beneficios como 0.
+        setSueldo(calcularSueldo());
     }
 
     @Override
@@ -32,9 +35,11 @@ public class Jefe extends Trabajador implements Votantes {
     }
 
     @Override
-    public int calcularSueldo(int sueldo) {
-        return beneficio + (int)(sueldo-(sueldo*0.2));
+    public int calcularSueldo() {
+        return beneficio + (int)(getSueldo()-(getSueldo()*0.2));
     }
+
+
 
 
 
