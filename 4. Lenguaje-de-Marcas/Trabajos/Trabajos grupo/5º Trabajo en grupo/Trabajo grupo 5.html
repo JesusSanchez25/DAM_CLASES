@@ -969,7 +969,58 @@
   <section class="contenedor" id="contenedorDia5">
     <div class="divEjemploContenido" id="divEjemploDia5">
       <div id="contenidoDia5">
-        <table id="tablaCursores">
+        <table class="tablaCursores" id="tablaCursores">
+          <tr>
+            <td id="cursor1"><img id="imagenCursores" alt="imaen1"
+                src="https://cdn3.iconfinder.com/data/icons/user-interface-173/64/ui-60-512.png"></td>
+            <td id="cursor2"><img id="imagenCursoresMano" alt="imaen2"
+                src="https://cdn1.iconfinder.com/data/icons/interface-essentials-5-1/24/hand-drag-1--cursor-drag-move-hand-grab-select-512.png">
+            </td>
+            <td id="cursor3"><img id="imagenCursores" alt="imaen3"
+                src="https://cdn3.iconfinder.com/data/icons/loaders-4/24/Loader-13-256.png"></td>
+          </tr>
+          <tr>
+            <td id="cursor4"><img id="imagenCursores" alt="imaen4"
+                src="https://cdn4.iconfinder.com/data/icons/prohibited-red-signs/119/Prohibition_sign_043-512.png"></td>
+            <td id="cellShow"></td>
+            <td id="cellHide"></td>
+          </tr>
+          <tr>
+            <td id="cursor5"><img id="imagenCursores" alt="imaen5"
+                src="https://cdn1.iconfinder.com/data/icons/ionicons-outline-vol-2/512/resize-outline-512.png"></td>
+            <td id="cellHide"></td>
+            <td id="cursor6"><img id="imagenCursores" alt="imaen6"
+                src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/zoom_in-256.png"></td>
+          </tr>
+        </table>
+
+
+        <table class="tablaCursores" id="tablaCursores2">
+          <tr>
+            <td id="cursor1"><img id="imagenCursores" alt="imaen1"
+                src="https://cdn3.iconfinder.com/data/icons/user-interface-173/64/ui-60-512.png"></td>
+            <td id="cursor2"><img id="imagenCursoresMano" alt="imaen2"
+                src="https://cdn1.iconfinder.com/data/icons/interface-essentials-5-1/24/hand-drag-1--cursor-drag-move-hand-grab-select-512.png">
+            </td>
+            <td id="cursor3"><img id="imagenCursores" alt="imaen3"
+                src="https://cdn3.iconfinder.com/data/icons/loaders-4/24/Loader-13-256.png"></td>
+          </tr>
+          <tr>
+            <td id="cursor4"><img id="imagenCursores" alt="imaen4"
+                src="https://cdn4.iconfinder.com/data/icons/prohibited-red-signs/119/Prohibition_sign_043-512.png"></td>
+            <td id="cellShow"></td>
+            <td id="cellHide"></td>
+          </tr>
+          <tr>
+            <td id="cursor5"><img id="imagenCursores" alt="imaen5"
+                src="https://cdn1.iconfinder.com/data/icons/ionicons-outline-vol-2/512/resize-outline-512.png"></td>
+            <td id="cellHide"></td>
+            <td id="cursor6"><img id="imagenCursores" alt="imaen6"
+                src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/zoom_in-256.png"></td>
+          </tr>
+        </table>
+
+        <table class="tablaCursores" id="tablaCursores3">
           <tr>
             <td id="cursor1"><img id="imagenCursores" alt="imaen1"
                 src="https://cdn3.iconfinder.com/data/icons/user-interface-173/64/ui-60-512.png"></td>
@@ -996,32 +1047,7 @@
       </div>
 
 
-      <div id="contenidoDia5">
-        <table id="tablaCursores">
-          <tr>
-            <td id="cursor1"><img id="imagenCursores" alt="imaen1"
-                src="https://cdn3.iconfinder.com/data/icons/user-interface-173/64/ui-60-512.png"></td>
-            <td id="cursor2"><img id="imagenCursoresMano" alt="imaen2"
-                src="https://cdn1.iconfinder.com/data/icons/interface-essentials-5-1/24/hand-drag-1--cursor-drag-move-hand-grab-select-512.png">
-            </td>
-            <td id="cursor3"><img id="imagenCursores" alt="imaen3"
-                src="https://cdn3.iconfinder.com/data/icons/loaders-4/24/Loader-13-256.png"></td>
-          </tr>
-          <tr>
-            <td id="cursor4"><img id="imagenCursores" alt="imaen4"
-                src="https://cdn4.iconfinder.com/data/icons/prohibited-red-signs/119/Prohibition_sign_043-512.png"></td>
-            <td id="cellShow"></td>
-            <td id="cellHide"></td>
-          </tr>
-          <tr>
-            <td id="cursor5"><img id="imagenCursores" alt="imaen5"
-                src="https://cdn1.iconfinder.com/data/icons/ionicons-outline-vol-2/512/resize-outline-512.png"></td>
-            <td id="cellHide"></td>
-            <td id="cursor6"><img id="imagenCursores" alt="imaen6"
-                src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/zoom_in-256.png"></td>
-          </tr>
-        </table>
-      </div>
+      
 
 
       <div class="textoExplicacion" id="textoExplicacionDia5">
@@ -1055,76 +1081,30 @@
 
 
 
-        <!-- CAMBIAR COLOR COLUMN2-->
-        <button class="button" id="buttonDia5"
-          onclick="
-        var contenido = document.getElementById('contenidoColumns2');
-        var estilo = window.getComputedStyle(contenido);
-       
-        if (estilo.columnRuleColor === 'rgb(0, 0, 0)') {
-          contenido.style.columnRuleColor = 'rgb(0, 0, 255)';
-        } else if (estilo.columnRuleColor === 'rgb(0, 0, 255)') {
-          contenido.style.columnRuleColor = 'rgb(0, 128, 0)';
-        } else if (estilo.columnRuleColor === 'rgb(0, 128, 0)') {
-          contenido.style.columnRuleColor = 'rgb(255, 165, 0)';
-        } else if (estilo.columnRuleColor === 'rgb(255, 165, 0)') {
-          contenido.style.columnRuleColor = 'rgb(255, 255, 0)';
-        } else if (estilo.columnRuleColor === 'rgb(255, 255, 0)') {
-          contenido.style.columnRuleColor = 'rgb(142, 68, 173)';
-        } else if (estilo.columnRuleColor === 'rgb(142, 68, 173)') {
-          contenido.style.columnRuleColor = 'black';
-        }
-       
-        document.getElementById('textoExplicacionColumns2').innerHTML = '<u>Column-rule-color:</u> Establece el color de la regla que separa las columnas. Puedes elegir el color tanto por su nombre, código hexadecimal, código rgb, etc...';document.getElementById('valoresColumns2').innerHTML = '<-- Border color: ' + contenido.style.columnRuleColor +'-->';">
-        </button>
+        <!-- MAS WIDTH COLUMN2 -->
+        <button class="button" onmousedown="
+        try{document.querySelector('.ensanchar').classList.toggle('ensanchar');}
+        catch{}
+        document.getElementById('tablaCursores3').classList.toggle('ensanchar');
+        ">Boton</button>
 
 
 
 
         <!-- MAS WIDTH COLUMN2 -->
-        <button class="button" id="buttonDia5"
-          onmousedown="
-        // variables
-            var contenido = document.getElementById('contenidoColumns2');
-            var estilo = window.getComputedStyle(contenido);
-            var ancho = parseInt(estilo.columnRuleWidth);
-
-
-            // Coge el ancho actual del borde y le suma 5px
-            contenido.style.columnRuleWidth = (ancho + 2) + 'px';
-           
-            // Para que no se pase de tamaño
-            if(ancho >= '30'){
-            contenido.style.columnRuleWidth = '5px'
-          }
-
-
-            // Cambia la descripcion y el valor
-            document.getElementById('textoExplicacionColumns2').innerHTML = '<u>Column - rule - width:</u> Define el ancho de la linea que se muestra entre las columnas en un elemento con múltiples columnas. ';
-            document.getElementById('valoresColumns2').innerHTML = '<-- Colum-rule-width: ' + contenido.style.columnRuleWidth +'-->';">Más column-rule-width
-        </button>
-
-
+        <button class="button" onmousedown="
+        try{document.querySelector('.ensanchar').classList.toggle('ensanchar');}
+        catch{}
+        document.getElementById('tablaCursores').classList.toggle('ensanchar');
+        ">Boton</button>
 
 
         <!-- MENOS WIDTH COLUMN2 -->
-        <button class="button" id="buttonDia5"
-          onmousedown="
-        // variables
-            var contenido = document.getElementById('contenidoColumns2');
-            var estilo = window.getComputedStyle(contenido);
-            var ancho = parseInt(estilo.columnRuleWidth);
-
-
-            // Coge el ancho actual del borde y le suma 5px
-            contenido.style.columnRuleWidth = ((ancho - 2) + 'px');
-
-
-            // Cambia la descripcion y el valor
-            document.getElementById('textoExplicacionColumns2').innerHTML = '<u>Column - rule - width:</u> Define el ancho de la linea que se muestra entre las columnas en un elemento con múltiples columnas. ';
-            document.getElementById('valoresColumns2').innerHTML = '<-- Colum-rule-width: ' + contenido.style.columnRuleWidth +'-->';">Menos
-          column-rule-width
-        </button>
+        <button class="button" onmousedown="
+        try{document.querySelector('.ensanchar').classList.toggle('ensanchar');}
+        catch{}
+        document.getElementById('tablaCursores2').classList.toggle('ensanchar');
+        ">Volver</button>
       </div>
     </div>
   </section>
