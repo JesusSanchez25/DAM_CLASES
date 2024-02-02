@@ -77,17 +77,7 @@ insert into comunidades values ('01','Andalucía','JESUS SANCHEZ PEDRAZA')
 ,('16','País Vasco','JESUS SANCHEZ PEDRAZA')
 ,('17','Rioja, La','JESUS SANCHEZ PEDRAZA')
 ,('18','Ceuta','JESUS SANCHEZ PEDRAZA')
-,('19','Melilla','JESUS SANCHEZ PEDRAZA')
-
-
-
-
-
-
-
-
-
-
+,('19','Melilla','JESUS SANCHEZ PEDRAZA');
 
 
 -- PROVINCIAS --
@@ -143,4 +133,50 @@ insert into provincias values ('49', 'Zamora','07','JESUS SANCHEZ PEDRAZA');
 insert into provincias values ('50', 'Zaragoza','02','JESUS SANCHEZ PEDRAZA');
 insert into provincias values ('51', 'Ceuta','18','JESUS SANCHEZ PEDRAZA');
 insert into provincias values ('52', 'Melilla','19','JESUS SANCHEZ PEDRAZA');
+
+-- VENDEDORES -- 
+insert into vendedores values ('1', 'Juan','Martín González','01','JESUS SANCHEZ PEDRAZA');
+insert into vendedores values ('2', 'Pedro','Gómez Solís','28','JESUS SANCHEZ PEDRAZA');
+insert into vendedores values ('3', 'Ana','García González','09','JESUS SANCHEZ PEDRAZA');
+insert into vendedores values ('4', 'Mariano','Martín Romero','28','JESUS SANCHEZ PEDRAZA');
+insert into vendedores values ('5', 'Susana','López Sanz','09','JESUS SANCHEZ PEDRAZA');
+insert into vendedores values ('6', 'Ignacio','Castejón García','28','JESUS SANCHEZ PEDRAZA');
+insert into vendedores values ('7', 'Olga','Lorenzo Silva','09','JESUS SANCHEZ PEDRAZA');
+insert into vendedores values ('8', 'Carlos','Sainz Torres','01','JESUS SANCHEZ PEDRAZA');
+insert into vendedores values ('9', 'Felipe','Soler Cardoso','20','JESUS SANCHEZ PEDRAZA');
+insert into vendedores values ('10', 'Lurdes','Montero Gómez','37','JESUS SANCHEZ PEDRAZA');
+
+
+
+-- PRODUCTOS --
+insert into productos values ('1', 'Mesa','Mesa de caoba 3x2','S','1000','JESUS SANCHEZ PEDRAZA');
+insert into productos values ('2', 'Mesa','Mesa de hierro forjado','S','300','JESUS SANCHEZ PEDRAZA');
+insert into productos values ('3', 'Silla','Silla para gamer F25','S','200','JESUS SANCHEZ PEDRAZA');
+insert into productos values ('4', 'Silla','Silla de despacho, lacada en blanco','S','75','JESUS SANCHEZ PEDRAZA');
+insert into productos values ('5', 'Silla','Silla de madera de roble','S','80','JESUS SANCHEZ PEDRAZA');
+insert into productos values ('6', 'Estantería','Estante cristal 2x2','S','265','JESUS SANCHEZ PEDRAZA');
+insert into productos values ('7', 'Estantería','Estante contrachapado M12','S','70','JESUS SANCHEZ PEDRAZA');
+insert into productos values ('8', 'Pisapapeles','Cubo pisapapeles de cristal','S','18','JESUS SANCHEZ PEDRAZA');
+insert into productos values ('9', 'Pisapapeles','Cubo pisapapeles de madera','N','12','JESUS SANCHEZ PEDRAZA');
+insert into productos values ('10', 'Cajonera','Cajonera de roble, 4 cajones','S','125','JESUS SANCHEZ PEDRAZA');
+
+
+-- VENTAS --
+insert into ventas values ('1', '3','2022-01-02','6','JESUS SANCHEZ PEDRAZA');
+insert into ventas values ('1', '1','2022-01-04','1','JESUS SANCHEZ PEDRAZA');
+insert into ventas values ('4', '4','2022-01-01','3','JESUS SANCHEZ PEDRAZA');
+insert into ventas values ('4', '6','2022-01-01','2','JESUS SANCHEZ PEDRAZA');
+insert into ventas values ('5', '5','2022-01-03','8','JESUS SANCHEZ PEDRAZA');
+insert into ventas values ('2', '2','2022-01-04','1','JESUS SANCHEZ PEDRAZA');
+insert into ventas values ('3', '5','2022-01-05','1','JESUS SANCHEZ PEDRAZA');
+insert into ventas values ('3', '7','2022-01-05','4','JESUS SANCHEZ PEDRAZA');
+insert into ventas values ('4', '3','2022-01-05','2','JESUS SANCHEZ PEDRAZA');
+insert into ventas values ('6', '8','2022-01-05','7','JESUS SANCHEZ PEDRAZA');
+insert into ventas values ('6', '1','2022-01-06','5','JESUS SANCHEZ PEDRAZA');
+insert into ventas values ('7', '9','2022-01-07','3','JESUS SANCHEZ PEDRAZA');
+insert into ventas values ('8', '5','2022-01-07','2','JESUS SANCHEZ PEDRAZA');
+insert into ventas values ('9', '6','2022-01-08','1','JESUS SANCHEZ PEDRAZA');
+insert into ventas values ('10', '10','2022-01-09','2','JESUS SANCHEZ PEDRAZA');
+
+
 
