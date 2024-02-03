@@ -1,0 +1,100 @@
+html{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  margin-top: -22px;
+}
+
+.intro{
+  width: 100%; 
+  height: 100vh;
+  background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(240,240,240,1) 15%, rgba(225,223,223,1) 62%, rgba(221,221,221,1) 100%);
+  padding-left: 10vh;
+}
+
+
+.header {
+  width: 100vw;
+  height: 12vh;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  .logo {
+    height: 50%;
+    padding-left: 3vw;
+    position: relative; /* Agrega esta línea para que el seudoelemento se posicione relativo a este elemento */
+
+    
+  }
+
+ 
+
+
+
+
+  h1 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: Ubuntu;
+    color: #707070;
+    transition: color 0.4s ease-in-out;
+    cursor: pointer;
+  }
+
+  h1:hover{
+    color: black;
+  }
+
+ 
+
+
+  .botonesHeader{
+    display: flex;
+    margin-right: 100px;
+    column-gap: 3vw;
+  }
+}
+
+
+
+.mensajeInicial{
+  top: 30vh;
+  left: 10;
+  position: relative;
+  font-family: Lexend;
+  font-size: 28px;
+  font-weight: 400;
+  margin: 1vh;
+
+  
+
+}
+
+@keyframes parpadeo {
+  50% {
+    border-color: transparent;
+  }
+}
+.grande{
+  font-weight: 800;
+  font-size: 47px;
+  width: max-content;
+  padding-right: 5px;
+  border-right: 5px solid black;
+  animation: parpadeo 1s step-end infinite;
+}
+
+.Yo{
+  position: absolute;
+  height: 93vh; 
+  bottom: -14px;
+  right: 20vh;
+  filter: grayscale(0) drop-shadow(20px 10px 4px gray);
+  
+}

@@ -585,7 +585,7 @@ footer:hover{
   box-shadow: 0px 0px 10px gray;
   height: 60%;
   font-family: Lexend;
-  text-align: left;
+  text-align: right;
   columns: 3;
   column-rule: 5px solid black;
   column-gap: 35px;
@@ -1148,6 +1148,7 @@ footer:hover{
   box-sizing: border-box;
   border: 2px solid #1a1f24;
   color: #637185;
+  
 }
 
 .valueMenu:focus{
