@@ -5,19 +5,15 @@ html{
 
 body{
   margin-top: -22px;
-}
-
-.intro{
-  width: 100%; 
-  height: 100vh;
-  background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(240,240,240,1) 15%, rgba(225,223,223,1) 62%, rgba(221,221,221,1) 100%);
-  padding-left: 10vh;
+  overflow-x: hidden;
 }
 
 
+/*<-- HEADER -->*/
 .header {
   width: 100vw;
   height: 12vh;
+  left: 2vw;
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -28,14 +24,8 @@ body{
     height: 50%;
     padding-left: 3vw;
     position: relative; /* Agrega esta línea para que el seudoelemento se posicione relativo a este elemento */
-
     
   }
-
- 
-
-
-
 
   h1 {
     margin: 0;
@@ -51,9 +41,6 @@ body{
     color: black;
   }
 
- 
-
-
   .botonesHeader{
     display: flex;
     margin-right: 100px;
@@ -62,39 +49,104 @@ body{
 }
 
 
-
-.mensajeInicial{
-  top: 30vh;
-  left: 10;
-  position: relative;
-  font-family: Lexend;
-  font-size: 28px;
-  font-weight: 400;
-  margin: 1vh;
-
-  
-
-}
+/*<-- INTRODUCCIÓN -->*/
 
 @keyframes parpadeo {
   50% {
     border-color: transparent;
   }
 }
-.grande{
-  font-weight: 800;
-  font-size: 47px;
-  width: max-content;
-  padding-right: 5px;
-  border-right: 5px solid black;
-  animation: parpadeo 1s step-end infinite;
+
+.intro{
+  width: 100%; 
+  height: 102vh;
+  background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(240,240,240,1) 15%, rgba(225,223,223,1) 62%, rgba(221,221,221,1) 100%);
+  padding-left: 10vh;
+
+  /*<-- TEXTO INICIAL -->*/
+  .divTextoInicial{
+    top: 32vh;
+    left: 10;
+    position: relative;
+  
+    .mensajeInicial{
+      font-family: Lexend;
+      font-size: 28px;
+      font-weight: 400;
+      margin: 1vh;
+    
+    }
+  
+    .grande{
+      font-weight: 800;
+      font-size: 47px;
+      width: max-content;
+      padding-right: 5px;
+      border-right: 5px solid black;
+      animation: parpadeo 1s step-end infinite;
+    }
+
+    .botonInicial{
+      position: relative;
+      left: 1vh;
+      top: 2vh;
+      padding: 15px 40px;
+      background-color: #009e66;
+      color: white;
+      border: none;
+      box-shadow: 1px 1px 4px gray;
+      font-family: Lexend;
+      cursor: pointer;
+    }
+  
+    .botonInicial:hover{
+      background-color: #008c5b;
+    }
+  
+  }
+  
+  /*<-- CONTACTO Y DATOS -->*/
+  .infoContacto {
+    position: relative;
+    top: 57vh;
+    left: 0.5vw;
+    width:min-content;
+    column-count: 3;
+    column-rule: 2px solid #008c5b;
+    gap: 4vw;
+    margin: 0;
+    font-family: Lexend;
+
+    p{
+      cursor: text;
+    }
+
+    .miniTitulo{
+      margin: 0;
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    .datos{
+      font-size: 15px;
+      color: gray;
+    }
 }
 
-.Yo{
-  position: absolute;
-  height: 93vh; 
-  bottom: -14px;
-  right: 20vh;
-  filter: grayscale(0) drop-shadow(20px 10px 4px gray);
+
+
   
+  /*<-- MI IMAGEN -->*/
+  .Yo{
+    position: absolute;
+    height: 93vh; 
+    bottom: 0vh;
+    right: 20vh;
+    filter: grayscale(0) drop-shadow(20px 10px 4px gray);
+    
+  }
+  
+
+
 }
+
