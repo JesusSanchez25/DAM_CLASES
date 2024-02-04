@@ -6,7 +6,10 @@ html{
 body{
   margin-top: -22px;
   overflow-x: hidden;
+  cursor: url(cursores/clear-cyan/Clear-c-01-Norm.cur), auto;
 }
+
+
 
 
 /*<-- HEADER -->*/
@@ -34,7 +37,7 @@ body{
     font-family: Ubuntu;
     color: #707070;
     transition: color 0.4s ease-in-out;
-    cursor: pointer;
+    cursor: url(cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
   }
 
   h1:hover{
@@ -96,7 +99,7 @@ body{
       border: none;
       box-shadow: 1px 1px 4px gray;
       font-family: Lexend;
-      cursor: pointer;
+      cursor: url(cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
     }
   
     .botonInicial:hover{
@@ -118,7 +121,7 @@ body{
     font-family: Lexend;
 
     p{
-      cursor: text;
+      cursor: url(cursores/clear-cyan/Clear-c-06-Text.cur), text;
     }
 
     .miniTitulo{

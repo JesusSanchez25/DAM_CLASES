@@ -170,6 +170,16 @@ html, body {
       z-index: 1;
 }
 
+.buttonColores{
+  font-size: 15px;
+  transition: font-size 0.3s;
+}
+
+.buttonColores:focus{
+  background-color: #D496A7;
+  font-size: 17px;
+}
+
 
 
 
@@ -909,6 +919,9 @@ footer:hover{
 }
 
 /* ---------------------------------------------EN PRUEBAS----------------------------------------------------- */
+
+
+
 #buttonDia5{
   font-size: 15px;
   transition: font-size 0.3s;
@@ -961,8 +974,8 @@ footer:hover{
 
 
 .ensanchar{
-  transform: scale(1);
-  opacity: 1;
+  transform: scale(1) !important;
+  opacity: 1 !important;
 }
 
 
@@ -986,6 +999,49 @@ footer:hover{
 #textoExplicacionDia5{
   margin-top: 5px;
   height: 12%;
+}
+
+.tablaDisplay {
+  height: 80%;
+  width: 60%;
+  background-image: none; /* La imagen está en el botón */
+  border-radius: 5px;
+  background-size: cover;
+  inset: 0;
+  transform: scale(0.1);
+  opacity: 0;
+  margin: auto;
+  position: absolute;
+  transition: transform 2s ease-in-out, opacity 2s ease-out;
+}
+
+#tablaCounter{
+  height: 100%;
+  width: 60%;
+  background-image: none; /* La imagen está en el botón */
+  border-radius: 5px;
+  background-size: cover;
+  inset: 0;
+  transform: scale(0.1);
+  opacity: 0;
+  margin: auto;
+  justify-self: start;
+  font-size: 27px;
+  position: absolute;
+  transition: transform 2s ease-in-out, opacity 2s ease-out;
+
+  ol {
+    counter-reset: item 1; /* Iniciar el contador en 2 */
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li::before {
+    content: counter(item); 
+    counter-increment: item; 
+    margin-right: 0.5em;
+    font-weight: bold;
+  }
 }
 
 
