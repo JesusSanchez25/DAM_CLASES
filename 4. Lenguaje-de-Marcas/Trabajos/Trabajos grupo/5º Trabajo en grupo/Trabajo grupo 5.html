@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Estilo Bordes</title>
   <link rel="stylesheet" href="Trabajo grupo 5.css">
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,23 +16,29 @@
     rel="stylesheet">
 </head>
 
+
 <body>
   <header class="header">
     <h1>Explicación propiedades CSS</h1>
 
+
     <p>- Explicando propiedades de CSS con estilo -</p>
   </header>
+
 
   <!-- Menu display-->
   <div class="menuAlejandro">
     <button class="valueMenu">
+
 
       <img class="imagen"
         src="https://static.vecteezy.com/system/resources/previews/009/346/267/original/3d-render-icon-yellow-folder-illustration-free-png.png"
         alt=""><a href="#tituloBorder" id="letralink">
         Estilos 1
 
+
     </button></a>
+
 
     <button class="valueMenu">
       <img class="imagen"
@@ -58,12 +66,16 @@
 
 
 
+
+
+
   <h1 class="titulo" id="tituloBorder"><u>1. Tipos de border</u></h1>
   <!-- BORDER -->
   <section class="contenedor" id="sectionBorder">
     <!-- Dividimos el contenedor en div de contenido y botones-->
     <div class="divEjemploContenido">
       <div id="contenido" class="contenido">
+
 
       </div>
       <div id="textoExplicacion" class="textoExplicacion">
@@ -75,6 +87,7 @@
       </div>
     </div>
 
+
     <div class="divBotones">
       <div class="botones">
         <!-- CAMBIAR ESTILO-->
@@ -83,7 +96,7 @@
           // Establece las variables para mayor legibilidad
           var contenido = document.getElementById('contenido');
           var estilo = window.getComputedStyle(contenido);
-          
+         
           // Detecta el etilo del borde y sigue una cadena de estilos hasta que vuelve al básico
           if (estilo.borderBottomStyle === 'solid') {
             contenido.style.borderStyle = 'dotted';
@@ -99,10 +112,14 @@
             contenido.style.borderStyle = 'solid';
           }
 
+
           // Cabia el texto de la descripción y el valor actual del borde
           document.getElementById('textoExplicacion').innerHTML = '<u>Border style:</u> Define el estilo del borde de un elemento. Puedes establecer diferentes estilos como sólido, punteado, discontinuo, etc.';
 
+
           document.getElementById('valores').innerHTML = '<-- Border style: ' + estilo.borderBottomStyle +'-->';">Border style</button>
+
+
 
 
         <!-- CAMBIAR COLOR-->
@@ -110,7 +127,7 @@
           onclick="
               var contenido = document.getElementById('contenido');
               var estilo = window.getComputedStyle(contenido);
-              
+             
               if (estilo.borderBottomColor === 'rgb(0, 0, 0)') {
                 contenido.style.borderColor = 'rgb(0, 0, 255)';
               } else if (estilo.borderBottomColor === 'rgb(0, 0, 255)') {
@@ -124,20 +141,24 @@
               } else if (estilo.borderBottomColor === 'rgb(142, 68, 173)') {
                 contenido.style.borderColor = 'black';
               }
-              
+             
               document.getElementById('textoExplicacion').innerHTML = '<u>Border Color:</u> Es simplemente un ajuste que define el color del borde de un elemento. Puedes elegir el color tanto por su nombre, código hexadecimal, código rgb, etc...';document.getElementById('valores').innerHTML = '<-- Border color: ' + contenido.style.borderBottomColor +'-->';">Border
           color</button>
 
 
+
+
         <!-- MÁS ANCHO-->
         <button class="button" onclick="
-            // variables 
+            // variables
             var contenido = document.getElementById('contenido');
             var estilo = window.getComputedStyle(contenido);
-            var ancho = parseInt(estilo.borderWidth); 
+            var ancho = parseInt(estilo.borderWidth);
+
 
             // Coge el ancho actual del borde y le suma 5px
             contenido.style.borderWidth = (ancho + 5) + 'px';
+
 
             // Cambia la descripcion y el valor
             document.getElementById('textoExplicacion').innerHTML = '<u>Border Width:</u> Establece el ancho de los cuatro bordes de un elemento de forma simultánea. Puedes proporcionar uno, dos, tres o cuatro valores.';
@@ -145,24 +166,31 @@
             ">Más width</button>
 
 
+
+
         <!-- MENOS ANCHO-->
         <button class="button"
           onclick="
             var contenido = document.getElementById('contenido');
             var estilo = window.getComputedStyle(contenido);
-            var ancho = parseInt(estilo.borderWidth); 
+            var ancho = parseInt(estilo.borderWidth);
+
 
             contenido.style.borderWidth = (ancho - 5) + 'px';
+
 
             document.getElementById('textoExplicacion').innerHTML = '<u>Border Width:</u> Establece el ancho de los cuatro bordes de un elemento de forma simultánea. Puedes proporcionar uno, dos, tres o cuatro valores.';
             document.getElementById('valores').innerHTML = '<-- Border width: ' + contenido.style.borderBottomWidth +'-->'">
           Menos width</button>
 
 
+
+
         <!-- MOSTRAR DISPLAY-->
         <button onclick="
                 document.getElementById('display').classList.toggle('moverDisplay');" class="button">Top border
         </button>
+
 
         <!-- DISPLAY -->
         <h1>
@@ -172,7 +200,7 @@
             // variables
             var contenido = document.getElementById('contenido');
             var estilo = window.getComputedStyle(contenido);
-            
+           
             // Patrón de estilos
             if (estilo.borderTopStyle === 'solid') {
               contenido.style.borderTopStyle = 'dotted';}
@@ -186,18 +214,19 @@
                 contenido.style.borderTopStyle = 'hidden';}
             else if (estilo.borderTopStyle === 'hidden'){
                 contenido.style.borderTopStyle = 'solid';}
-                      
+                     
             // Descripción y valor actual    
             document.getElementById('textoExplicacion').innerHTML = '<u>Border style:</u> Define el estilo del borde de un elemento. Puedes establecer diferentes estilos como sólido, punteado, discontinuo, etc.';
             document.getElementById('valores').innerHTML = '<-- Border style: ' + estilo.borderBottomStyle +'-->';">
               Style</li>
+
 
             <!-- CAMBIAR COLOR (top)-->
             <li class="button-pequeño"
               onclick="
               var contenido = document.getElementById('contenido');
               var estilo = window.getComputedStyle(contenido);
-              
+             
               if (estilo.borderTopColor === 'rgb(0, 0, 0)') {
                 contenido.style.borderTopColor = 'rgb(0, 0, 255)';
               } else if (estilo.borderTopColor === 'rgb(0, 0, 255)') {
@@ -211,11 +240,13 @@
               } else if (estilo.borderTopColor === 'rgb(142, 68, 173)') {
                 contenido.style.borderTopColor = 'black';
               }
-              
+             
               document.getElementById('textoExplicacion').innerHTML = '<u>Border Color:</u> Es simplemente un ajuste que define el color del borde superior de un elemento. Puedes elegir el color tanto por su nombre, código hexadecimal, código rgb, etc...';
-              
+             
               document.getElementById('valores').innerHTML = '<-- Border style: ' + contenido.style.borderBottomColor +'-->'">
               Color</li>
+
+
 
 
             <!-- MÁS ANCHO(top)-->
@@ -223,10 +254,12 @@
             // Variables
             var contenido = document.getElementById('contenido');
             var estilo = window.getComputedStyle(contenido);
-            var ancho = parseInt(estilo.borderTopWidth); 
+            var ancho = parseInt(estilo.borderTopWidth);
+
 
             // Aumentar ancho
             contenido.style.borderTopWidth = (ancho + 5) + 'px';
+
 
             // Cambiar descripción y valor actual
             document.getElementById('textoExplicacion').innerHTML = '<u>Border Width:</u> Establece el ancho del borde de arriba de un elemento de forma simultánea.';
@@ -234,17 +267,22 @@
             ">Más width</li>
 
 
+
+
             <!-- MENOS ANCHO(top)-->
             <li class="button-pequeño"
               onclick="
             var contenido = document.getElementById('contenido');
             var estilo = window.getComputedStyle(contenido);
-            var ancho = parseInt(estilo.borderTopWidth); 
+            var ancho = parseInt(estilo.borderTopWidth);
+
 
             contenido.style.borderTopWidth = (ancho - 5) + 'px';
 
+
             document.getElementById('textoExplicacion').innerHTML = '<u>Border Width:</u> Establece el ancho del borde de arriba de un elemento de forma simultánea.';
             document.getElementById('valores').innerHTML = '<-- Border width: ' + contenido.style.borderTopWidth +'-->';">Menos width
+
 
             </li>
           </ul>
@@ -252,6 +290,8 @@
       </div>
     </div>
   </section>
+
+
 
 
   <h1 class="titulo"><u>1.1 Border spacing</u></h1>
@@ -300,6 +340,7 @@
       </div>
     </div>
 
+
     <div class="tres-en-raya">
       <!-- TABLA CON BORDER SPACING -->
       <table id="tresEnRayaConSpacing">
@@ -322,7 +363,10 @@
     </div>
   </section>
 
+
   <h1 class="titulo" id="tituloClip">2. Clip</h1>
+
+
 
 
   <section class="contenedor" id="contenedorClip">
@@ -330,13 +374,16 @@
     <div class="divEjemploContenido" id="divEjemploClip">
       <div id="contenidoClip">
 
+
       </div>
+
 
       <!-- EXPLICACIÓN -->
       <div id="textoExplicacionClip" class="textoExplicacion">
         <-- Este texto dará una breve descripción del borde elegido para permitir un mejor entendimiento y ayudar a la
           explicación -->
       </div>
+
 
       <!-- VALOR ACTUAL -->
       <div id="valoresClip" class="valores">
@@ -345,9 +392,12 @@
     </div>
 
 
+
+
     <!-- BOTONES -->
     <div class="divBotones">
       <div class="botones">
+
 
         <!-- RECORTAR ARRIBA-->
         <button class="button" onclick="
@@ -355,14 +405,18 @@
           var contenido = document.getElementById('contenidoClip');
           var estilo = window.getComputedStyle(contenido);
 
+
           // Recorta por arriba siempre y cuando no haya recortado ya antes.
           // Si ya ha recortado antes, devuelve la imagen a su estado inicial
-          if(estilo.clip !== 'rect(50px, 300px, 250px, 0px)'){contenido.style.clip = 'rect(50px, 300px, 250px, 0px)';} 
+          if(estilo.clip !== 'rect(50px, 300px, 250px, 0px)'){contenido.style.clip = 'rect(50px, 300px, 250px, 0px)';}
           else {contenido.style.clip = 'rect(0px, 300px, 250px, 0px)';}
+
 
           // Cambia el texto de explicación y el valor actual del clip de la imagen
           document.getElementById('textoExplicacionClip').innerHTML = '<u>Clip:</u> Es una propiedad muy anticuada y en desuso que nos permite recortar una imagen o div en un cuadrado más pequeño';
           document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clip +'-->';">Arriba</button>
+
+
 
 
         <!-- RECORTAR DERECHA -->
@@ -370,35 +424,43 @@
           var contenido = document.getElementById('contenidoClip');
           var estilo = window.getComputedStyle(contenido);
 
-          if(estilo.clip !== 'rect(0px, 250px, 250px, 0px)'){contenido.style.clip = 'rect(0px, 250px, 250px, 0px)';} 
+
+          if(estilo.clip !== 'rect(0px, 250px, 250px, 0px)'){contenido.style.clip = 'rect(0px, 250px, 250px, 0px)';}
           else {contenido.style.clip = 'rect(0px, 300px, 250px, 0px)';}
+
 
           document.getElementById('textoExplicacionClip').innerHTML = '<u>Clip:</u> Es una propiedad muy anticuada y en desuso que nos permite recortar una imagen o div en un cuadrado más pequeño';
           document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clip +'-->';">Derecha</button>
+
+
 
 
         <!-- RECORTAR ABAJO -->
         <button class="button" onclick="
           var contenido = document.getElementById('contenidoClip');
           var estilo = window.getComputedStyle(contenido);
-    
-          if(estilo.clip !== 'rect(0px, 300px, 200px, 0px)'){contenido.style.clip = 'rect(0px, 300px, 200px, 0px)';} 
+   
+          if(estilo.clip !== 'rect(0px, 300px, 200px, 0px)'){contenido.style.clip = 'rect(0px, 300px, 200px, 0px)';}
           else {contenido.style.clip = 'rect(0px, 300px, 250px, 0px)';}
-    
+   
           document.getElementById('textoExplicacionClip').innerHTML = '<u>Clip:</u> Es una propiedad muy anticuada y en desuso que nos permite recortar una imagen o div en un cuadrado más pequeño';
           document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clip +'-->';">Abajo</button>
+
+
 
 
         <!-- RECORTAR IZQUIERDA -->
         <button class="button" onclick="
           var contenido = document.getElementById('contenidoClip');
           var estilo = window.getComputedStyle(contenido);
-    
-          if(estilo.clip !== 'rect(0px, 300px, 250px, 50px)'){contenido.style.clip = 'rect(0px, 300px, 250px, 50px)';} 
+   
+          if(estilo.clip !== 'rect(0px, 300px, 250px, 50px)'){contenido.style.clip = 'rect(0px, 300px, 250px, 50px)';}
           else {contenido.style.clip = 'rect(0px, 300px, 250px, 0px)';}
-    
+   
           document.getElementById('textoExplicacionClip').innerHTML = '<u>Clip:</u> Es una propiedad muy anticuada y en desuso que nos permite recortar una imagen o div en un cuadrado más pequeño';
           document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clip +'-->';">Izquierda</button>
+
+
 
 
         <!-- EJECUTAR DISPLAY -->
@@ -406,6 +468,8 @@
         // Ejecuta moverDisplay a un elemento oculto con escala 0 posicionado justo encima del botón
         // Al hacer clip aumentará su tamaño y lo mostrará con una animación
         document.getElementById('displayClip').classList.toggle('moverDisplayClip');"> Clip-path</button>
+
+
 
 
         <!-- EL DISPLAY (VARIOS BOTONES)-->
@@ -417,11 +481,12 @@
               var contenido = document.getElementById('contenidoClip');
               var estilo = window.getComputedStyle(contenido);
               var nuevoClipPath = 'circle(45% at 50% 50%)';
-  
+ 
               // Recorta en círculo, siempre y cuando no haya recortado ya antes.
               // Si ya ha recortado antes, devuelve la imagen a su estado inicial
               if (estilo.clipPath !== nuevoClipPath) {
                   contenido.style.clipPath = nuevoClipPath;
+
 
                   document.getElementById('textoExplicacionClip').innerHTML = '<u>Clip-path:</u> Es una propiedad mucho más actualizada y útil, que te permite recortar una imagen o div según varias formas predefinidas e incluso personalizadas';
                   document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';
@@ -430,14 +495,18 @@
                 document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';}">🔴</li>
 
 
+
+
             <!-- TRIANGULO -->
             <li class=" button-pequeño" onclick="
               var contenido = document.getElementById('contenidoClip');
               var estilo = window.getComputedStyle(contenido);
               var nuevoClipPath = 'polygon(50% 0%, 0% 100%, 100% 100%)';
 
+
               if (estilo.clipPath !== nuevoClipPath) {
                   document.getElementById('contenidoClip').style.clipPath = nuevoClipPath;
+
 
                   document.getElementById('textoExplicacionClip').innerHTML = '<u>Clip-path:</u> Es una propiedad mucho más actualizada y útil, que te permite recortar una imagen o div según varias formas predefinidas e incluso personalizadas';
                   document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';
@@ -446,14 +515,18 @@
                 document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';}">🔺</li>
 
 
+
+
             <!-- ROMBO -->
             <li class="button-pequeño" onclick="
               var contenido = document.getElementById('contenidoClip');
               var estilo = window.getComputedStyle(contenido);
               var nuevoClipPath = 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)';
 
+
               if (estilo.clipPath !== nuevoClipPath) {
                   document.getElementById('contenidoClip').style.clipPath = nuevoClipPath;
+
 
                   document.getElementById('textoExplicacionClip').innerHTML = '<u>Clip-path:</u> Es una propiedad mucho más actualizada y útil, que te permite recortar una imagen o div según varias formas predefinidas e incluso personalizadas';
                   document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';
@@ -462,15 +535,17 @@
                 document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';}">🔶</li>
 
 
+
+
             <!-- ESTRELLA -->
             <li class="button-pequeño" onclick="
               var contenido = document.getElementById('contenidoClip');
               var estilo = window.getComputedStyle(contenido);
               var nuevoClipPath = 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)';
-              
+             
               if (estilo.clipPath !== nuevoClipPath) {
                 document.getElementById('contenidoClip').style.clipPath = nuevoClipPath;
-                
+               
                 document.getElementById('textoExplicacionClip').innerHTML = '<u>Clip-path:</u> Es una propiedad mucho más actualizada y útil, que te permite recortar una imagen o div según varias formas predefinidas e incluso personalizadas';
                 document.getElementById('valoresClip').innerHTML = '<-- Clip: ' + estilo.clipPath + '-->';
               } else {
@@ -483,6 +558,7 @@
     </div>
   </section>
 
+
   <h1 class="titulo" id="sectionCapSide">2.1 Caption </h1>
   <!-- CAPTION SIDE -->
   <section class="contenedor" id="contendedorCapSide">
@@ -492,9 +568,11 @@
         <tr>
         </tr>
 
+
         <!-- El caption que vamos a mover de lugar -->
         <caption>Leyenda de la tabla</caption>
       </table>
+
 
       <!-- DESCRIPCION -->
       <div id="textoExplicacionCapSide" class="textoExplicacion">
@@ -502,11 +580,14 @@
           explicación -->
       </div>
 
+
       <!-- VALORES -->
       <div id="valoresCapSide" class="valores">
         <-- Aquí estará el valor del borde elegido -->
       </div>
     </div>
+
+
 
 
     <!-- BOTONES -->
@@ -516,40 +597,47 @@
         <button class="button" onclick="
           var contenidoCapSide = document.getElementById('contenidoCapSide');
           var estilo = window.getComputedStyle(contenidoCapSide);
-  
+ 
           document.getElementById('contenidoCapSide').caption.style.opacity = '1';
           document.getElementById('contenidoCapSide').style.captionSide = 'top';
           document.getElementById('textoExplicacionCapSide').innerHTML = 'Caption-Side Top : Con esta propiedad, la leyenda (caption) de la tabla se ubicará en la parte superior de la tabla.';
           document.getElementById('valoresCapSide').innerHTML = estilo.captionSide;">Caption-Side Top</button>
 
 
+
+
         <!-- BOTTOM -->
         <button class="button" onclick="
           var contenidoCapSide = document.getElementById('contenidoCapSide');
           var estilo = window.getComputedStyle(contenidoCapSide);
-              
+             
           document.getElementById('contenidoCapSide').caption.style.opacity = '1';
           document.getElementById('contenidoCapSide').style.captionSide = 'bottom';
           document.getElementById('textoExplicacionCapSide').innerHTML = 'Caption-Side Bottom : En este caso, la leyenda de la tabla se colocará en la parte inferior de la tabla. El texto descriptivo se mostrará debajo de la tabla.';
           document.getElementById('valoresCapSide').innerHTML = estilo.captionSide; ">Caption-Side bottom</button>
 
 
+
+
         <!-- HIDDEN -->
         <button class="button" onclick="
               var contenidoCapSide = document.getElementById('contenidoCapSide');
               var estilo = window.getComputedStyle(contenidoCapSide);
-              var ancho = parseInt(estilo.borderWidth); 
-            
+              var ancho = parseInt(estilo.borderWidth);
+           
             document.getElementById('contenidoCapSide').caption.style.opacity = '0';
             document.getElementById('textoExplicacionCapSide').innerHTML = 'Sin Caption-Side :  Si estableces hidden, la leyenda se ocultará. Esto significa que el texto descriptivo definido en <caption> no será visible. La tabla seguirá siendo funcional, pero no habrá una leyenda visible asociada.';
             document.getElementById('valoresCapSide').innerHTML = estilo.captionSide;  
               ">Sin Caption-Side</button>
 
+
       </div>
     </div>
   </section>
 
+
   <h1 class="titulo" id="sectionClear">2.2 Clear</h1>
+
 
   <!-- FLOAT -->
   <section class="contenedor" id="contenedorFloat">
@@ -567,7 +655,10 @@
         Clear Both: El elemento es movido hacia abajo si hay elementos flotantes a algun lado de la pantalla.
       </div>
 
+
     </div>
+
+
 
 
     <!-- PARTE DERECHA -->
@@ -578,15 +669,18 @@
         <div class="clear-none">Elemento No Flotante con Clear None</div>
       </center>
 
+
       <div class="explicacion2">
         <p id="adios">None/Left/Right/Both</p>
         Clear Left: El elemento es movido hacia abajo si hay elementos flotantes a la izquierda.<br><br>
         Clear Right: El elemento es movido hacia abajo si hay elementos flotantes a la derecha.<br><br>
         Clear None: Keyword que indica que el elemento puede estar al lado de elementos flotantes.
 
+
       </div>
     </div>
   </section>
+
 
   <!-- BOX SHADOW / BOX SIZING-->
   <h1 class="titulo" id="sectionBoxSS">2.3 Ejemplo de box shadow y box-sizing</h1>
@@ -594,6 +688,7 @@
     <div id="divEjemploBoxSS">
       <!-- CONTENIDO -->
       <div id="contenidoBoxSS"></div>
+
 
       <div id="textoExplicacionBoxSS" class="textoExplicacion2">
         <-- Este texto dará una breve descripción de la propiedad elegida para permitir un mejor entendimiento y ayudar
@@ -603,7 +698,9 @@
         <-- Aquí estará el valor del borde elegido -->
       </div>
 
+
     </div>
+
 
     <!-- BOTONES -->
     <div class="divBotones">
@@ -611,25 +708,28 @@
         <!-- BOX SIZING -->
         <button class="button" id="button-BoxSS" onclick="
           var contenidoBoxSS = document.getElementById('contenidoBoxSS');
-          
+         
           if(contenidoBoxSS.style.boxSizing === 'none'){
             contenidoBoxSS.style.boxSizing = 'border-box';
           } else{
             contenidoBoxSS.style.boxSizing = 'none';
           }
-          
-          
+         
+         
           document.getElementById('textoExplicacionBoxSS').innerHTML = '<u>BOX-SIZING:</u> box-sizing es una propiedad en CSS que determina cómo se calcula el tamaño total de un elemento, incluyendo su contenido, relleno y borde.';
           document.getElementById('valoresBoxSS').innerHTML = estilo.boxSizing; ">BOX-SIZING
 
+
         </button>
+
+
 
 
         <!-- BOX SHADOW -->
         <button class="button" id="button-BoxSS" onclick="
           var contenidoBoxSS = document.getElementById('contenidoBoxSS');
           var estilo = window.getComputedStyle(contenidoBoxSS);
-          
+         
           if(estilo.boxShadow.includes('none')){
             contenidoBoxSS.style.boxShadow = '0px 0px 29px gray';
           } else if (estilo.boxShadow.includes('0px 0px 29px')) {
@@ -641,14 +741,17 @@
           } else if(estilo.boxShadow.includes('0px 0px 30px')){
             contenidoBoxSS.style.boxShadow = 'none';
           }
-          
+         
           document.getElementById('textoExplicacionBoxSS').innerHTML = '<u>BOX-SHADOW:</u>En CSS se utiliza para agregar sombras a los elementos. Puedes aplicar sombras a cajas (elementos rectangulares) y texto.';
           document.getElementById('valoresBoxSS').innerHTML = contenidoBoxSS.style.boxShadow; ">BOX-SHADOW
+
 
         </button>
       </div>
     </div>
   </section>
+
+
 
 
   <!-- COLUMNS -->
@@ -668,7 +771,14 @@
 
 
 
+
+
+
+
       </div>
+
+
+
 
 
 
@@ -679,11 +789,14 @@
       </div>
 
 
+
+
       <!-- VALORES -->
       <div id="valoresColumns" class="valores">
         <-- Aquí estará el valor elegido -->
       </div>
     </div>
+
 
     <div class="divBotones" id="divBotonesColumns">
       <div class="botones" id="botonesColumns">
@@ -698,8 +811,10 @@
             contenido.style.columnCount = '1';
           }
           document.getElementById('textoExplicacionColumns').innerHTML = '<u>Columns:</u>Se utiliza para especificar el diseño de columnas en contenedores. Puedes establecer el número de columnas a dividir, lo que permitirá otras propiedades.';
-          document.getElementById('valoresColumns').innerHTML = 'Columnas: ' + contenido.style.columnCount; 
+          document.getElementById('valoresColumns').innerHTML = 'Columnas: ' + contenido.style.columnCount;
           ">Añadir Columnas</button>
+
+
 
 
         <!-- AÑADIR GAP -->
@@ -717,10 +832,13 @@
           ">Añadir Gap</button>
 
 
+
+
         <!-- COLUM FILL -->
         <button class="button" onclick="
           var contenido = document.getElementById('contentBoxColumns');
           var estilo = window.getComputedStyle(contenido);
+
 
           if(estilo.columnFill === 'auto'){
             contenido.style.columnFill = 'Balance'
@@ -729,9 +847,12 @@
           }
           ">Column Fill: Auto/Balance</button>
 
+
       </div>
     </div>
   </section>
+
+
 
 
   <h1 class="titulo" id="tituloColumns2">4. Más Columns</h1>
@@ -748,10 +869,12 @@
         </p>
       </div>
 
+
       <div class="textoExplicacion" id="textoExplicacionColumns2">
         <-- Este texto dará una breve descripción de la opción elegida para permitir un mejor entendimiento y ayudar a
           la explicación -->
       </div>
+
 
       <div class="valores " id="valoresColumns2">
         <-- Aquí estará el valor elegido -->
@@ -764,13 +887,15 @@
         <h1 class="miniTitulo">COLUMN RULE:</h1>
 
 
+
+
         <!-- CAMBIAR ESTILO-->
         <button id="buttonColumns2" class="button"
           onclick="
             // Establece las variables para mayor legibilidad
             var contenido = document.getElementById('contenidoColumns2');
             var estilo = window.getComputedStyle(contenido);
-            
+           
             // Detecta el etilo del borde y sigue una cadena de estilos hasta que vuelve al básico
             if (estilo.columnRuleStyle === 'solid') {
               contenido.style.columnRuleStyle = 'dotted';
@@ -785,11 +910,13 @@
             } else if (estilo.columnRuleStyle === 'hidden') {
               contenido.style.columnRuleStyle = 'solid';
             }
-  
+ 
             // Cabia el texto de la descripción y el valor actual del borde
             document.getElementById('textoExplicacionColumns2').innerHTML = '<u>Column-rule-style:</u> Determina el estilo de la regla que separa las columnas. Puedes establecer diferentes estilos como sólido, punteado, discontinuo, etc.';
-  
+ 
             document.getElementById('valoresColumns2').innerHTML = '<-- Column-rule-style: ' + estilo.columnRuleStyle +'-->';"> column-rule-style </button>
+
+
 
 
         <!-- CAMBIAR COLOR COLUMN2-->
@@ -797,7 +924,7 @@
           onclick="
         var contenido = document.getElementById('contenidoColumns2');
         var estilo = window.getComputedStyle(contenido);
-        
+       
         if (estilo.columnRuleColor === 'rgb(0, 0, 0)') {
           contenido.style.columnRuleColor = 'rgb(0, 0, 255)';
         } else if (estilo.columnRuleColor === 'rgb(0, 0, 255)') {
@@ -811,26 +938,30 @@
         } else if (estilo.columnRuleColor === 'rgb(142, 68, 173)') {
           contenido.style.columnRuleColor = 'black';
         }
-        
+       
         document.getElementById('textoExplicacionColumns2').innerHTML = '<u>Column-rule-color:</u> Establece el color de la regla que separa las columnas. Puedes elegir el color tanto por su nombre, código hexadecimal, código rgb, etc...';document.getElementById('valoresColumns2').innerHTML = '<-- Border color: ' + contenido.style.columnRuleColor +'-->';">
           column-rule-color </button>
+
+
 
 
         <!-- MAS WIDTH COLUMN2 -->
         <button class="button" id="buttonColumns2"
           onmousedown="
-        // variables 
+        // variables
             var contenido = document.getElementById('contenidoColumns2');
             var estilo = window.getComputedStyle(contenido);
-            var ancho = parseInt(estilo.columnRuleWidth); 
+            var ancho = parseInt(estilo.columnRuleWidth);
+
 
             // Coge el ancho actual del borde y le suma 5px
             contenido.style.columnRuleWidth = (ancho + 2) + 'px';
-            
+           
             // Para que no se pase de tamaño
             if(ancho >= '30'){
             contenido.style.columnRuleWidth = '5px'
           }
+
 
             // Cambia la descripcion y el valor
             document.getElementById('textoExplicacionColumns2').innerHTML = '<u>Column - rule - width:</u> Define el ancho de la linea que se muestra entre las columnas en un elemento con múltiples columnas. ';
@@ -838,16 +969,20 @@
         </button>
 
 
+
+
         <!-- MENOS WIDTH COLUMN2 -->
         <button class="button" id="buttonColumns2"
           onmousedown="
-        // variables 
+        // variables
             var contenido = document.getElementById('contenidoColumns2');
             var estilo = window.getComputedStyle(contenido);
-            var ancho = parseInt(estilo.columnRuleWidth); 
+            var ancho = parseInt(estilo.columnRuleWidth);
+
 
             // Coge el ancho actual del borde y le suma 5px
             contenido.style.columnRuleWidth = ((ancho - 2) + 'px');
+
 
             // Cambia la descripcion y el valor
             document.getElementById('textoExplicacionColumns2').innerHTML = '<u>Column - rule - width:</u> Define el ancho de la linea que se muestra entre las columnas en un elemento con múltiples columnas. ';
@@ -858,11 +993,14 @@
   </section>
 
 
+
+
   <h1 class="titulo" id="tituloColumns3">4.1 Más Columns</h1>
   <!-- Columns 3-->
   <section class="contenedor" id="contenedorColumns3">
     <div class="divEjemploContenido" id="divEjemploColumns3">
       <div id="contenidoColumns3">
+
 
         <h3 id="qwertyu">Header haciendo span las columnas de debajo</h3>
         <p>
@@ -880,12 +1018,17 @@
 
 
 
+
+
+
       </div>
+
 
       <div class="textoExplicacion" id="textoExplicacionColumns3">
         <-- Este texto dará una breve descripción de la opción elegida para permitir un mejor entendimiento y ayudar a
           la explicación -->
       </div>
+
 
       <div class="valores " id="valoresColumns3">
         <-- Aquí estará el valor elegido -->
@@ -898,8 +1041,11 @@
         <h1 class="miniTitulo">COLUMN SPAN/WIDTH:</h1>
 
 
+
+
         <!-- SPAN: NONE/ALL-->
         <button id="buttonColumns3" class="button" onclick="
+
 
           var contenido = document.getElementById('qwerty');
           var contenido2 = document.getElementById('qwertyu');
@@ -913,17 +1059,21 @@
             contenido2.style.columnSpan = 'all'
           }
 
+
           /*texto explicativo*/
           document.getElementById('textoExplicacionColumns3').innerHTML = '<u>Column Span:</u> Determina si un elemento en una columna pone un espacio debajo suya(All) o no lo pone(none)';
           document.getElementById('valoresColumns3').innerHTML = '<-- Colum Span: ' + contenido.style.columnSpan +'-->';
         "> Column-Span: None/All </button>
 
 
+
+
         <!-- MÁS WIDTH-->
         <button class="button" id="buttonColumns3" onclick="
           var contenido = document.getElementById('contenidoColumns3');
             var estilo = window.getComputedStyle(contenido);
-            var anchura = parseInt(estilo.columnWidth); 
+            var anchura = parseInt(estilo.columnWidth);
+
 
             /*cambia la anchura de las columnas*/
             if(anchura == '100'){
@@ -934,17 +1084,20 @@
             contenido.style.columnWidth = '100px'
           }
 
-            // Cambia la descripcion y el valor 
+
+            // Cambia la descripcion y el valor
             document.getElementById('textoExplicacionColumns3').innerHTML = '<u>Column width:</u> Define el ancho de las columnas de un elemento, si el ancho de la columna es mayor que el ancho total, se establece el ancho total.';
             document.getElementById('valoresColumns3').innerHTML = '<-- Colum-width: ' + contenido.style.columnWidth +'-->';
         "> Más column-width </button>
+
+
 
 
         <!-- MENOS WIDTH -->
         <button class="button" id="buttonColumns3" onmousedown="
         var contenido = document.getElementById('contenidoColumns3');
             var estilo = window.getComputedStyle(contenido);
-            var anchura = parseInt(estilo.columnWidth); 
+            var anchura = parseInt(estilo.columnWidth);
             /*cambia la anchura de las columnas*/
             if(anchura == '300'){
             contenido.style.columnWidth = '200px'
@@ -954,14 +1107,18 @@
             contenido.style.columnWidth = '300px'
           }
 
+
             // Cambia la descripcion y el valor
             document.getElementById('textoExplicacionColumns3').innerHTML = '<u>Column width:</u> Define el ancho de las columnas de un elemento, si el ancho de la columna es mayor que el ancho total, se establece el ancho total. ';
             document.getElementById('valoresColumns3').innerHTML = '<-- Colum-width: ' + contenido.style.columnWidth +'-->';
         ">Menos column-width </button>
 
+
       </div>
     </div>
   </section>
+
+
 
 
   <h1 class="titulo" id="tituloDia5">5. Día 5</h1>
@@ -970,26 +1127,27 @@
     <div class="divEjemploContenido" id="divEjemploDia5">
       <div id="contenidoDia5">
 
+
         <!-- TABLA CURSORES-->
         <table class="tablaCursores" id="tablaCursores">
           <tr>
             <td id="cursor1"
-              onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;">
+              onmouseenter="document.getElementById('valoresDia5').innerHTML = '<-- Valor: ' +  window.getComputedStyle(this).cursor+ ' -->';">
               <img id="imagenCursores" alt="imaen1"
                 src="https://cdn3.iconfinder.com/data/icons/user-interface-173/64/ui-60-512.png"></td>
             <td id="cursor2"
-              onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;">
+              onmouseenter="document.getElementById('valoresDia5').innerHTML = '<-- Valor: ' +  window.getComputedStyle(this).cursor + ' -->' ;">
               <img id="imagenCursoresMano" alt="imaen2"
                 src="https://cdn1.iconfinder.com/data/icons/interface-essentials-5-1/24/hand-drag-1--cursor-drag-move-hand-grab-select-512.png">
             </td>
             <td id="cursor3"
-              onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;">
+              onmouseenter="document.getElementById('valoresDia5').innerHTML = '<-- Valor: ' +  window.getComputedStyle(this).cursor + ' -->' ;">
               <img id="imagenCursores" alt="imaen3"
                 src="https://cdn3.iconfinder.com/data/icons/loaders-4/24/Loader-13-256.png"></td>
           </tr>
           <tr>
             <td id="cursor4"
-              onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;">
+              onmouseenter="document.getElementById('valoresDia5').innerHTML = '<-- Valor: ' +  window.getComputedStyle(this).cursor + ' -->' ;">
               <img id="imagenCursores" alt="imaen4"
                 src="https://cdn4.iconfinder.com/data/icons/prohibited-red-signs/119/Prohibition_sign_043-512.png"></td>
             <td id="cellShow"></td>
@@ -997,16 +1155,21 @@
           </tr>
           <tr>
             <td id="cursor5"
-              onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;">
+              onmouseenter="document.getElementById('valoresDia5').innerHTML = '<-- Valor: ' +  window.getComputedStyle(this).cursor + ' -->' ;">
               <img id="imagenCursores" alt="imaen5"
                 src="https://cdn1.iconfinder.com/data/icons/ionicons-outline-vol-2/512/resize-outline-512.png"></td>
             <td id="cellHide"></td>
             <td id="cursor6"
-              onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;">
+              onmouseenter="document.getElementById('valoresDia5').innerHTML = '<-- Valor: ' +  window.getComputedStyle(this).cursor + ' -->' ;">
               <img id="imagenCursores" alt="imaen6"
                 src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/zoom_in-256.png"></td>
           </tr>
         </table>
+
+
+
+
+
 
         <!-- COUNTER -->
         <div class="tablaCounter" id="tablaCounter">
@@ -1021,7 +1184,30 @@
           </ol>
         </div>
 
+
         <!-- CONTENT -->
+
+
+        <div clas="content" id="ejemploContent">
+
+          <h2>Ejemplo content</h2>
+          <ol>
+            <br>
+            <li class="directionrtl">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <br>
+            <li class="new-entry"> Excepturi molestias hic temporibus iure cum? Nostrum minima, </li>
+            <br>
+            <li class="directionrtl">minus voluptas illo quidem quisquam nisi eum exercitationem natus cupiditate sunt
+              modi dolor id?</li>
+            <br>
+            <li class="old-entry"> Sit ipsam sapiente asperiores atque enim nam delectus doloribus.</li>
+            <br>
+          </ol>
+
+
+        </div>
+
+
 
         <!-- DISPLAY -->
         <div class="tablaDisplay" id="tablaDisplay">
@@ -1029,7 +1215,12 @@
         </div>
 
 
+
       </div>
+
+
+
+
 
 
 
@@ -1041,6 +1232,8 @@
       </div>
 
 
+
+
       <div class="valores " id="valoresDia5">
         <-- Aquí estará el valor elegido -->
       </div>
@@ -1049,7 +1242,11 @@
       <!-- BOTONES-->
       <div class="botones" id="botonesDia5">
         <!-- MINI TÍTULO -->
-        <h1 class="miniTitulo">COLUMN RULE:</h1>
+        <h1 class="miniTitulo">DIA 5:</h1>
+
+
+
+
 
 
 
@@ -1059,7 +1256,22 @@
         try{document.querySelector('.ensanchar').classList.toggle('ensanchar');}
         catch{}
         document.getElementById('tablaCursores').classList.toggle('ensanchar');
+        document.getElementById('textoExplicacionDia5').innerHTML = '<u>Cursor / Empty-cell:</u> La propiedad cursor te permite cambiar el tipo de cursor y la propiedad empty-cell te permite mostrar o no mostrar celdas vacias. ';
+        document.getElementById('valoresDia5').innerHTML = '<-- Cursor: -->'
+        var tablaCursores = document.getElementById('tablaCursores');
+
+
+if(tablaCursores.style.direction === 'ltr'){
+    tablaCursores.style.direction = 'rtl';
+} else {
+  tablaCursores.style.direction = 'ltr';
+}
+
+
+       
+       
         ">empty-cell / cursor </button>
+
 
         <!-- BOTÓN COUNTER -->
         <button class="button buttonColores" onclick="
@@ -1070,70 +1282,85 @@
            document.querySelector('.ensanchar').classList.toggle('ensanchar');
          } catch{}
      
-         tabla.classList.toggle('ensanchar'); 
+         tabla.classList.toggle('ensanchar');
      
          if (counter === 2) {
            tabla.style.item = counter + 1;
-         } 
+         }
      
          if (counter === 8) {
            tabla.style.counterReset = '2';
          }
+         
+
+
+         document.getElementById('textoExplicacionDia5').innerHTML = '<u>Counter:</u> La propiedad counter crea un contador que suma automaticamente al añadir elementos. ';
+         document.getElementById('valoresDia5').innerHTML ='<-- Counter -->';
        ">Counter </button>
 
 
+
+
         <!-- BOTÓN CONTENT -->
-        <button class="button buttonColores">Content</button>
+        <button class="button buttonColores" onmousedown="
+        var tabla = document.getElementById('ejemploContent');
+        try {
+          document.querySelector('.ensanchar').classList.toggle('ensanchar');
+        } catch{}
+        tabla.classList.toggle('ensanchar')
+        document.getElementById('textoExplicacionDia5').innerHTML = '<u>content / direction:</u> La propiedad content permite insertar texto antes (before) o despues (after) de un elemento, direction permite scribir de izquierdas o de derechas.';
+        document.getElementById('valoresDia5').innerHTML ='<-- Content / Direction -->'
+        ;">Content / Direction</button>
 
 
-        <!-- Direction Table -->
-        <button class="button" onclick="
-        var tipoDirection = document.getElementById('tablaCursores');
-        var estilo = window.getComputedStyle(tipoDirection);
-
-        var directionActual = tipoDirection.style.direction || estilo.getPropertyValue('direction');
-
-        var nuevaDirection = (directionActual === 'ltr') ? 'rtl' : 'ltr';
-
-        // Aplica la nueva dirección al elemento
-        tipoDirection.style.direction = nuevaDirection;
 
 
-// Cabia el texto de la descripción y el valor actual del borde
-    document.getElementById('textoExplicacionDia5').innerHTML = '<u>Direction  :</u> La propiedad direction se aplica no solo al texto, sino también a la dirección en la que fluyen otros elementos en la página, como las capas y las listas. ';
-
-    document.getElementById('valoresDia5').innerHTML = ' ';">
-          Cambiar Direction
-        </button>
 
 
 
         <!-- BOTON DISPLAY -->
 
 
+
+
         <button class="button buttonColores" onmousedown="
         var tabla = document.getElementById('tablaDisplay');
+
 
         try {
           document.querySelector('.ensanchar').classList.toggle('ensanchar');
         } catch {}
-    
+   
+
 
         tabla.classList.toggle('ensanchar');
+
 
         var computedStyle = window.getComputedStyle(tabla);
         var currentBackgroundImage = computedStyle.getPropertyValue('background-image');
 
+
         if (currentBackgroundImage !== 'none') {
           tabla.style.backgroundImage = 'none';
+          document.getElementById('valoresDia5').innerHTML ='<-- Display: none-->'
         } else {
           tabla.style.backgroundImage = 'url(\'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Sasso_lungo_da_passo_pordoi.jpg/1200px-Sasso_lungo_da_passo_pordoi.jpg\')';
+          document.getElementById('valoresDia5').innerHTML ='<-- Display: block -->'
         }
+        document.getElementById('textoExplicacionDia5').innerHTML = '<u>Display:</u> La propiedad display permite a un elemento ser mostrado (display: block), o no (display: none). ';
+       
       ">Display</button>
+
 
       </div>
     </div>
   </section>
+
+
+
+
+
+
 
 
 
@@ -1159,6 +1386,7 @@
     </div>
   </div>
 
+
   <!-- FOOTER -->
   <footer>
     <div id="textoFooter2">
@@ -1166,5 +1394,6 @@
     </div>
   </footer>
 </body>
+
 
 </html>

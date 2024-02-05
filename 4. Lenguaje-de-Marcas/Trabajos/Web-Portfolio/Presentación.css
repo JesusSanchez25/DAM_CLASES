@@ -4,7 +4,7 @@ html{
 }
 
 body{
-  margin-top: -22px;
+  margin: -1vh;
   overflow-x: hidden;
   cursor: url(cursores/clear-cyan/Clear-c-01-Norm.cur), auto;
 }
@@ -61,8 +61,8 @@ body{
 }
 
 .intro{
-  width: 100%; 
-  height: 102vh;
+  width: 100vw; 
+  height: 100vh;
   background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(240,240,240,1) 15%, rgba(225,223,223,1) 62%, rgba(221,221,221,1) 100%);
   padding-left: 10vh;
 
@@ -145,11 +145,63 @@ body{
     height: 93vh; 
     bottom: 0vh;
     right: 20vh;
-    filter: grayscale(0) drop-shadow(20px 10px 4px gray);
-    
+    filter: grayscale(0) drop-shadow(20px 0px 4px gray);
   }
   
 
+
+}
+
+
+.presentacion{
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  margin: auto;
+  margin-top: 10vh;
+
+  div{
+    outline: solid 10px red;
+  }
+
+  .divImagenMia{
+    height: 100%;
+    width: 45%;
+
+    .imagen{
+      height: 70%;
+      width: 70%;
+      margin: 10% auto;
+      background-color: yellow;
+    }
+
+
+    .descImagen{
+      position: relative;
+      top: 10%;
+    }
+  }
+
+  .divTextoPresentacion{
+    height: 100%;
+    width: 55%;
+    
+
+    .titulo{
+      height: 30%;
+      width: 100%;
+      background-color: blue;
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    .contenido{
+      height: 70%;
+      width: 100%;
+      background-color: green;
+
+    }
+  }
 
 }
 
