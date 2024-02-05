@@ -973,26 +973,37 @@
         <!-- TABLA CURSORES-->
         <table class="tablaCursores" id="tablaCursores">
           <tr>
-            <td id="cursor1" onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;">
+            <td id="cursor1"
+              onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;">
               <img id="imagenCursores" alt="imaen1"
                 src="https://cdn3.iconfinder.com/data/icons/user-interface-173/64/ui-60-512.png"></td>
-            <td id="cursor2" onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;"><img id="imagenCursoresMano" alt="imaen2"
+            <td id="cursor2"
+              onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;">
+              <img id="imagenCursoresMano" alt="imaen2"
                 src="https://cdn1.iconfinder.com/data/icons/interface-essentials-5-1/24/hand-drag-1--cursor-drag-move-hand-grab-select-512.png">
             </td>
-            <td id="cursor3" onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;"><img id="imagenCursores" alt="imaen3"
+            <td id="cursor3"
+              onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;">
+              <img id="imagenCursores" alt="imaen3"
                 src="https://cdn3.iconfinder.com/data/icons/loaders-4/24/Loader-13-256.png"></td>
           </tr>
           <tr>
-            <td id="cursor4" onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;"><img id="imagenCursores" alt="imaen4"
+            <td id="cursor4"
+              onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;">
+              <img id="imagenCursores" alt="imaen4"
                 src="https://cdn4.iconfinder.com/data/icons/prohibited-red-signs/119/Prohibition_sign_043-512.png"></td>
-            <td id="cellShow" ></td>
+            <td id="cellShow"></td>
             <td id="cellHide"></td>
           </tr>
           <tr>
-            <td id="cursor5" onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;"><img id="imagenCursores" alt="imaen5"
+            <td id="cursor5"
+              onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;">
+              <img id="imagenCursores" alt="imaen5"
                 src="https://cdn1.iconfinder.com/data/icons/ionicons-outline-vol-2/512/resize-outline-512.png"></td>
             <td id="cellHide"></td>
-            <td id="cursor6" onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;"><img id="imagenCursores" alt="imaen6"
+            <td id="cursor6"
+              onmouseenter="document.getElementById('valoresDia5').innerHTML = 'Valor: ' +  window.getComputedStyle(this).cursor;">
+              <img id="imagenCursores" alt="imaen6"
                 src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/zoom_in-256.png"></td>
           </tr>
         </table>
@@ -1014,14 +1025,14 @@
 
         <!-- DISPLAY -->
         <div class="tablaDisplay" id="tablaDisplay">
-          
+
         </div>
 
-        
+
       </div>
 
 
-      
+
 
 
       <div class="textoExplicacion" id="textoExplicacionDia5">
@@ -1050,8 +1061,8 @@
         document.getElementById('tablaCursores').classList.toggle('ensanchar');
         ">empty-cell / cursor </button>
 
-         <!-- BOTÓN COUNTER -->
-         <button class="button buttonColores" onclick="
+        <!-- BOTÓN COUNTER -->
+        <button class="button buttonColores" onclick="
          var tabla = document.getElementById('tablaCounter');
          var counter = parseInt(tabla.style.counterReset) || 1;
      
@@ -1075,8 +1086,26 @@
         <button class="button buttonColores">Content</button>
 
 
-        <!-- BOTÓN CONTENT -->
-        <button class="button buttonColores">Direction</button>
+        <!-- Direction Table -->
+        <button class="button" onclick="
+        var tipoDirection = document.getElementById('tablaCursores');
+        var estilo = window.getComputedStyle(tipoDirection);
+
+        var directionActual = tipoDirection.style.direction || estilo.getPropertyValue('direction');
+
+        var nuevaDirection = (directionActual === 'ltr') ? 'rtl' : 'ltr';
+
+        // Aplica la nueva dirección al elemento
+        tipoDirection.style.direction = nuevaDirection;
+
+
+// Cabia el texto de la descripción y el valor actual del borde
+    document.getElementById('textoExplicacionDia5').innerHTML = '<u>Direction  :</u> La propiedad direction se aplica no solo al texto, sino también a la dirección en la que fluyen otros elementos en la página, como las capas y las listas. ';
+
+    document.getElementById('valoresDia5').innerHTML = ' ';">
+          Cambiar Direction
+        </button>
+
 
 
         <!-- BOTON DISPLAY -->
