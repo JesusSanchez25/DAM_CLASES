@@ -9,6 +9,10 @@ body{
   cursor: url(cursores/clear-cyan/Clear-c-01-Norm.cur), auto;
 }
 
+p,h3,h2,h1{
+  cursor: url(cursores/clear-cyan/Clear-c-06-Text.cur), text;
+}
+
 
 
 
@@ -122,10 +126,7 @@ body{
     margin: 0;
     font-family: Lexend;
 
-    p{
-      cursor: url(cursores/clear-cyan/Clear-c-06-Text.cur), text;
-    }
-
+    
     .miniTitulo{
       margin: 0;
       font-weight: 700;
@@ -186,6 +187,10 @@ body{
     justify-content: space-between;
   }
 
+  .icono{
+    height: 1em;
+  }
+
 
 
   .contenedorSobreMi{
@@ -227,7 +232,7 @@ body{
 
 
     li{
-      color: #a0a0a0;
+      color: #686868;
     }
 
 
@@ -238,7 +243,7 @@ body{
     height: 40vh;
     width: 20vw;
     border-radius: 3px;
-    padding-top: 7vh;
+    padding-top: 5vh;
 
       ul{
         justify-content: start;
