@@ -189,6 +189,14 @@ p,h3,h2,h1{
 
   .icono{
     height: 1em;
+    
+  }
+
+  .svg-icon{
+    height: 25px;
+  }
+  .svg-icon path {
+    fill: green; /* Relleno verde */
   }
 
 
@@ -248,10 +256,14 @@ p,h3,h2,h1{
       ul{
         justify-content: start;
         gap: 3vh;
+        margin-left: -0.5vw;
       }
 
       li{
         font-family: Ubuntu;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
       }
   }
 
