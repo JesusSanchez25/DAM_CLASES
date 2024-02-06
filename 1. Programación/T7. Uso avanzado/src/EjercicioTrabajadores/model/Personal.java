@@ -26,4 +26,7 @@ public abstract class Personal {
     }
 
 
+    public Object getDni() {
+        return "puta";
+    }
 }

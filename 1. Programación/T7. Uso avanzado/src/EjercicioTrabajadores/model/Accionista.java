@@ -33,4 +33,9 @@ public final class Accionista extends Personal implements Votantes {
     public void setAcciones(int acciones) {
         this.acciones = acciones;
     }
+
+    @Override
+    public int votar() {
+        return 0;
+    }
 }

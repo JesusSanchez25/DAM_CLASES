@@ -26,7 +26,6 @@ public abstract class Trabajador extends Personal{
     }
 
 
-    public abstract int calcularSueldo();
 
 
     public int getSueldo() {
