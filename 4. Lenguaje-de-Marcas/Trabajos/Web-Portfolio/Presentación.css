@@ -7,6 +7,7 @@ body{
   margin: -1vh;
   overflow-x: hidden;
   cursor: url(cursores/clear-cyan/Clear-c-01-Norm.cur), auto;
+  scroll-behavior: smooth;
 }
 
 p,h3,h2,h1{
@@ -169,7 +170,7 @@ p,h3,h2,h1{
 
   @keyframes deslizarDerecha {
     from {
-      transform: translateX(-100vw);
+      transform: translateX(-50vw);
     }
   
     to {
@@ -185,10 +186,12 @@ p,h3,h2,h1{
   margin: 10vh 0;
   transition: transform 3s ease-in-out;
 
-  animation: deslizarDerecha;
-  animation-timeline: view(20vh 50vh);
-
-	animation-timing-function: ease-out;
+  view-timeline-name: --image;
+	animation-timeline: --image;
+	animation-name: deslizarDerecha;
+	animation-range: entry 0% cover 30%;
+	animation-fill-mode: both;
+	animation-timing-function: ease-in-out;
   
 
   
@@ -215,15 +218,14 @@ p,h3,h2,h1{
     justify-content: space-between;
   }
 
-  .icono{
-    height: 1em;
-    
-  }
+  
 
-  .svg-icon{
-    height: 25px;
+  .svg-icono{
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
   }
-  .svg-icon path {
+  .svg-icono path {
     fill: green; /* Relleno verde */
   }
 
