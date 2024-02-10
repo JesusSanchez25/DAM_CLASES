@@ -170,7 +170,7 @@ p,h3,h2,h1{
 
   @keyframes deslizarDerecha {
     from {
-      transform: translateX(-50vw);
+      transform: translateX(-100vw);
     }
   
     to {
@@ -187,11 +187,14 @@ p,h3,h2,h1{
   transition: transform 3s ease-in-out;
 
   view-timeline-name: --image;
-	animation-timeline: --image;
-	animation-name: deslizarDerecha;
-	animation-range: entry 0% cover 30%;
-	animation-fill-mode: both;
-	animation-timing-function: ease-in-out;
+  view-timeline-axis: block;
+
+  animation-timeline: --image;
+  animation-name: deslizarDerecha;
+
+  animation-range: entry 0% cover 45%;
+  animation-fill-mode: both;
+	animation-timing-function: ease-out;
   
 
   
@@ -221,9 +224,9 @@ p,h3,h2,h1{
   
 
   .svg-icono{
-    height: 50px;
-    width: 50px;
     margin-right: 10px;
+    min-width: 10%;
+    max-width: 10%;
   }
   .svg-icono path {
     fill: green; /* Relleno verde */
