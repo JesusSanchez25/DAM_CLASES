@@ -423,11 +423,11 @@ section:first-of-type{
 
     .barra {
       position: relative; 
-      height: 10px;
+      height: 12px;
       width: 80%;
       z-index: 99;
       border-radius: 5px;
-      border: solid 1px black;
+      border: solid 1px gray;
 
       
     }
@@ -436,14 +436,14 @@ section:first-of-type{
     
     .barra::before {
       content: "";
-      top: -1px;
+      top: 0px;
       left: -1px;
       position: absolute;
-      height: 100%;
+      height: 101%;
       width: 80%; 
       background-color: rgb(108,182,108);
       border-radius: 5px;
-      border: solid 1px black;
+      border: none;
       z-index: 100;
       
 
