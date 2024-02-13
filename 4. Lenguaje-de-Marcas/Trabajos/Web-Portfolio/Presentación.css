@@ -18,7 +18,7 @@ p,h3,h2,h1{
 
 section{
   padding-left: 10vh;
-  margin: 15vh 0;
+  margin: 18vh 0;
 }
 
 section:first-of-type{
@@ -56,8 +56,8 @@ section:first-of-type{
 .header {
   width: 100vw;
   height: 12vh;
-  left: 2vw;
   position: absolute;
+  left: 2vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -484,6 +484,7 @@ section:first-of-type{
       border-radius: 20px;
       overflow-y: scroll;
       background-color: #f7f7f7;
+      box-shadow: 2px 2px 16px lightgray;
       
 
       .miniTitulo::before{
@@ -531,13 +532,11 @@ section:first-of-type{
   }
 
 
-  .sectionInteresEmpresa{
-    margin: 15vh 0 0 0;
+  .sectionInteresesEmpresa{
+    height: 100px;
   }
 
   .contenedorEmpresa{
-    padding: 6vh 4vw;
-    height: 50vh;
     width: 85vw;
     display: flex;
     justify-content: space-between;
@@ -580,6 +579,54 @@ section:first-of-type{
       
     }
 
+  }
+
+  .footer{
+    width: 100svw;
+    height: 20vh;
+    display: flex;
+    background-color: #529052;
+
+    .elemento{
+      display: flex;
+      align-items: center;
+      color: white;
+      font-family: Ubuntu;
+      font-size: 20px;
+    }
+
+    .marca{
+      padding-left: 7vw;
+      .logo{
+        height: 32%;
+      }
+    }
+
+    .navegador{
+      margin: 0 0px 0 auto;
+      gap: 3vw;
+      width: min-content;
+      
+
+      p:before{
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 2px;
+        background-color: blue;
+      }
+      
+    }
+
+    .redes{
+      margin: 0 5vw 0 auto;
+      gap: 1vw;
+
+      svg{
+        stroke: transparent;
+        fill: white;
+      }
+    }
   }
 
   
