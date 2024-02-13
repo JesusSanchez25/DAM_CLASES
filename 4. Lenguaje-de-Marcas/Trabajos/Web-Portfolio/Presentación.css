@@ -113,12 +113,22 @@ section:first-of-type{
 
 @keyframes progreso {
   from {
-    background-color: red;
     width: 0%;
   }
 
   to {
-    background: green;
+  }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    scale: 0
+  }
+
+  to {
+    scale: 1;
+    opacity:1;
   }
 }
 
@@ -431,7 +441,7 @@ section:first-of-type{
       position: absolute;
       height: 100%;
       width: 80%; 
-      background-color: orange;
+      background-color: rgb(108,182,108);
       border-radius: 5px;
       border: solid 1px black;
       z-index: 100;
@@ -446,12 +456,21 @@ section:first-of-type{
     }
 
     .divBarras .elemento:nth-child(1) .barra::before {
-      width: 90%;
+      width: 95%;
       
     }
 
     .divBarras .elemento:nth-child(2) .barra::before {
       width: 70%;
+    }
+    .divBarras .elemento:nth-child(3) .barra::before {
+      width: 90%;
+    }
+    .divBarras .elemento:nth-child(4) .barra::before {
+      width: 80%;
+    }
+    .divBarras .elemento:nth-child(5) .barra::before {
+      width: 85%;
     }
 
     
@@ -531,6 +550,34 @@ section:first-of-type{
     .elemento{
       text-align: center;
       width: 23vw;
+
+      view-timeline-name: --image;
+      view-timeline-axis: block;
+    
+      animation-timeline: --image;
+      animation-name: aparecer;
+
+      animation-range: entry 0% cover 35%;
+      animation-fill-mode: both;
+      animation-timing-function: ease-out;
+      
+    }
+
+    .elemento:first-of-type{
+      animation-range: entry 0% cover 25%;
+    }
+
+    .elemento:nth-of-type(2){
+      animation-range: entry 0% cover 42%;
+    }
+
+    .elemento:nth-of-type(3){
+      animation-range: entry 0% cover 55%;
+    }
+
+
+    .datos{
+      
     }
 
   }
