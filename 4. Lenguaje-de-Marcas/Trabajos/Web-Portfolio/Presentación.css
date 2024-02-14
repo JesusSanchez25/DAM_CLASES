@@ -478,6 +478,7 @@ section:first-of-type{
     .divScrollLaboral{
       height: auto;
       width: 30%;
+      margin-left: 3vw;
       display: flex;
       position: relative;
       padding: 2vh;
@@ -586,6 +587,7 @@ section:first-of-type{
     height: 20vh;
     display: flex;
     background-color: #529052;
+    box-shadow: 0 0 5px gray;
 
     .elemento{
       display: flex;
@@ -611,9 +613,8 @@ section:first-of-type{
       p:before{
         content: "";
         position: absolute;
-        width: 50%;
+        width: 0%;
         height: 2px;
-        background-color: blue;
       }
       
     }
