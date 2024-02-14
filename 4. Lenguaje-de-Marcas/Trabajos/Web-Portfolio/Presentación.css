@@ -134,7 +134,7 @@ section:first-of-type{
 
 @keyframes subrayar {
   from {
-    width: 0;
+    width: 0%;
   }
 
   to {
@@ -416,7 +416,7 @@ section:first-of-type{
       margin-bottom: 10px;
       position: relative;
 
-      view-timeline-name: --mek;
+      view-timeline-name: --Linea;
       view-timeline-axis: block;
     }
 
@@ -449,14 +449,14 @@ section:first-of-type{
       left: -1px;
       position: absolute;
       height: 101%;
-      width: attr(data-variable + '%'); 
+      width: 90%; 
       background-color: rgb(108,182,108);
       border-radius: 5px;
       border: none;
       z-index: 100;
       
 
-      animation-timeline: --mek;
+      animation-timeline: --Linea;
       animation-name: progreso;
 
       animation-range: entry 0% cover 40%;
@@ -483,15 +483,30 @@ section:first-of-type{
     }
 
     .divBarras .barra::after {
-      --Barra2: 10;
-      --Barraf: attr(data-variable):
-      content: var(--Barraf);
+      content: "";
       position: absolute;
       left: calc(100% + 8px);
       top: -4px;
       z-index: 101;
       font-family: Oswald;
     }
+
+    .divBarras .elemento:nth-child(1) .barra::after {
+      content: "95%";
+    }
+    .divBarras .elemento:nth-child(2) .barra::after {
+      content: "70%";
+    }
+    .divBarras .elemento:nth-child(3) .barra::after {
+      content: "90%";
+    }
+    .divBarras .elemento:nth-child(4) .barra::after {
+      content: "80%";
+    }
+    .divBarras .elemento:nth-child(5) .barra::after {
+      content: "85%";
+    }
+  
 
     
 
@@ -510,13 +525,14 @@ section:first-of-type{
 
       .miniTitulo::before{
         content: "";
+        position: absolute;
+        left: 1%;
         height: 10px;
         width: 10px;
         border-radius: 15px;
         border: solid 6px #f7f7f7;
         background-color: #6cb66c;
-        position: absolute;
-        left: 6px;
+        
       }
     }
 
@@ -532,7 +548,7 @@ section:first-of-type{
 
     .lineaTiempo{
       height: 200%;
-      width: 5px;
+      width: 8px;
       margin: 0 2% 0 0;
       border-radius: 5px;
       background-color: #dcdcdc;
@@ -558,6 +574,7 @@ section:first-of-type{
   }
 
   .contenedorEmpresa{
+    margin-top: 5vh;
     width: 85vw;
     display: flex;
     justify-content: space-between;
@@ -638,7 +655,6 @@ section:first-of-type{
       }
       p:hover{
         color: var(--ColorHover);
-    
       }
 
       p:before{
@@ -646,13 +662,14 @@ section:first-of-type{
         position: absolute;
         top: 100%;
         z-index: 101;
-        width: 100%;
-        height: 1px;
-        background-color: blue;
+        width: 0%;
+        height: 2px;
+        transition: width 0.3s ease;
+        background-color: black;
       }
 
-      p:hover::before{
-        animation: subrayar 3s fowards;
+      p:hover:before{
+        width: 100%;
       }
       
     }
