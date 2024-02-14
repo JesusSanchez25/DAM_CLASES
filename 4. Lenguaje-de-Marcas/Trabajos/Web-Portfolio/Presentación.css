@@ -132,6 +132,16 @@ section:first-of-type{
   }
 }
 
+@keyframes subrayar {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
 .intro{
   width: 100vw; 
   height: 100vh;
@@ -250,13 +260,11 @@ section:first-of-type{
   margin: 10vh;
   transition: transform 3s ease-in-out;
 
-  view-timeline-name: --image;
+  view-timeline-name: --timeline;
   view-timeline-axis: block;
-
-  animation-timeline: --image;
+  animation-timeline: --timeline;
   animation-name: deslizarDerecha;
-
-  animation-range: entry 0% cover 45%;
+  animation-range: entry 0% cover 39%;
   animation-fill-mode: both;
 	animation-timing-function: ease-out;
   
@@ -424,6 +432,7 @@ section:first-of-type{
     .barra {
       position: relative; 
       height: 12px;
+      --Barra: 80;
       width: 80%;
       z-index: 99;
       border-radius: 5px;
@@ -440,7 +449,7 @@ section:first-of-type{
       left: -1px;
       position: absolute;
       height: 101%;
-      width: 80%; 
+      width: attr(data-variable + '%'); 
       background-color: rgb(108,182,108);
       border-radius: 5px;
       border: none;
@@ -471,6 +480,17 @@ section:first-of-type{
     }
     .divBarras .elemento:nth-child(5) .barra::before {
       width: 85%;
+    }
+
+    .divBarras .barra::after {
+      --Barra2: 10;
+      --Barraf: attr(data-variable):
+      content: var(--Barraf);
+      position: absolute;
+      left: calc(100% + 8px);
+      top: -4px;
+      z-index: 101;
+      font-family: Oswald;
     }
 
     
@@ -551,12 +571,9 @@ section:first-of-type{
       text-align: center;
       width: 23vw;
 
-      view-timeline-name: --image;
-      view-timeline-axis: block;
-    
-      animation-timeline: --image;
+      view-timeline-name: --timeline;    
+      animation-timeline: --timeline;
       animation-name: aparecer;
-
       animation-range: entry 0% cover 35%;
       animation-fill-mode: both;
       animation-timing-function: ease-out;
@@ -585,36 +602,57 @@ section:first-of-type{
   .footer{
     width: 100svw;
     height: 20vh;
+    margin-top: 24vh;
     display: flex;
-    background-color: #529052;
-    box-shadow: 0 0 5px gray;
+    background-color: #9A9A9A;
+    box-shadow: 0 0 10px gray;
+    --Color: white;
+    --ColorHover: #000000;
 
     .elemento{
       display: flex;
       align-items: center;
-      color: white;
-      font-family: Ubuntu;
-      font-size: 20px;
+      Color: var(--Color);
     }
 
     .marca{
       padding-left: 7vw;
+      margin-right: auto;
       .logo{
         height: 32%;
       }
     }
 
     .navegador{
-      margin: 0 0px 0 auto;
-      gap: 3vw;
+      gap: 5vw;
       width: min-content;
-      
+      font-family: Ubuntu;
+      font-size: 21px;
+
+      p{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        cursor: url(cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
+      }
+      p:hover{
+        color: var(--ColorHover);
+    
+      }
 
       p:before{
         content: "";
         position: absolute;
-        width: 0%;
-        height: 2px;
+        top: 100%;
+        z-index: 101;
+        width: 100%;
+        height: 1px;
+        background-color: blue;
+      }
+
+      p:hover::before{
+        animation: subrayar 3s fowards;
       }
       
     }
@@ -624,8 +662,15 @@ section:first-of-type{
       gap: 1vw;
 
       svg{
+        transition: all 0.3s ease-in-out;
+        cursor: url(cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
         stroke: transparent;
-        fill: white;
+        fill: var(--Color);
+      }
+
+      svg:hover{
+        fill: var(--ColorHover);
+    
       }
     }
   }
