@@ -1,0 +1,157 @@
+html{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  margin: -1vh;
+  overflow-x: hidden;
+  cursor: url(cursores/clear-cyan/Clear-c-01-Norm.cur), auto;
+  scroll-behavior: smooth;
+  font-family: Roboto;
+}
+
+p,h3,h2,h1{
+  cursor: url(cursores/clear-cyan/Clear-c-06-Text.cur), text;
+  margin: 0;
+}
+
+section{
+  padding: 0 12vw;
+  margin: 18vh 0;
+}
+
+.header {
+  width: 100svw;
+  height: 12vh;
+  position: relative;
+  left: 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  .logo {
+    height: 50%;
+    padding-left: 3vw;
+    position: relative; /* Agrega esta línea para que el seudoelemento se posicione relativo a este elemento */
+    
+  }
+
+  a {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: Ubuntu;
+    text-decoration: none;
+    color: #707070;
+    transition: color 0.4s ease-in-out;
+    cursor: url(cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
+  }
+
+  a:hover{
+    color: black;
+  }
+
+  .botonesHeader{
+    display: flex;
+    margin-right: 100px;
+    column-gap: 3vw;
+  }
+}
+
+.miniTitulo{
+  margin: 0;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.datos{
+  font-size: 15px;
+  color: #a0a0a0;
+}
+
+
+.titulo{
+  text-align: center;
+  font-size: 4.8rem;
+  font-family: Teko;
+  color: rgb(81, 127, 81);
+  text-transform: uppercase;
+  animation: brillar 2s ease-in-out infinite alternate;
+}
+
+@keyframes brillar {
+  from {
+    text-shadow: 0 0 5px rgb(81, 127, 81);
+  }
+  to {
+    text-shadow: 0 0 20px rgb(81, 127, 81), 0 0 5px rgb(81, 127, 81);
+  }
+  
+}
+
+
+@keyframes identifier {
+  to{
+    height: 500px;
+  }
+}
+
+
+.trabajos{
+
+  .contenedor{
+    overflow: hidden;
+    position: relative;
+    height: 100px;
+
+    animation: identifier 3s both infinite alternate;
+  }
+
+  .divIntroduccion{
+    padding: 5vh 2vw;
+    background-color:red;
+    z-index: 1;
+  }
+
+  .desplegable{
+    background-color: blue;
+    padding: 8vmin;
+    display: flex;
+    position: relative;
+    margin-top: this.heigth;
+    z-index: -1;
+  }
+
+  img{
+    max-width: 40%;
+    
+  }
+
+  .divInformacion{
+    width: 100%;
+    min-height: 100%;
+    padding: 2vmin 0;
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+
+    .miniTitulo{
+      text-align: center;
+      margin-bottom: 2vh;
+    }
+
+    p{
+      padding-left: 4vw;
+    }
+
+    .creditos{
+      margin-top: auto;
+    }
+
+   
+
+  }
+
+}
