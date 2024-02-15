@@ -519,6 +519,7 @@ section:first-of-type{
       padding: 2vh;
       border-radius: 20px;
       overflow-y: scroll;
+      background-color: red;
       background-color: #f7f7f7;
       box-shadow: 2px 2px 16px lightgray;
       

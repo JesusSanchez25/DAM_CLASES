@@ -17,8 +17,8 @@ p,h3,h2,h1{
 }
 
 section{
-  padding: 0 12vw;
-  margin: 18vh 0;
+  padding: 0 8vw;
+  margin: 10vh 0;
 }
 
 .header {
@@ -78,7 +78,9 @@ section{
   font-family: Teko;
   color: rgb(81, 127, 81);
   text-transform: uppercase;
-  animation: brillar 2s ease-in-out infinite alternate;
+  margin-top: 10vh;
+  animation: brillar 5s ease-in-out infinite alternate;
+  text-decoration: underline;
 }
 
 @keyframes brillar {
@@ -86,7 +88,7 @@ section{
     text-shadow: 0 0 5px rgb(81, 127, 81);
   }
   to {
-    text-shadow: 0 0 20px rgb(81, 127, 81), 0 0 5px rgb(81, 127, 81);
+    text-shadow: 0 0 10px rgb(81, 127, 81), 0 0 5px rgb(81, 127, 81);
   }
   
 }
@@ -117,9 +119,13 @@ section{
   .contenedor{
     overflow: hidden;
     position: relative;
-    height: 100px;
-    transition: all 0.3s;
+    height: 15.6vh;
+    transition: all 0.5s ease-out;
     z-index: 200;
+    border-radius: 5px;
+    margin: 2vmin 0;
+
+    
     
   }
 
@@ -131,12 +137,16 @@ section{
     height: 500px;
   }
 
+  
+
   .divIntroduccion{
-    padding: 5vmin 2vmin;
-    background-color:lightgreen;
+    padding: 5vmin 4vmin;
+    background: rgb(133,217,133);
+    background: linear-gradient(87deg, rgba(133,217,133,1) 0%, rgba(116,240,116,1) 40%, rgba(189,230,189,1) 92%, rgba(202,233,202,1) 100%);
     z-index: 1;
-    
-  }
+    border: solid darkgreen 2px;
+    font-family: Oswald;
+    color: rgb(35, 35, 35);}
 
   .desplegable{
     background-color: #c0c0c09e;
@@ -144,6 +154,8 @@ section{
     display: flex;
     position: relative;
     z-index: -1;
+    border: solid #9a9a9a9e 2px;
+
   }
 
   img{
