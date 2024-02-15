@@ -467,7 +467,6 @@ section:first-of-type{
 
     .divBarras .elemento:nth-child(1) .barra::before {
       width: 95%;
-      
     }
 
     .divBarras .elemento:nth-child(2) .barra::before {
