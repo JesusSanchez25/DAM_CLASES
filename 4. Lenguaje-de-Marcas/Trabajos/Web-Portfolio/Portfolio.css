@@ -92,12 +92,25 @@ section{
 }
 
 
-@keyframes identifier {
+@keyframes desplegar {
+  from{
+    height: 100px;
+  }
   to{
-    height: 500px;
+    height: 60vh;
   }
 }
 
+
+@keyframes subrayar {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
 
 .trabajos{
 
@@ -105,37 +118,46 @@ section{
     overflow: hidden;
     position: relative;
     height: 100px;
+    transition: all 0.3s;
+    z-index: 200;
+    
+  }
 
-    animation: identifier 3s both infinite alternate;
+  input[type="checkbox"]{
+    display: none;
+  }
+
+  input[type="checkbox"]:checked + label .contenedor {
+    height: 500px;
   }
 
   .divIntroduccion{
-    padding: 5vh 2vw;
-    background-color:red;
+    padding: 5vmin 2vmin;
+    background-color:lightgreen;
     z-index: 1;
+    
   }
 
   .desplegable{
-    background-color: blue;
-    padding: 8vmin;
+    background-color: #c0c0c09e;
+    padding: 5vmin 6vmin;
     display: flex;
     position: relative;
-    margin-top: this.heigth;
     z-index: -1;
   }
 
   img{
     max-width: 40%;
-    
+    box-shadow: 0 0 5px gray;
+    border-radius: 2px;
   }
 
   .divInformacion{
     width: 100%;
     min-height: 100%;
-    padding: 2vmin 0;
+    padding: 0 0 1vmin 0;
     display: flex;
     flex-direction: column;
-    background-color: green;
 
     .miniTitulo{
       text-align: center;
@@ -148,6 +170,26 @@ section{
 
     .creditos{
       margin-top: auto;
+    }
+
+    .link{
+      position: relative;
+      cursor: url(cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
+
+    }
+    .link::before{
+      content: "";
+      position: absolute;
+      top: 100%;
+      z-index: 101;
+      width: 0%;
+      height: 2px;
+      transition: width 0.3s ease;
+      background-color: black;
+    }
+
+    .link:hover:before{
+      width: 100%;
     }
 
    
