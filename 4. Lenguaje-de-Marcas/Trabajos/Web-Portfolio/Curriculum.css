@@ -1,0 +1,329 @@
+/* <-- UNIVERSAL -->*/
+
+html{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  margin: -1vh;
+  overflow-x: hidden;
+  cursor: url(cursores/clear-cyan/Clear-c-01-Norm.cur), auto;
+  scroll-behavior: smooth;
+  font-family: Roboto;
+}
+
+p,h3,h2,h1{
+  cursor: url(cursores/clear-cyan/Clear-c-06-Text.cur), text;
+  margin: 0;
+}
+
+
+
+
+
+/*<-- HEADER -->*/
+.header {
+  width: 100vw;
+  height: 12vh;
+  left: 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  .logo {
+    height: 50%;
+    padding-left: 3vw;
+    position: relative; /* Agrega esta línea para que el seudoelemento se posicione relativo a este elemento */
+    
+  }
+
+
+  a {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: Ubuntu;
+    text-decoration: none;
+    color: #707070;
+    transition: color 0.4s ease-in-out;
+    cursor: url(cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
+  }
+
+  a:hover{
+    color: black;
+  }
+
+  .botonesHeader{
+    display: flex;
+    margin-right: 100px;
+    column-gap: 3vw;
+  }
+}
+
+
+/* <--GENERAL BODY -->*/
+
+.datos{
+  font-size: 15px;
+  color: #a0a0a0;
+}
+
+.titulo{
+  text-align: center;
+  font-size: 4.8rem;
+  font-family: Teko;
+  color: rgb(81, 127, 81);
+  text-transform: uppercase;
+  margin-top: 10vh;
+  animation: brillar 5s ease-in-out infinite alternate;
+  text-decoration: underline;
+}
+
+.titulo-Secundario{
+  display: inline-block;
+  position: relative;
+  display: flex;
+  font-family: Roboto;
+  margin: 20px;
+  z-index: 100;
+}
+
+.titulo-Secundario-bg {
+  font-family: Archivo Black;
+  position: absolute;
+  left: -0.4%;
+  color: #fff;
+  font-size: 70px;
+  font-weight: 900;
+  -webkit-text-stroke: 1px rgb(0 0 0/25%);
+  -webkit-user-select: none;
+  bottom: -16px;
+  z-index: -1;
+  text-transform: uppercase;
+}
+
+section{
+  padding-left: 10vh;
+  margin: 25vh 0;
+}
+
+section:first-of-type{
+  margin: 14vmin 0;
+}
+
+
+
+.ligero{
+  color: gray;
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
+.normal{
+  color: rgb(139, 139, 139);
+}
+
+.coloreada{
+  color: #50b272;
+  font-weight: bold;
+}
+
+.miniTitulo{
+  margin: 0;
+  font-family: Oswald;
+  margin-bottom: 1vmin;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+/* <--SOBRE MI-->*/
+.sectionInfoPersonalidad{
+  height: auto;
+
+  .contenido{
+    display: flex;
+    height: 90vh;
+    margin: 10vmin 0vmin 10vmin 8vmin;
+  }
+
+
+  .titulo{
+    width: 100%;
+  }
+
+  .divInfoPersonal{
+    padding: 5vmin;
+    width: 60vmin;
+    height: 80vh;
+    border-radius: 3px;
+    box-shadow: 0 0 12px rgba(128, 128, 128, 0.179);
+
+    .ligero{
+      color: rgba(47, 161, 47, 0.681);
+      font-size: 0.9em;
+    }
+
+    hr{
+      border: 0;
+      margin-top: 2vmin;
+      background-color: #a8a8a890;
+      height: 2px;
+      width: 100%;
+
+        }
+  }
+
+  .divPersonalidadHabilidades{
+    width: 80vmin;
+    height: 100%;
+    margin-left: 5vmin;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    hr{
+    width: 20%;
+    border: solid 3px #50b272;
+    margin: 0 0 1.5vh 0;
+    }
+
+    .divPersonalidad{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .divHabilidades{
+      margin-top: 3vh;
+      display: flex;
+      flex-direction: column;
+      height: 50%;
+    }
+
+    .ul{
+      list-style-type: none;
+      width: 100%;
+      flex: 1;
+      overflow-y: scroll;
+      position: relative;
+
+      li{
+        position: relative;
+        margin: 2vmin 0;
+      }
+      
+      li:first-of-type{
+        margin: 0;
+      }
+
+
+      li::before{
+        content: "";
+        position: absolute;
+        left: -3%;
+        top: 4px;
+        height: 8px;
+        width: 8px;
+        border-radius: 15px;
+        background-color: #6cb66c;
+
+      }
+    }
+    
+
+    .ul::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    .ul::-webkit-scrollbar-thumb {
+      background: rgb(108,182,108);
+      border-radius: 5px;
+    }
+
+    .ul::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1); /* Color de fondo para el track */
+      border-radius: 5px;
+      box-shadow: inset 0 0 10px rgba(172, 172, 172, 0.5); /* Sombra interior */
+    }
+
+
+   
+
+    
+  }
+
+}
+
+
+
+/* <--EXPERIENCIA LABORAL-->*/
+.sectionExperiencia{
+  counter-reset: elemento;
+
+  .indice::before{
+    counter-increment: elemento;
+    content: "" counter(elemento);
+    position: absolute;
+    left: 1.2vmin;
+    top: 0.7vmin;
+    font-family: Lexend;
+    font-size: 1em;
+    color: #272727dd;
+  }
+
+  .contenedor{
+    min-height: 25vmin;
+    margin: 10vmin 25vmin 10vmin 7vmin;
+    display: flex;
+    gap: 2vmin;
+
+    .elemento{
+      --PadLeft : 4.5vmin;
+      position: relative;
+      width: 33.3%;
+      border-left: 2px solid green;
+      padding: 4vmin var(--PadLeft);
+      box-shadow: 0 0 5px rgba(128, 128, 128, 0.214);
+      background-color: white;
+      transition: all 0.55s ease-in-out;
+
+      .miniTitulo{
+        position: relative;
+      }
+
+      .miniTitulo::before{
+        content: "";
+        width: 12px;
+        height: 15px;
+        position: absolute;
+        left: calc(var(--PadLeft) * -1);
+        top: 1vmin;
+        z-index: 101;
+        background-color: green;
+      }
+
+      .miniTitulo::after{
+        content: "";
+        width: 8px;
+        height: 15px;
+        position: absolute;
+        left: calc(calc(var(--PadLeft) * -1) + 12px);
+        top: 1vmin;
+        z-index: 101;
+        background-color: green;
+        clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+      }
+    }
+  }
+
+  .elemento:hover {
+    box-shadow: 0 0 12px rgba(128, 128, 128, 0.414);
+    scale: 1.15;
+    
+  }
+  
+ 
+}
+

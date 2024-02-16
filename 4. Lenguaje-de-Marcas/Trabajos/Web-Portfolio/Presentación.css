@@ -544,9 +544,13 @@ section:first-of-type{
     .divScrollLaboral::-webkit-scrollbar-thumb {
       background: rgb(108,182,108);
       border-radius: 5px;
-
     }
-
+    
+    .divScrollLaboral::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1); /* Color de fondo para el track */
+      border-radius: 5px;
+      box-shadow: inset 0 0 7px rgba(172, 172, 172, 0.5); /* Sombra interior */
+    }
     .lineaTiempo{
       height: 200%;
       width: 8px;

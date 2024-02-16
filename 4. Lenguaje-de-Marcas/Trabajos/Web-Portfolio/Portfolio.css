@@ -142,7 +142,7 @@ section{
   .divIntroduccion{
     padding: 5vmin 4vmin;
     background: rgb(133,217,133);
-    background: linear-gradient(87deg, rgba(133,217,133,1) 0%, rgba(116,240,116,1) 40%, rgba(189,230,189,1) 92%, rgba(202,233,202,1) 100%);
+    background: linear-gradient(45deg, rgba(133,217,133,1) 0%, rgba(116,240,116,1) 40%, rgba(189,230,189,1) 100%);
     z-index: 1;
     border: solid darkgreen 2px;
     font-family: Oswald;
