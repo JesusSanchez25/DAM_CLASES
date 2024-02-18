@@ -6,13 +6,13 @@ html{
 body{
   margin: -1vh;
   overflow-x: hidden;
-  cursor: url(cursores/clear-cyan/Clear-c-01-Norm.cur), auto;
+  cursor: url(assets/cursores/clear-cyan/Clear-c-01-Norm.cur), auto;
   scroll-behavior: smooth;
   font-family: Roboto;
 }
 
 p,h3,h2,h1{
-  cursor: url(cursores/clear-cyan/Clear-c-06-Text.cur), text;
+  cursor: url(assets/cursores/clear-cyan/Clear-c-06-Text.cur), text;
   margin: 0;
 }
 
@@ -78,7 +78,7 @@ section:first-of-type{
     text-decoration: none;
     color: #707070;
     transition: color 0.4s ease-in-out;
-    cursor: url(cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
+    cursor: url(assets/cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
   }
 
   a:hover{
@@ -181,7 +181,7 @@ section:first-of-type{
       border: none;
       box-shadow: 1px 1px 4px gray;
       font-family: Lexend;
-      cursor: url(cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
+      cursor: url(assets/cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
     }
   
     .botonInicial:hover{
@@ -656,7 +656,7 @@ section:first-of-type{
         display: flex;
         justify-content: center;
         transition: all 0.3s ease-in-out;
-        cursor: url(cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
+        cursor: url(assets/cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
       }
       p:hover{
         color: var(--ColorHover);
@@ -685,7 +685,7 @@ section:first-of-type{
 
       svg{
         transition: all 0.3s ease-in-out;
-        cursor: url(cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
+        cursor: url(assets/cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
         stroke: transparent;
         fill: var(--Color);
       }

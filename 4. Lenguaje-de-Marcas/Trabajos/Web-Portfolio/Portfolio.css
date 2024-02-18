@@ -6,13 +6,13 @@ html{
 body{
   margin: -1vh;
   overflow-x: hidden;
-  cursor: url(cursores/clear-cyan/Clear-c-01-Norm.cur), auto;
+  cursor: url(assets/cursores/clear-cyan/Clear-c-01-Norm.cur), auto;
   scroll-behavior: smooth;
   font-family: Roboto;
 }
 
 p,h3,h2,h1{
-  cursor: url(cursores/clear-cyan/Clear-c-06-Text.cur), text;
+  cursor: url(assets/cursores/clear-cyan/Clear-c-06-Text.cur), text;
   margin: 0;
 }
 
@@ -46,7 +46,7 @@ section{
     text-decoration: none;
     color: #707070;
     transition: color 0.4s ease-in-out;
-    cursor: url(cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
+    cursor: url(assets/cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
   }
 
   a:hover{
@@ -121,6 +121,7 @@ section{
 }
 
 .trabajos{
+  cursor: url(assets/cursores/clear-cyan/Clear-c-01-Norm.cur);
 
   .contenedor{
     overflow: hidden;
@@ -130,6 +131,7 @@ section{
     z-index: 200;
     border-radius: 5px;
     margin: 4vmin 0;
+    cursor: url(assets/cursores/clear-cyan/Clear-c-01-Norm.cur), pointer;
 
     
     
@@ -146,7 +148,7 @@ section{
     font-family: Oswald;
     color: rgb(35, 35, 35);
     transition: filter 0.5s ease;
-    background: url(backgrounds/Base\ datos.jpg);
+    background: url(assets/backgrounds/Base\ datos.jpg);
 
     
     
@@ -162,16 +164,16 @@ section{
   }
 
    #divIntroduccion1{
-    background: url(backgrounds/navidad.jpg);
+    background: url(assets/backgrounds/navidad.jpg);
   }
 
   #divIntroduccion2{
-    background: url(backgrounds/Guia\ propiedades.jpg);
+    background: url(assets/backgrounds/Guia\ propiedades.jpg);
     background-size: 50%;
   }
 
   #divIntroduccion3{
-    background: url(backgrounds/Base\ datos.jpg);
+    background: url(assets/backgrounds/Base\ datos.jpg);
     background-size: 50%;
   } 
 
@@ -254,9 +256,16 @@ section{
 
     .link{
       position: relative;
-      cursor: url(cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
-
+      cursor: url(assets/cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s;
     }
+
+    .link:hover{
+      font-weight: bold;
+    }
+
     .link::before{
       content: "";
       position: absolute;

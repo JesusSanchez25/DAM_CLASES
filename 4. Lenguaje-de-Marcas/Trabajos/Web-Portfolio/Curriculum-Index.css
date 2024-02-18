@@ -1,0 +1,788 @@
+/*<-- UNIVERSAL -->*/
+html{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  margin: -1vh;
+  overflow-x: hidden;
+  cursor: url(assets/cursores/clear-cyan/Clear-c-01-Norm.cur), auto;
+  scroll-behavior: smooth;
+  font-family: Roboto;
+}
+
+p,h3,h2,h1{
+  cursor: url(assets/cursores/clear-cyan/Clear-c-06-Text.cur), text;
+  margin: 0;
+}
+
+section{
+  padding-left: 10vh;
+  margin: 18vh 0;
+}
+
+section:first-of-type{
+  margin: 0;
+}
+
+.titulo{
+  display: inline-block;
+  position: relative;
+  display: flex;
+  font-family: Roboto;
+  margin: 20px;
+  z-index: 100;
+}
+
+.titulo-bg {
+  position: absolute;
+  left: -0.4%;
+  color: #fff;
+  font-size: 90px;
+  font-weight: 900;
+  -webkit-text-stroke: 1px rgb(0 0 0/25%);
+  -webkit-user-select: none;
+  bottom: -30px;
+  z-index: -1;
+  text-transform: uppercase;
+}
+
+@keyframes borrado {
+  0% { content: "Desarrollado"; }
+  2% { content: "Desarrollad"; }
+  4% { content: "Desarrolla"; }
+  6% { content: "Desarroll"; }
+  8% { content: "Desarrol"; }
+  10% { content: "Desarro"; }
+  12% { content: "Desarr"; }
+  14% { content: "Desar"; }
+  16% { content: "Desa"; }
+  18% { content: "Des"; }
+  20% { content: "De"; }
+  22% { content: "D"; }
+  24% { content: ""; }
+  26% { content: "P"; }
+  28% { content: "Pr"; }
+  30% { content: "Pro"; }
+  32% { content: "Prog"; }
+  34% { content: "Progr"; }
+  36% { content: "Progra"; }
+  38% { content: "Program"; }
+  40% { content: "Programa"; }
+  42% { content: "Programad"; }
+  44% { content: "Programado"; }
+  46% { content: "Programador"; }
+  48% { content: "Programado"; }
+  50% { content: "Programad"; }
+  52% { content: "Programa"; }
+  54% { content: "Program"; }
+  56% { content: "Progra"; }
+  58% { content: "Progr"; }
+  60% { content: "Prog"; }
+  62% { content: "Pro"; }
+  64% { content: "Pr"; }
+  66% { content: "P"; }
+  68% { content: ""; }
+  70% { content: "D"; }
+  72% { content: "Di"; }
+  71% { content: "Dis"; }
+  72% { content: "Dise"; }
+  73% { content: "Diseñ"; }
+  74% { content: "Diseña"; }
+  75% { content: "Diseñad"; }
+  76% { content: "Diseñado"; }
+  77% { content: "Diseñador"; }
+  78% { content: "Diseñado"; }
+  79% { content: "Diseñad"; }
+  80% { content: "Diseña"; }
+  81% { content: "Diseñ"; }
+  82% { content: "Dise"; }
+  83% { content: "Dis"; }
+  84% { content: "Dis"; }
+  85% { content: "Di"; }
+  86% { content: "D"; }
+  87% { content: ""; }
+  88% { content: "D"; }
+  89% { content: "De"; }
+  90% { content: "Des"; }
+  91% { content: "Desa"; }
+  92% { content: "Desar"; }
+  93% { content: "Desarr"; }
+  94% { content: "Desarro"; }
+  95% { content: "Desarrol"; }
+  96% { content: "Desarroll"; }
+  97% { content: "Desarrolla"; }
+  98% { content: "Desarrollad"; }
+  99% { content: "Desarrollado"; }
+  100% { content: "Desarrollador"; }
+}
+
+
+
+
+/*<-- HEADER -->*/
+.header {
+  width: 100vw;
+  height: 12vh;
+  position: absolute;
+  left: 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  .logo {
+    height: 50%;
+    padding-left: 3vw;
+    position: relative; 
+    
+  }
+
+  a {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: Ubuntu;
+    text-decoration: none;
+    color: #707070;
+    transition: color 0.4s ease-in-out;
+    cursor: url(assets/cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
+  }
+
+  a:hover{
+    color: black;
+  }
+
+  .botonesHeader{
+    display: flex;
+    margin-right: 100px;
+    column-gap: 3vw;
+  }
+}
+
+.miniTitulo{
+  margin: 0;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.datos{
+  font-size: 15px;
+  color: #a0a0a0;
+}
+
+
+/*<-- INTRODUCCIÓN -->*/
+
+@keyframes parpadeo {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes progreso {
+  from {
+    width: 0%;
+  }
+
+  to {
+  }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    scale: 0
+  }
+
+  to {
+    scale: 1;
+    opacity:1;
+  }
+}
+
+@keyframes subrayar {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.intro{
+  width: 100vw; 
+  height: 100vh;
+  background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(240,240,240,1) 15%, rgba(225,223,223,1) 62%, rgba(221,221,221,1) 100%);
+  
+
+  /*<-- TEXTO INICIAL -->*/
+  .divTextoInicial{
+    top: 32vh;
+    position: relative;
+  
+    .mensajeInicial{
+      font-family: Lexend;
+      font-size: 28px;
+      font-weight: 400;
+      margin: 1vh;
+    
+    }
+  
+    .grande{
+      font-weight: 800;
+      font-size: 47px;
+      width: max-content;
+      padding-right: 5px;
+      border-right: 5px solid black;
+      animation: parpadeo 1s step-end infinite;
+    }
+
+    .grande::after{
+      content: "Desarrollador";
+      animation: borrado 7s linear infinite;
+    }
+
+    .botonInicial{
+      position: relative;
+      left: 1vh;
+      top: 2vh;
+      padding: 15px 40px;
+      background-color: #009e66;
+      color: white;
+      border: none;
+      box-shadow: 1px 1px 4px gray;
+      font-family: Lexend;
+      cursor: url(assets/cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
+    }
+  
+    .botonInicial:hover{
+      background-color: #008c5b;
+    }
+  
+  }
+
+ 
+  
+  /*<-- CONTACTO Y DATOS -->*/
+  .infoContacto {
+    position: relative;
+    top: 57vh;
+    left: 0.5vw;
+    width:min-content;
+    column-count: 3;
+    column-rule: 2px solid #008c5b;
+    gap: 4vw;
+    margin: 0;
+    font-family: Lexend;
+
+    
+    .miniTitulo{
+      margin: 0;
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    .datos{
+      font-size: 15px;
+      color: #a0a0a0;
+    }
+}
+
+
+
+  
+  /*<-- MI IMAGEN -->*/
+  .Yo{
+    position: absolute;
+    height: 93vh; 
+    bottom: 0vh;
+    right: 20vh;
+    filter: grayscale(0) drop-shadow(20px 0px 4px gray);
+  }
+  
+
+
+}
+
+ @keyframes mostrar {
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+  
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+
+  @keyframes deslizarDerecha {
+    from {
+      transform: translateX(-100vw);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  }
+
+/*<-- PRESENTACIÓN -->*/
+.sectionPresentacion{  
+  display: flex;
+  align-items: center;
+  gap: 8vw;
+  margin: 10vh;
+  transition: transform 3s ease-in-out;
+
+  view-timeline-name: --timeline;
+  view-timeline-axis: block;
+  animation-timeline: --timeline;
+  animation-name: deslizarDerecha;
+  animation-range: entry 0% cover 39%;
+  animation-fill-mode: both;
+	animation-timing-function: ease-out;
+  
+
+  
+  h2{
+    font-size: 1.5rem;
+    font-family: Ubuntu;
+    margin: 0;
+  }
+
+  hr{
+    width: 20%;
+    border: solid 3px #50b272;
+    margin: 0 0 1.5vh 0;
+  }
+
+  ul{
+    height: 90%;
+    min-width: 45%;
+    padding: 5% 0 0 0;
+    list-style-type: none;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  
+
+  .svg-icono{
+    margin-right: 10px;
+    min-width: 10%;
+    max-width: 10%;
+  }
+  .svg-icono path {
+    fill: green; 
+  }
+
+
+  /*<-- SOBRE MI -->*/
+
+  .contenedorSobreMi{
+    height: 40vh;
+    width: 20vw;
+    padding: 4vh;
+    border-radius: 3px;
+    box-shadow: 0px 0px 16px lightgray;
+    
+
+    h3,h2{
+      margin: 0;
+    }
+
+    .divTitulo{
+      height: 25%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-bottom: solid 2px lightgray;
+      
+      .verde{
+        color: #008c5b;
+        font-size: 20px;
+      }
+
+      
+
+    }
+
+    .contenido{
+      height: 70%;
+      width: 100%;
+      display: flex;
+
+    }
+
+
+
+    li{
+      color: #686868;
+    }
+
+
+  }
+
+ 
+/*<-- PERSONALIDAD & HABILIDADES -->*/
+  .contenedorExtras{
+    height: 40vh;
+    width: 20vw;
+    border-radius: 3px;
+
+    
+  
+   
+
+      ul{
+        justify-content: start;
+        gap: 3vh;
+        margin-left: -0.5vw;
+      }
+
+      li{
+        font-family: Ubuntu;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+      }
+  }
+  }
+
+/*<-- EXPERIENCIA -->*/
+
+  .contenedorLaboral{
+    padding: 6vh 4vw;
+    height: 50vh;
+    width: 100svw;
+    display: flex;
+
+    .titulo{
+      display: inline-block;
+      position: relative;
+      display: flex;
+      font-family: Roboto;
+      margin: 20px;
+      z-index: 100;
+    }
+
+    .titulo-bg {
+      position: absolute;
+      left: -0.4%;
+      color: #fff;
+      font-size: 90px;
+      font-weight: 900;
+      -webkit-text-stroke: 1px rgb(0 0 0/25%);
+      -webkit-user-select: none;
+      bottom: -30px;
+      z-index: -1;
+      text-transform: uppercase;
+  }
+
+  /*<-- BARRAS -->*/
+    
+    .divBarras{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 40vw;
+      gap: 3vh;
+      margin-top: auto;
+      margin-bottom: 10px;
+      position: relative;
+
+      view-timeline-name: --Linea;
+      view-timeline-axis: block;
+    }
+
+    .elemento{
+      display: flex;
+      flex-direction: column;
+      gap: 1vh;
+    }
+
+    
+
+
+    .barra {
+      position: relative; 
+      height: 12px;
+      --Barra: 80;
+      width: 80%;
+      z-index: 99;
+      border-radius: 5px;
+      border: solid 1px gray;
+
+      
+    }
+
+    
+    
+    .barra::before {
+      content: "";
+      top: 0px;
+      left: -1px;
+      position: absolute;
+      height: 101%;
+      width: 90%; 
+      background-color: rgb(108,182,108);
+      border-radius: 5px;
+      border: none;
+      z-index: 100;
+      
+
+      animation-timeline: --Linea;
+      animation-name: progreso;
+
+      animation-range: entry 0% cover 40%;
+      animation-fill-mode: both;
+      animation-timing-function: ease-out;
+    }
+
+    .divBarras .elemento:nth-child(1) .barra::before {
+      width: 95%;
+    }
+
+    .divBarras .elemento:nth-child(2) .barra::before {
+      width: 70%;
+    }
+    .divBarras .elemento:nth-child(3) .barra::before {
+      width: 90%;
+    }
+    .divBarras .elemento:nth-child(4) .barra::before {
+      width: 80%;
+    }
+    .divBarras .elemento:nth-child(5) .barra::before {
+      width: 85%;
+    }
+
+    .divBarras .barra::after {
+      content: "";
+      position: absolute;
+      left: calc(100% + 8px);
+      top: -4px;
+      z-index: 101;
+      font-family: Oswald;
+    }
+
+    .divBarras .elemento:nth-child(1) .barra::after {
+      content: "95%";
+    }
+    .divBarras .elemento:nth-child(2) .barra::after {
+      content: "70%";
+    }
+    .divBarras .elemento:nth-child(3) .barra::after {
+      content: "90%";
+    }
+    .divBarras .elemento:nth-child(4) .barra::after {
+      content: "80%";
+    }
+    .divBarras .elemento:nth-child(5) .barra::after {
+      content: "85%";
+    }
+  
+
+    
+  /*<-- SCROLL -->*/
+
+    .divScrollLaboral{
+      height: auto;
+      width: 30%;
+      margin-left: 3vw;
+      display: flex;
+      position: relative;
+      padding: 2vh;
+      border-radius: 20px;
+      overflow-y: scroll;
+      background-color: red;
+      background-color: #f7f7f7;
+      box-shadow: 2px 2px 16px lightgray;
+      
+
+      .miniTitulo::before{
+        content: "";
+        position: absolute;
+        left: 1%;
+        height: 10px;
+        width: 10px;
+        border-radius: 15px;
+        border: solid 6px #f7f7f7;
+        background-color: #6cb66c;
+        
+      }
+    }
+
+    .divScrollLaboral::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    .divScrollLaboral::-webkit-scrollbar-thumb {
+      background: rgb(108,182,108);
+      border-radius: 5px;
+    }
+    
+    .divScrollLaboral::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1); /* Color de fondo para el track */
+      border-radius: 5px;
+      box-shadow: inset 0 0 7px rgba(172, 172, 172, 0.5); /* Sombra interior */
+    }
+    .lineaTiempo{
+      height: 200%;
+      width: 8px;
+      margin: 0 2% 0 0;
+      border-radius: 5px;
+      background-color: #dcdcdc;
+      margin-top: -10%;
+    }
+
+    .trabajo{
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: 3vh;
+    }
+
+    
+
+    
+
+  }
+
+
+  .sectionInteresesEmpresa{
+    height: 100px;
+  }
+
+  .contenedorEmpresa{
+    margin-top: 5vh;
+    width: 85vw;
+    display: flex;
+    justify-content: space-between;
+
+  .miniTitulo {
+    text-align: center;
+    margin: 2vw 0;
+  }
+
+    .elemento{
+      text-align: center;
+      width: 23vw;
+
+      view-timeline-name: --timeline;    
+      animation-timeline: --timeline;
+      animation-name: aparecer;
+      animation-range: entry 0% cover 35%;
+      animation-fill-mode: both;
+      animation-timing-function: ease-out;
+      
+    }
+
+    .elemento:first-of-type{
+      animation-range: entry 0% cover 25%;
+    }
+
+    .elemento:nth-of-type(2){
+      animation-range: entry 0% cover 42%;
+    }
+
+    .elemento:nth-of-type(3){
+      animation-range: entry 0% cover 55%;
+    }
+
+
+    .datos{
+      
+    }
+
+  }
+
+  /*<-- FOOTER -->*/
+
+  .footer{
+    width: 100svw;
+    height: 20vh;
+    margin-top: 24vh;
+    display: flex;
+    background-color: #9A9A9A;
+    box-shadow: 0 0 10px gray;
+    --Color: white;
+    --ColorHover: #000000;
+
+    .elemento{
+      display: flex;
+      align-items: center;
+      Color: var(--Color);
+    }
+
+    .marca{
+      padding-left: 7vw;
+      margin-right: auto;
+      .logo{
+        height: 32%;
+      }
+    }
+
+    .navegador{
+      gap: 5vw;
+      width: min-content;
+      font-family: Ubuntu;
+      font-size: 21px;
+
+      p{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        cursor: url(assets/cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
+      }
+      p:hover{
+        color: var(--ColorHover);
+      }
+
+      p:before{
+        content: "";
+        position: absolute;
+        top: 100%;
+        z-index: 101;
+        width: 0%;
+        height: 2px;
+        transition: width 0.3s ease;
+        background-color: black;
+      }
+
+      p:hover:before{
+        width: 100%;
+      }
+      
+    }
+
+    .redes{
+      margin: 0 5vw 0 auto;
+      gap: 1vw;
+
+      svg{
+        transition: all 0.3s ease-in-out;
+        cursor: url(assets/cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
+        stroke: transparent;
+        fill: var(--Color);
+      }
+
+      svg:hover{
+        fill: var(--ColorHover);
+    
+      }
+    }
+  }
+
+  
+
+
+
+ 
+
