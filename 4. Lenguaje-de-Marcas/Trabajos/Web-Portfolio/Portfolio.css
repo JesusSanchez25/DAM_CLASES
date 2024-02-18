@@ -114,40 +114,108 @@ section{
   }
 }
 
+@keyframes animation {
+  100%{
+   background-position:-3000px 0px;
+ }
+}
+
 .trabajos{
 
   .contenedor{
     overflow: hidden;
     position: relative;
-    height: 15.6vh;
+    height: 17vh;
     transition: all 0.5s ease-out;
     z-index: 200;
     border-radius: 5px;
-    margin: 2vmin 0;
+    margin: 4vmin 0;
 
     
     
   }
 
-  input[type="checkbox"]{
-    display: none;
-  }
-
-  input[type="checkbox"]:checked + label .contenedor {
-    height: 500px;
-  }
 
   
 
   .divIntroduccion{
     padding: 5vmin 4vmin;
     background: rgb(133,217,133);
-    background: linear-gradient(45deg, rgba(133,217,133,1) 0%, rgba(116,240,116,1) 40%, rgba(189,230,189,1) 100%);
     z-index: 1;
     border: solid darkgreen 2px;
     font-family: Oswald;
-    color: rgb(35, 35, 35);}
+    color: rgb(35, 35, 35);
+    transition: filter 0.5s ease;
+    background: url(backgrounds/Base\ datos.jpg);
 
+    
+    
+    h1{
+      width: max-content;
+      position: relative;
+      background-color: #dedede;
+      border-radius: 5px;
+      padding: 0.5vmin;
+      box-shadow: inset 0 0 8px rgba(128, 128, 128, 0.534);
+    }
+   
+  }
+
+   #divIntroduccion1{
+    background: url(backgrounds/navidad.jpg);
+  }
+
+  #divIntroduccion2{
+    background: url(backgrounds/Guia\ propiedades.jpg);
+    background-size: 50%;
+  }
+
+  #divIntroduccion3{
+    background: url(backgrounds/Base\ datos.jpg);
+    background-size: 50%;
+  } 
+
+  
+
+  input[type="checkbox"]{
+    display: none;
+  }
+
+
+
+  #desplegable1:checked + label .uno {
+    height: 500px;
+  }
+  #desplegable1:checked + label #divIntroduccion1 {
+    animation: animation 60s linear infinite forwards;
+    filter: brightness(1.2);
+    
+  } 
+
+
+  #desplegable2:checked + label .dos {
+    height: 500px;
+  }
+  #desplegable2:checked + label #divIntroduccion2 {
+    animation: animation 100s linear infinite forwards;
+    filter: brightness(1.2);
+  } 
+
+
+  #desplegable3:checked + label .tres {
+    height: 500px;
+  }
+  #desplegable3:checked + label #divIntroduccion3 {
+    animation: animation 100s linear infinite forwards;
+    filter: brightness(1.2);
+  } 
+
+
+ 
+
+  
+  
+ 
   .desplegable{
     background-color: #c0c0c09e;
     padding: 5vmin 6vmin;
@@ -206,6 +274,10 @@ section{
 
    
 
+  }
+
+  .fa-server{
+    font-size: 0.8em;
   }
 
 }
