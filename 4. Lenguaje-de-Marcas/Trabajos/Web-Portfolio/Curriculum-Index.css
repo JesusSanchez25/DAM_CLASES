@@ -213,9 +213,10 @@ section:first-of-type{
 }
 
 .intro{
+  background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(240,240,240,1) 15%, rgba(225,223,223,1) 62%, rgba(221,221,221,1) 100%);
   width: 100vw; 
   height: 100vh;
-  background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(240,240,240,1) 15%, rgba(225,223,223,1) 62%, rgba(221,221,221,1) 100%);
+  
   
 
   /*<-- TEXTO INICIAL -->*/
@@ -246,13 +247,13 @@ section:first-of-type{
     }
 
     .botonInicial{
+      background-color: #009e66;
+      border: none;
       position: relative;
       left: 1vh;
       top: 2vh;
       padding: 15px 40px;
-      background-color: #009e66;
       color: white;
-      border: none;
       box-shadow: 1px 1px 4px gray;
       font-family: Lexend;
       cursor: url(assets/cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
@@ -268,13 +269,15 @@ section:first-of-type{
   
   /*<-- CONTACTO Y DATOS -->*/
   .infoContacto {
-    position: relative;
     top: 57vh;
-    left: 0.5vw;
-    width:min-content;
+    gap: 4vw;
     column-count: 3;
     column-rule: 2px solid #008c5b;
-    gap: 4vw;
+
+    position: relative;
+    left: 0.5vw;
+    width:min-content;
+
     margin: 0;
     font-family: Lexend;
 
@@ -473,15 +476,15 @@ section:first-of-type{
     }
 
     .titulo-bg {
+      -webkit-text-stroke: 1px rgb(0 0 0/25%);
+      -webkit-user-select: none;
+      z-index: -1;
       position: absolute;
       left: -0.4%;
       color: #fff;
       font-size: 90px;
       font-weight: 900;
-      -webkit-text-stroke: 1px rgb(0 0 0/25%);
-      -webkit-user-select: none;
       bottom: -30px;
-      z-index: -1;
       text-transform: uppercase;
   }
 
