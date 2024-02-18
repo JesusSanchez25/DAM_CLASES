@@ -337,6 +337,7 @@ section:first-of-type{
       }
 
       .miniTitulo::after{
+        clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
         content: "";
         width: 8px;
         height: 15px;

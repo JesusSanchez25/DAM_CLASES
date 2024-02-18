@@ -233,11 +233,11 @@ section:first-of-type{
     }
   
     .grande{
+      border-right: 5px solid black;
       font-weight: 800;
       font-size: 47px;
       width: max-content;
       padding-right: 5px;
-      border-right: 5px solid black;
       animation: parpadeo 1s step-end infinite;
     }
 
@@ -347,7 +347,7 @@ section:first-of-type{
   animation-range: entry 0% cover 39%;
   animation-fill-mode: both;
 	animation-timing-function: ease-out;
-  
+ 
 
   
   h2{
@@ -595,6 +595,7 @@ section:first-of-type{
   /*<-- SCROLL -->*/
 
     .divScrollLaboral{
+      overflow-y: scroll;
       height: auto;
       width: 30%;
       margin-left: 3vw;
@@ -602,7 +603,6 @@ section:first-of-type{
       position: relative;
       padding: 2vh;
       border-radius: 20px;
-      overflow-y: scroll;
       background-color: red;
       background-color: #f7f7f7;
       box-shadow: 2px 2px 16px lightgray;
@@ -737,18 +737,20 @@ section:first-of-type{
       font-family: Ubuntu;
       font-size: 21px;
 
-      p{
+      a{
+        text-decoration: none;
+        color: white;
         position: relative;
         display: flex;
         justify-content: center;
         transition: all 0.3s ease-in-out;
         cursor: url(assets/cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
       }
-      p:hover{
+      a:hover{
         color: var(--ColorHover);
       }
 
-      p:before{
+      a:before{
         content: "";
         position: absolute;
         top: 100%;
@@ -759,7 +761,7 @@ section:first-of-type{
         background-color: black;
       }
 
-      p:hover:before{
+      a:hover:before{
         width: 100%;
       }
       
@@ -770,10 +772,11 @@ section:first-of-type{
       gap: 1vw;
 
       svg{
-        transition: all 0.3s ease-in-out;
-        cursor: url(assets/cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
         stroke: transparent;
         fill: var(--Color);
+        transition: all 0.3s ease-in-out;
+        cursor: url(assets/cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
+        
       }
 
       svg:hover{
