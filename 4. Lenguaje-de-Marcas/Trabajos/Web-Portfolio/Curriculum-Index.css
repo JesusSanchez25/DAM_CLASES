@@ -344,9 +344,9 @@ section:first-of-type{
   view-timeline-axis: block;
   animation-timeline: --timeline;
   animation-name: deslizarDerecha;
-  animation-range: entry 0% cover 39%;
+  animation-range: entry -5% cover 39%;
   animation-fill-mode: both;
-	animation-timing-function: ease-out;
+	animation-timing-function: cubic-bezier(.13,.53,.3,1.05);
  
 
   
@@ -500,8 +500,7 @@ section:first-of-type{
       margin-bottom: 10px;
       position: relative;
 
-      view-timeline-name: --Linea;
-      view-timeline-axis: block;
+      
     }
 
     .elemento{
@@ -540,10 +539,12 @@ section:first-of-type{
       z-index: 100;
       
 
+      view-timeline-name: --Linea;
+      view-timeline-axis: block;
       animation-timeline: --Linea;
       animation-name: progreso;
 
-      animation-range: entry 0% cover 40%;
+      animation-range: entry -5% cover 35%;
       animation-fill-mode: both;
       animation-timing-function: ease-out;
     }
@@ -562,13 +563,13 @@ section:first-of-type{
       width: 80%;
     }
     .divBarras .elemento:nth-child(5) .barra::before {
-      width: 85%;
+      width: 80%;
     }
 
     .divBarras .barra::after {
       content: "";
       position: absolute;
-      left: calc(100% + 8px);
+      left: calc(100% + 12px);
       top: -4px;
       z-index: 101;
       font-family: Oswald;
@@ -587,7 +588,7 @@ section:first-of-type{
       content: "80%";
     }
     .divBarras .elemento:nth-child(5) .barra::after {
-      content: "85%";
+      content: "80%";
     }
   
 
@@ -651,6 +652,9 @@ section:first-of-type{
       margin-bottom: 3vh;
     }
 
+  
+     
+
     
 
     
@@ -676,18 +680,20 @@ section:first-of-type{
     .elemento{
       text-align: center;
       width: 23vw;
+      transition: all 0.3s ease;
 
+      
       view-timeline-name: --timeline;    
       animation-timeline: --timeline;
       animation-name: aparecer;
-      animation-range: entry 0% cover 35%;
+      animation-range: entry -5% cover %;
       animation-fill-mode: both;
-      animation-timing-function: ease-out;
+      animation-timing-function: cubic-bezier(.13,.53,.3,1.05);
       
     }
 
     .elemento:first-of-type{
-      animation-range: entry 0% cover 25%;
+      animation-range: entry -10% cover 25%;
     }
 
     .elemento:nth-of-type(2){
@@ -695,12 +701,14 @@ section:first-of-type{
     }
 
     .elemento:nth-of-type(3){
-      animation-range: entry 0% cover 55%;
+      animation-range: entry 10% cover 55%;
     }
 
+    .elemento:hover{
+      transform: scale(1.2  );
+    }
 
     .datos{
-      
     }
 
   }
@@ -709,7 +717,7 @@ section:first-of-type{
 
   .footer{
     width: 100svw;
-    height: 20vh;
+    height: 15vh;
     margin-top: 24vh;
     display: flex;
     background-color: #9A9A9A;

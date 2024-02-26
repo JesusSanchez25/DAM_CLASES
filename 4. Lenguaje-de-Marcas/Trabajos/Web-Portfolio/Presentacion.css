@@ -383,6 +383,11 @@ section:first-of-type{
         text-align: center;
         font-size: 1.8rem;
         text-decoration: underline;
+
+        animation-timeline: --timeline;
+      animation-name: aparecer;
+      animation-fill-mode: both;
+      animation-timing-function: ease-out;
       }
 
       p{
@@ -392,6 +397,10 @@ section:first-of-type{
       animation-name: aparecer;
       animation-fill-mode: both;
       animation-timing-function: ease-out;
+      }
+
+      .miniTitulo:first-of-type{
+        animation-range: entry 0% cover 15%;
       }
 
       p:first-of-type{

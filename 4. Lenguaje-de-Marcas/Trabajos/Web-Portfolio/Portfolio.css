@@ -129,7 +129,7 @@ section{
   .contenedor{
     overflow: hidden;
     position: relative;
-    height: 17vh;
+    height: 15.5vh;
     transition: all 0.5s ease-out;
     z-index: 200;
     border-radius: 5px;
