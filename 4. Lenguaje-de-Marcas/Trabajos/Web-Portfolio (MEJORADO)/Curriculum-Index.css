@@ -130,6 +130,7 @@ section:first-of-type{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  --ColorHover: #000000;
 
 
   .logo {
@@ -140,6 +141,10 @@ section:first-of-type{
   }
 
   a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
     margin: 0;
     font-weight: 400;
     font-size: 16px;
@@ -150,8 +155,24 @@ section:first-of-type{
     cursor: url(assets/cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
   }
 
+ 
   a:hover{
-    color: black;
+    color: var(--ColorHover);
+  }
+
+  a:before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    z-index: 101;
+    width: 0%;
+    height: 2px;
+    transition: width 0.3s ease;
+    background-color: black;
+  }
+
+  a:hover:before{
+    width: 100%;
   }
 
   .botonesHeader{
@@ -159,6 +180,8 @@ section:first-of-type{
     margin-right: 100px;
     column-gap: 3vw;
   }
+
+ 
 }
 
 .miniTitulo{
@@ -379,9 +402,20 @@ section:first-of-type{
     margin-right: 10px;
     min-width: 10%;
     max-width: 10%;
+    stroke-width: 1px !important;
   }
+
+  .fa-solid{
+    margin-right: 10px;
+    font-size: 2em;
+    color: green;
+  }
+
+  
+
   .svg-icono path {
     fill: green; 
+    stroke-width: 50px;
   }
 
 
@@ -725,17 +759,21 @@ section:first-of-type{
     --Color: white;
     --ColorHover: #000000;
 
+    
+      
     .elemento{
       display: flex;
       align-items: center;
       Color: var(--Color);
     }
 
+
     .marca{
       padding-left: 7vw;
       margin-right: auto;
       .logo{
         height: 32%;
+        href
       }
     }
 
