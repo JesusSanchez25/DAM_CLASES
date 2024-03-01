@@ -225,6 +225,18 @@ section:first-of-type{
   }
 }
 
+@keyframes aparecer2 {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 @keyframes subrayar {
   from {
     width: 0%;
@@ -246,22 +258,39 @@ section:first-of-type{
   .divTextoInicial{
     top: 32vh;
     position: relative;
-  
+
+    --duracionAnimaciones: 1.5s;
+    --delay: 0; /*Predefinido*/
+    
+    
+     
+    
+    
     .mensajeInicial{
+
       font-family: Lexend;
       font-size: 28px;
       font-weight: 400;
       margin: 1vh;
-    
+      opacity: 0;
+      width: max-content;
+      animation: aparecer2 var(--duracionAnimaciones) var(--delay) ease forwards;
+
+
     }
   
     .grande{
+
+      opacity: 0;
+      letter-spacing: -20%;
       border-right: 5px solid black;
       font-weight: 800;
       font-size: 47px;
       width: max-content;
       padding-right: 5px;
-      animation: parpadeo 1s step-end infinite;
+      animation: parpadeo 1s step-end infinite, aparecer2 var(--duracionAnimaciones) var(--delay) ease forwards;
+
+      
     }
 
     .grande::after{
@@ -280,6 +309,9 @@ section:first-of-type{
       box-shadow: 1px 1px 4px gray;
       font-family: Lexend;
       cursor: url(assets/cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
+      opacity: 0;
+      animation: parpadeo 1s step-end infinite, aparecer2 var(--duracionAnimaciones) var(--delay) ease forwards;
+
     }
   
     .botonInicial:hover{
@@ -774,6 +806,10 @@ section:first-of-type{
       .logo{
         height: 32%;
         href
+      }
+
+      .logo:link{
+        href: "google.com"
       }
     }
 
