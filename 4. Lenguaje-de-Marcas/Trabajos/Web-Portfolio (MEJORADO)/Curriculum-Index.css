@@ -514,6 +514,7 @@ section:first-of-type{
 
   /*<-- BARRAS -->*/
     
+
     .divBarras{
       display: flex;
       flex-direction: column;
@@ -539,7 +540,6 @@ section:first-of-type{
     .barra {
       position: relative; 
       height: 12px;
-      --Barra: 80;
       width: 80%;
       z-index: 99;
       border-radius: 5px;
@@ -556,21 +556,20 @@ section:first-of-type{
       left: -1px;
       position: absolute;
       height: 101%;
-      width: 90%; 
       background-color: rgb(108,182,108);
       border-radius: 5px;
       border: none;
       z-index: 100;
-      
+    
 
       view-timeline-name: --Linea;
       view-timeline-axis: block;
       animation-timeline: --Linea;
       animation-name: progreso;
-
       animation-range: entry -5% cover 35%;
       animation-fill-mode: both;
       animation-timing-function: ease-out;
+
     }
 
     .divBarras .elemento:nth-child(1) .barra::before {
@@ -600,8 +599,9 @@ section:first-of-type{
     }
 
     .divBarras .elemento:nth-child(1) .barra::after {
-      content: "95%";
+      content: "";
     }
+
     .divBarras .elemento:nth-child(2) .barra::after {
       content: "70%";
     }

@@ -505,7 +505,7 @@
     <div class="contenedorLaboral">
       <div class="divBarras">
         <div class="elemento">
-          <h1 class="miniTitulo tituloLenguajes">HTML y CSS</h1>
+          <h1 class="miniTitulo tituloLenguajes" id="htmlYCss">HTML y CSS</h1>
           <div class="barra"></div>
         </div>
 
@@ -683,6 +683,19 @@
     }
 
     typeWriter();
+  </script>
+
+  <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    var element = document.getElementById('htmlYCss');
+    var computedStyle = window.getComputedStyle(element);
+    var width = computedStyle.width;
+    var widthWithPercentage = width + '%';
+    element.style.setProperty('--width-before', widthWithPercentage);
+});
+
+
   </script>
 
 </body>
