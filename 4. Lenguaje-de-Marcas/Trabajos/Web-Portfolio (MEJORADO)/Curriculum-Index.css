@@ -148,7 +148,7 @@ section:first-of-type{
 @keyframes aparecer {
   from {
     opacity: 0;
-    scale: 0
+    scale: 0;
   }
 
   to {
@@ -178,6 +178,8 @@ section:first-of-type{
 		opacity: 1;
 	}
 }
+
+
 
 @keyframes subrayar {
   from {
@@ -684,57 +686,7 @@ section:first-of-type{
   }
 
 
-  .sectionInteresesEmpresa{
-    height: 100px;
-  }
-
-  .contenedorEmpresa{
-    margin-top: 5vh;
-    width: 85vw;
-    display: flex;
-    justify-content: space-between;
-
-  .miniTitulo {
-    text-align: center;
-    margin: 2vw 0;
-  }
-
-    .elemento{
-      text-align: center;
-      width: 23vw;
-      transition: all 0.3s ease;
-
-      
-      view-timeline-name: --timeline;    
-      animation-timeline: --timeline;
-      animation-name: aparecer;
-      animation-range: entry -5% cover %;
-      animation-fill-mode: both;
-      animation-timing-function: cubic-bezier(.13,.53,.3,1.05);
-      
-    }
-
-    .elemento:first-of-type{
-      animation-range: entry -10% cover 25%;
-    }
-
-    .elemento:nth-of-type(2){
-      animation-range: entry 0% cover 42%;
-    }
-
-    .elemento:nth-of-type(3){
-      animation-range: entry 10% cover 55%;
-    }
-
-    .elemento:hover{
-      transform: scale(1.2  );
-    }
-
-    .datos{
-    }
-
-  }
-
+  
   /*<-- FOOTER -->*/
 
   .footer{
