@@ -48,77 +48,6 @@ section:first-of-type{
   text-transform: uppercase;
 }
 
-@keyframes borrado {
-  0% { content: "Desarrollado"; }
-  2% { content: "Desarrollad"; }
-  4% { content: "Desarrolla"; }
-  6% { content: "Desarroll"; }
-  8% { content: "Desarrol"; }
-  10% { content: "Desarro"; }
-  12% { content: "Desarr"; }
-  14% { content: "Desar"; }
-  16% { content: "Desa"; }
-  18% { content: "Des"; }
-  20% { content: "De"; }
-  22% { content: "D"; }
-  24% { content: ""; }
-  26% { content: "P"; }
-  28% { content: "Pr"; }
-  30% { content: "Pro"; }
-  32% { content: "Prog"; }
-  34% { content: "Progr"; }
-  36% { content: "Progra"; }
-  38% { content: "Program"; }
-  40% { content: "Programa"; }
-  42% { content: "Programad"; }
-  44% { content: "Programado"; }
-  46% { content: "Programador"; }
-  48% { content: "Programado"; }
-  50% { content: "Programad"; }
-  52% { content: "Programa"; }
-  54% { content: "Program"; }
-  56% { content: "Progra"; }
-  58% { content: "Progr"; }
-  60% { content: "Prog"; }
-  62% { content: "Pro"; }
-  64% { content: "Pr"; }
-  66% { content: "P"; }
-  68% { content: ""; }
-  70% { content: "D"; }
-  72% { content: "Di"; }
-  71% { content: "Dis"; }
-  72% { content: "Dise"; }
-  73% { content: "Diseñ"; }
-  74% { content: "Diseña"; }
-  75% { content: "Diseñad"; }
-  76% { content: "Diseñado"; }
-  77% { content: "Diseñador"; }
-  78% { content: "Diseñado"; }
-  79% { content: "Diseñad"; }
-  80% { content: "Diseña"; }
-  81% { content: "Diseñ"; }
-  82% { content: "Dise"; }
-  83% { content: "Dis"; }
-  84% { content: "Dis"; }
-  85% { content: "Di"; }
-  86% { content: "D"; }
-  87% { content: ""; }
-  88% { content: "D"; }
-  89% { content: "De"; }
-  90% { content: "Des"; }
-  91% { content: "Desa"; }
-  92% { content: "Desar"; }
-  93% { content: "Desarr"; }
-  94% { content: "Desarro"; }
-  95% { content: "Desarrol"; }
-  96% { content: "Desarroll"; }
-  97% { content: "Desarrolla"; }
-  98% { content: "Desarrollad"; }
-  99% { content: "Desarrollado"; }
-  100% { content: "Desarrollador"; }
-}
-
-
 
 
 /*<-- HEADER -->*/
@@ -131,6 +60,9 @@ section:first-of-type{
   justify-content: space-between;
   align-items: center;
   --ColorHover: #000000;
+
+  opacity: 0;
+  animation: aparecer3 1s ease forwards;
 
 
   .logo {
@@ -237,6 +169,16 @@ section:first-of-type{
 	}
 }
 
+@keyframes aparecer3 {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
 @keyframes subrayar {
   from {
     width: 0%;
@@ -252,15 +194,14 @@ section:first-of-type{
   width: 100vw; 
   height: 100vh;
   
+  --duracionAnimaciones: 1.5s;
+  --delay: 0; /*Predefinido*/
   
 
   /*<-- TEXTO INICIAL -->*/
   .divTextoInicial{
     top: 32vh;
     position: relative;
-
-    --duracionAnimaciones: 1.5s;
-    --delay: 0; /*Predefinido*/
     
     
      
@@ -294,8 +235,7 @@ section:first-of-type{
     }
 
     .grande::after{
-      content: "Desarrollador";
-      animation: borrado 7s linear infinite;
+      content: "";
     }
 
     .botonInicial{
@@ -328,13 +268,14 @@ section:first-of-type{
     gap: 4vw;
     column-count: 3;
     column-rule: 2px solid #008c5b;
-
     position: relative;
     left: 0.5vw;
     width:min-content;
-
     margin: 0;
     font-family: Lexend;
+
+    opacity: 0;
+    animation: deslizarDerecha var(--duracionAnimaciones) cubic-bezier(0.175, 0.885, 0.320, 1.175) var(--delay) both;
 
     
     .miniTitulo{
@@ -359,6 +300,9 @@ section:first-of-type{
     bottom: 0vh;
     right: 20vh;
     filter: grayscale(0) drop-shadow(20px 0px 4px gray);
+
+    animation: deslizarIzquierda 1s cubic-bezier(.13,.53,.3,1.1); forwards;
+
   }
   
 
@@ -384,6 +328,18 @@ section:first-of-type{
   
     to {
       transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes deslizarIzquierda {
+    from {
+      transform: translateX(50vw);
+    }
+  
+    to {
+      transform: translateX(0);
+      opacity: 1;
     }
   }
 

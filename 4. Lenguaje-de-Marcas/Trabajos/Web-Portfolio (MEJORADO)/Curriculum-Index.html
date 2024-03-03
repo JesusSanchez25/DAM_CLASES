@@ -36,25 +36,27 @@
 
   <section class="intro">
 
+   
+
     <div class="divTextoInicial">
-      <h1 class="mensajeInicial" style="--delay: 00ms;">Encantado!</h1>
-      <h1 class="mensajeInicial grande" style="--delay: 250ms;">Soy un </h1>
-      <h1 class="mensajeInicial" style="--delay: 500ms;">Experto en HMTL y CSS esperando tu llamada.</h1>
+      <h1 class="mensajeInicial" style="--delay: 1200ms;">Encantado!</h1>
+      <h1 class="mensajeInicial grande" style="--delay: 1600ms;">Soy un&nbsp;<span id="typewriter"></span></h1>
+      <h1 class="mensajeInicial" style="--delay: 2000ms;">Experto en HMTL y CSS esperando tu llamada.</h1>
       <a href="https://www.instagram.com/jesussanchz.01/" target="_blank"><button class="botonInicial"
-          style="--delay: 800ms;">Contáctame</button></a>
+          style="--delay: 2400ms;">Contáctame</button></a>
 
     </div>
 
-    <div class="infoContacto">
+    <div class="infoContacto" style="--delay: 2400ms;">
 
       <div class="contenido">
         <h2 class="miniTitulo"> Email</h2>
-        <p class="datos">Jesus.Sanchez@gmail.com</p>
+        <p class="datos">jsus3005@gmail.com</p>
       </div>
 
       <div class="contenido">
         <h2 class="miniTitulo"> Teléfono</h2>
-        <p class="datos">+72 234 12 32 09</p>
+        <p class="datos">+00 000 00 00 00</p>
       </div>
 
       <div class="contenido">
@@ -647,6 +649,42 @@
 
     </div>
   </footer>
+
+  <script>
+    // Palabras
+    const words = ["Programador", "Desarrollador", "Diseñador"];
+    let wordIndex = 0;
+    let letterIndex = 0;
+    let direction = 1; // 1 para escribir, -1 para borrar
+
+    const textElement = document.getElementById("typewriter");
+
+
+    function typeWriter() {
+      if (direction === 1) {
+        textElement.textContent += words[wordIndex].charAt(letterIndex);
+        letterIndex++;
+        if (letterIndex === words[wordIndex].length) {
+          direction = -1;
+          setTimeout(typeWriter, 2000); // Tiempo de espera
+        } else {
+          setTimeout(typeWriter, 80); // Velocidad de escritura
+        }
+      } else {
+        textElement.textContent = words[wordIndex].substring(0, letterIndex-1);
+        letterIndex--;
+        if (letterIndex === 0) {
+          direction = 1;
+          wordIndex = (wordIndex + 1) % words.length;
+          setTimeout(typeWriter, 500); // Espera entre palabra y palabra
+        } else {
+          setTimeout(typeWriter, 60); // Velocidad de borrado
+        }
+      }
+    }
+
+    typeWriter();
+  </script>
 
 </body>
 
