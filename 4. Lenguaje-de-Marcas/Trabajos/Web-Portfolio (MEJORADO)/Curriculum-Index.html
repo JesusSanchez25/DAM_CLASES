@@ -35,18 +35,18 @@
 
   <section class="intro">
 
-   
+
 
     <div class="divTextoInicial">
-      <h1 class="mensajeInicial" style="--delay: 1200ms;">Encantado!</h1>
-      <h1 class="mensajeInicial grande" style="--delay: 1600ms;">Soy un&nbsp;<span id="typewriter"></span></h1>
-      <h1 class="mensajeInicial" style="--delay: 2000ms;">Experto en HMTL y CSS esperando tu llamada.</h1>
+      <h1 class="mensajeInicial" style="--delay: 800ms;">Encantado!</h1>
+      <h1 class="mensajeInicial grande" style="--delay: 1200ms;">Soy un&nbsp;<span id="typewriter"></span></h1>
+      <h1 class="mensajeInicial" style="--delay: 1600ms;">Experto en HMTL y CSS esperando tu llamada.</h1>
       <a href="https://www.instagram.com/jesussanchz.01/" target="_blank"><button class="botonInicial"
-          style="--delay: 2400ms;">Contáctame</button></a>
+          style="--delay: 2000ms;">Contáctame</button></a>
 
     </div>
 
-    <div class="infoContacto" style="--delay: 2400ms;">
+    <div class="infoContacto" style="--delay: 2000ms;">
 
       <div class="contenido">
         <h2 class="miniTitulo"> Email</h2>
@@ -593,30 +593,7 @@
 
   </section>
 
-  <section class="sectionInteresEmpresa">
-    <h1 class="titulo">Empresa <span class="titulo-bg">EMPRESA</span></h1>
-    <h1></h1>
-    <div class="contenedorEmpresa">
-      <div class="elemento">
-        <h1 class="miniTitulo">Interés</h1>
-        <p class="datos">Estoy buscando una empresa en la cual me permita desarrollar todo mi potencial y evolucionar
-          como programador, me considero una persona ambiciosa que quiere llegar lo más lejos que se pueda</p>
-      </div>
 
-      <div class="elemento">
-        <h1 class="miniTitulo">Objetivo</h1>
-        <p class="datos">Mi objetivo actualmente es rodearme de gente con conocimientos de la que pueda aprender cosas
-          interesantes, además de realizar la máxima cantidad de tareas, lo más variadas posibles para aprender en todos
-          los ámbitos posibles</p>
-      </div>
-
-      <div class="elemento">
-        <h1 class="miniTitulo">Futuro</h1>
-        <p class="datos">Mi objetivo futuro es ser una persona respetada que llegue lejos en alguna empresa de
-          programación, me planteo incluso crearme una empresa propia con algo relacionado con la informática.</p>
-      </div>
-    </div>
-  </section>
 
   <footer class="footer">
     <div class="elemento marca">
@@ -670,7 +647,7 @@
           setTimeout(typeWriter, 80); // Velocidad de escritura
         }
       } else {
-        textElement.textContent = words[wordIndex].substring(0, letterIndex-1);
+        textElement.textContent = words[wordIndex].substring(0, letterIndex - 1);
         letterIndex--;
         if (letterIndex === 0) {
           direction = 1;
@@ -687,13 +664,13 @@
 
   <script>
 
-document.addEventListener("DOMContentLoaded", function() {
-    var element = document.getElementById('htmlYCss');
-    var computedStyle = window.getComputedStyle(element);
-    var width = computedStyle.width;
-    var widthWithPercentage = width + '%';
-    element.style.setProperty('--width-before', widthWithPercentage);
-});
+    document.addEventListener("DOMContentLoaded", function () {
+      var element = document.getElementById('htmlYCss');
+      var computedStyle = window.getComputedStyle(element);
+      var width = computedStyle.width;
+      var widthWithPercentage = width + '%';
+      element.style.setProperty('--width-before', widthWithPercentage);
+    });
 
 
   </script>
