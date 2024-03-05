@@ -128,6 +128,12 @@ section:first-of-type{
 }
 
 
+/*<-- BARRA LATERAL -->*/
+.vertical{
+  
+}
+
+
 /*<-- INTRODUCCIÓN -->*/
 
 @keyframes parpadeo {
@@ -684,69 +690,67 @@ section:first-of-type{
 
   }
 
-  
-  /*<-- PORTFOLIO -->*/
 
-  @keyframes deslizarArriba{
-    from{
+/*<-- PORTFOLIO -->*/
 
-    }
-    to{
-      transform: translateY(-100%);
-    }
+@keyframes deslizarArriba{
+  from{
+
   }
-
-  @keyframes desaparecer{
-    from{
-
-    }
-    to{
-      opacity: 0;
-    }
+  to{
+    transform: translateY(-100%);
   }
+}
 
-  .sectionPortfolio{
+@keyframes desaparecer{
+  from{
 
-    .contenedor-grid{
-      margin-left: 1%;
-      margin-top: 10vmin;
-      display: grid;
-      justify-content: start;
-      grid-template-columns: repeat(2, 45%);
-      grid-auto-rows: 40vmin;
-      gap: 10vh;
+  }
+  to{
+    opacity: 0;
+  }
+}
+
+.sectionPortfolio{
+
+  .contenedor-grid{
+    margin-left: 1%;
+    margin-top: 10vmin;
+    display: grid;
+    justify-content: start;
+    grid-template-columns: repeat(2, 45%);
+    grid-auto-rows: 40vmin;
+    gap: 10vh;
 
 
-      .elemento{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rebeccapurple;
-        overflow: hidden;
-
-       
-
-        .portadaElemento{
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          transform: translateY(-0%);
-        }
-
-        
-      }
-
-      .elemento:hover .portadaElemento{
-        animation: desaparecer 0.4s ease both;
-      }
+    .elemento{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rebeccapurple;
+      overflow: hidden;
 
      
 
-    }
-  }
+      .portadaElemento{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transform: translateY(-0%);
+      }
 
-  
+      
+    }
+
+    .elemento:hover .portadaElemento{
+      animation: desaparecer 0.4s ease both;
+    }
+
+   
+
+  }
+}  
   /*<-- FOOTER -->*/
 
   .footer{
