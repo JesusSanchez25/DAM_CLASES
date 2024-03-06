@@ -130,7 +130,14 @@ section:first-of-type{
 
 /*<-- BARRA LATERAL -->*/
 .vertical{
-  
+  position: fixed;
+  inset: 34vh 1vw;
+  font-weight: 100;
+  display: flex;
+  writing-mode: vertical-lr;
+  font-size: 20px;  
+
+  display: none;
 }
 
 
