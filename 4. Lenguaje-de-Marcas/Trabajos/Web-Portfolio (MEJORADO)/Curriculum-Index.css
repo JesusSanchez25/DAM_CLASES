@@ -10,6 +10,10 @@ body{
   cursor: url(assets/cursores/clear-cyan/Clear-c-01-Norm.cur), auto;
   scroll-behavior: smooth;
   font-family: Roboto;
+
+  width: 100svw;
+  font-family: Lexend;
+
 }
 
 p,h3,h2,h1{
@@ -52,7 +56,7 @@ section:first-of-type{
 
 /*<-- HEADER -->*/
 .header {
-  width: 100vw;
+  width: 97vw;
   height: 12vh;
   position: absolute;
   left: 2vw;
@@ -128,17 +132,82 @@ section:first-of-type{
 }
 
 
-/*<-- BARRA LATERAL -->*/
-.vertical{
-  position: fixed;
-  inset: 34vh 1vw;
-  font-weight: 100;
-  display: flex;
-  writing-mode: vertical-lr;
-  font-size: 20px;  
+/*<-- QUIEN SOY -->*/
+  .sectionQuienSoy{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    height: auto;
 
-  display: none;
-}
+
+    .imagen{
+      height: 70vh;
+    }
+
+    .divTexto{
+      width: 50vw;
+      margin-left: 2vw;
+      padding: 2vh;
+      min-height: max-content;
+
+      .miniTitulo{
+        font-size: 25px;
+        color: #50b272;
+        margin-bottom: 1.5%;
+        font-weight: 600;
+      }
+
+      .miniTitulo-negro{
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1.5;
+        margin-bottom: 3%;
+        letter-spacing: -0.5px;
+      }
+
+      .datos{
+        margin-bottom: 3%;
+        line-height: 1.5;
+      }
+
+      hr{
+        flex-grow: 1;
+        height: 2px;
+        margin: 3.5% 0;
+        background-color: rgba(160, 160, 160, 0.616);
+        border: 0;
+      }
+
+      .divDatosPersonales{
+        flex-grow: 1;
+        display: flex;
+        .col{
+          width: 50%;
+
+          p{
+            margin-bottom: 4.5%;
+          }
+        }
+      }
+
+      .boton{
+        background-color: #009e66;
+        border: none;
+        position: relative;
+        padding: 15px 40px;
+        color: white;
+        box-shadow: 1px 1px 4px gray;
+        font-family: Lexend;
+        cursor: url(assets/cursores/clear-cyan/Clear-c-05-Prec.cur), pointer;
+        
+      }
+    
+      .boton:hover{
+        background-color: #008c5b;
+      }
+    }
+
+  }
 
 
 /*<-- INTRODUCCIÓN -->*/
@@ -499,7 +568,6 @@ section:first-of-type{
   .contenedorLaboral{
     padding: 6vh 4vw;
     height: 50vh;
-    width: 100svw;
     display: flex;
 
     .titulo{
@@ -538,14 +606,16 @@ section:first-of-type{
       position: relative;
 
       
-    }
-
     .elemento{
       display: flex;
       flex-direction: column;
       gap: 1vh;
     }
 
+      
+    }
+
+    
     
 
 
