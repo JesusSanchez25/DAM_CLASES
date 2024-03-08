@@ -139,6 +139,15 @@ section:first-of-type{
     justify-content: center;
     height: auto;
 
+    view-timeline-name: --timeline;
+    view-timeline-axis: block;
+    animation-timeline: --timeline;
+    animation-name: deslizarDerecha;
+    animation-range: entry -5% cover 39%;
+    animation-fill-mode: both;
+	  animation-timing-function: cubic-bezier(.13,.53,.3,1.05);
+ 
+
 
     .imagen{
       height: 70vh;
@@ -384,7 +393,7 @@ section:first-of-type{
     right: 20vh;
     filter: grayscale(0) drop-shadow(20px 0px 4px gray);
 
-    animation: deslizarIzquierda 1s cubic-bezier(.13,.53,.3,1.1); forwards;
+    animation: deslizarIzquierda 1s cubic-bezier(.13,.53,.3,1.1) forwards;
 
   }
   
