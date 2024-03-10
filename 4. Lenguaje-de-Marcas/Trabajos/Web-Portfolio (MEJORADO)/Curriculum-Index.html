@@ -73,12 +73,12 @@
 
 
 
-    <img class="Yo" src="assets/Yo.png" alt="Imagen mía">
+    <img class="Yo" src="assets/Yo2.png" alt="Imagen mía">
 
   </section>
 
   <section class="sectionQuienSoy">
-    <img class="imagen" src="assets/YoFondo.png" alt="">
+    <img class="imagen" src="assets/Yo2Fondo.png" alt="">
     <div class="divTexto">
       <h1 class="miniTitulo">Quien soy?</h1>
       <h1 class="miniTitulo-negro">Soy Jesús Sánchez Pedraza, un estudiante, programador, desarrollador y diseñador.</h1>
@@ -100,7 +100,7 @@
 
       </div>
 
-      <a href="https://www.instagram.com/jesussanchz.01/" target="_blank"><button class="boton"
+      <a href="assets/documentos/Curriculum Jesús Sánchez.pdf" target=""><button class="boton"
         >Descargar CV</button></a>
 
       
@@ -108,35 +108,13 @@
     </div>
   </section>
 
+  <h1 class="titulo"  style="margin-left: 6vw;">Sobre mi
+    <span class="titulo-bg">Sobre mi</span>
+  </h1>
 
-  <section class="sectionPresentacion">
-    <div class="contenedorSobreMi">
-      <div class="divTitulo">
-        <h3 class="verde">Sobre mi</h3>
-        <h2>Información Personal</h2>
-      </div>
-      <div class="contenido">
-        <ul>
-          <li>Nombre</li>
-          <li>Edad</li>
-          <li>Experiencia</li>
-          <li>Página web</li>
-        </ul>
-
-        <ul>
-          <li>Jesus Sanchez</li>
-          <li>19 años</li>
-          <li>Estudiante</li>
-          <li>Jesus-sanchez.github.io</li>
-        </ul>
-      </div>
-    </div>
-
-
-
-    <div class="contenedorExtras">
-      <hr>
-      <h2>Personalidad</h2>
+  <section class="sectionSobreMi">
+    <div class="SobreMi-elemento">
+      <h1 class="miniTitulo">Personalidad</h1>
       <ul>
         <li>
           <svg class="svg-icono" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.000000 512.000000"
@@ -265,9 +243,8 @@
       </ul>
     </div>
 
-    <div class="contenedorExtras">
-      <hr>
-      <h2>Habilidades</h2>
+    <div class="SobreMi-elemento">
+      <h1 class="miniTitulo">Habilidades</h1>
       <ul>
         <li>
           <svg class="svg-icono" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.000000 512.000000"
@@ -529,10 +506,11 @@
 
 
       </ul>
-
     </div>
-  </section>
 
+  </section>
+  
+  
 
   <section>
     <h1 class="titulo">Experiencia
@@ -541,12 +519,12 @@
     <div class="contenedorLaboral">
       <div class="divBarras">
         <div class="elemento">
-          <h1 class="miniTitulo tituloLenguajes" id="htmlYCss">HTML y CSS</h1>
+          <h1 class="miniTitulo tituloLenguajes" id="htmlYCss" style="--valor: 20">HTML y CSS</h1>
           <div class="barra"></div>
         </div>
 
         <div class="elemento">
-          <h1 class="miniTitulo tituloLenguajes">JAVASCRIPT</h1>
+          <h1 class="miniTitulo tituloLenguajes">PYTHON</h1>
           <div class="barra"></div>
         </div>
 
@@ -560,23 +538,61 @@
 
       <div class="divBarras">
         <div class="elemento">
-          <h1 class="miniTitulo tituloLenguajes" id="htmlYCss">HTML y CSS</h1>
+          <h1 class="miniTitulo tituloLenguajes" id="htmlYCss">JAVASCRIPT</h1>
           <div class="barra"></div>
         </div>
   
         <div class="elemento">
-          <h1 class="miniTitulo tituloLenguajes">JAVASCRIPT</h1>
+          <h1 class="miniTitulo tituloLenguajes">KOTLIN</h1>
           <div class="barra"></div>
         </div>
   
         <div class="elemento">
-          <h1 class="miniTitulo tituloLenguajes">JAVA</h1>
+          <h1 class="miniTitulo tituloLenguajes">MYSQL</h1>
           <div class="barra"></div>
         </div>
   
           
       </div> 
+
+      
     </div> 
+
+    <div class="experiencia-trabajos">
+      <div class="experiencia-elemento">
+        <div class="divNumGrande">
+          <h1 class="numGrande" data-valor="96">96+</h1>
+        </div>
+
+        <div class="divTexto">
+          <p>horas trabajadas</p>
+        </div>
+      </div>
+       
+      <div class="experiencia-elemento">
+        <div class="divNumGrande">
+          <h1 class="numGrande" data-valor="345">345+</h1>
+        </div>
+
+        <div class="divTexto">
+          <p>horas estudiadas</p>
+        </div>
+      </div>
+
+      <div class="experiencia-elemento">
+        <div class="divNumGrande">
+          <h1 class="numGrande" data-valor="9126">9126+</h1>
+        </div>
+
+        <div class="divTexto">
+          <p>proyectos en mente </p>
+        </div>
+      </div>
+
+      
+
+      
+    </div>
 
  
 
@@ -588,6 +604,8 @@
     </h1>
 
     <div class="contenedor-grid">
+
+      <!--PAGINA LEGO --> 
       <div class="elemento">
         <div class="portada">
           <img src="assets/iconos/pieza lego.png" class="iconoTarjeta" alt="">
@@ -604,6 +622,24 @@
         </div>
       </div>
 
+      <!--GUIA CSS-->  
+      <div class="elemento">
+        <div class="portada">
+          <i class="fa-brands fa-css3-alt iconoTarjeta"></i>
+          <h1 class="miniTitulo">
+            GUIA CSS
+          </h1>
+          <p class="datos">Guia de todas las propiedades de css expuestas en clase</p>
+        </div>
+
+        <div class="interior">
+          <a href="../Trabajos grupo/5º Trabajo en grupo/Trabajo grupo 5.html"><img class="imagen" src="assets/Guia css.png" alt=""></a>
+
+        </div>
+      </div>
+
+
+      <!--BASE DE DATOS-->  
       <div class="elemento">
         <div class="portada">
           <i class="fa-solid fa-database iconoTarjeta"></i>
@@ -619,24 +655,24 @@
         </div>
       </div>
 
-      <div class="elemento">
+       <!--GUIA CSS-->  
+       <div class="elemento">
         <div class="portada">
-          <i class="fa-brands fa-css3-alt iconoTarjeta"></i>
+          <i class="fa-solid fa-hippo iconoTarjeta"></i>
           <h1 class="miniTitulo">
-            GUIA CSS
+            Mi Zoológico (ficticio)
           </h1>
-          <p class="datos">Guia de todas las propiedades de css expuestas en clase</p>
+          <p class="datos">Trabajo de Html y CSS con el objetivo de crear nuestro zoológico</p>
         </div>
 
         <div class="interior">
-          <a href="https://www.google.com/?hl=es"><img class="imagen" src="assets/Guia css.png" alt=""></a>
+          <a href="../Trabajo Zoo (Muy mejorado)/Trabajo Zoo mejoradísimo.html">
+            <img class="imagen" src="assets/Zoo_foto.png" alt=""></a>
 
         </div>
       </div>
 
-      <div class="elemento">
-
-      </div>
+      
   </section>
 
   
@@ -688,7 +724,7 @@
         letterIndex++;
         if (letterIndex === words[wordIndex].length) {
           direction = -1;
-          setTimeout(typeWriter, 2000); // Tiempo de espera
+          setTimeout(typeWriter, 2000); // tiempoTotal de espera
         } else {
           setTimeout(typeWriter, 80); // Velocidad de escritura
         }
@@ -707,6 +743,58 @@
 
     typeWriter();
   </script>
+
+<script>
+  function actualizarValores(entrada) {
+
+  // Esta función cambia el texto del objetivo por una sucesión rápida y ascendente desde
+  // el 0 hasta el valor deseado, procurando siempre tener una duración total fijada independientemente
+  // del número deseado (por eso valorinicio += valorFinal/tiempoTotal)
+  let valorMostrado = entrada.target;
+  let valorInicio = 0;
+  let valorFinal = parseInt(valorMostrado.getAttribute("data-valor"));
+  
+  let tiempoTotal = 220;
+
+ 
+  let contador = setInterval(function () {
+
+    valorInicio += valorFinal/tiempoTotal;
+
+    valorMostrado.textContent = Math.floor(valorInicio);
+    if (valorInicio > valorFinal) {
+      clearInterval(contador);
+      valorMostrado.textContent = valorFinal + '+';
+    }
+  }, 1);
+}
+
+  
+//Aquí simplemente ponemos un Observador que ejecutará la animación al ver en pantalla
+// los elementos deseados
+
+
+
+  const observer = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada)=> {
+      console.log(entrada)
+      if (entrada.isIntersecting) {
+        actualizarValores(entrada);
+       
+      } else {
+      }
+     });
+    })
+
+    const numeros = document.querySelectorAll('.numGrande');
+    numeros.forEach((el) => observer.observe(el));
+
+
+    
+  
+
+
+</script>
 
   <script>
 
