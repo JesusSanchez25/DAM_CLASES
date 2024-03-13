@@ -9,6 +9,9 @@ public class Entrada {
 
         claseExterna.getClaseInterna().mostrarPadre();
 
+        claseInterna2.mostrarPadre();
+
+
 
     }
 

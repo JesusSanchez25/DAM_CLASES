@@ -49,14 +49,14 @@ public class ClaseExterna {
         this.claseInterna = claseInterna;
     }
 
-    public class ClaseInterna{
+    class ClaseInterna{
 
         private  String datoUnoInterno;
         private  int datoDosInterno;
 
         private ClaseExterna claseExterna;
 
-        public ClaseInterna(String datoUnoInterno, int datoDosInterno, ClaseExterna claseExterna){
+        ClaseInterna(String datoUnoInterno, int datoDosInterno, ClaseExterna claseExterna){
            this.datoUnoInterno = datoUnoInterno;
            this.datoDosInterno = datoDosInterno;
            this.claseExterna = claseExterna;
