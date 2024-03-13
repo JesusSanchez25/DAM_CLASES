@@ -15,6 +15,10 @@ public class Entrada {
             System.out.println(e.getMessage());
         }
 
+        terreno.getCasa().construirAnexo(23);
+
+
+
     }
 
 

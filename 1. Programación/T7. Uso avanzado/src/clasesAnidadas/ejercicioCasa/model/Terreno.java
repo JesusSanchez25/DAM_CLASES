@@ -24,7 +24,7 @@ public class Terreno {
     //    - getter y setter
 
     private Casa casa;
-    private int m2, precio;
+    private int m2, precio, metrosDisponibles;
     private Orientacion orientacion;
 
     public Terreno() {
@@ -40,11 +40,11 @@ public class Terreno {
     }
 
     public void construirCasa(int metros) throws TerrenoException{
-
-        if (metros <= this.m2){
+        if (metros <= this.metrosDisponibles){
             casa = new Casa(metros);
             revalorizarTerreno();
             System.out.println("Casa construida con éxito en el terreno");
+            metrosDisponibles-= metros;
         } else {
             throw new TerrenoException("Esto no se puede construir porque hay poco terreno");
         }
@@ -63,11 +63,7 @@ public class Terreno {
         }
     }
 
-    public void construirHabitacion(int metros){
-        casa.construirHabitacion(metros);
-    }
 
-    public void construirAnexo(){}
 
     public Casa getCasa() {
         return casa;
@@ -93,7 +89,7 @@ public class Terreno {
         this.orientacion = orientacion;
     }
 
-    class Casa{
+    public class Casa {
         //- Existirá una clase anidad Casa con los siguientes atributos y métodos:
         //    - m2
         //    - piscina
@@ -118,23 +114,35 @@ public class Terreno {
         }
 
 
-        public void construirHabitacion(int metros) throws TerrenoException{
-            if (metros>metrosDisponibles){
+        public void construirHabitacion(int metros) throws TerrenoException {
+            if (metros > metrosDisponibles) {
                 throw new TerrenoException("No hay espacio suficiente para crear la habitacion");
+            } else {
+                habitaciones++;
+                System.out.println("Habitación construida con éxito");
+                metrosDisponibles -= metros;
+            }
+
+        }
+
+        public void construirPiscina() throws TerrenoException {
+            if (!piscina) {
+                piscina = true;
+                System.out.println("Piscina construida con éxito");
+            } else {
+                throw new TerrenoException("Ya tienes una piscina creada máquina");
             }
         }
 
-        public void construirAnexo(int metros) throws TerrenoException{
 
-
-
-            if (metros > metrosDisponibles) {
-                throw new TerrenoException("No se puede construir el anexño");
+        public void construirAnexo(int metros) {
+            if (metros > Terreno.this.metrosDisponibles) {
             } else {
                 Terreno.this.metrosDisponibles -= metros;
-            }
+                System.out.println("Anexo creado exitosamente");
             }
         }
+
         public int getM2() {
             return m2;
         }
@@ -158,6 +166,8 @@ public class Terreno {
         public void setPiscina(boolean piscina) {
             this.piscina = piscina;
         }
+
+
     }
 
 
