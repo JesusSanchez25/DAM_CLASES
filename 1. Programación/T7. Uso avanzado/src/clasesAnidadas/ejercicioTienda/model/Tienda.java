@@ -1,6 +1,4 @@
-package ejercicioTienda.model;
-
-import com.sun.security.jgss.GSSUtil;
+package clasesAnidadas.ejercicioTienda.model;
 
 import java.util.ArrayList;
 

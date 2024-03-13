@@ -1,14 +1,15 @@
-package ejercicioTienda.Utils;
+package clasesAnidadas.ejercicioTienda.Utils;
 
-public enum TipoBici {
+public enum TamanioBici {
 
-    MTB("mountain bike"), CARRETERA("Carrera"), PASEO("Paseo");
+    S("pequeño"), M("mediano"), L("grande");
 
     String nombre;
 
-    TipoBici(String nombre) {
+    TamanioBici(String nombre) {
         this.nombre = nombre;
     }
+
 
     public String getNombre() {
         return nombre;

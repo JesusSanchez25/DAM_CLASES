@@ -1,8 +1,8 @@
-package ejercicioTienda;
+package clasesAnidadas.ejercicioTienda;
 
-import ejercicioTienda.Utils.TamanioBici;
-import ejercicioTienda.Utils.TipoBici;
-import ejercicioTienda.model.Bicicleta;
+import clasesAnidadas.ejercicioTienda.Utils.TamanioBici;
+import clasesAnidadas.ejercicioTienda.Utils.TipoBici;
+import clasesAnidadas.ejercicioTienda.model.Bicicleta;
 
 public class Entrada {
     public static void main(String[] args) {

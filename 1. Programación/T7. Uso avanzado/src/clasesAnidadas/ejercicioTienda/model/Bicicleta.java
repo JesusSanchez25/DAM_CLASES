@@ -1,7 +1,7 @@
-package ejercicioTienda.model;
+package clasesAnidadas.ejercicioTienda.model;
 
-import ejercicioTienda.Utils.TamanioBici;
-import ejercicioTienda.Utils.TipoBici;
+import clasesAnidadas.ejercicioTienda.Utils.TamanioBici;
+import clasesAnidadas.ejercicioTienda.Utils.TipoBici;
 import lombok.Getter;
 import lombok.Setter;
 
