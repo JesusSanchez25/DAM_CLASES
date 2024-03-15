@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class OperacionesFicheros {
-    File file = new File("C:\\Users\\Usuario DAM1\\Documents\\DAM\\1. Programación\\T8.Flujo de datos\\Ficheros\\ejemplo_fichero3.txt");
+    File file = new File("C:\\Users\\Usuario DAM1\\Documents\\DAM\\1. Programación\\T8.Flujo de datos\\Ficheros\\fichero2.1.txt");
 
     //tamaño
     // modificacion, creacion, propietario, permisos, extensión
@@ -40,6 +40,22 @@ public class OperacionesFicheros {
 
     }
 
+    public void lecturaDirectorio(String directorio) throws Exception{
+        File file = new File(directorio);
 
+        //FILE.LIST da el String[] con todos los nombres dentro del directorio.
+        //FILE.LISTFILES da el File[] con todos los archivos.
+
+        if (file.isDirectory()){
+            for (File archivo : file.listFiles()) {
+                System.out.println("Nombre: " + archivo.getName());
+                if (archivo.isDirectory()){
+                    lecturaDirectorio(archivo.getAbsolutePath());
+                }
+
+            }
+        }
+
+    }
 
 }

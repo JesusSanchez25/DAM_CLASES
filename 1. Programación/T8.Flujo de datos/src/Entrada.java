@@ -19,9 +19,9 @@ public class Entrada {
 
         OperacionesFicheros operacionesFicheros = new OperacionesFicheros();
         try {
-            operacionesFicheros.lecturaInformacion("C:\\Users\\Usuario DAM1\\Documents\\DAM\\1. Programación\\T8.Flujo de datos\\Ficheros\\ejemplo_fichero3.txt");
+            operacionesFicheros.lecturaDirectorio("C:\\Users\\Usuario DAM1\\Documents");
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            System.out.println("");
         }
 
 
