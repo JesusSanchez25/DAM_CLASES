@@ -11,13 +11,17 @@ public class Entrada {
     public static void main(String[] args) {
 
 
-        for (Equipo item: DataSet.newInstance().getAllEquipos()) {
-            System.out.println(item.getNombre());
-        }
 
         for (Equipo item: DataSet.newInstance().getAllEquipos()) {
             System.out.println(item.getNombre());
         }
+
+        for (Equipo item : DataSet.newInstance().getAllEquipos()) {
+            System.out.println(item.getNombre());
+
+        }
+        System.out.println("\n");
+
 
 
 

@@ -41,7 +41,12 @@ public class Entrada {
         //3. Genera un número aleatorio que esté entre 1 y 20. Vende la bici situada en el número aleatorio generado. Cada vez que se vende una bici se debe meter en caja el coste Se deberá capturar el fallo si se intenta acceder a una bici que no existe
 
 
-        Bicicleta bicicleta = new Bicicleta(TipoBici.PASEO, TamanioBici.S,12,23,true);
+        Bicicleta bicicleta = new Bicicleta(TipoBici.PASEO, TamanioBici.S, 12, 23, true) {
+            @Override
+            public double reparar() {
+                return 0;
+            }
+        };
 
         bicicleta.reparar();
     }
