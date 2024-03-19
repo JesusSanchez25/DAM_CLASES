@@ -1,0 +1,31 @@
+Pasos:
+
+
+IP:
+Clonar el ubuntu, cada uno debería tener un ip diferente
+(puedes cambiar la ip, miras si se está utilizando con ping + ip y luego lo cambias, primero
+te descargas sudo apt install net-tools, para luego poder utilizar el (sudo ifconfig enp0s3 'IP')
+
+
+ping
+
+Apache:
+Sudo apt stop apache2
+Sudo apt remove apache2
+
+Nginx:
+sudo apt install nginx
+
+En ubuntu original:
+cd /var/www
+sudo chmod 777 'archivo' -R
+tar -czvf archivos.tar.gz 'html/' (comprimir la página web actual)
+
+
+SCP :
+(Instalado en los dos servidores)
+scp archivos.tar.gz dam@NUEVA IP:/var/www/s:
+
+Descomprimir:
+tar -xzvf archivos.tar.gz html/
+
