@@ -1,0 +1,2 @@
+Esto es un ejemplo de fichero para su lectura
+Esta es la segunda línea

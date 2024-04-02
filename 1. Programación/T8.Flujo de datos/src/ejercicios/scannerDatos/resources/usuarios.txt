@@ -1,0 +1,4 @@
+Me comí una salchipapaUsuario{nombre='Jesus', apelido='Sanchez', dni='213', telefono=312, edad=432}
+Usuario{nombre='jesus', apelido='san', dni='123', telefono=123, edad=123}
+Usuario{nombre='Jesu', apelido='Sanc', dni='123', telefono=123, edad=123}
+Usuario{nombre='Mario', apelido='Galan', dni='23712', telefono=2831, edad=20}
