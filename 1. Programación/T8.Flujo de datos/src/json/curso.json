@@ -1,0 +1,37 @@
+[
+    {
+        "nombre": "Programacion",
+        "horas": 8,
+        "Profesor": "Borja Martin",
+        "conocimientos": [
+            "Java"
+        ]
+    },
+    {
+        "nombre": "Lenguaje de marcas",
+        "horas": 8,
+        "Profesor": "Luismi",
+        "conocimientos": [
+            "HTML",
+            "CSS"
+        ]
+    },
+    {
+        "nombre": "Base de datos",
+        "horas": 8,
+        "Profesor": "Luis",
+        "conocimientos": [
+            "MySQL",
+            "NoSql"
+        ]
+    },
+    {
+        "nombre": "Entornos de desarrollo",
+        "horas": 3,
+        "Profesor": "Jesunino",
+        "conocimientos": [
+            "Powershell",
+            "Scrum"
+        ]
+    }
+]
