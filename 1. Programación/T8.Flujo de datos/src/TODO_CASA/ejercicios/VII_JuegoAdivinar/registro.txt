@@ -1,0 +1,21 @@
+Nombre: Terreneitor, el coche más poderoso que ha existido, con tracción 4x4 y dos turbomotores
+Intentos: 17
+
+Nombre: Marco Aurelio
+Intentos: 4
+
+Nombre: Jamonería Pedro
+Intentos: 8
+
+Nombre: Gojo Satoru
+Intentos: 21
+
+Nombre: Pablo picasso
+Intentos: 12
+
+Nombre: Pedrito Perez hernandez de la Torre
+Intentos: 16
+
+Nombre: 0
+Intentos: 14
+
