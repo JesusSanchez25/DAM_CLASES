@@ -1,5 +1,6 @@
 package json;
 
+import com.google.gson.Gson;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -12,6 +13,9 @@ public class Operaciones {
         FileReader fileReader = null;
         BufferedReader bufferedReader = null;
         StringBuilder texto = new StringBuilder();
+
+
+
 
         try {
             fileReader = new FileReader(file);
@@ -26,7 +30,7 @@ public class Operaciones {
 
 
             for (int i = 0; i < arrayAsignaturas.length(); i++) {
-                JSONObject asignatura = arrayAsignaturas.getJSONObject(i);
+                /*JSONObject asignatura = arrayAsignaturas.getJSONObject(i);
                 String nombre = asignatura.getString("nombre");
                 String profesor = asignatura.getString("profesor");
                 int horas = asignatura.getInt("horas");
@@ -36,8 +40,13 @@ public class Operaciones {
                 System.out.println("Profesor: " + profesor);
                 System.out.println("Horas: " + horas);
                 System.out.println("Conocimientos: " + conocimientos.join(","));
-                System.out.println("\n");
+                System.out.println("\n");*/
+
+                JSONObject asignaturaJSOn = arrayAsignaturas.getJSONObject(i);
+                Asignatura asignatura = new Gson().fromJson(asignaturaJSOn.toString());
             }
+
+
 
 
 
