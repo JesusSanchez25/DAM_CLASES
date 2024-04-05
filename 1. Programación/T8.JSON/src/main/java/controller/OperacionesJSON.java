@@ -41,11 +41,33 @@ public class OperacionesJSON {
                     System.out.println(ligas.getJSONObject(i).getString("strLeague"));
                 }
             }
+
             Scanner scanner = new Scanner(in);
             System.out.println("\n\n\nDe que liga quieres ver los equipos?");
             String buscarLiga = scanner.nextLine();
-            // https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=Belgian%20First%20Division%20A
+            urlString = "https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?l=" + buscarLiga;
+            url = new URL(urlString);
 
+
+            connection = (HttpURLConnection) url.openConnection();
+            System.out.println(connection.getURL());
+            bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            linea = "";
+            lecturatotal = new StringBuilder();
+
+            while ((linea = bufferedReader.readLine()) != null){
+                lecturatotal.append(linea);
+            }
+
+            json = new JSONObject(lecturatotal.toString());
+            JSONArray equipos = json.getJSONArray("teams");
+
+            for (int i = 0; i < equipos.length(); i++) {
+                if (equipos.getJSONObject(i).getString("strStadium").equals("Estadio Diego Armando Maradona")){
+                    System.out.println(equipos.getJSONObject(i).getString("strTeam"));
+
+                }
+            }
 
 
 
