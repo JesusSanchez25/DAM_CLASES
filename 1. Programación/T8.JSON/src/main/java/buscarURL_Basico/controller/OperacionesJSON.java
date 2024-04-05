@@ -1,4 +1,4 @@
-package controller;
+package buscarURL_Basico.controller;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -9,7 +9,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 import static java.lang.System.in;
@@ -18,7 +17,7 @@ public class OperacionesJSON {
 
     public void lecturaAPI(){
 
-        String urlString = "https://www.thesportsdb.com/api/v1/json/3/all_leagues.php";
+        String urlString = "";
         BufferedReader bufferedReader = null;
         try {
             URL url = new URL(urlString);
@@ -32,6 +31,7 @@ public class OperacionesJSON {
                 lecturatotal.append(linea);
             }
 
+            //IMPORTANTE PASAR EL STRING BUILDER A STRING
             JSONObject json = new JSONObject(lecturatotal.toString());
             JSONArray ligas = json.getJSONArray("leagues");
 
