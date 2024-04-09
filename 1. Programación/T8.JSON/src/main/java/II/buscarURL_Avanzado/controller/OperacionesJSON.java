@@ -1,4 +1,4 @@
-package buscarURL_Menu.controller;
+package II.buscarURL_Avanzado.controller;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -9,9 +9,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Scanner;
-
-import static java.lang.System.in;
 
 public class OperacionesJSON {
 
@@ -54,7 +51,7 @@ public class OperacionesJSON {
 
     }
 
-    public void mostrarTodasLigas(JSONObject json){
+    public void mostrarTodosEquipos(JSONObject json){
 
         JSONArray ligas = json.getJSONArray("teams");
 
