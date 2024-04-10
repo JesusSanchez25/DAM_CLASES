@@ -1,8 +1,7 @@
-package buscarURL_Menu;
+package II.buscarURL_Avanzado;
 
-import buscarURL_Menu.controller.OperacionesJSON;
+import II.buscarURL_Avanzado.controller.OperacionesJSON;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 import static java.lang.System.in;
