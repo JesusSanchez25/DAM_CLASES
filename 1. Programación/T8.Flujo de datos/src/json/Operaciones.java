@@ -43,7 +43,7 @@ public class Operaciones {
                 System.out.println("\n");*/
 
                 JSONObject asignaturaJSOn = arrayAsignaturas.getJSONObject(i);
-                Asignatura asignatura = new Gson().fromJson(asignaturaJSOn.toString());
+                //Asignatura asignatura = new Gson().fromJson(asignaturaJSOn.toString());
             }
 
 
