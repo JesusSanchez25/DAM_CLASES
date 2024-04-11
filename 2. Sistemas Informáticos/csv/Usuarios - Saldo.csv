@@ -1,0 +1,201 @@
+,ID,Saldo,Banco
+,1,5200,BBVA
+,2,18900,Banco Santander
+,3,7600,CaixaBank
+,4,14200,Banco Sabadell
+,5,3200,Bankia
+,6,21600,Banco Popular
+,7,9800,Bankinter
+,8,5500,ING Direct
+,9,18400,Kutxabank
+,10,12700,Abanca
+,11,8900,Unicaja Banco
+,12,16200,Liberbank
+,13,7100,Ibercaja
+,14,23700,Cajamar
+,15,5300,Banco Mare Nostrum
+,16,1200,Banco Cooperativo Español
+,17,21300,Banco Mediolanum
+,18,7100,Evo Banco
+,19,21800,BBVA
+,20,4200,Banco Santander
+,21,17300,CaixaBank
+,22,900,Banco Sabadell
+,23,24200,Bankia
+,24,15100,Banco Popular
+,25,22700,Bankinter
+,26,10600,ING Direct
+,27,17900,Kutxabank
+,28,23000,Abanca
+,29,10300,Unicaja Banco
+,30,800,Liberbank
+,31,15200,Ibercaja
+,32,2400,Cajamar
+,33,24800,Banco Mare Nostrum
+,34,12400,Banco Cooperativo Español
+,35,16900,Banco Mediolanum
+,36,21500,Evo Banco
+,37,21200,BBVA
+,38,19400,Banco Santander
+,39,14000,CaixaBank
+,40,24200,Banco Sabadell
+,41,22500,Bankia
+,42,10100,Banco Popular
+,43,15800,Bankinter
+,44,21900,ING Direct
+,45,5800,Kutxabank
+,46,22600,Abanca
+,47,17800,Unicaja Banco
+,48,15800,Liberbank
+,49,4400,Ibercaja
+,50,7900,Cajamar
+,51,16600,Banco Mare Nostrum
+,52,13700,Banco Cooperativo Español
+,53,8100,Banco Mediolanum
+,54,12300,Evo Banco
+,55,9800,BBVA
+,56,15600,Banco Santander
+,57,6400,CaixaBank
+,58,12500,Banco Sabadell
+,59,17900,Bankia
+,60,22700,Banco Popular
+,61,18400,Bankinter
+,62,20400,ING Direct
+,63,11800,Kutxabank
+,64,16600,Abanca
+,65,15100,Unicaja Banco
+,66,17400,Liberbank
+,67,19100,Ibercaja
+,68,22300,Cajamar
+,69,10100,Banco Mare Nostrum
+,70,11300,Banco Cooperativo Español
+,71,18100,Banco Mediolanum
+,72,9600,Evo Banco
+,73,22800,BBVA
+,74,23100,Banco Santander
+,75,19100,CaixaBank
+,76,15800,Banco Sabadell
+,77,14500,Bankia
+,78,15700,Banco Popular
+,79,12400,Bankinter
+,80,15500,ING Direct
+,81,20300,Kutxabank
+,82,12100,Abanca
+,83,10400,Unicaja Banco
+,84,12200,Liberbank
+,85,17200,Ibercaja
+,86,17600,Cajamar
+,87,13700,Banco Mare Nostrum
+,88,11000,Banco Cooperativo Español
+,89,23900,Banco Mediolanum
+,90,19100,Evo Banco
+,91,18300,BBVA
+,92,10600,Banco Santander
+,93,17900,CaixaBank
+,94,13400,Banco Sabadell
+,95,19600,Bankia
+,96,19400,Banco Popular
+,97,24000,Bankinter
+,98,7400,ING Direct
+,99,21000,Kutxabank
+,100,8500,Abanca
+,101,8400,Unicaja Banco
+,102,23900,Liberbank
+,103,21500,Ibercaja
+,104,23100,Cajamar
+,105,22100,Banco Mare Nostrum
+,106,11100,Banco Cooperativo Español
+,107,9200,Banco Mediolanum
+,108,24900,Evo Banco
+,109,21000,BBVA
+,110,20000,Banco Santander
+,111,14600,CaixaBank
+,112,12500,Banco Sabadell
+,113,21200,Bankia
+,114,18300,Banco Popular
+,115,22500,Bankinter
+,116,10300,ING Direct
+,117,18100,Kutxabank
+,118,13500,Abanca
+,119,19400,Unicaja Banco
+,120,14000,Liberbank
+,121,23800,Ibercaja
+,122,19600,Cajamar
+,123,11900,Banco Mare Nostrum
+,124,17800,Banco Cooperativo Español
+,125,12200,Banco Mediolanum
+,126,13000,Evo Banco
+,127,13400,BBVA
+,128,12800,Banco Santander
+,129,16200,CaixaBank
+,130,12100,Banco Sabadell
+,131,12300,Bankia
+,132,13400,Banco Popular
+,133,22100,Bankinter
+,134,12200,ING Direct
+,135,17600,Kutxabank
+,136,15900,Abanca
+,137,15100,Unicaja Banco
+,138,13700,Liberbank
+,139,19000,Ibercaja
+,140,24800,Cajamar
+,141,15300,Banco Mare Nostrum
+,142,20300,Banco Cooperativo Español
+,143,11400,Banco Mediolanum
+,144,12400,Evo Banco
+,145,10400,BBVA
+,146,11300,Banco Santander
+,147,23000,CaixaBank
+,148,16700,Banco Sabadell
+,149,14300,Bankia
+,150,20600,Banco Popular
+,151,14600,Bankinter
+,152,13300,ING Direct
+,153,17700,Kutxabank
+,154,22700,Abanca
+,155,15500,Unicaja Banco
+,156,21900,Liberbank
+,157,12100,Ibercaja
+,158,19700,Cajamar
+,159,23000,Banco Mare Nostrum
+,160,17300,Banco Cooperativo Español
+,161,16800,Banco Mediolanum
+,162,14900,Evo Banco
+,163,15700,BBVA
+,164,23000,Banco Santander
+,165,20500,CaixaBank
+,166,15800,Banco Sabadell
+,167,20400,Bankia
+,168,12200,Banco Popular
+,169,24500,Bankinter
+,170,23200,ING Direct
+,171,15100,Kutxabank
+,172,22700,Abanca
+,173,18300,Unicaja Banco
+,174,10800,Liberbank
+,175,12400,Ibercaja
+,176,11900,Cajamar
+,177,15900,Banco Mare Nostrum
+,178,21300,Banco Cooperativo Español
+,179,13100,Banco Mediolanum
+,180,12800,Evo Banco
+,181,21700,BBVA
+,182,12100,Banco Santander
+,183,20300,CaixaBank
+,184,14900,Banco Sabadell
+,185,22500,Bankia
+,186,17800,Banco Popular
+,187,14100,Bankinter
+,188,21300,ING Direct
+,189,13700,Kutxabank
+,190,17500,Abanca
+,191,18600,Unicaja Banco
+,192,13300,Liberbank
+,193,18100,Ibercaja
+,194,15600,Cajamar
+,195,12300,Banco Mare Nostrum
+,196,22200,Banco Cooperativo Español
+,197,14600,Banco Mediolanum
+,198,23300,Evo Banco
+,199,22800,Ibercaja
+,200,12011,Cajamar
