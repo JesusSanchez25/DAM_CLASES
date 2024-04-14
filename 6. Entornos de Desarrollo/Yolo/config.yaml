@@ -1,0 +1,6 @@
+path: C:\Users\magol\1. DAM\6. Entornos de Desarrollo\Yolo\Data
+train: images\train
+val: images\train
+
+#Classes
+  0: botella

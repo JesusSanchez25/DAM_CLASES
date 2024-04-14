@@ -1,5 +1,17 @@
 package ejercicios.ejerciciosFichero;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.sql.PreparedStatement;
+import java.util.Scanner;
+
+import static java.lang.System.in;
+
 public class Entrada {
 
     //Supongamos que vamos a automatizar la forma de rellenar un formulario. Para ello
@@ -35,11 +47,74 @@ public class Entrada {
     //Recordar el método .contains() que tienen los objetos tipo String que indica si contiene la
     //cadena de caracteres que se le pasa por parámetro.
 
-
+    private static String[] datos = new String[]{"nombre", "apellidos", "DNI", "email"};
 
     public static void main(String[] args) {
-        String puta = "puta";
-        System.out.println(puta.contains("uta"));
+
+        //1. Rellenar nombre.
+        //2. Rellenar apellidos.
+        //3. Rellenar DNI.
+        //4. Rellenar e-mail.
+        //5. Finalizar.
+
+        File file = new File("src/ejercicios/ejerciciosFichero/recursos/usuarios");
+        BufferedReader bufferedReader = null;
+        JSONArray jsonArrayUsuarios;
+        JSONObject jsonUsuario;
+
+        try {
+            bufferedReader = new BufferedReader(new FileReader(file));
+            StringBuilder stringBuilder = new StringBuilder();
+            String linea = "";
+            while ((linea =  bufferedReader.readLine()) != null){
+                stringBuilder.append(linea);
+            }
+
+            jsonArrayUsuarios = new JSONArray(stringBuilder.toString());
+
+            
+        } catch (FileNotFoundException e) {
+            System.out.println("Error en la lectura");
+        } finally {
+            if (bufferedReader !=null){
+                bufferedReader.close();
+            }
+        }
+
+
+        JSONArray jsonArray =
+
+        int respuesta = 0;
+        Scanner scanner = new Scanner(in);
+
+        // Esto está bien porque si la respuesta no es 5 no va a ejecutar la función
+        while (respuesta != 5 && comprobarJSON()){
+            System.out.println("1. Rellenar nombre ");
+            System.out.println("2. Rellenar apellido");
+            System.out.println("3. Rellenar DNI ");
+            System.out.println("4. Rellenar E-MAIL ");
+            System.out.println("5. Finalizar ");
+
+            respuesta = scanner.nextInt();
+        }
+
+
+
+
+    }
+
+    private static boolean comprobarJSON(JSONObject jsonobjeto){
+        if (jsonobjeto.length() != datos.length){
+            for (int i = 0; i < jsonobjeto.length(); i++) {
+                if (jsonobjeto.getString(datos[i]) = null){
+                    System.out.println("Te falta el " + datos[i] + " crack");
+                }
+            }
+            System.out.println("\nYo que tu lo arreglaba");
+            return false;
+        }
+        System.out.println("Todo correcto caballero");
+        return true;
     }
 
 }
