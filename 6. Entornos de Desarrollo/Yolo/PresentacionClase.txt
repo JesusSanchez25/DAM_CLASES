@@ -1,0 +1,6 @@
+- Explicar cámara con sensores https://www.youtube.com/watch?v=MPU2HistivI&t=57s
+- Explicar la posterior implementeación tanto *movil* como en el *robot*
+- Open images data V7
+- Annotation CVAT
+- Codigo python
+- FiftyOne puerto 5151
