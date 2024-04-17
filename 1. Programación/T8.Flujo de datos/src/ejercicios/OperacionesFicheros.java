@@ -36,20 +36,18 @@ public class OperacionesFicheros {
         FileWriter fileWriter = null;
 
         try {
-            if (file.exists()){
+            if (!file.exists()){
+                System.out.println("El archivo que has intentado acceder no existe así que lo vamos a crear por ti guapo");
+            }
             fileWriter = new FileWriter(file, true);
             fileWriter.write(texto);
-            } else{
-                System.out.println("El archivo que has intentado acceder no existe así que lo vamos a crear por ti");
-                fileWriter = new FileWriter(file, true);
-                fileWriter.write(texto);
-            }
         } catch (IOException e) {
             System.out.println("No se ha encontrado el fichero");
         } finally {
             try {
                 if (fileWriter !=null) {
                     fileWriter.close();
+
                 }
             } catch (IOException e) {
                 System.out.println("Exception");
@@ -88,6 +86,8 @@ public class OperacionesFicheros {
         int letras= 0, palabras= 0, oraciones = 0;
 
         FileReader fileReader = null;
+
+        Character hola = 'a';
 
         try {
             fileReader = new FileReader(file);
