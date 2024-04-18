@@ -1,4 +1,4 @@
-package ejercicios.ejerciciosFichero;
+package ejercicios.ejerciciosFichero.I_Ejercicio;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -13,7 +13,7 @@ import java.util.Scanner;
 import static java.lang.System.in;
 
 public class Entrada {
-
+/*
     //Supongamos que vamos a automatizar la forma de rellenar un formulario. Para ello
     //vamos a crear una clase Formulario que tendrá un método main.
     //Dentro de este main se le mostrará al usuario un menú con las siguientes opciones:
@@ -82,7 +82,6 @@ public class Entrada {
         }
 
 
-        JSONArray jsonArray =
 
         int respuesta = 0;
         Scanner scanner = new Scanner(in);
@@ -116,5 +115,5 @@ public class Entrada {
         System.out.println("Todo correcto caballero");
         return true;
     }
-
+*/
 }

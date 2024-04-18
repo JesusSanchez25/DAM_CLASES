@@ -1,0 +1,17 @@
+Jesús Sánchez Pedraza:
+-He participado activamente en el desarrollo de la página principal del figma, he dado 
+las ideas para el desarrollo del selector de islas, enseñando ideas y páginas de ejemplo para
+el diseño y el funcionamiento de esta, como por ejemplo las imágenes usadas y la organización del elemento.
+
+-Además, he mostrado variedad de tipografías de letra al grupo para la final decisión de 
+2 o 3 de ellas como constantes en toda la página.
+
+-También he participado en el diseño del mapa grande en la página principal, tomando como inspiración
+a la página de Madbox de Bruno Simon e integrándola a nuestra forma en la página.
+
+- He desarrollado completamente la historia de nuestro protagonista, que por ahora llamamos "Paquito",
+la cual da sentido al la aventura de las islas 
+
+- Además de esto, he participado en casi todas las decisiones de diseño de la página, en 
+sintonía con mis compañeros y siempre buscando una decisión en común 
+
