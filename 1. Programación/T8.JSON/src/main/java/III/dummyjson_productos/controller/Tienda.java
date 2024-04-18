@@ -28,6 +28,7 @@ public class Tienda {
         }
 
         System.out.println("\n Precio total: " + precioTotal);
+
     }
 
 
