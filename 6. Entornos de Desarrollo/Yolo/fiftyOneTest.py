@@ -2,7 +2,7 @@ import fiftyone as fo
 
 
 dataset1 = fo.zoo.load_zoo_dataset(
-              "open-images-v7",
+              "open-images-v6", 
               split="validation",
               label_types=["detections"],
               classes=["Cat", "Dog"],
