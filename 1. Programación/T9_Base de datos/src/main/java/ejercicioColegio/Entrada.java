@@ -1,8 +1,7 @@
-import controler.AcademiaControler;
-import controler.AlumnoCrudRepository;
-import database.DBconnection;
-import model.Alumno;
-import model.Profesor;
+package ejercicioColegio;
+
+import ejercicioColegio.controler.AcademiaControler;
+import ejercicioColegio.database.DBconnection;
 
 import java.sql.Connection;
 

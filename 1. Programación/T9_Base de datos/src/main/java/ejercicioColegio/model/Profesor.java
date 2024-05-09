@@ -1,4 +1,4 @@
-package model;
+package ejercicioColegio.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

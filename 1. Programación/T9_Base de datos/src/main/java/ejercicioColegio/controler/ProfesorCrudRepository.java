@@ -1,11 +1,9 @@
-package controler;
+package ejercicioColegio.controler;
 
-import database.DBconnection;
-import database.Esquema;
-import static database.Esquema.*;
+import ejercicioColegio.database.DBconnection;
+import ejercicioColegio.database.Esquema;
 
-import model.Profesor;
-import model.Profesor;
+import ejercicioColegio.model.Profesor;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -31,8 +29,8 @@ public class ProfesorCrudRepository {
         // Al hacer un PREPARE STATEMENT no se ponen las COMILLAS a los STRING
         // ya que luego al parametrizar se ponen solas
         String query = String.format("INSERT INTO %s (%s,%s,%s, %s) VALUES (?,?,?,?)",
-                TAB_PROFESORES,
-                COL_NOMBRE, COL_CORREO, COL_SALARIO,COL_DIRECCION);
+                Esquema.TAB_PROFESORES,
+                Esquema.COL_NOMBRE, Esquema.COL_CORREO, Esquema.COL_SALARIO, Esquema.COL_DIRECCION);
         try {
             ps = connection.prepareStatement(query);
             ps.setString(1, profesor.getNombre());
@@ -76,9 +74,9 @@ public class ProfesorCrudRepository {
 
             // QUERY DE SQL
             String query = String.format("UPDATE %s set %s = '%s' WHERE (%s = '%s')" ,
-                    TAB_PROFESORES,
-                    COL_NOMBRE, profesorCambiante.getNombre(),
-                    COL_NOMBRE, profesorCambiado.getNombre());
+                    Esquema.TAB_PROFESORES,
+                    Esquema.COL_NOMBRE, profesorCambiante.getNombre(),
+                    Esquema.COL_NOMBRE, profesorCambiado.getNombre());
 
             statement.execute(query);
 
@@ -113,8 +111,8 @@ public class ProfesorCrudRepository {
 
             // QUERY DE SQL
             String query = String.format("DELETE FROM %s WHERE (%s = '%s')" ,
-                    TAB_PROFESORES,
-                    COL_NOMBRE,
+                    Esquema.TAB_PROFESORES,
+                    Esquema.COL_NOMBRE,
                     profesor.getNombre());
             statement.execute(query);
 
@@ -140,8 +138,8 @@ public class ProfesorCrudRepository {
     public ArrayList<Profesor> obtenerProfesores(int salario){
         ArrayList<Profesor> profesores = new ArrayList<>();
         String query = String.format("SELECT * FROM %s where %s > ?",
-                TAB_PROFESORES,
-                COL_SALARIO);
+                Esquema.TAB_PROFESORES,
+                Esquema.COL_SALARIO);
 
         connection = DBconnection.getConnection();
 
@@ -154,10 +152,10 @@ public class ProfesorCrudRepository {
 
             while (resultSet.next()){
                 profesores.add(new Profesor(
-                        resultSet.getString(COL_NOMBRE),
-                        resultSet.getString(COL_CORREO),
-                        resultSet.getString(COL_DIRECCION),
-                        resultSet.getInt(COL_SALARIO)
+                        resultSet.getString(Esquema.COL_NOMBRE),
+                        resultSet.getString(Esquema.COL_CORREO),
+                        resultSet.getString(Esquema.COL_DIRECCION),
+                        resultSet.getInt(Esquema.COL_SALARIO)
                 ));
             }
 

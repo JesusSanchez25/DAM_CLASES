@@ -1,4 +1,4 @@
-package model;
+package ejercicioColegio.model;
 
 public class Alumno {
     private int id;

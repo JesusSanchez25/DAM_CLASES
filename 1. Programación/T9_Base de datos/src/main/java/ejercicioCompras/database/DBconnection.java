@@ -1,4 +1,4 @@
-package database;
+package ejercicioCompras.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -24,8 +24,8 @@ public class DBconnection {
     private static void createConnection (){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = String.format("jdbc:mysql://%s/%s", Esquema.HOST, Esquema.DB_NAME);
-            connection = DriverManager.getConnection(url,"root",                       "SanchezJesus01*_");
+            String url = String.format("jdbc:mysql://%s/%s", EsquemaCompras.HOST, EsquemaCompras.DB_NAME);
+            connection = DriverManager.getConnection(url,"root",                                                                                                                                 "SanchezJesus01*_");
         } catch (ClassNotFoundException e) {
             System.out.println("Error en el Driver");
         } catch (SQLException e) {

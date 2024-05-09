@@ -1,8 +1,8 @@
-package controler;
+package ejercicioColegio.controler;
 
-import database.DBconnection;
-import database.Esquema;
-import model.Alumno;
+import ejercicioColegio.database.DBconnection;
+import ejercicioColegio.database.Esquema;
+import ejercicioColegio.model.Alumno;
 
 import java.sql.*;
 import java.util.ArrayList;

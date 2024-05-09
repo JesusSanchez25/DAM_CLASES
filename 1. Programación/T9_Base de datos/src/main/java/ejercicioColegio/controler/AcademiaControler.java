@@ -1,7 +1,7 @@
-package controler;
+package ejercicioColegio.controler;
 
-import model.Alumno;
-import model.Profesor;
+import ejercicioColegio.model.Profesor;
+import ejercicioColegio.model.Alumno;
 
 import java.util.ArrayList;
 
@@ -18,7 +18,6 @@ public class AcademiaControler {
     Alumno jorge = new Alumno("Jorge", "Lopez", "jorgitoputon@gmail.com", 123324);
 
     public void inscribirAlumno(){
-
         alumnoCrudRepository.darAltaAlumno(jorge);
     }
 

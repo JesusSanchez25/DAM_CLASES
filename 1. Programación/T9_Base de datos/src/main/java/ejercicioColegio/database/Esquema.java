@@ -1,4 +1,4 @@
-package database;
+package ejercicioColegio.database;
 
 public interface Esquema {
 
