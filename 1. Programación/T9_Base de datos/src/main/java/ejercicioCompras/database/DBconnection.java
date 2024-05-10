@@ -42,6 +42,7 @@ public class DBconnection {
         // cierra la conexión
         try {
             connection.close();
+            connection = null;
         } catch (SQLException e) {
             System.out.println("Error en el cerrado de la base de datos");
         }

@@ -11,7 +11,7 @@ public interface EsquemaCompras {
     String COL_ID = "id";
     String COL_NOMBRE = "name";
     String COL_EMAIL = "email";
-    String COL_PASSWORD= "telefono";
+    String COL_PASSWORD= "password";
     String COL_IDPRODUCTO = "id_p";
     String COL_IDCLIENTE = "id_c";
     String COL_CANTIDAD = "amount";

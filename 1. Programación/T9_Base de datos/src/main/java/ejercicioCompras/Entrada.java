@@ -9,7 +9,7 @@ public class Entrada {
 
         TiendaController tiendaController = new TiendaController();
 
-        tiendaController.insertarProductosIniciales();
+        tiendaController.mostrarUsuario("s");
 
 
 

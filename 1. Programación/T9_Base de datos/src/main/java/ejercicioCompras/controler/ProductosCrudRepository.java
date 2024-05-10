@@ -19,6 +19,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class ProductosCrudRepository {
 
@@ -58,7 +59,7 @@ public class ProductosCrudRepository {
             ps.setString(8,producto.getCategory());
 
             ps.execute();
-            System.out.println("mek");
+            System.out.println("Se ha insertado correctamente");
         } catch (SQLException e) {
             System.out.println("Error en la query");
             System.out.println(e.getCause());
@@ -76,6 +77,87 @@ public class ProductosCrudRepository {
         connection = null;
 
     }
+
+    public Producto sacarProducto(int id){
+        connection = DBconnection.getConnection();
+
+        // Trabajo conexión
+        String query = String.format("Select * from %s where %s = ?",
+                EsquemaCompras.TAB_PRODUCTOS, EsquemaCompras.COL_ID);
+
+        try {
+            ps = connection.prepareStatement(query);
+            ps.setInt(1, id);
+
+            resultSet = ps.executeQuery();
+
+            while (resultSet.next()) {
+
+                Producto producto = new Producto(
+                        resultSet.getInt(EsquemaCompras.COL_ID),
+                        resultSet.getString(EsquemaCompras.COL_NOMBREPRODUCTO),
+                        resultSet.getString(EsquemaCompras.COL_DESCRIPCION),
+                        resultSet.getLong(EsquemaCompras.COL_PRECIO),
+                        resultSet.getDouble(EsquemaCompras.COL_RATING),
+                        resultSet.getLong(EsquemaCompras.COL_STOCK),
+                        resultSet.getString(EsquemaCompras.COL_MARCA),
+                        resultSet.getString(EsquemaCompras.COL_CATEGORIA));
+
+                        System.out.println("El producto es: \n" + producto);
+                        return producto;
+            }
+
+
+
+
+
+        } catch (SQLException e) {
+            System.out.println("Error en sql");
+        } finally {
+            ps = null;
+        }
+        return null;
+    }
+
+    public ArrayList<Producto> sacarTodosProductos(){
+        connection = DBconnection.getConnection();
+        ArrayList<Producto> listaProductos = new ArrayList<>();
+
+        String query = String.format("Select * from %s",
+                EsquemaCompras.TAB_PRODUCTOS);
+
+        try {
+            ps = connection.prepareStatement(query);
+            resultSet = ps.executeQuery();
+
+            while (resultSet.next()){
+                Producto producto = new Producto(
+                        resultSet.getInt(EsquemaCompras.COL_ID),
+                        resultSet.getString(EsquemaCompras.COL_NOMBREPRODUCTO),
+                        resultSet.getString(EsquemaCompras.COL_DESCRIPCION),
+                        resultSet.getLong(EsquemaCompras.COL_PRECIO),
+                        resultSet.getDouble(EsquemaCompras.COL_RATING),
+                        resultSet.getLong(EsquemaCompras.COL_STOCK),
+                        resultSet.getString(EsquemaCompras.COL_MARCA),
+                        resultSet.getString(EsquemaCompras.COL_CATEGORIA));
+
+                listaProductos.add(producto);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error en query");
+        }
+        return listaProductos;
+    }
+
+    public boolean hayProductos(){
+        if (sacarTodosProductos().isEmpty()){
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+
 
 
 
@@ -99,6 +181,12 @@ public class ProductosCrudRepository {
 
         } catch (IOException e) {
             System.out.println("ERROR EN IO");
+        } finally {
+            try {
+                bufferedReader.close();
+            } catch (IOException e) {
+                System.out.println("Error en el cerrado");
+            }
         }
 
 
@@ -107,10 +195,7 @@ public class ProductosCrudRepository {
     }
 
     public void insertarProductosApi(String api){
-        GsonBuilder builder = new GsonBuilder();
-        builder.setPrettyPrinting();
 
-        Gson gson = builder.create();
 
         JSONArray jsonArray = leerApi(api).getJSONArray("products");
 
