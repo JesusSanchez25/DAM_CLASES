@@ -12,6 +12,11 @@ import lombok.Setter;
 public class Usuario {
     private String nombre, apellido, correo, telefono;
 
+    public Usuario(String correo, String telefono) {
+        this.correo = correo;
+        this.telefono = telefono;
+    }
+
     @Override
     public String toString() {
         return

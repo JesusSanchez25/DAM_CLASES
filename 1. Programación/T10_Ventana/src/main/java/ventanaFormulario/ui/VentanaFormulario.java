@@ -1,20 +1,20 @@
     package ventanaFormulario.ui;
 
+    import ventanaFormulario.controller.GestorUsuarios;
     import ventanaFormulario.model.Usuario;
 
     import javax.swing.*;
     import java.awt.*;
     import java.awt.event.ActionEvent;
     import java.awt.event.ActionListener;
-    import java.util.ArrayList;
 
     public class VentanaFormulario extends JFrame implements ActionListener {
-        private ArrayList<Usuario> usuarios;
         private JPanel panelCentral;
         private JButton botonRegistro, botonListar;
         private JTextField textoNombre, textoApellido, textoCorreo, textoTelefono;
+        private final GestorUsuarios gestorUsuarios;
         private JLabel etiquetaConfirmacion;
-        public VentanaFormulario() throws HeadlessException {
+        public VentanaFormulario(GestorUsuarios gestorUsuarios) throws HeadlessException {
             setTitle("VentanaFormulario");
             setSize(1000,600);
             setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -26,11 +26,13 @@
             pack();
             setLocationRelativeTo(null);
             setVisible(true);
+
+            this.gestorUsuarios = gestorUsuarios;
         }
 
         public void instancias(){
             panelCentral = new JPanel();
-            panelCentral.setLayout(new GridLayout(6,1, 10, 20));
+            panelCentral.setLayout(new GridLayout(8,1, 10, 20));
 
             textoNombre = new JTextField();
             textoApellido = new JTextField();
@@ -51,41 +53,49 @@
             panelCentral.add(textoTelefono);
             panelCentral.add(botonRegistro);
             panelCentral.add(botonListar);
+            panelCentral.add(etiquetaConfirmacion);
 
-            usuarios = new ArrayList<>();
 
         }
         public void acciones(){
             botonRegistro.addActionListener(this);
             botonListar.addActionListener(this);
         }
-        @Override
-        public void actionPerformed(ActionEvent e) {
 
-            if (e.getSource() == botonRegistro){
-                usuarios.add(sacarUsuario());
-                System.out.println("Usuario agregado con éxito");
-            } else if (e.getSource() == botonListar){
-                for (Usuario item : usuarios) {
-                    System.out.println(item);
-                }
-                System.out.println("La cantidad de usuarios es de: " + usuarios.size());
-            }
-        }
-
-        private Usuario sacarUsuario(){
-            Usuario usuario = new Usuario(
-                    textoNombre.getText(),
-                    textoApellido.getText(),
-                    textoCorreo.getText(),
-                    textoTelefono.getText()
-            );
-
+        public void vaciarCeldas(){
             textoNombre.setText("");
             textoApellido.setText("");
             textoCorreo.setText("");
             textoTelefono.setText("");
-
-            return usuario;
         }
-    }
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            if (e.getSource() == botonRegistro){
+                try {
+
+                    if (textoNombre.getText().length() == 0 || textoApellido.getText().length() == 0 || textoCorreo.getText().length() == 0 || textoTelefono.getText().length() == 0){
+                        throw new Exception("Datos vacios");
+                    }
+
+                    gestorUsuarios.agregarUsuario(
+                            new Usuario(textoNombre.getText(), textoApellido.getText(),
+                                        textoCorreo.getText(), textoTelefono.getText())
+                    );
+                    vaciarCeldas();
+                    etiquetaConfirmacion.setText("" + gestorUsuarios.getListaUsuarios().size());
+                    System.out.println("Usuario agregado con éxito");
+
+
+                    } catch (NumberFormatException ex){
+                    System.out.println("El teléfono debe ser un número"); // o debería
+                } catch (Exception ex) {
+                    System.out.println("Introduce bien los datos");
+                }
+
+            } else if (e.getSource() == botonListar){
+                gestorUsuarios.listarUsuarios();
+        }
+
+
+    }}
