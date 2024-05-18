@@ -44,15 +44,6 @@ public class ProfesorCrudRepository {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             System.out.println("ERRPR");
-        } finally {
-            try {
-                if (ps != null){
-                    ps.close();
-                }
-            } catch (SQLException e) {
-                System.out.println("Error en el close");
-            }
-
         }
 
 
