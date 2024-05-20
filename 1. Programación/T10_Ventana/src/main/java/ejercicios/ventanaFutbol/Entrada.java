@@ -11,7 +11,7 @@ public class Entrada {
     public static void main(String[] args) {
     DBControler dbControler = new DBControler();
 
-    for (Jugador item : dbControler.sacarJugadoresFichar()) {
+    for (Jugador item : dbControler.sacarJugadoresEnAlineacion()) {
         System.out.println(item);
     }
 

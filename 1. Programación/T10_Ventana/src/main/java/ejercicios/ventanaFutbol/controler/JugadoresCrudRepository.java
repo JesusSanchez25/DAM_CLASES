@@ -130,6 +130,42 @@ public class JugadoresCrudRepository {
 
     }
 
+    public ArrayList<Jugador> sacarJugadoresEnAlineacion(){
+        connection = DBconnection.getConnection();
+        ArrayList<Jugador> jugadores = new ArrayList<>();
+
+        String query = String.format("SELECT * FROM %s where %s = true", // TODO CAMBIAR A true
+                EsquemaFutbol.TB_JUGADORES, EsquemaFutbol.COL_ESTITULAR);
+
+        try {
+            ps = connection.prepareStatement(query);
+            resultSet = ps.executeQuery();
+
+            while (resultSet.next()) {
+                System.out.println();
+                jugadores.add(new Jugador(
+                        resultSet.getInt(EsquemaFutbol.COL_FK_IDEQUIPO),
+                        resultSet.getString(EsquemaFutbol.COL_JG_ID),
+                        resultSet.getString(EsquemaFutbol.COL_JG_NOMBRE),
+                        resultSet.getString(EsquemaFutbol.COL_POSICION),
+                        resultSet.getInt(EsquemaFutbol.COL_MEDIA),
+                        resultSet.getInt(EsquemaFutbol.COL_PRECIO),
+                        resultSet.getInt(EsquemaFutbol.COL_ESTITULAR) == 1 // Para pasarlo a booleano
+                ));
+            }
+
+            return jugadores;
+        } catch (SQLException e) {
+            System.out.println("Error en query");
+            e.printStackTrace();
+        } finally {
+            DBconnection.closeConnection();
+        }
+
+        return null;
+
+    }
+
 
 
 

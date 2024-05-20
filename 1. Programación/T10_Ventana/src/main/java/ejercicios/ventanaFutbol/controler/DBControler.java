@@ -140,4 +140,8 @@ public class DBControler {
         return jugadoresCrudRepository.sacarJugadoresFichar();
     }
 
+    public ArrayList<Jugador> sacarJugadoresEnAlineacion(){
+        return jugadoresCrudRepository.sacarJugadoresEnAlineacion();
+    }
+
 }
