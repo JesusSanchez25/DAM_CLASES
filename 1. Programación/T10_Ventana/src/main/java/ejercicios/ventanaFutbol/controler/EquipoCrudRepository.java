@@ -16,41 +16,7 @@ public class EquipoCrudRepository {
     PreparedStatement ps;
     ResultSet resultSet;
 
-    public ArrayList<Jugador> sacarJugadoresEquipo(int idEquipo){
-        connection = DBconnection.getConnection();
-        ArrayList<Jugador> jugadores = new ArrayList<>();
 
-        String query = String.format("SELECT * FROM %s WHERE %s = ?",
-                EsquemaFutbol.TB_JUGADORES, EsquemaFutbol.COL_FK_IDEQUIPO);
-
-        try {
-            ps = connection.prepareStatement(query);
-            ps.setInt(1, idEquipo);
-            resultSet = ps.executeQuery();
-
-            while (resultSet.next()) {
-               jugadores.add(new Jugador(
-                       resultSet.getInt(EsquemaFutbol.COL_JG_ID),
-                       resultSet.getString(EsquemaFutbol.COL_FK_IDEQUIPO),
-                       resultSet.getString(EsquemaFutbol.COL_JG_NOMBRE),
-                       resultSet.getString(EsquemaFutbol.COL_POSICION),
-                       resultSet.getInt(EsquemaFutbol.COL_MEDIA),
-                       resultSet.getInt(EsquemaFutbol.COL_PRECIO),
-                       resultSet.getBoolean(EsquemaFutbol.COL_ESTITULAR)
-                       ));
-            }
-
-            return jugadores;
-        } catch (SQLException e) {
-            System.out.println("Error en query");
-            e.printStackTrace();
-        } finally {
-            DBconnection.closeConnection();
-        }
-
-        return null;
-
-    }
 
     public void crearEquipo(String nombre){
         connection = DBconnection.getConnection();

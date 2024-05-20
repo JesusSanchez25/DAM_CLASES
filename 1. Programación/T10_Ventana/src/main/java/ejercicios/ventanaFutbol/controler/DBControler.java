@@ -58,7 +58,7 @@ public class DBControler {
     }
 
     public ArrayList<Jugador> sacarJugadoresEquipo(int idEquipo){
-        return equipoCrudRepository.sacarJugadoresEquipo(idEquipo);
+        return jugadoresCrudRepository.sacarJugadoresEquipo(idEquipo);
     }
 
     public void insertarJugadoresIniciales(){
@@ -135,6 +135,9 @@ public class DBControler {
 
         // está vacio
         return true;
+    }
+    public ArrayList<Jugador> sacarJugadoresFichar(){
+        return jugadoresCrudRepository.sacarJugadoresFichar();
     }
 
 }

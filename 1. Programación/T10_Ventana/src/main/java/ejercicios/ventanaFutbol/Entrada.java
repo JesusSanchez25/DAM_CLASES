@@ -9,8 +9,11 @@ import ejercicios.ventanaFutbol.ui.VentanaPrincipal;
 
 public class Entrada {
     public static void main(String[] args) {
+    DBControler dbControler = new DBControler();
 
-    VentanaLogin ventanaLogin = new VentanaLogin();
+    for (Jugador item : dbControler.sacarJugadoresFichar()) {
+        System.out.println(item);
+    }
 
 
     }

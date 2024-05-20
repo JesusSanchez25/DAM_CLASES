@@ -19,9 +19,9 @@ public interface EsquemaFutbol {
     String COL_MEDIA = "media";
     String COL_POSICION = "posicion";
     String COL_PRECIO = "precio";
-    String COL_ESTITULAR = "vistaJugadoresNoFichados";
-    String VISTA_JugadoresNoFichados = "vistajugadoresnofichados";
-    String VISTA_JugadoresEnAlineacion = "vistajugadoresenalineacion";
+    String COL_ESTITULAR = "estitular";
+    String VISTA_JUGADORESNOFICHADOS = "vistajugadoresnofichados";
+    String VISTA_JUGADORESENALINEACION = "vistajugadoresenalineacion";
 
 
 

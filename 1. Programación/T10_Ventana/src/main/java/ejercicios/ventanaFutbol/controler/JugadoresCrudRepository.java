@@ -9,10 +9,8 @@ import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 
 public class JugadoresCrudRepository {
     Connection connection;
@@ -57,6 +55,79 @@ public class JugadoresCrudRepository {
             agregarJugador(jugador);
             System.out.println(jugador.getName());
         }
+    }
+
+    public ArrayList<Jugador> sacarJugadoresEquipo(int idEquipo){
+        connection = DBconnection.getConnection();
+        ArrayList<Jugador> jugadores = new ArrayList<>();
+
+        String query = String.format("SELECT * FROM %s WHERE %s = ?",
+                EsquemaFutbol.TB_JUGADORES, EsquemaFutbol.COL_FK_IDEQUIPO);
+
+        try {
+            ps = connection.prepareStatement(query);
+            ps.setInt(1, idEquipo);
+            resultSet = ps.executeQuery();
+
+            while (resultSet.next()) {
+                jugadores.add(new Jugador(
+                        resultSet.getInt(EsquemaFutbol.COL_FK_IDEQUIPO),
+                        resultSet.getString(EsquemaFutbol.COL_JG_ID),
+                        resultSet.getString(EsquemaFutbol.COL_JG_NOMBRE),
+                        resultSet.getString(EsquemaFutbol.COL_POSICION),
+                        resultSet.getInt(EsquemaFutbol.COL_MEDIA),
+                        resultSet.getInt(EsquemaFutbol.COL_PRECIO),
+                        resultSet.getInt(EsquemaFutbol.COL_ESTITULAR) == 1 // Para pasarlo a booleano
+
+                ));
+            }
+
+            return jugadores;
+        } catch (SQLException e) {
+            System.out.println("Error en query");
+            e.printStackTrace();
+        } finally {
+            DBconnection.closeConnection();
+        }
+
+        return null;
+
+    }
+
+    public ArrayList<Jugador> sacarJugadoresFichar(){
+        connection = DBconnection.getConnection();
+        ArrayList<Jugador> jugadores = new ArrayList<>();
+
+        String query = String.format("SELECT * FROM %s",
+                EsquemaFutbol.VISTA_JUGADORESNOFICHADOS);
+
+        try {
+            ps = connection.prepareStatement(query);
+            resultSet = ps.executeQuery();
+
+            while (resultSet.next()) {
+                System.out.println();
+                jugadores.add(new Jugador(
+                        resultSet.getInt(EsquemaFutbol.COL_FK_IDEQUIPO),
+                        resultSet.getString(EsquemaFutbol.COL_JG_ID),
+                        resultSet.getString(EsquemaFutbol.COL_JG_NOMBRE),
+                        resultSet.getString(EsquemaFutbol.COL_POSICION),
+                        resultSet.getInt(EsquemaFutbol.COL_MEDIA),
+                        resultSet.getInt(EsquemaFutbol.COL_PRECIO),
+                        resultSet.getInt(EsquemaFutbol.COL_ESTITULAR) == 1 // Para pasarlo a booleano
+                ));
+            }
+
+            return jugadores;
+        } catch (SQLException e) {
+            System.out.println("Error en query");
+            e.printStackTrace();
+        } finally {
+            DBconnection.closeConnection();
+        }
+
+        return null;
+
     }
 
 
