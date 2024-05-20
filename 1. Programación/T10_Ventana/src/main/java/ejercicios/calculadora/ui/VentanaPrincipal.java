@@ -1,4 +1,4 @@
-package calculadora.ui;
+package ejercicios.calculadora.ui;
 
 import javax.swing.*;
 import java.awt.*;

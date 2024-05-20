@@ -1,7 +1,7 @@
-package calculadora;
+package ejercicios.calculadora;
 
 
-import calculadora.ui.VentanaPrincipal;
+import ejercicios.calculadora.ui.VentanaPrincipal;
 
 import javax.swing.*;
 

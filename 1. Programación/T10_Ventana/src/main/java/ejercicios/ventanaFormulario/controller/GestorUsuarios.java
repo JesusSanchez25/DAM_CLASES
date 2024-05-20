@@ -1,8 +1,8 @@
-package ventanaFormulario.controller;
+package ejercicios.ventanaFormulario.controller;
 
 import lombok.Getter;
 import lombok.Setter;
-import ventanaFormulario.model.Usuario;
+import ejercicios.ventanaFormulario.model.Usuario;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package ventanaFormulario.model;
+package ejercicios.ventanaFormulario.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
