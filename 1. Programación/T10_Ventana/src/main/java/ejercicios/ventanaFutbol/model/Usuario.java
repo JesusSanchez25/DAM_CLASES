@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Usuario {
-    private int id;
+    private int id, idEquipo;
     private String nombre, contrasenia, correo;
 
 

@@ -66,7 +66,7 @@ public class DBControler {
     }
 
     public int sacarIdEquipo(int idUsuario){
-        return usuariosCrudRepository.sacarIdEquipo(idUsuario);
+        return usuariosCrudRepository.sacarUsuario(idUsuario).getIdEquipo();
     }
 
     public int sacarIdEquipo(String nombreEquipo){
@@ -101,6 +101,7 @@ public class DBControler {
             System.out.println("ERROR EN IO");
         } finally {
             try {
+                connection = null;
                 DBconnection.closeConnection();
                 bufferedReader.close();
             } catch (IOException e) {
@@ -142,6 +143,22 @@ public class DBControler {
 
     public ArrayList<Jugador> sacarJugadoresEnAlineacion(){
         return jugadoresCrudRepository.sacarJugadoresEnAlineacion();
+    }
+
+    public void ficharJugador(Jugador jugador, int idEquipo, int presupuestoEquipo){
+        jugadoresCrudRepository.ficharJugador(jugador,idEquipo, presupuestoEquipo);
+    }
+
+    public void setPresupuestoEquipo(int cantidad, int idEquipo){
+        equipoCrudRepository.setPresupuestoEquipo(cantidad, idEquipo);
+    }
+
+    public void agregarJugadorAlineacion(String idJugador){
+        jugadoresCrudRepository.agregarJugadoresAlineacion(idJugador);
+    }
+
+    public boolean retarUsuario(int idUsuario1, int idUsuario2){
+        return usuariosCrudRepository.retarUsuario(idUsuario1, idUsuario2);
     }
 
 }

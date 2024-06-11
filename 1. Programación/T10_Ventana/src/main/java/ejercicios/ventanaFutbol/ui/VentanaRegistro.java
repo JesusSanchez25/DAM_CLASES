@@ -64,6 +64,7 @@ public class VentanaRegistro extends JFrame implements ActionListener {
                 } else{
                     VentanaCrearEquipo ventanaCrearEquipo = new VentanaCrearEquipo(idUsuario);
                 }
+                dispose();
 
             } catch (UsuarioNoEncontradoException ex) {
                 dbControler.aniadirUsuario(textUsuario.getText(), textCorreo.getText(), textContrasenia.getText());
@@ -79,12 +80,12 @@ public class VentanaRegistro extends JFrame implements ActionListener {
                     VentanaCrearEquipo ventanaCrearEquipo = new VentanaCrearEquipo(idUsuario);
                 }
 
+                    limpiarTexto();
+                    dispose();
+
             } catch (DatosIncorrectosException ei){
                 System.out.println("Nombre no disponible");
                 lblConsola.setText("Nombre no disponible");
-            } finally {
-                limpiarTexto();
-                dispose();
             }
 
 

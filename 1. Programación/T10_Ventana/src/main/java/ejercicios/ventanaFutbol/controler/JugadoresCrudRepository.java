@@ -39,6 +39,7 @@ public class JugadoresCrudRepository {
         } catch (SQLException e) {
             System.out.println("Error en query");
         } finally {
+            connection = null;
             DBconnection.closeConnection();
         }
 
@@ -87,6 +88,7 @@ public class JugadoresCrudRepository {
             System.out.println("Error en query");
             e.printStackTrace();
         } finally {
+            connection = null;
             DBconnection.closeConnection();
         }
 
@@ -123,6 +125,7 @@ public class JugadoresCrudRepository {
             System.out.println("Error en query");
             e.printStackTrace();
         } finally {
+            connection = null;
             DBconnection.closeConnection();
         }
 
@@ -134,7 +137,7 @@ public class JugadoresCrudRepository {
         connection = DBconnection.getConnection();
         ArrayList<Jugador> jugadores = new ArrayList<>();
 
-        String query = String.format("SELECT * FROM %s where %s = true", // TODO CAMBIAR A true
+        String query = String.format("SELECT * FROM %s where %s = true",
                 EsquemaFutbol.TB_JUGADORES, EsquemaFutbol.COL_ESTITULAR);
 
         try {
@@ -159,10 +162,66 @@ public class JugadoresCrudRepository {
             System.out.println("Error en query");
             e.printStackTrace();
         } finally {
+            connection = null;
             DBconnection.closeConnection();
         }
 
         return null;
+
+    }
+
+    public void ficharJugador(Jugador jugador, int idEquipo, int presupuestoEquipo){
+
+        EquipoCrudRepository equipoCrudRepository = new EquipoCrudRepository();
+        asignarEquipo(jugador.get_id(), idEquipo);
+        equipoCrudRepository.setPresupuestoEquipo(presupuestoEquipo - jugador.getPrecio(), idEquipo);
+
+    }
+
+    public void asignarEquipo(String idJugador, int idEquipo){
+        connection = DBconnection.getConnection();
+
+        String query = String.format("UPDATE %s SET %s = ? where %s = ?",
+                EsquemaFutbol.TB_JUGADORES,
+                EsquemaFutbol.COL_FK_IDEQUIPO, EsquemaFutbol.COL_JG_ID);
+
+        try {
+            ps = connection.prepareStatement(query);
+            ps.setInt(1, idEquipo);
+            ps.setString(2, idJugador);
+            ps.execute();
+
+
+        } catch (SQLException e) {
+            System.out.println("Error en query");
+        } finally {
+            connection = null;
+            DBconnection.closeConnection();
+        }
+
+    }
+
+
+    public void agregarJugadoresAlineacion(String idJugador){
+        connection = DBconnection.getConnection();
+
+        String query = String.format("UPDATE %s SET %s = ? where %s = ?",
+                EsquemaFutbol.TB_JUGADORES,
+                EsquemaFutbol.COL_ESTITULAR, EsquemaFutbol.COL_JG_ID);
+
+        try {
+            ps = connection.prepareStatement(query);
+            ps.setBoolean(1, true);
+            ps.setString(2, idJugador);
+            ps.execute();
+
+
+        } catch (SQLException e) {
+            System.out.println("Error en query");
+        } finally {
+            connection = null;
+            DBconnection.closeConnection();
+        }
 
     }
 

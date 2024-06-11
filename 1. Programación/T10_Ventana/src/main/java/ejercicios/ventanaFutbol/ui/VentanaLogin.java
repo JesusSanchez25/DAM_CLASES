@@ -48,7 +48,7 @@ public class VentanaLogin extends JFrame implements ActionListener {
         if (e.getSource() == bttnLogin){
             int idUsuario = 0;
             try {
-                idUsuario = dbControler.comprobarUsuario(textUsuario.getText(), textContrasenia.getText());
+                idUsuario = dbControler.comprobarUsuario(textUsuario.getText().trim(), textContrasenia.getText().trim());
 
                 System.out.println("Entrando en la cuenta");
                 lblConsola.setText("Entrando en la cuenta");

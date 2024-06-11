@@ -24,4 +24,13 @@ public class Jugador {
         this.media = media;
         this.precio = precio;
     }
+
+    @Override
+    public String toString() {
+        return name +" - " + media;
+    }
+
+    public String toStringAmpliado(){
+        return name + " " + media + " " + posicion;
+    }
 }

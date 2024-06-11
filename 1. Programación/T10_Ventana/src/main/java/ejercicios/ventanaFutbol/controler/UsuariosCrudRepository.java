@@ -4,6 +4,7 @@ import ejercicios.ventanaFutbol.database.DBconnection;
 import ejercicios.ventanaFutbol.database.EsquemaFutbol;
 import ejercicios.ventanaFutbol.excepciones.DatosIncorrectosException;
 import ejercicios.ventanaFutbol.excepciones.UsuarioNoEncontradoException;
+import ejercicios.ventanaFutbol.model.Equipo;
 import ejercicios.ventanaFutbol.model.Usuario;
 
 import java.sql.Connection;
@@ -15,6 +16,10 @@ public class UsuariosCrudRepository {
     Connection connection;
     PreparedStatement ps;
     ResultSet resultSet;
+    DBControler dbControler;
+
+
+
     public int comprobarUsuario(String nombre, String contrasenia)  throws UsuarioNoEncontradoException, DatosIncorrectosException  {
         return comprobarUsuario(nombre, contrasenia, null);
     }
@@ -86,6 +91,7 @@ public class UsuariosCrudRepository {
             while (resultSet.next()){
                 return new Usuario(
                         resultSet.getInt(EsquemaFutbol.COL_ID),
+                        resultSet.getInt(EsquemaFutbol.COL_FK_IDEQUIPO),
                         resultSet.getString(EsquemaFutbol.COL_NOMBRE),
                         resultSet.getString(EsquemaFutbol.COL_CONTRASENIA),
                         resultSet.getString(EsquemaFutbol.COL_CORREO)
@@ -96,6 +102,26 @@ public class UsuariosCrudRepository {
         }
 
         return null;
+    }
+
+    public boolean retarUsuario(int idUsuario1, int idUsuario2){
+        dbControler = new DBControler();
+
+
+            Equipo equipo1 = dbControler.sacarEquipo(dbControler.sacarIdEquipo(idUsuario1));
+            Equipo equipo2 = dbControler.sacarEquipo(dbControler.sacarIdEquipo(idUsuario2));
+
+
+
+        if (equipo1.getValoracionMedia() > equipo2.getValoracionMedia()){
+            System.out.println(equipo1.getValoracionMedia());
+            System.out.println(equipo2.getValoracionMedia());
+            return true;
+        } else {
+            System.out.println(equipo1.getValoracionMedia());
+            System.out.println(equipo2.getValoracionMedia());
+            return false;
+        }
     }
 
     public void asignarEquipo(int idEquipo, int idUsuario){
@@ -115,8 +141,6 @@ public class UsuariosCrudRepository {
         } catch (SQLException e) {
             System.out.println("Error en query");
         }
-
-
     }
 
     public void aniadirUsuario(String nombre, String correo, String contrasenia){
@@ -141,31 +165,9 @@ public class UsuariosCrudRepository {
 
     }
 
-    public int sacarIdEquipo(int idUsuario){
-        connection = DBconnection.getConnection();
 
-        String query = String.format("SELECT * FROM %s WHERE %s = ? Limit 1",
-                EsquemaFutbol.TB_USUARIOS, EsquemaFutbol.COL_ID);
 
-        try {
-            ps = connection.prepareStatement(query);
-            ps.setInt(1, idUsuario);
-            resultSet = ps.executeQuery();
 
-            while (resultSet.next()) {
-                return resultSet.getInt(EsquemaFutbol.COL_FK_IDEQUIPO);
-            }
-
-        } catch (SQLException e) {
-            System.out.println("Error en query");
-            e.printStackTrace();
-        } finally {
-            DBconnection.closeConnection();
-        }
-
-        return -1;
-
-    }
 
 
 }

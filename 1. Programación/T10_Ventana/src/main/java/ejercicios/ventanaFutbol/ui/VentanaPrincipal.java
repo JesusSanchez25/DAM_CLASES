@@ -6,8 +6,10 @@ import ejercicios.ventanaFutbol.model.Usuario;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class VentanaPrincipal extends JFrame {
+public class VentanaPrincipal extends JFrame implements ActionListener {
 
     private JPanel panelCentral;
     private JButton bttnFicharJugador;
@@ -47,6 +49,28 @@ public class VentanaPrincipal extends JFrame {
     }
 
 
-    public void acciones(){};
+    public void acciones(){
+        bttnFicharJugador.addActionListener(this);
+        bttnVerJugadores.addActionListener(this);
+        bttnCrearAlineacion.addActionListener(this);
+        bttnRetarUsuario.addActionListener(this);
+    };
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == bttnFicharJugador){
+            VentanaFicharJugador ventanaFicharJugador = new VentanaFicharJugador(idUsuario);
+            dispose();
+        } else if(e.getSource() == bttnVerJugadores){
+            VentanaVerPlantilla ventanaVerPlantilla = new VentanaVerPlantilla(idUsuario);
+            dispose();
+        } else if (e.getSource() == bttnCrearAlineacion) {
+            VentanaCrearAlineacion ventanaCrearAlineacion = new VentanaCrearAlineacion(idUsuario);
+            dispose();
+        } else if (e.getSource() == bttnRetarUsuario) {
+            dispose();
+            VentanaRetarUsuario ventanaRetarUsuario = new VentanaRetarUsuario(idUsuario);
+        }
+    }
 
 }

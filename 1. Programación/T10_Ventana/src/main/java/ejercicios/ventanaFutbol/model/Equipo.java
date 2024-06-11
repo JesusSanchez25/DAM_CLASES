@@ -1,7 +1,6 @@
 package ejercicios.ventanaFutbol.model;
 
 import ejercicios.ventanaFutbol.controler.DBControler;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -20,13 +19,17 @@ public class Equipo {
 
     public Equipo(int id, String nombre, int presupuesto) {
         dbControler = new DBControler();
+        this.plantilla = new ArrayList<>();
+        this.alineacion = new ArrayList<>();
 
         this.id = id;
         this.nombre = nombre;
         this.presupuesto = presupuesto;
-        this.plantilla = dbControler.sacarJugadoresEquipo(id); // todo valoracionMedia
-        this.alineacion = alineacion; // todo valoracionMedia
-        this.valoracionMedia = 0; // todo valoracionMedia
+        this.plantilla = dbControler.sacarJugadoresEquipo(id);
+        this.alineacion = new ArrayList<>();
+        sacarAlineacion();
+        this.valoracionMedia = 0;
+        calcularValoracion();
 
     }
 

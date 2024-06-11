@@ -57,6 +57,7 @@ public class EquipoCrudRepository {
             System.out.println("Error en query");
             e.printStackTrace();
         } finally {
+            connection = null;
             DBconnection.closeConnection();
         }
 
@@ -88,6 +89,34 @@ public class EquipoCrudRepository {
 
         return null;
     }
+
+
+
+
+    public void setPresupuestoEquipo(int cantidad, int idEquipo){
+        connection = DBconnection.getConnection();
+
+        String query = String.format("UPDATE %s SET %s = ? where %s = ?",
+                EsquemaFutbol.TB_EQUIPOS,
+                EsquemaFutbol.COL_PRESUPUEPSTO, EsquemaFutbol.COL_ID);
+
+        try {
+            ps = connection.prepareStatement(query);
+            ps.setInt(1, cantidad);
+            ps.setInt(2, idEquipo);
+            ps.execute();
+
+
+        } catch (SQLException e) {
+            System.out.println("Error en query");
+        } finally {
+            connection = null;
+            DBconnection.closeConnection();
+        }
+
+    }
+
+
 
 
 }
